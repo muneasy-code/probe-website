@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Über ProBe | Projekt Berufsbegleitung</title>
+
+ <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/kontakt.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+
+<header>
+  <div class="container header-inner">
+<div class="mobile-header-top">
+
+<a class="logo" href="index.html">
+  <img src="probe-logo.png" alt="ProBe" class="logo-img">
+</a>
+
+<button class="menu-toggle" aria-label="Menü öffnen">
+  ☰
+</button>
+</div>
+<nav class="main-nav">
+  <a href="index.html" data-i18n="navStart">Start</a>
+  <a href="ueber-probe.html" data-i18n="navAbout">Über ProBe</a>
+  <a href="unterstuetzung.html" data-i18n="navSupport">Unterstützung</a>
+  <a href="team.html" data-i18n="navTeam">Team</a>
+  <a href="kontakt.html" data-i18n="navContact">Kontakt</a>
+</nav>
+
+<div class="language-switcher" aria-label="Sprachauswahl">
+        <button class="active" type="button" data-lang="de">DE</button>
+        <button type="button" data-lang="en">EN</button>
+        <button type="button" data-lang="ar">AR</button>
+        <button type="button" data-lang="ru">RU</button>
+        <button type="button" data-lang="tr">TR</button>
+      </div>
+
+
+  </div>
+</header>
+
+<main>
+
+  <section class="contact-page-hero">
+    <div class="container">
+      <p class="label" data-i18n="contactPageLabel">Kontakt</p>
+     <div class="contact-badge" data-i18n="contactBadge">✦ Persönlich • Vertraulich • Kostenfrei</div>
+      <h1 data-i18n="contactHeroTitle">Kontakt aufnehmen</h1>
+      <p class="lead-text" data-i18n="contactHeroText">Sie möchten ProBe nutzen, haben Fragen oder möchten als Einrichtung Kontakt aufnehmen? Schreiben Sie uns gern.</p>
+    </div>
+  </section>
+
+  <section class="contact-page-section">
+    <div class="container">
+      <div class="contact-page-box">
+
+        <div>
+          <p class="label" data-i18n="contactBoxLabel">ProBe</p>
+          <h2 data-i18n="contactBoxTitle">Wir sind für Sie da.</h2>
+
+          <p class="contact-page-text" data-i18n="contactBoxText">Das ProBe-Team unterstützt Teilnehmende und Einrichtungen persönlich, vertraulich und kostenfrei.</p>
+
+          <div class="contact-page-data">
+            <span data-i18n="contactOrg1">ProBe Berufs-Begleitung</span>
+                  <span data-i18n="contactOrg2">Deutsches Rotes Kreuz Landesverband Sachsen-Anhalt e.V.</span>
+            <span data-cms-contact-email data-cms-prefix="✉ ">✉ probe@sachsen-anhalt.drk.de</span>
+            <span data-cms-contact-phone data-cms-prefix="☎ ">☎ 0391 / 61068972</span>
+            <span data-cms-contact-address data-cms-prefix="📍 ">📍 Altes Fischerufer 49/50 in 39104 Magdeburg</span>
+          </div>
+        </div>
+
+        <form
+  name="kontakt"
+  method="POST"
+  data-netlify="true"
+  netlify-honeypot="bot-field"
+>
+
+  <input type="hidden" name="form-name" value="kontakt">
+
+  <p hidden>
+    <input name="bot-field">
+  </p>
+
+  <input
+    type="text"
+    name="name"
+    placeholder="Name"
+    data-i18n-placeholder="namePlaceholder"
+    required
+  >
+
+  <input
+    type="email"
+    name="email"
+    placeholder="E-Mail"
+    data-i18n-placeholder="emailPlaceholder"
+    required
+  >
+
+  <textarea
+    name="nachricht"
+    placeholder="Nachricht"
+    data-i18n-placeholder="messagePlaceholder"
+    required
+  ></textarea>
+
+  <button class="submit" type="submit" data-i18n="sendBtn">
+    Anfrage senden
+  </button>
+
+</form>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <span data-i18n="footerProject">ProBe · Projekt Berufsbegleitung</span>
+  <br>
+    <section class="funding-section">
+  <p class="funding-title" data-i18n="fundedBy">Gefördert durch</p>
+
+  <div class="funding-logos">
+    <img src="ms-logo.png" alt="">
+
+  </div>
+</section>
+
+<div class="partner-section">
+  <p class="funding-title" data-i18n="inCooperationWith">In Kooperation mit</p>
+
+  <div class="partner-main">
+    <img src="drk-logo.png" alt="DRK Landesverband Sachsen-Anhalt">
+    <img src="bpa-png.png" alt="Bundesverband privater Anbieter sozialer Dienste">
+  </div>
+
+  <div class="partner-regions">
+    <img src="drkalt.png" alt="DRK Kreisverband Altmark">
+    <img src="drkbö.png" alt="DRK Kreisverband Börde">
+    <img src="drkjl.png" alt="DRK Regionalverband Magdeburg–Jerichower Land">
+    <img src="drkwnz.png" alt="DRK Kreisverband Wanzleben">
+  </div>
+</div>
+
+<span class="footer-credit">
+  <span data-i18n="footerCredit">Digital umgesetzt mit</span> muneasy.de
+</span>
+
+<div class="footer-links">
+    <a href="https://instagram.com/probe.sachsenanhalt"
+   target="_blank"
+   class="social-link">
+   Instagram
+</a>
+  <a href="impressum.html" data-i18n="imprint">Impressum</a>
+  <a href="datenschutz.html" data-i18n="privacy">Datenschutz</a>
+</div>
+</footer>
+<script src="js/translations.js"></script>
+<script src="js/cms-content.js"></script>
+
+<script>
+  const menuToggle = document.querySelector(".menu-toggle");
+  const mainNav = document.querySelector(".main-nav");
+
+  menuToggle.addEventListener("click", () => {
+    mainNav.classList.toggle("open");
+  });
+</script>
+</body>
+</html>

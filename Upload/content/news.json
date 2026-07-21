@@ -1,0 +1,85 @@
+{
+  "items": [
+    {
+      "de": {
+        "date": "2026",
+        "title": "Projektstart in Sachsen-Anhalt",
+        "text": "ProBe begleitet internationale Fachkräfte, Auszubildende und Einrichtungen beim Ankommen im Pflege- und Gesundheitsbereich."
+      },
+      "en": {
+        "date": "2026",
+        "title": "Project launch in Saxony-Anhalt",
+        "text": "ProBe supports international professionals, trainees and institutions as they enter and settle into the nursing and healthcare sector."
+      },
+      "ar": {
+        "date": "2026",
+        "title": "انطلاق المشروع في ساكسونيا أنهالت",
+        "text": "يرافق ProBe الكوادر الدولية والمتدربين والمؤسسات عند الوصول والاندماج في قطاعي الرعاية والصحة."
+      },
+      "ru": {
+        "date": "2026",
+        "title": "Старт проекта в Саксонии-Анхальт",
+        "text": "ProBe помогает международным специалистам, стажёрам и учреждениям адаптироваться в сфере ухода и здравоохранения."
+      },
+      "tr": {
+        "date": "2026",
+        "title": "Saksonya-Anhalt'ta proje başlangıcı",
+        "text": "ProBe, uluslararası uzmanları, stajyerleri ve kurumları bakım ve sağlık alanına uyum süreçlerinde destekler."
+      }
+    },
+    {
+      "de": {
+        "date": "Information",
+        "title": "Flyer und Materialien verfügbar",
+        "text": "Informationen zum Projekt stehen als Download bereit. Weitere Materialien und Sprachversionen können ergänzt werden."
+      },
+      "en": {
+        "date": "Information",
+        "title": "Flyer and materials available",
+        "text": "Information about the project is available for download. Additional materials and language versions can be added."
+      },
+      "ar": {
+        "date": "معلومات",
+        "title": "المنشور والمواد متاحة",
+        "text": "تتوفر معلومات عن المشروع للتنزيل. ويمكن إضافة مواد ونسخ بلغات أخرى."
+      },
+      "ru": {
+        "date": "Информация",
+        "title": "Флаер и материалы доступны",
+        "text": "Информацию о проекте можно скачать. Позже могут быть добавлены дополнительные материалы и языковые версии."
+      },
+      "tr": {
+        "date": "Bilgi",
+        "title": "Broşür ve materyaller mevcut",
+        "text": "Projeye ilişkin bilgiler indirilebilir. Ek materyaller ve dil sürümleri daha sonra eklenebilir."
+      }
+    },
+    {
+      "de": {
+        "date": "Begleitung",
+        "title": "Individuelle Unterstützung möglich",
+        "text": "Interessierte Teilnehmende und Einrichtungen können Kontakt aufnehmen und sich kostenfrei beraten lassen."
+      },
+      "en": {
+        "date": "Support",
+        "title": "Individual support available",
+        "text": "Interested participants and institutions can contact us and receive free advice."
+      },
+      "ar": {
+        "date": "مرافقة",
+        "title": "دعم فردي متاح",
+        "text": "يمكن للمشاركين والمؤسسات المهتمة التواصل معنا والحصول على استشارة مجانية."
+      },
+      "ru": {
+        "date": "Поддержка",
+        "title": "Доступна индивидуальная поддержка",
+        "text": "Заинтересованные участники и учреждения могут связаться с нами и получить бесплатную консультацию."
+      },
+      "tr": {
+        "date": "Destek",
+        "title": "Bireysel destek mümkün",
+        "text": "İlgilenen katılımcılar ve kurumlar bizimle iletişime geçebilir ve ücretsiz danışmanlık alabilir."
+      }
+    }
+  ]
+}

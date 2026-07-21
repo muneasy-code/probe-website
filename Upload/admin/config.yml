@@ -1,0 +1,160 @@
+backend:
+  name: github
+  repo: HIER_GITHUB_BENUTZERNAME/HIER_REPOSITORY_EINTRAGEN
+  branch: main
+
+site_url: https://probe-sachsen-anhalt.de
+display_url: https://probe-sachsen-anhalt.de
+logo_url: /probe-logo.png
+media_folder: uploads
+public_folder: /uploads
+locale: de
+
+collections:
+  - name: website
+    label: Website pflegen
+    files:
+      - name: news
+        label: Aktuelles
+        file: content/news.json
+        format: json
+        editor:
+          preview: false
+        fields:
+          - label: Meldungen
+            name: items
+            widget: list
+            collapsed: true
+            add_to_top: true
+            summary: "{{fields.de.date}} – {{fields.de.title}}"
+            label_singular: Meldung
+            fields:
+              - label: Deutsch
+                name: de
+                widget: object
+                summary: "{{fields.title}}"
+                fields:
+                  - { label: Datum / Kategorie, name: date, widget: string, hint: "Zum Beispiel: 21.07.2026 oder Information" }
+                  - { label: Überschrift, name: title, widget: string }
+                  - { label: Text, name: text, widget: text }
+              - label: Englisch (optional)
+                name: en
+                widget: object
+                collapsed: true
+                required: false
+                fields:
+                  - { label: Datum / Kategorie, name: date, widget: string, required: false }
+                  - { label: Überschrift, name: title, widget: string, required: false }
+                  - { label: Text, name: text, widget: text, required: false }
+              - label: Arabisch (optional)
+                name: ar
+                widget: object
+                collapsed: true
+                required: false
+                fields:
+                  - { label: Datum / Kategorie, name: date, widget: string, required: false }
+                  - { label: Überschrift, name: title, widget: string, required: false }
+                  - { label: Text, name: text, widget: text, required: false }
+              - label: Russisch (optional)
+                name: ru
+                widget: object
+                collapsed: true
+                required: false
+                fields:
+                  - { label: Datum / Kategorie, name: date, widget: string, required: false }
+                  - { label: Überschrift, name: title, widget: string, required: false }
+                  - { label: Text, name: text, widget: text, required: false }
+              - label: Türkisch (optional)
+                name: tr
+                widget: object
+                collapsed: true
+                required: false
+                fields:
+                  - { label: Datum / Kategorie, name: date, widget: string, required: false }
+                  - { label: Überschrift, name: title, widget: string, required: false }
+                  - { label: Text, name: text, widget: text, required: false }
+
+      - name: team
+        label: Team
+        file: content/team.json
+        format: json
+        editor:
+          preview: false
+        fields:
+          - label: Teammitglieder
+            name: members
+            widget: list
+            collapsed: true
+            summary: "{{fields.name}} – {{fields.translations.de.role}}"
+            label_singular: Teammitglied
+            fields:
+              - { label: Name, name: name, widget: string }
+              - { label: Foto, name: image, widget: image, hint: "Am besten ein bereits passend zugeschnittenes Teamfoto hochladen." }
+              - { label: Telefon, name: phone, widget: string, required: false }
+              - { label: E-Mail, name: email, widget: string, required: false }
+              - label: Texte
+                name: translations
+                widget: object
+                fields:
+                  - label: Deutsch
+                    name: de
+                    widget: object
+                    fields:
+                      - { label: Region, name: region, widget: string }
+                      - { label: Funktion / Standort, name: role, widget: string }
+                      - { label: Vorstellungstext, name: about, widget: text }
+                  - label: Englisch (optional)
+                    name: en
+                    widget: object
+                    collapsed: true
+                    required: false
+                    fields:
+                      - { label: Region, name: region, widget: string, required: false }
+                      - { label: Funktion / Standort, name: role, widget: string, required: false }
+                      - { label: Vorstellungstext, name: about, widget: text, required: false }
+                  - label: Arabisch (optional)
+                    name: ar
+                    widget: object
+                    collapsed: true
+                    required: false
+                    fields:
+                      - { label: Region, name: region, widget: string, required: false }
+                      - { label: Funktion / Standort, name: role, widget: string, required: false }
+                      - { label: Vorstellungstext, name: about, widget: text, required: false }
+                  - label: Russisch (optional)
+                    name: ru
+                    widget: object
+                    collapsed: true
+                    required: false
+                    fields:
+                      - { label: Region, name: region, widget: string, required: false }
+                      - { label: Funktion / Standort, name: role, widget: string, required: false }
+                      - { label: Vorstellungstext, name: about, widget: text, required: false }
+                  - label: Türkisch (optional)
+                    name: tr
+                    widget: object
+                    collapsed: true
+                    required: false
+                    fields:
+                      - { label: Region, name: region, widget: string, required: false }
+                      - { label: Funktion / Standort, name: role, widget: string, required: false }
+                      - { label: Vorstellungstext, name: about, widget: text, required: false }
+
+      - name: settings
+        label: Kontakt & Flyer
+        file: content/settings.json
+        format: json
+        editor:
+          preview: false
+        fields:
+          - label: Kontaktdaten
+            name: contact
+            widget: object
+            fields:
+              - { label: E-Mail, name: email, widget: string }
+              - { label: Telefon, name: phone, widget: string }
+              - { label: Adresse, name: address, widget: string }
+          - label: Aktueller Flyer
+            name: flyer
+            widget: file
+            hint: "PDF hochladen oder den bestehenden Flyer auswählen."

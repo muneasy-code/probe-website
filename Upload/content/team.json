@@ -1,0 +1,136 @@
+{
+  "members": [
+    {
+      "name": "Natalia Giesbrecht",
+      "image": "/Natalia.png",
+      "phone": "0155 63 38 84 32",
+      "email": "natalia.giesbrecht@sachsen-anhalt.drk.de",
+      "translations": {
+        "de": {
+          "region": "ALTMARKKREIS SALZWEDEL",
+          "role": "Berufsbegleiterin, Standort Stendal",
+          "about": "„Vor 29 Jahren bin ich selbst nach Deutschland gekommen. Daher weiß ich aus eigener Erfahrung, wie viel Mut, Ausdauer und Unterstützung ein erfolgreicher Neuanfang braucht. Heute begleite ich Menschen mit Migrationsgeschichte auf ihrem Weg in Arbeit und Ausbildung im Pflege- und Gesundheitsbereich. Es erfüllt mich, individuelle Potenziale zu entdecken, Perspektiven aufzuzeigen und Menschen dabei zu unterstützen, ihren eigenen Weg in Deutschland erfolgreich zu gestalten.“"
+        },
+        "en": {
+          "region": "ALTMARK DISTRICT OF SALZWEDEL",
+          "role": "Career support professional, Stendal",
+          "about": "I came to Germany myself 29 years ago. From my own experience, I know how much courage, perseverance and support a successful new beginning requires. Today I support people with a migration background on their path into work and training in nursing and healthcare. I find it fulfilling to discover individual potential, highlight opportunities and help people successfully shape their own path in Germany."
+        },
+        "ar": {
+          "region": "منطقة ألتمارك سالتسفيدل",
+          "role": "مرافقة مهنية، موقع شتندال",
+          "about": "أتيت بنفسي إلى ألمانيا قبل 29 عامًا، ولذلك أعرف من تجربتي مقدار الشجاعة والمثابرة والدعم الذي تتطلبه بداية جديدة ناجحة. واليوم أرافق الأشخاص ذوي تاريخ الهجرة في طريقهم إلى العمل والتدريب في قطاعي الرعاية والصحة، ويسعدني اكتشاف الإمكانات الفردية وإظهار الفرص ودعم الناس في بناء طريقهم الخاص بنجاح في ألمانيا."
+        },
+        "ru": {
+          "region": "АЛЬТМАРККРАЙС ЗАЛЬЦВЕДЕЛЬ",
+          "role": "Специалист по профессиональному сопровождению, Штендаль",
+          "about": "Я сама приехала в Германию 29 лет назад и по собственному опыту знаю, сколько мужества, настойчивости и поддержки требует успешное новое начало. Сегодня я сопровождаю людей с миграционной историей на пути к работе и обучению в сфере ухода и здравоохранения. Мне особенно важно раскрывать индивидуальный потенциал, показывать перспективы и помогать людям успешно строить собственный путь в Германии."
+        },
+        "tr": {
+          "region": "ALTMARKKREIS SALZWEDEL",
+          "role": "Mesleki rehber, Stendal",
+          "about": "29 yıl önce ben de Almanya’ya geldim. Bu nedenle başarılı bir yeni başlangıcın ne kadar cesaret, sabır ve destek gerektirdiğini kendi deneyimimden biliyorum. Bugün göç geçmişi olan insanlara bakım ve sağlık alanında iş ve eğitim yolunda eşlik ediyorum. Bireysel potansiyelleri keşfetmek, yeni perspektifler göstermek ve insanların Almanya’daki kendi yollarını başarıyla şekillendirmelerine destek olmak bana büyük mutluluk veriyor."
+        }
+      }
+    },
+    {
+      "name": "Annelie Neumann",
+      "image": "/annelie.png",
+      "phone": "0155 63 37 89 07",
+      "email": "annelie.neumann@sachsen-anhalt.drk.de",
+      "translations": {
+        "de": {
+          "region": "BÖRDE & MAGDEBURG",
+          "role": "Berufsbegleiterin, Standort Wanzleben",
+          "about": "„Jeder Mensch bringt seine eigene Geschichte, Erfahrungen und Stärken mit. Mir ist es wichtig, diese Potenziale sichtbar zu machen und Menschen auf ihrem Weg in Deutschland zu begleiten. Als Berufsbegleiterin unterstütze ich internationale Fachkräfte und Auszubildende dabei, sich im Pflege- und Gesundheitsbereich zurechtzufinden, Herausforderungen zu meistern und neue Perspektiven zu entwickeln. Dabei geht es nicht nur um Formulare, Sprache oder berufliche Fragen – sondern vor allem darum, Sicherheit, Orientierung und Vertrauen zu schaffen. Zu erleben, wie aus ersten Schritten neue Chancen entstehen, ist für mich das Schönste an meiner Arbeit.“"
+        },
+        "en": {
+          "region": "BÖRDE & MAGDEBURG",
+          "role": "Career support professional, Wanzleben",
+          "about": "Everyone brings their own story, experiences and strengths. It is important to me to make this potential visible and support people on their journey in Germany. As a career support professional, I help international professionals and trainees find their way in nursing and healthcare, overcome challenges and develop new perspectives. This is not only about forms, language or professional questions, but above all about creating security, orientation and trust. Seeing first steps turn into new opportunities is the most rewarding part of my work."
+        },
+        "ar": {
+          "region": "بورده وماغديبورغ",
+          "role": "مرافقة مهنية، موقع فانتسليبن",
+          "about": "لكل إنسان قصته وخبراته ونقاط قوته. من المهم بالنسبة لي إظهار هذه الإمكانات ومرافقة الناس في طريقهم في ألمانيا. بصفتي مرافقة مهنية، أدعم الكوادر الدولية والمتدربين في إيجاد طريقهم في قطاعي الرعاية والصحة وتجاوز التحديات وتطوير آفاق جديدة. ولا يتعلق الأمر فقط بالنماذج أو اللغة أو الأسئلة المهنية، بل قبل كل شيء بخلق الأمان والتوجيه والثقة. ورؤية الخطوات الأولى وهي تتحول إلى فرص جديدة هي أجمل ما في عملي."
+        },
+        "ru": {
+          "region": "БЁРДЕ И МАГДЕБУРГ",
+          "role": "Специалист по профессиональному сопровождению, Ванцлебен",
+          "about": "У каждого человека своя история, опыт и сильные стороны. Для меня важно сделать этот потенциал видимым и сопровождать людей на их пути в Германии. Как специалист по профессиональному сопровождению я помогаю международным специалистам и учащимся ориентироваться в сфере ухода и здравоохранения, преодолевать трудности и находить новые перспективы. Речь идёт не только о документах, языке или профессиональных вопросах, но прежде всего о создании чувства безопасности, ориентации и доверия. Видеть, как первые шаги превращаются в новые возможности, — самое прекрасное в моей работе."
+        },
+        "tr": {
+          "region": "BÖRDE VE MAGDEBURG",
+          "role": "Mesleki rehber, Wanzleben",
+          "about": "Her insan kendi hikâyesini, deneyimlerini ve güçlü yönlerini beraberinde getirir. Bu potansiyelleri görünür kılmak ve insanlara Almanya’daki yollarında eşlik etmek benim için önemlidir. Mesleki rehber olarak uluslararası uzmanların ve kursiyerlerin bakım ve sağlık alanında yollarını bulmalarına, zorlukların üstesinden gelmelerine ve yeni perspektifler geliştirmelerine destek oluyorum. Burada yalnızca formlar, dil veya mesleki sorular değil, her şeyden önce güven, yönlendirme ve emniyet duygusu oluşturmak önemlidir. İlk adımlardan yeni fırsatların doğduğunu görmek işimin en güzel yanıdır."
+        }
+      }
+    },
+    {
+      "name": "Mathias Wilhelm",
+      "image": "/Mathias.png",
+      "phone": "0155 63 38 82 34",
+      "email": "mathias.wilhelm@sachsen-anhalt.drk.de",
+      "translations": {
+        "de": {
+          "region": "JERICHOWER LAND & MAGDEBURG",
+          "role": "Berufsbegleiter, Standort Burg",
+          "about": "Ich bin 41 Jahre alt, Familienvater und lebe in Magdeburg. Nach meinem Studium der Sportwissenschaften mit Schwerpunkt Gesundheitssport war ich nahezu zehn Jahre in den Bereichen Gesundheitsförderung, Prävention, Sporttherapie und Pflege tätig. Berufsbegleitend absolvierte ich ein Masterstudium im Gesundheitsmanagement und war anschließend als Projektleiter im Bereich präventiver Gesunderhaltung tätig. Heute arbeite ich als Referent Berufsbegleitung beim DRK Landesverband Sachsen-Anhalt e.V. und unterstütze sowohl Menschen mit beruflichen Integrations- und Qualifizierungsbedarfen als auch Unternehmen und Einrichtungen bei der Gewinnung, Entwicklung und nachhaltigen Bindung von Fachkräften."
+        },
+        "en": {
+          "region": "JERICHOWER LAND & MAGDEBURG",
+          "role": "Career support professional, Burg",
+          "about": "I am 41 years old, a father and live in Magdeburg. After studying sports science with a focus on health-oriented exercise, I worked for almost ten years in health promotion, prevention, sports therapy and nursing. Alongside my work, I completed a master’s degree in health management and later worked as a project manager in preventive health. Today I work in career support at the German Red Cross State Association of Saxony-Anhalt and support both people with professional integration and qualification needs and organisations in recruiting, developing and retaining skilled professionals."
+        },
+        "ar": {
+          "region": "يريخوفر لاند وماغديبورغ",
+          "role": "مرافق مهني، موقع بورغ",
+          "about": "أبلغ من العمر 41 عامًا، وأنا أب وأعيش في ماغديبورغ. بعد دراسة علوم الرياضة مع التركيز على الرياضة الصحية، عملت قرابة عشر سنوات في تعزيز الصحة والوقاية والعلاج الرياضي والرعاية. وأكملت أثناء عملي درجة الماجستير في إدارة الصحة، ثم عملت مديرًا لمشروع في مجال الحفاظ الوقائي على الصحة. واليوم أعمل في المرافقة المهنية لدى جمعية الصليب الأحمر الألماني في ساكسونيا أنهالت، وأدعم الأشخاص ذوي احتياجات الاندماج والتأهيل المهني وكذلك الشركات والمؤسسات في استقطاب الكفاءات وتطويرها والاحتفاظ بها."
+        },
+        "ru": {
+          "region": "ЙЕРИХОВЕР-ЛАНД И МАГДЕБУРГ",
+          "role": "Специалист по профессиональному сопровождению, Бург",
+          "about": "Мне 41 год, я отец семейства и живу в Магдебурге. После изучения спортивных наук со специализацией на оздоровительном спорте я почти десять лет работал в сферах укрепления здоровья, профилактики, спортивной терапии и ухода. Параллельно с работой я получил степень магистра в области управления здравоохранением, а затем работал руководителем проекта в сфере профилактического здоровья. Сегодня я работаю в сфере профессионального сопровождения в земельном объединении Немецкого Красного Креста Саксонии-Анхальт и поддерживаю как людей с потребностями в профессиональной интеграции и квалификации, так и организации в привлечении, развитии и долгосрочном удержании специалистов."
+        },
+        "tr": {
+          "region": "JERICHOWER LAND VE MAGDEBURG",
+          "role": "Mesleki rehber, Burg",
+          "about": "41 yaşındayım, aile babasıyım ve Magdeburg’da yaşıyorum. Sağlık sporu odaklı spor bilimleri eğitimimin ardından yaklaşık on yıl sağlık geliştirme, önleme, spor terapisi ve bakım alanlarında çalıştım. Çalışırken sağlık yönetimi alanında yüksek lisans yaptım ve daha sonra koruyucu sağlık alanında proje yöneticisi olarak görev aldım. Bugün Alman Kızılhaçı Saksonya-Anhalt Eyalet Birliği’nde mesleki rehberlik alanında çalışıyor; hem mesleki entegrasyon ve yeterlilik ihtiyacı olan insanları hem de kurumları nitelikli personelin kazanılması, geliştirilmesi ve uzun vadeli olarak elde tutulması konularında destekliyorum."
+        }
+      }
+    },
+    {
+      "name": "Sascha Bornkampf",
+      "image": "/sascha.png",
+      "phone": "0155 63 38 82 24",
+      "email": "sascha.bornkampf@sachsen-anhalt.drk.de",
+      "translations": {
+        "de": {
+          "region": "BÖRDE",
+          "role": "Berufsbegleiter, Standort Haldensleben",
+          "about": "Als staatlich anerkannter Sozialarbeiter M.A. gilt mein fachliches Interesse unter anderem gesellschaftlichen Veränderungen und wie wir damit umgehen. Durch den demografischen, sozialen und wirtschaftlichen Wandel gewinnen besonders Berufe im Pflege- und Gesundheitswesen zunehmend an Bedeutung. Bereits heute zeigt sich, dass qualifizierte Fachkräfte aus dem Ausland unverzichtbar sind, um den wachsenden Anforderungen einer sich verändernden Gesellschaft gerecht zu werden. Die bedarfsgerechte Unterstützung von Menschen mit Migrationsgeschichte auf ihrem Weg in diese Berufsfelder eröffnet die Möglichkeit, Fachkräftesicherung und gelingende Integration sinnvoll miteinander zu verbinden. Als Berufsbegleiter im Landkreis Börde unterstütze ich bereits ausländische Auszubildende des DRK-Kreisverbandes auf ihrem Weg und verstehe diese anspruchsvolle Aufgabe als zukunftsorientiert und zugleich als große Chance, Integration im Alltag und im Beruf erlebbar zu machen."
+        },
+        "en": {
+          "region": "BÖRDE",
+          "role": "Career support professional, Haldensleben",
+          "about": "As a state-recognised social worker with a master’s degree, my professional interests include social change and how we respond to it. Demographic, social and economic change is making professions in nursing and healthcare increasingly important. Qualified professionals from abroad are already essential to meet the growing demands of a changing society. Providing needs-based support to people with a migration background on their path into these professions creates an opportunity to combine securing skilled professionals with successful integration. As a career support professional in the Börde district, I already support international trainees of the local German Red Cross association and see this demanding task as forward-looking and as a major opportunity to make integration tangible in everyday life and at work."
+        },
+        "ar": {
+          "region": "بورده",
+          "role": "مرافق مهني، موقع هالدنسليبن",
+          "about": "بصفتي أخصائيًا اجتماعيًا معترفًا به رسميًا وحاصلًا على درجة الماجستير، تشمل اهتماماتي المهنية التغيرات المجتمعية وكيفية التعامل معها. ومع التحولات الديموغرافية والاجتماعية والاقتصادية تزداد أهمية المهن في قطاعي الرعاية والصحة. وتظهر الحاجة بالفعل إلى الكفاءات المؤهلة من الخارج لمواجهة متطلبات المجتمع المتغير. إن تقديم دعم مناسب لاحتياجات الأشخاص ذوي تاريخ الهجرة في طريقهم إلى هذه المهن يتيح الجمع بين تأمين الكفاءات والاندماج الناجح. وبصفتي مرافقًا مهنيًا في منطقة بورده، أدعم بالفعل متدربين دوليين في جمعية الصليب الأحمر المحلية وأرى في هذه المهمة فرصة مستقبلية كبيرة لجعل الاندماج ملموسًا في الحياة اليومية والعمل."
+        },
+        "ru": {
+          "region": "БЁРДЕ",
+          "role": "Специалист по профессиональному сопровождению, Хальденслебен",
+          "about": "Как государственно признанный социальный работник со степенью магистра, я профессионально интересуюсь общественными изменениями и тем, как мы на них реагируем. Демографические, социальные и экономические изменения делают профессии в сфере ухода и здравоохранения всё более значимыми. Уже сегодня квалифицированные специалисты из-за рубежа необходимы для удовлетворения растущих потребностей меняющегося общества. Поддержка людей с миграционной историей с учётом их потребностей на пути в эти профессии позволяет разумно сочетать обеспечение кадрами и успешную интеграцию. Как специалист по профессиональному сопровождению в районе Бёрде я уже поддерживаю иностранных учащихся местного отделения Немецкого Красного Креста и считаю эту ответственную работу ориентированной на будущее и большой возможностью сделать интеграцию ощутимой в повседневной жизни и профессии."
+        },
+        "tr": {
+          "region": "BÖRDE",
+          "role": "Mesleki rehber, Haldensleben",
+          "about": "Devlet tarafından tanınan, yüksek lisans derecesine sahip bir sosyal hizmet uzmanı olarak mesleki ilgi alanlarım arasında toplumsal değişimler ve bunlarla nasıl başa çıktığımız yer alıyor. Demografik, sosyal ve ekonomik değişim nedeniyle bakım ve sağlık meslekleri giderek daha fazla önem kazanıyor. Değişen toplumun artan ihtiyaçlarını karşılamak için yurt dışından gelen nitelikli uzmanların vazgeçilmez olduğu şimdiden görülüyor. Göç geçmişi olan insanlara bu mesleklere giden yolda ihtiyaçlarına uygun destek sunmak, nitelikli personel güvencesi ile başarılı entegrasyonu anlamlı biçimde birleştirme fırsatı yaratıyor. Börde ilçesinde mesleki rehber olarak yerel Alman Kızılhaçı kuruluşundaki yabancı kursiyerleri destekliyorum ve bu zorlu görevi geleceğe dönük, entegrasyonu günlük yaşamda ve işte görünür kılmak için büyük bir fırsat olarak görüyorum."
+        }
+      }
+    }
+  ]
+}
