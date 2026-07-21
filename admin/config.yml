@@ -1,6 +1,5 @@
 backend:
-  name: github
-  repo: HIER_GITHUB_BENUTZERNAME/HIER_REPOSITORY_EINTRAGEN
+  name: git-gateway
   branch: main
 
 site_url: https://probe-sachsen-anhalt.de
