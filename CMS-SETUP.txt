@@ -1,0 +1,36 @@
+PROBE CMS – EINMALIGE EINRICHTUNG
+================================
+
+Das CMS ist technisch eingebaut. Es pflegt:
+- Aktuelles auf der Startseite
+- Teammitglieder inklusive Fotos, Kontaktdaten und Übersetzungen
+- zentrale ProBe-Kontaktdaten
+- den aktuellen Flyer
+
+Die Website selbst bleibt statisch und schnell. Das CMS bearbeitet nur die JSON-Dateien im Ordner /content.
+Design, HTML und CSS sind für die Redaktion nicht als Eingabefelder freigegeben.
+
+EINMALIG VOR DEM ERSTEN LOGIN
+------------------------------
+1. Den kompletten Website-Ordner in ein GitHub-Repository legen.
+2. Das Repository mit der bestehenden Netlify-Seite verbinden.
+3. In /admin/config.yml diese Zeile ersetzen:
+
+   repo: HIER_GITHUB_BENUTZERNAME/HIER_REPOSITORY_EINTRAGEN
+
+   Beispiel:
+   repo: muneasy/probe-website
+
+4. In Netlify/GitHub die OAuth-Anmeldung für Decap CMS konfigurieren.
+5. Katrin als GitHub-Collaboratorin mit Schreibzugriff auf das Repository hinzufügen.
+6. Danach öffnet Katrin:
+
+   https://probe-sachsen-anhalt.de/admin/
+
+WICHTIG
+-------
+Neue oder geänderte deutsche Inhalte erscheinen sofort nach dem nächsten Netlify-Deploy.
+Bei "Aktuelles" und "Team" können die vorhandenen Sprachversionen ebenfalls gepflegt werden.
+Fehlt bei einem dynamischen Inhalt eine Übersetzung, verwendet die Website automatisch die deutsche Fassung.
+
+Die bestehenden Inhalte sind bereits in /content/news.json, /content/team.json und /content/settings.json übernommen.
