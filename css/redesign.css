@@ -376,7 +376,7 @@ h3 {
 
 .campaign-hero-media img {
   object-fit: cover;
-  object-position: 68% center;
+  object-position: 64% center;
   filter: saturate(0.88) contrast(1.03);
 }
 
@@ -973,6 +973,16 @@ section.content,
 .about-hero,
 .support-hero-image {
   background-position: 82% center !important;
+}
+
+.about-hero {
+  background-image: url("../campaign-everyday-arrival.webp") !important;
+  background-position: 67% center !important;
+}
+
+.support-hero-image {
+  background-image: url("../campaign-care-team.webp") !important;
+  background-position: 72% center !important;
 }
 
 .about-hero::after,
