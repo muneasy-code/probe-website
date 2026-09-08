@@ -9,6 +9,7 @@
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/unterstuetzung.css">
 <link rel="stylesheet" href="css/responsive.css">
+<link rel="stylesheet" href="css/redesign.css">
 </head>
 
 <body>
@@ -28,7 +29,7 @@
 <nav class="main-nav">
   <a href="index.html" data-i18n="navStart">Start</a>
   <a href="ueber-probe.html" data-i18n="navAbout">Über ProBe</a>
-  <a href="unterstuetzung.html" data-i18n="navSupport">Unterstützung</a>
+  <a href="unterstuetzung.html" data-i18n="navSupport" aria-current="page">Unterstützung</a>
   <a href="team.html" data-i18n="navTeam">Team</a>
   <a href="kontakt.html" data-i18n="navContact">Kontakt</a>
 </nav>
@@ -72,7 +73,7 @@
 <section class="content support-section-tight">
     <div class="container support-columns">
 
-      <div class="support-column">
+      <div class="support-column" id="fuer-teilnehmende">
         <p class="label" data-i18n="supportParticipantsLabel">Für Teilnehmende</p>
         <ul class="support-points">
           <li data-i18n="supportParticipant1">Unterstützung bei Anerkennungsverfahren</li>
@@ -83,7 +84,7 @@
         </ul>
       </div>
 
-      <div class="support-column">
+      <div class="support-column" id="fuer-einrichtungen">
         <p class="label" data-i18n="supportInstitutionsLabel">Für Einrichtungen</p>
         <ul class="support-points">
           <li data-i18n="supportInstitution1">Unterstützung bei Integrationsprozessen</li>

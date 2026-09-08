@@ -3,10 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ProBe – Projekt Berufsbegleitung</title>
+  <meta name="description" content="ProBe begleitet internationale Auszubildende und Fachkräfte beim Ankommen in Arbeit und Alltag und unterstützt Pflege- und Gesundheitseinrichtungen in Sachsen-Anhalt." />
+  <meta name="theme-color" content="#16364f" />
+  <title>ProBe – Gemeinsam ankommen. Gemeinsam weiterkommen.</title>
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/startseite.css">
 <link rel="stylesheet" href="css/responsive.css">
+<link rel="stylesheet" href="css/redesign.css">
 </head>
 
 <body>
@@ -23,7 +26,7 @@
 </button>
 </div>
 <nav class="main-nav">
-  <a href="index.html" data-i18n="navStart">Start</a>
+  <a href="index.html" data-i18n="navStart" aria-current="page">Start</a>
   <a href="ueber-probe.html" data-i18n="navAbout">Über ProBe</a>
   <a href="unterstuetzung.html" data-i18n="navSupport">Unterstützung</a>
   <a href="team.html" data-i18n="navTeam">Team</a>
@@ -40,214 +43,193 @@
     </div>
   </header>
 
-  <main id="top">
-    <section class="hero">
-      <div class="container hero-grid">
-        <div>
-          <div class="kicker" data-i18n="heroKicker">✦ Kostenfreies Angebot in Sachsen-Anhalt</div>
-          <h1 data-i18n="heroTitle">Brücken bauen. Potenziale stärken. Zukunft sichern.</h1>
-          <p class="hero-text" data-i18n="heroText">ProBe unterstützt internationale Fach- und Hilfskräfte beim Ankommen und Einleben in Sachsen-Anhalt und trägt damit zur Fachkräftesicherung im Pflege- und Gesundheitsbereich bei.</p>
-          <div class="button-row">
-            <a class="btn primary" href="#kontakt" data-i18n="primaryBtn">Beratung anfragen →</a>
-            <a class="btn secondary" href="/downloads/probe-flyer.pdf" data-cms-flyer-link data-i18n="secondaryBtn">⬇ Flyer herunterladen</a>
+  <main id="top" class="home-v2">
+    <section class="campaign-hero" aria-labelledby="home-title">
+      <div class="container campaign-hero-grid">
+        <div class="campaign-hero-copy">
+          <p class="campaign-eyebrow" data-i18n="heroKicker">Kostenfreie Berufsbegleitung in Sachsen-Anhalt</p>
+          <h1 id="home-title" data-i18n-html="heroTitle">Gemeinsam ankommen.<br><span>Gemeinsam weiterkommen.</span></h1>
+          <p class="campaign-lead" data-i18n="heroText">ProBe begleitet internationale Auszubildende und Fachkräfte auf ihrem Weg in Arbeit und Alltag – und unterstützt Einrichtungen dabei, gutes Ankommen möglich zu machen.</p>
+          <div class="campaign-actions">
+            <a class="campaign-button campaign-button-primary" href="unterstuetzung.html#fuer-teilnehmende">
+              <span data-i18n="primaryBtn">Ich suche Unterstützung</span><span aria-hidden="true">↗</span>
+            </a>
+            <a class="campaign-button campaign-button-secondary" href="unterstuetzung.html#fuer-einrichtungen">
+              <span data-i18n="secondaryBtn">Wir sind eine Einrichtung</span><span aria-hidden="true">↗</span>
+            </a>
           </div>
         </div>
 
-<div class="hero-card">
-  <div class="visual-card">
-
-    <picture>
-      <source
-        media="(max-width: 768px)"
-        srcset="startseite-hero-mobile.png"
-      >
-
-      <img 
-        src="startseite-hero.png" 
-        alt="Fachkraft im Arbeitsumfeld"
-        class="hero-image"
-      >
-    </picture>
-
-    <div class="hero-overlay">
-      <strong data-i18n="visualTitle">Starke Begleitung für starke Pflege</strong>
-      <p data-i18n="visualText">Persönlich. Verständlich. Für Menschen mit Migrationsgeschichte.</p>
-    </div>
-
-  </div>
-</div>
-      </div>
-
-      <svg class="wave" viewBox="0 0 1440 140" preserveAspectRatio="none" aria-hidden="true"><path fill="#2f57a3" d="M0,80 C220,10 320,110 520,55 C730,-5 850,105 1040,65 C1210,30 1320,50 1440,10 L1440,140 L0,140 Z"></path></svg>
-    </section>
-
-    <section class="quick-section">
-      <div class="container quick-grid">
-        <div class="quick-item"><div class="quick-icon">🤝</div><strong data-i18n="quick1">Persönliche Begleitung</strong></div>
-        <div class="quick-item"><div class="quick-icon">🌱</div><strong data-i18n="quick2">Chancen erkennen</strong></div>
-        <div class="quick-item"><div class="quick-icon">🔑</div><strong data-i18n="quick3">Service Point für Pflegeeinrichtungen</strong></div>
-        <div class="quick-item"><div class="quick-icon">🚀</div><strong data-i18n="quick4">Zukunft gestalten</strong></div>
-      </div>
-    </section>
-
-    <section id="unterstuetzung" class="content">
-      <div class="container support-grid">
-        <div>
-          <p class="label" data-i18n="offerLabel">Angebot</p>
-          <h2 data-i18n="supportTitle">Wir unterstützen Sie</h2>
-          <div class="blue-box"><h3 data-i18n="freeTitle">Kostenfrei & vertraulich</h3><p data-i18n="freeText">Der Förderzeitraum des Modellprojekts läuft von 01/2026 bis 12/2028. Das Angebot ist kostenfrei und steht Einrichtungen jeder Trägerschaft offen.</p></div>
-        </div>
-
-        <div class="support-list">
-          <div class="support-item"><span class="support-icon">🌍</span><span data-i18n="support1">Orientierung im beruflichen Integrationsprozess</span></div>
-          <div class="support-item"><span class="support-icon">📚</span><span data-i18n="support2">Vermittlung zu Sprachkursen und Qualifizierungsangeboten</span></div>
-          <div class="support-item"><span class="support-icon">👥</span><span data-i18n="support3">Hilfe bei Fragen zur sozialen und gesellschaftlichen Teilhabe</span></div>
-          <div class="support-item"><span class="support-icon">🎓</span><span data-i18n="support4">Unterstützung bei der Erbringung von Nachweisen für Anerkennungsverfahren</span></div>
-          <div class="support-item"><span class="support-icon">🤝</span><span data-i18n="support5">Begleitung von Einrichtungen bei der Integration internationaler Mitarbeitender</span></div>
-          <div class="support-item"><span class="support-icon">💼</span><span data-i18n="support6">Hilfe bei behördlichen Angelegenheiten</span></div>
+        <div class="campaign-hero-media">
+          <picture>
+            <source media="(max-width: 720px)" srcset="startseite-hero-mobile.png">
+            <img src="startseite-hero.png" alt="Internationale Pflegefachkraft in einer Pflegeeinrichtung">
+          </picture>
+          <div class="campaign-signature">
+            <strong data-i18n="visualTitle">Gemeinsam gelingt’s.</strong>
+            <span data-i18n="visualText">Menschen begleiten. Zukunft gestalten.</span>
+          </div>
+          <svg class="campaign-image-wave" viewBox="0 0 800 220" preserveAspectRatio="none" aria-hidden="true">
+            <path d="M-10 140C150 52 272 218 438 126C585 45 682 77 812 12V232H-10Z"></path>
+            <path d="M-10 178C168 82 270 244 463 158C612 92 703 110 812 62" fill="none"></path>
+          </svg>
         </div>
       </div>
+      <svg class="campaign-section-wave" viewBox="0 0 1440 150" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M0 88C231 12 357 132 573 71C792 9 916 127 1116 75C1244 41 1348 42 1440 18V150H0Z"></path>
+      </svg>
     </section>
 
-    <section id="download" class="content">
-      <div class="container download-box">
-        <div class="download-content">
-          <p class="label" data-i18n="downloadLabel">Download</p>
+    <section class="promise-strip" aria-label="ProBe auf einen Blick">
+      <div class="container promise-grid">
+        <div><span>01</span><strong data-i18n="quick1">Persönlich</strong></div>
+        <div><span>02</span><strong data-i18n="quick2">Individuell</strong></div>
+        <div><span>03</span><strong data-i18n="quick3">Auf Augenhöhe</strong></div>
+        <div><span>04</span><strong data-i18n="quick4">Kostenfrei</strong></div>
+      </div>
+    </section>
+
+    <section class="campaign-section audience-section" id="wege" aria-labelledby="audience-title">
+      <div class="container">
+        <div class="section-intro">
+          <p class="campaign-eyebrow" data-i18n="homeAudienceLabel">Für wen ist ProBe da?</p>
+          <h2 id="audience-title" data-i18n="homeAudienceTitle">Zwei Perspektiven. Ein gemeinsamer Weg.</h2>
+          <p data-i18n="homeAudienceText">Gute Integration gelingt, wenn Menschen Orientierung finden und Einrichtungen verlässlich entlastet werden.</p>
+        </div>
+
+        <div class="audience-grid">
+          <article class="audience-card audience-card-people">
+            <p class="audience-number">01</p>
+            <p class="audience-label" data-i18n="homePeopleLabel">Für internationale Auszubildende & Fachkräfte</p>
+            <h3 data-i18n-html="homePeopleTitle">Neue Sprache.<br>Neue Stadt.<br>Neue Arbeit.<br><span>Neues Leben.</span></h3>
+            <p data-i18n="homePeopleText">ProBe hilft beim Orientieren, Verstehen und Ankommen – bei beruflichen Fragen genauso wie bei Herausforderungen im Alltag.</p>
+            <a href="unterstuetzung.html#fuer-teilnehmende" data-i18n="homePeopleCta">Unterstützung für mich</a>
+          </article>
+
+          <article class="audience-card audience-card-organisations">
+            <p class="audience-number">02</p>
+            <p class="audience-label" data-i18n="homeOrgLabel">Für Pflege- und Gesundheitseinrichtungen</p>
+            <h3 data-i18n-html="homeOrgTitle">Sie kümmern sich<br>um die Pflege.<br><span>Beim Rest hilft ProBe.</span></h3>
+            <p data-i18n="homeOrgText">Wir sehen, was zusätzlich an Ihrer Einrichtung hängenbleibt – und begleiten dort, wo der fachliche Auftrag eigentlich aufhört.</p>
+            <a href="unterstuetzung.html#fuer-einrichtungen" data-i18n="homeOrgCta">Unterstützung für unsere Einrichtung</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="campaign-story" aria-labelledby="story-title">
+      <div class="container campaign-story-grid">
+        <div class="campaign-story-image">
+          <img src="unterstuetzung-hero.png" alt="Pflegefachkraft und Berufsbegleiter im Gespräch">
+          <span class="story-image-tag" data-i18n="homeStoryTag">Begleitung, die im Alltag ankommt.</span>
+        </div>
+        <div class="campaign-story-copy">
+          <p class="campaign-eyebrow light" data-i18n="homePrincipleLabel">Was ProBe besonders macht</p>
+          <h2 id="story-title" data-i18n="homePrincipleTitle">Keine Standardlösung. Sondern Begleitung, die passt.</h2>
+          <p data-i18n="homePrincipleText">ProBe hört zu, ordnet gemeinsam die Situation und begleitet die nächsten sinnvollen Schritte – persönlich, lösungsorientiert und auf Augenhöhe.</p>
+          <blockquote data-i18n="homeQuote">„Integration braucht Zeit. Pflege meistens nicht.“</blockquote>
+        </div>
+      </div>
+      <svg class="story-wave" viewBox="0 0 1440 130" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M0 70C206 136 374 6 585 69C791 132 966 22 1165 72C1275 100 1368 96 1440 65V130H0Z"></path>
+      </svg>
+    </section>
+
+    <section class="campaign-section process-section-v2" aria-labelledby="process-title">
+      <div class="container">
+        <div class="section-intro compact">
+          <p class="campaign-eyebrow" data-i18n="homeProcessLabel">So funktioniert die Begleitung</p>
+          <h2 id="process-title" data-i18n="homeProcessTitle">Unkompliziert. Persönlich. Passend.</h2>
+        </div>
+        <div class="process-grid-v2">
+          <article>
+            <span>01</span>
+            <h3 data-i18n="homeStep1Title">Sie melden sich.</h3>
+            <p data-i18n="homeStep1Text">Ein kurzer Kontakt reicht für den Einstieg.</p>
+          </article>
+          <article>
+            <span>02</span>
+            <h3 data-i18n="homeStep2Title">Wir schauen gemeinsam.</h3>
+            <p data-i18n="homeStep2Text">Was wird gebraucht, wer ist beteiligt und welcher nächste Schritt hilft?</p>
+          </article>
+          <article>
+            <span>03</span>
+            <h3 data-i18n="homeStep3Title">ProBe begleitet.</h3>
+            <p data-i18n="homeStep3Text">Individuell und genau dort, wo Unterstützung sinnvoll ist.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="download" class="campaign-section material-section">
+      <div class="container material-grid">
+        <div class="material-copy">
+          <p class="campaign-eyebrow" data-i18n="downloadLabel">Material</p>
           <h2 data-i18n="downloadTitle">Flyer & Informationen</h2>
-          <p class="hero-text" data-i18n="downloadText">Hier kann der aktuelle ProBe-Flyer heruntergeladen werden. Weitere Sprachversionen folgen bald.</p>
-        <a class="download-btn"
-  href="downloads/probe-flyer.pdf"
-  data-cms-flyer-link
-  target="_blank"
-  data-i18n="downloadBtn">
-  Flyer ansehen & herunterladen
-</a>  
-      </div>
-        <div class="download-preview">
-          <div class="preview-card">
-            <img src="probe-logo.png" alt="ProBe – Projekt Berufsbegleitung" class="preview-logo-img">
-            <div class="preview-title" data-i18n="heroTitle2">Brücken bauen. Potenziale stärken. Zukunft sichern.</div>
-          </div>
+          <p data-i18n="downloadText">Hier kann der aktuelle ProBe-Flyer heruntergeladen werden. Weitere Sprachversionen folgen bald.</p>
+          <a class="campaign-button campaign-button-primary" href="uploads/probe_4seiter_weboptimiert.pdf" data-cms-flyer-link target="_blank" rel="noopener">
+            <span data-i18n="downloadBtn">Flyer ansehen & herunterladen</span><span aria-hidden="true">↓</span>
+          </a>
+        </div>
+        <div class="material-poster" aria-hidden="true">
+          <img src="probe-logo.png" alt="">
+          <p data-i18n="heroTitle2">Gemeinsam gelingt’s.</p>
+          <svg viewBox="0 0 500 150" preserveAspectRatio="none"><path d="M-10 88C105 26 186 140 301 77C389 29 445 51 510 17V160H-10Z"></path></svg>
         </div>
       </div>
     </section>
 
-<section class="content news-preview-section">
-  <div class="container">
+    <section class="campaign-section news-preview-section-v2">
+      <div class="container">
+        <div class="section-intro compact">
+          <p class="campaign-eyebrow" data-i18n="newsLabel">Aktuelles</p>
+          <h2 data-i18n="newsTitle">Aktuelles aus ProBe</h2>
+        </div>
+        <div class="news-preview-grid" data-cms-news-list>
+          <article class="news-preview-card">
+            <p class="news-date" data-i18n="news1Date">2026</p>
+            <h3 data-i18n="news1Title">Projektstart in Sachsen-Anhalt</h3>
+            <p data-i18n="news1Text">ProBe begleitet internationale Fachkräfte, Auszubildende und Einrichtungen beim Ankommen im Pflege- und Gesundheitsbereich.</p>
+          </article>
+          <article class="news-preview-card">
+            <p class="news-date" data-i18n="news2Date">Information</p>
+            <h3 data-i18n="news2Title">Flyer und Materialien verfügbar</h3>
+            <p data-i18n="news2Text">Informationen zum Projekt stehen als Download bereit. Weitere Materialien und Sprachversionen können ergänzt werden.</p>
+          </article>
+          <article class="news-preview-card">
+            <p class="news-date" data-i18n="news3Date">Begleitung</p>
+            <h3 data-i18n="news3Title">Individuelle Unterstützung möglich</h3>
+            <p data-i18n="news3Text">Interessierte Teilnehmende und Einrichtungen können Kontakt aufnehmen und sich kostenfrei beraten lassen.</p>
+          </article>
+        </div>
+      </div>
+    </section>
 
-    <p class="label" data-i18n="newsLabel">Aktuelles</p>
-
-    <h2 data-i18n="newsTitle">
-      Aktuelles aus ProBe
-    </h2>
-
-    <div class="news-preview-grid" data-cms-news-list>
-
-      <article class="news-preview-card">
-        <p class="news-date" data-i18n="news1Date">
-          2026
-        </p>
-
-        <h3 data-i18n="news1Title">
-          Projektstart in Sachsen-Anhalt
-        </h3>
-
-        <p data-i18n="news1Text">
-          ProBe begleitet internationale Fachkräfte, Auszubildende und Einrichtungen beim Ankommen im Pflege- und Gesundheitsbereich.
-        </p>
-      </article>
-
-      <article class="news-preview-card">
-        <p class="news-date" data-i18n="news2Date">
-          Information
-        </p>
-
-        <h3 data-i18n="news2Title">
-          Flyer und Materialien verfügbar
-        </h3>
-
-        <p data-i18n="news2Text">
-          Informationen zum Projekt stehen als Download bereit. Weitere Materialien und Sprachversionen können ergänzt werden.
-        </p>
-      </article>
-
-      <article class="news-preview-card">
-        <p class="news-date" data-i18n="news3Date">
-          Begleitung
-        </p>
-
-        <h3 data-i18n="news3Title">
-          Individuelle Unterstützung möglich
-        </h3>
-
-        <p data-i18n="news3Text">
-          Interessierte Teilnehmende und Einrichtungen können Kontakt aufnehmen und sich kostenfrei beraten lassen.
-        </p>
-      </article>
-
-    </div>
-  </div>
-</section>
-
-    <section id="kontakt" class="content">
-      <div class="container contact-box">
-        <div>
-          <p class="label" style="color: var(--teal-light);" data-i18n="contactLabel">Kontakt</p>
-          <h2 data-i18n="contactTitle">Kontakt aufnehmen</h2>
-          <p class="contact-text" data-i18n="contactText">Sie möchten ProBe nutzen, haben Fragen oder möchten als Einrichtung Kontakt aufnehmen? Schreiben Sie uns gern.</p>
-          <div class="contact-data">
-            <p data-cms-contact-email data-cms-prefix="✉ ">✉ probe@sachsen-anhalt.drk.de</p>
-            <p data-cms-contact-phone data-cms-prefix="☎ ">☎ 0391 / 61068972</p>
-            <p data-cms-contact-address data-cms-prefix="📍 ">📍 Altes Fischerufer 49/50 in 39104 Magdeburg</p>
+    <section id="kontakt" class="campaign-section contact-section-v2">
+      <div class="container contact-panel-v2">
+        <div class="contact-copy-v2">
+          <p class="campaign-eyebrow light" data-i18n="contactLabel">Kontakt</p>
+          <h2 data-i18n="homeContactTitle">Gemeinsam gelingt’s.</h2>
+          <p data-i18n="contactText">Sie möchten ProBe nutzen, haben Fragen oder möchten als Einrichtung Kontakt aufnehmen? Schreiben Sie uns gern.</p>
+          <div class="contact-data-v2">
+            <a href="mailto:probe@sachsen-anhalt.drk.de" data-cms-contact-email>probe@sachsen-anhalt.drk.de</a>
+            <a href="tel:+4939161068972" data-cms-contact-phone>0391 / 61068972</a>
+            <span data-cms-contact-address>Altes Fischerufer 49/50 in 39104 Magdeburg</span>
           </div>
         </div>
 
-                <form
-  name="kontakt"
-  method="POST"
-  data-netlify="true"
-  netlify-honeypot="bot-field"
->
-
-  <input type="hidden" name="form-name" value="kontakt">
-
-  <p hidden>
-    <input name="bot-field">
-  </p>
-
-  <input
-    type="text"
-    name="name"
-    placeholder="Name"
-    data-i18n-placeholder="namePlaceholder"
-    required
-  >
-
-  <input
-    type="email"
-    name="email"
-    placeholder="E-Mail"
-    data-i18n-placeholder="emailPlaceholder"
-    required
-  >
-
-  <textarea
-    name="nachricht"
-    placeholder="Nachricht"
-    data-i18n-placeholder="messagePlaceholder"
-    required
-  ></textarea>
-
-  <p class="form-note">
-    Informationen zum Datenschutz lesen Sie bitte <a href="datenschutz.html">hier</a>.
-  </p>
-
-  <button class="submit" type="submit" data-i18n="sendBtn">
-    Anfrage senden
-  </button>
-
-</form>
-
+        <form name="kontakt" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="contact-form-v2">
+          <input type="hidden" name="form-name" value="kontakt">
+          <p hidden><label>Bitte nicht ausfüllen: <input name="bot-field"></label></p>
+          <label class="sr-only" for="home-name">Name</label>
+          <input id="home-name" type="text" name="name" placeholder="Name" data-i18n-placeholder="namePlaceholder" required>
+          <label class="sr-only" for="home-email">E-Mail</label>
+          <input id="home-email" type="email" name="email" placeholder="E-Mail" data-i18n-placeholder="emailPlaceholder" required>
+          <label class="sr-only" for="home-message">Nachricht</label>
+          <textarea id="home-message" name="nachricht" placeholder="Nachricht" data-i18n-placeholder="messagePlaceholder" required></textarea>
+          <p class="form-note">Informationen zum Datenschutz lesen Sie bitte <a href="datenschutz.html">hier</a>.</p>
+          <button class="submit" type="submit" data-i18n="sendBtn">Anfrage senden</button>
+        </form>
       </div>
     </section>
   </main>
