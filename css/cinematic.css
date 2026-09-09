@@ -1125,8 +1125,11 @@ footer > span:first-child,
 .funding-logos img,
 .partner-main img,
 .partner-regions img {
-  padding: 7px 10px;
-  background: rgba(255, 255, 255, 0.96);
+  padding: 0;
+  background: transparent;
+  filter:
+    drop-shadow(0 0 1px rgba(255, 255, 255, 0.72))
+    drop-shadow(0 8px 22px rgba(0, 0, 0, 0.18));
 }
 
 .footer-credit {
@@ -1542,7 +1545,7 @@ html[dir="rtl"] .story-image-tag {
   .funding-logos img,
   .partner-main img,
   .partner-regions img {
-    padding: 6px 8px;
+    padding: 0;
   }
 }
 
