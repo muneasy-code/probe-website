@@ -5,15 +5,21 @@
 ========================================================= */
 
 :root {
-  --cinema-ink: #031722;
-  --cinema-deep: #072436;
+  --cinema-ink: #021722;
+  --cinema-deep: #052b38;
   --cinema-blue: #0b4059;
-  --cinema-cyan: #39b8d4;
-  --cinema-cyan-soft: #9adced;
-  --cinema-paper: #f2f6f8;
-  --cinema-mist: #dce9ee;
-  --cinema-line: rgba(151, 220, 239, 0.28);
-  --cinema-white: #f9fcfd;
+  --cinema-navy-brand: #012a4c;
+  --cinema-teal: #237d76;
+  --cinema-teal-bright: #47968a;
+  --cinema-teal-soft: #8fcfc6;
+  --cinema-tide: #0a3941;
+  --cinema-swell: #0d4b51;
+  --cinema-cyan: #41b7b2;
+  --cinema-cyan-soft: #9adbd3;
+  --cinema-paper: #eef5f6;
+  --cinema-mist: #d7e7e8;
+  --cinema-line: rgba(109, 196, 187, 0.3);
+  --cinema-white: #f7fcfb;
 }
 
 html {
@@ -22,7 +28,7 @@ html {
 
 body {
   overflow-x: clip;
-  background: var(--cinema-paper);
+  background: var(--cinema-ink);
 }
 
 h1,
@@ -50,7 +56,7 @@ h2 {
 
 header {
   border-bottom-color: rgba(3, 23, 34, 0.12);
-  background: rgba(249, 252, 253, 0.92);
+  background: rgba(235, 244, 245, 0.94);
   box-shadow: 0 10px 38px rgba(3, 23, 34, 0.07);
   backdrop-filter: blur(22px) saturate(1.1);
 }
@@ -77,7 +83,7 @@ header {
 
 .language-switcher {
   border-color: rgba(3, 23, 34, 0.14);
-  background: rgba(220, 233, 238, 0.45);
+  background: rgba(199, 223, 223, 0.42);
 }
 
 /* Opening shot */
@@ -142,7 +148,7 @@ header {
 }
 
 .page-home .campaign-hero h1 span {
-  color: #54c5e1;
+  color: #5bc6bf;
 }
 
 .page-home .campaign-lead {
@@ -163,8 +169,8 @@ header {
 }
 
 .page-home .campaign-button-primary:hover {
-  border-color: white;
-  background: white;
+  border-color: var(--cinema-teal-soft);
+  background: var(--cinema-teal-soft);
 }
 
 .page-home .campaign-button-secondary {
@@ -190,7 +196,7 @@ header {
 
 .page-home .campaign-image-wave {
   height: 220px;
-  color: #05283a;
+  color: #073640;
   opacity: 0.93;
 }
 
@@ -199,7 +205,7 @@ header {
 }
 
 .page-home .campaign-section-wave path {
-  fill: var(--cinema-paper);
+  fill: var(--cinema-tide);
 }
 
 .page-home .campaign-hero-copy > * {
@@ -216,23 +222,25 @@ header {
 
 .promise-strip {
   padding: 24px 0 44px;
-  background: var(--cinema-paper);
+  background: linear-gradient(180deg, var(--cinema-tide) 0%, var(--cinema-deep) 100%);
+  color: white;
 }
 
 .promise-grid {
-  border-color: rgba(3, 23, 34, 0.2);
+  border-color: var(--cinema-line);
 }
 
 .promise-grid > div {
   min-height: 98px;
-  border-color: rgba(3, 23, 34, 0.14);
+  border-color: var(--cinema-line);
 }
 
 .promise-grid span {
-  color: #238ca9;
+  color: var(--cinema-teal-soft);
 }
 
 .promise-grid strong {
+  color: rgba(255, 255, 255, 0.9);
   font-family: "Arial Narrow", "Helvetica Neue Condensed", Arial, sans-serif;
   font-size: 1rem;
   letter-spacing: 0.055em;
@@ -243,7 +251,22 @@ header {
 .audience-section {
   padding-top: 118px;
   padding-bottom: 132px;
-  background: var(--cinema-paper);
+  background:
+    radial-gradient(90% 42% at 90% 8%, rgba(71, 150, 138, 0.16), transparent 65%),
+    linear-gradient(180deg, var(--cinema-deep) 0%, var(--cinema-ink) 18%, var(--cinema-ink) 100%);
+  color: white;
+}
+
+.audience-section .campaign-eyebrow {
+  color: var(--cinema-teal-soft);
+}
+
+.audience-section .section-intro h2 {
+  color: white;
+}
+
+.audience-section .section-intro > p:last-child {
+  color: rgba(255, 255, 255, 0.72);
 }
 
 .audience-section .section-intro {
@@ -325,7 +348,7 @@ header {
 
 .audience-card h3 span,
 .audience-card-organisations h3 span {
-  color: #55c5df;
+  color: #5bc6bf;
 }
 
 .audience-card > p:not(.audience-number):not(.audience-label),
@@ -423,29 +446,47 @@ html[dir="rtl"] .audience-card > a {
 }
 
 .story-wave path {
-  fill: var(--cinema-paper);
+  fill: var(--cinema-tide);
 }
 
 /* Editorial interlude */
 
 .process-section-v2 {
+  position: relative;
+  overflow: hidden;
   padding-top: 132px;
   padding-bottom: 132px;
-  background: var(--cinema-paper);
+  background:
+    radial-gradient(75% 70% at 88% 12%, rgba(71, 150, 138, 0.22), transparent 64%),
+    linear-gradient(180deg, var(--cinema-tide) 0%, var(--cinema-swell) 46%, var(--cinema-navy-brand) 100%);
+  color: white;
+}
+
+.process-section-v2 .campaign-eyebrow {
+  color: var(--cinema-teal-soft);
+}
+
+.process-section-v2 .section-intro h2,
+.process-grid-v2 h3 {
+  color: white;
+}
+
+.process-grid-v2 p {
+  color: rgba(255, 255, 255, 0.72);
 }
 
 .process-grid-v2 {
-  border-top: 2px solid rgba(3, 23, 34, 0.26);
+  border-top: 2px solid var(--cinema-line);
 }
 
 .process-grid-v2 article {
   min-height: 350px;
   padding-top: 48px;
-  border-color: rgba(3, 23, 34, 0.16);
+  border-color: var(--cinema-line);
 }
 
 .process-grid-v2 span {
-  color: #238ca9;
+  color: var(--cinema-teal-soft);
   font-size: 2.6rem;
   letter-spacing: -0.04em;
   line-height: 1;
@@ -462,8 +503,8 @@ html[dir="rtl"] .audience-card > a {
   position: relative;
   overflow: hidden;
   background:
-    radial-gradient(circle at 82% 20%, rgba(38, 137, 165, 0.22), transparent 34%),
-    linear-gradient(135deg, var(--cinema-ink), #0a3044);
+    radial-gradient(circle at 82% 20%, rgba(71, 150, 138, 0.25), transparent 36%),
+    linear-gradient(135deg, var(--cinema-navy-brand), #0a3541 58%, var(--cinema-ink));
   color: white;
 }
 
@@ -474,7 +515,7 @@ html[dir="rtl"] .audience-card > a {
   bottom: -120px;
   width: 72%;
   height: 250px;
-  border: 38px solid rgba(69, 188, 217, 0.12);
+  border: 38px solid rgba(71, 150, 138, 0.16);
   border-bottom: 0;
   border-radius: 50% 50% 0 0;
   transform: rotate(-5deg);
@@ -508,22 +549,38 @@ html[dir="rtl"] .audience-card > a {
 /* News read like an editorial index rather than cards */
 
 .news-preview-section-v2 {
-  background: #f8fafb;
+  background:
+    radial-gradient(72% 60% at 8% 18%, rgba(71, 150, 138, 0.15), transparent 68%),
+    linear-gradient(180deg, var(--cinema-ink) 0%, var(--cinema-deep) 100%);
+  color: white;
+}
+
+.news-preview-section-v2 .campaign-eyebrow {
+  color: var(--cinema-teal-soft);
+}
+
+.news-preview-section-v2 .section-intro h2,
+.news-preview-section-v2 .news-preview-card h3 {
+  color: white;
+}
+
+.news-preview-section-v2 .news-preview-card > p:last-child {
+  color: rgba(255, 255, 255, 0.7);
 }
 
 .news-preview-section-v2 .news-preview-grid {
-  border-color: rgba(3, 23, 34, 0.24);
+  border-color: var(--cinema-line);
 }
 
 .news-preview-section-v2 .news-preview-card {
   min-height: 320px;
   padding: 44px 36px;
-  border-color: rgba(3, 23, 34, 0.16);
+  border-color: var(--cinema-line);
   background: transparent;
 }
 
 .news-preview-section-v2 .news-preview-card:hover {
-  background: #e7f1f5;
+  background: rgba(71, 150, 138, 0.13);
 }
 
 .news-preview-section-v2 .news-preview-card h3 {
@@ -535,7 +592,9 @@ html[dir="rtl"] .audience-card > a {
 
 .contact-section-v2 {
   border-top: 1px solid rgba(151, 220, 239, 0.14);
-  background: var(--cinema-ink);
+  background:
+    radial-gradient(70% 55% at 92% 100%, rgba(35, 125, 118, 0.18), transparent 68%),
+    var(--cinema-ink);
 }
 
 .contact-section-v2::before {
@@ -634,7 +693,9 @@ html[dir="rtl"] .audience-card > a {
 /* About: dark first chapter, then clean editorial lists */
 
 .page-about .about-story {
-  background: var(--cinema-ink);
+  background:
+    radial-gradient(76% 70% at 8% 92%, rgba(35, 125, 118, 0.16), transparent 70%),
+    linear-gradient(180deg, var(--cinema-ink) 0%, #052a34 100%);
   color: white;
 }
 
@@ -657,21 +718,40 @@ html[dir="rtl"] .audience-card > a {
 }
 
 .page-about .muted-section {
-  background: var(--cinema-paper);
+  background:
+    radial-gradient(80% 70% at 92% 20%, rgba(71, 150, 138, 0.2), transparent 66%),
+    linear-gradient(180deg, #052a34 0%, var(--cinema-tide) 42%, var(--cinema-swell) 100%);
+  color: white;
+}
+
+.page-about .muted-section .label,
+.page-about #zielgruppen .label {
+  color: var(--cinema-teal-soft);
+}
+
+.page-about .muted-section h2,
+.page-about .muted-section h3,
+.page-about #zielgruppen h2 {
+  color: white;
+}
+
+.page-about .muted-section p,
+.page-about #zielgruppen .target-card {
+  color: rgba(255, 255, 255, 0.78);
 }
 
 .page-about .feature-grid,
 .page-about .target-list {
   gap: 0;
   margin-top: 58px;
-  border-top: 1px solid rgba(3, 23, 34, 0.22);
+  border-top: 1px solid var(--cinema-line);
 }
 
 .page-about .target-card,
 .page-about .feature-card {
   padding: 30px 24px 30px 0;
   border: 0;
-  border-bottom: 1px solid rgba(3, 23, 34, 0.16);
+  border-bottom: 1px solid var(--cinema-line);
   border-radius: 0;
   background: transparent;
   box-shadow: none;
@@ -679,13 +759,16 @@ html[dir="rtl"] .audience-card > a {
 
 .page-about .feature-card .check,
 .page-about .target-list .check {
-  border: 1px solid #238ca9;
+  border: 1px solid var(--cinema-teal-soft);
   background: transparent;
-  color: #238ca9;
+  color: var(--cinema-teal-soft);
 }
 
 .page-about #zielgruppen {
-  background: #e6eff3;
+  background:
+    radial-gradient(75% 75% at 10% 12%, rgba(71, 150, 138, 0.16), transparent 68%),
+    linear-gradient(180deg, var(--cinema-swell) 0%, var(--cinema-navy-brand) 58%, var(--cinema-ink) 100%);
+  color: white;
 }
 
 .page-about .cta-section {
@@ -701,7 +784,9 @@ html[dir="rtl"] .audience-card > a {
 /* Support: a two-part briefing room */
 
 .page-support .support-section-tight {
-  background: var(--cinema-ink);
+  background:
+    radial-gradient(70% 60% at 90% 90%, rgba(35, 125, 118, 0.16), transparent 70%),
+    linear-gradient(180deg, var(--cinema-ink) 0%, #062c35 100%);
 }
 
 .page-support .support-columns {
@@ -735,24 +820,54 @@ html[dir="rtl"] .audience-card > a {
 }
 
 .page-support .process-content {
-  background: var(--cinema-paper);
+  background:
+    radial-gradient(78% 68% at 12% 18%, rgba(71, 150, 138, 0.2), transparent 68%),
+    linear-gradient(180deg, #062c35 0%, var(--cinema-tide) 38%, var(--cinema-navy-brand) 100%);
+  color: white;
+}
+
+.page-support .process-content .label {
+  color: var(--cinema-teal-soft);
+}
+
+.page-support .process-content h2,
+.page-support .process-content h3 {
+  color: white;
+}
+
+.page-support .process-content p {
+  color: rgba(255, 255, 255, 0.74);
 }
 
 .page-support .process-timeline::before {
-  background: rgba(3, 23, 34, 0.22);
+  background: var(--cinema-line);
 }
 
 .page-support .process-step span {
-  border: 1px solid #238ca9;
-  background: var(--cinema-paper);
-  color: #238ca9;
+  border: 1px solid var(--cinema-teal-soft);
+  background: rgba(2, 23, 34, 0.72);
+  color: var(--cinema-teal-soft);
+  box-shadow: 0 0 0 8px rgba(35, 125, 118, 0.09);
 }
 
 .page-support .support-info-box {
   border: 0;
   border-left: 4px solid var(--cinema-cyan);
   border-radius: 0;
-  background: var(--cinema-deep);
+  background: linear-gradient(115deg, rgba(1, 42, 76, 0.92), rgba(35, 125, 118, 0.34));
+}
+
+.page-support main > .content:last-of-type {
+  background: linear-gradient(180deg, var(--cinema-navy-brand) 0%, var(--cinema-ink) 100%);
+  color: white;
+}
+
+.page-support .support-info-box h3 {
+  color: white;
+}
+
+.page-support .support-info-box p {
+  color: rgba(255, 255, 255, 0.76);
 }
 
 /* Team: map as title sequence, people as the cast rather than cards */
@@ -988,7 +1103,9 @@ html[dir="rtl"] .audience-card > a {
 /* End credits */
 
 footer {
-  background: #041a28;
+  background:
+    radial-gradient(72% 45% at 50% 0%, rgba(35, 125, 118, 0.16), transparent 72%),
+    linear-gradient(180deg, var(--cinema-ink) 0%, #041f2b 54%, #052a31 100%);
   color: rgba(255, 255, 255, 0.62);
 }
 
