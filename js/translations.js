@@ -1,13 +1,35 @@
   const translations = {
               de: {
                 navStart: "Start", navAbout: "Über ProBe", navSupport: "Unterstützung", navTeam: "Team", navContact: "Kontakt",
-                heroKicker: "✦ Kostenfreies Angebot in Sachsen-Anhalt",
-                heroTitle: "Brücken bauen. Potenziale stärken. Zukunft sichern.",
-                heroTitle2: "Brücken bauen. Potenziale stärken. Zukunft sichern.",
-                heroText: "ProBe unterstützt internationale Fach- und Hilfskräfte beim Ankommen und Einleben in Sachsen-Anhalt und trägt damit zur Fachkräftesicherung im Pflege- und Gesundheitsbereich bei.",
-                primaryBtn: "Beratung anfragen →", secondaryBtn: "⬇ Flyer herunterladen",
-                visualTitle: "Starke Begleitung für starke Pflege", visualText: "Persönlich. Verständlich. Für Menschen mit Migrationsgeschichte.",
-                quick1: "Persönliche Begleitung", quick2: "Chancen erkennen", quick3: "Service Point für Pflegeeinrichtungen", quick4: "Zukunft gestalten",
+                heroKicker: "Kostenfreie Berufsbegleitung in Sachsen-Anhalt",
+                heroTitle: "Gemeinsam ankommen.<br><span>Gemeinsam weiterkommen.</span>",
+                heroTitle2: "Gemeinsam gelingt’s.",
+                heroText: "ProBe begleitet internationale Auszubildende und Fachkräfte auf ihrem Weg in Arbeit und Alltag – und unterstützt Einrichtungen dabei, gutes Ankommen möglich zu machen.",
+                primaryBtn: "Ich suche Unterstützung", secondaryBtn: "Wir sind eine Einrichtung",
+                visualTitle: "Gemeinsam gelingt’s.", visualText: "Menschen begleiten. Zukunft gestalten.",
+                quick1: "Persönlich", quick2: "Individuell", quick3: "Auf Augenhöhe", quick4: "Kostenfrei",
+                homeAudienceLabel: "Für wen ist ProBe da?",
+                homeAudienceTitle: "Zwei Perspektiven. Ein gemeinsamer Weg.",
+                homeAudienceText: "Gute Integration gelingt, wenn Menschen Orientierung finden und Einrichtungen verlässlich entlastet werden.",
+                homePeopleLabel: "Für internationale Auszubildende & Fachkräfte",
+                homePeopleTitle: "Neue Sprache.<br>Neue Stadt.<br>Neue Arbeit.<br><span>Neues Leben.</span>",
+                homePeopleText: "ProBe hilft beim Orientieren, Verstehen und Ankommen – bei beruflichen Fragen genauso wie bei Herausforderungen im Alltag.",
+                homePeopleCta: "Unterstützung für mich",
+                homeOrgLabel: "Für Pflege- und Gesundheitseinrichtungen",
+                homeOrgTitle: "Sie kümmern sich<br>um die Pflege.<br><span>Beim Rest hilft ProBe.</span>",
+                homeOrgText: "Wir sehen, was zusätzlich an Ihrer Einrichtung hängenbleibt – und begleiten dort, wo der fachliche Auftrag eigentlich aufhört.",
+                homeOrgCta: "Unterstützung für unsere Einrichtung",
+                homeStoryTag: "Begleitung, die im Alltag ankommt.",
+                homePrincipleLabel: "Was ProBe besonders macht",
+                homePrincipleTitle: "Keine Standardlösung. Sondern Begleitung, die passt.",
+                homePrincipleText: "ProBe hört zu, ordnet gemeinsam die Situation und begleitet die nächsten sinnvollen Schritte – persönlich, lösungsorientiert und auf Augenhöhe.",
+                homeQuote: "„Integration braucht Zeit. Im Pflegealltag ist sie oft knapp.“",
+                homeProcessLabel: "So funktioniert die Begleitung",
+                homeProcessTitle: "Unkompliziert. Persönlich. Passend.",
+                homeStep1Title: "Sie melden sich.", homeStep1Text: "Ein kurzer Kontakt reicht für den Einstieg.",
+                homeStep2Title: "Wir schauen gemeinsam.", homeStep2Text: "Was wird gebraucht, wer ist beteiligt und welcher nächste Schritt hilft?",
+                homeStep3Title: "ProBe begleitet.", homeStep3Text: "Individuell und genau dort, wo Unterstützung sinnvoll ist.",
+                homeContactTitle: "Gemeinsam gelingt’s.",
                 offerLabel: "Angebot", supportTitle: "Wir unterstützen Sie", freeTitle: "Kostenfrei & vertraulich",
                 freeText: "Der Förderzeitraum des Modellprojekts läuft von 01/2026 bis 12/2028. Das Angebot ist kostenfrei und steht Einrichtungen jeder Trägerschaft offen.",
                 support1: "Orientierung im beruflichen Integrationsprozess",
@@ -18,7 +40,7 @@
                 support6: "Hilfe bei behördlichen Angelegenheiten",
                 downloadLabel: "Download", downloadTitle: "Flyer & Informationen",
                 downloadText: "Hier kann der aktuelle ProBe-Flyer heruntergeladen werden. Weitere Sprachversionen folgen bald.",
-                downloadBtn: "Flyer ansehen & herunterladen",
+                downloadBtn: "Flyer herunterladen",
                 newsLabel: "Aktuelles", newsTitle: "Aktuelles aus ProBe",
                 news1Date: "2026", news1Title: "Projektstart in Sachsen-Anhalt",
                 news1Text: "ProBe begleitet internationale Fachkräfte, Auszubildende und Einrichtungen beim Ankommen im Pflege- und Gesundheitsbereich.",
@@ -44,8 +66,8 @@
                 
                 supportPageLabel: "Unterstützung",
                 supportHeroTitle: "Ankommen.<br>Einleben.<br>Beruflich<br>Fuß fassen.",
-                supportHeroText: "ProBe unterstützt internationale Fach- und Hilfskräfte nicht nur bei beruflichen Fragen, sondern auch beim Ankommen und Einleben in Sachsen-Anhalt. Ziel ist eine erfolgreiche berufliche und soziale Integration sowie eine langfristige Perspektive im Pflege- und Gesundheitsbereich.",
-                supportHeroFact: "Das Angebot steht Einrichtungen aller Trägerschaften offen.",
+                supportHeroText: "ProBe unterstützt internationale Auszubildende und Fachkräfte beim Ankommen in Beruf und Alltag und begleitet Einrichtungen bei der Integration. Ziel ist eine langfristige Perspektive im Pflege- und Gesundheitsbereich.",
+                supportHeroFact: "ProBe steht Einrichtungen jeder Trägerschaft zur Verfügung.",
                 supportParticipantsLabel: "Für Teilnehmende",
                 supportParticipant1: "Unterstützung bei Anerkennungsverfahren",
                 supportParticipant2: "Vermittlung zu Sprachkursen und Qualifizierungsangeboten",
@@ -66,7 +88,7 @@
                 supportFreeTitle: "Kostenfrei & vertraulich",
                 supportFreeText: "Der Förderzeitraum des Modellprojekts läuft von Januar 2026 bis Dezember 2028. Die Unterstützung durch die Berufs-Begleitung ist kostenfrei und vertraulich.",
                 
-                teamPageLabel: "Team", teamHeroTitle: "Ihre regionalen Ansprechpersonen", teamHeroText: "Persönliche Unterstützung für Auszubildende, Schulen und Einrichtungen in den Projektregionen Sachsen-Anhalts.",
+                teamPageLabel: "Team", teamHeroTitle: "Ihre regionalen Ansprechpersonen", teamHeroText: "Persönliche Unterstützung für internationale Auszubildende, Fachkräfte und Einrichtungen in den nördlichen Projektregionen Sachsen-Anhalts.",
                 teamNataliaRegion: "ALTMARKKREIS SALZWEDEL", teamAnnelieRegion: "BÖRDE & MAGDEBURG", teamMathiasRegion: "JERICHOWER LAND & MAGDEBURG", teamSaschaRegion: "BÖRDE",
                 teamNataliaRole: "Berufsbegleiterin, Standort Stendal", teamAnnelieRole: "Berufsbegleiterin, Standort Wanzleben", teamMathiasRole: "Berufsbegleiter, Standort Burg", teamSaschaRole: "Berufsbegleiter, Standort Haldensleben",
                 teamNataliaAbout: "„Vor 29 Jahren bin ich selbst nach Deutschland gekommen. Daher weiß ich aus eigener Erfahrung, wie viel Mut, Ausdauer und Unterstützung ein erfolgreicher Neuanfang braucht. Heute begleite ich Menschen mit Migrationsgeschichte auf ihrem Weg in Arbeit und Ausbildung im Pflege- und Gesundheitsbereich. Es erfüllt mich, individuelle Potenziale zu entdecken, Perspektiven aufzuzeigen und Menschen dabei zu unterstützen, ihren eigenen Weg in Deutschland erfolgreich zu gestalten.“", teamAnnelieAbout: "„Jeder Mensch bringt seine eigene Geschichte, Erfahrungen und Stärken mit. Mir ist es wichtig, diese Potenziale sichtbar zu machen und Menschen auf ihrem Weg in Deutschland zu begleiten. Als Berufsbegleiterin unterstütze ich internationale Fachkräfte und Auszubildende dabei, sich im Pflege- und Gesundheitsbereich zurechtzufinden, Herausforderungen zu meistern und neue Perspektiven zu entwickeln. Dabei geht es nicht nur um Formulare, Sprache oder berufliche Fragen – sondern vor allem darum, Sicherheit, Orientierung und Vertrauen zu schaffen. Zu erleben, wie aus ersten Schritten neue Chancen entstehen, ist für mich das Schönste an meiner Arbeit.“", teamMathiasAbout: "Ich bin 41 Jahre alt, Familienvater und lebe in Magdeburg. Nach meinem Studium der Sportwissenschaften mit Schwerpunkt Gesundheitssport war ich nahezu zehn Jahre in den Bereichen Gesundheitsförderung, Prävention, Sporttherapie und Pflege tätig. Berufsbegleitend absolvierte ich ein Masterstudium im Gesundheitsmanagement und war anschließend als Projektleiter im Bereich präventiver Gesunderhaltung tätig. Heute arbeite ich als Referent Berufsbegleitung beim DRK Landesverband Sachsen-Anhalt e.V. und unterstütze sowohl Menschen mit beruflichen Integrations- und Qualifizierungsbedarfen als auch Unternehmen und Einrichtungen bei der Gewinnung, Entwicklung und nachhaltigen Bindung von Fachkräften.", teamSaschaAbout: "Als staatlich anerkannter Sozialarbeiter M.A. gilt mein fachliches Interesse unter anderem gesellschaftlichen Veränderungen und wie wir damit umgehen. Durch den demografischen, sozialen und wirtschaftlichen Wandel gewinnen besonders Berufe im Pflege- und Gesundheitswesen zunehmend an Bedeutung. Bereits heute zeigt sich, dass qualifizierte Fachkräfte aus dem Ausland unverzichtbar sind, um den wachsenden Anforderungen einer sich verändernden Gesellschaft gerecht zu werden. Die bedarfsgerechte Unterstützung von Menschen mit Migrationsgeschichte auf ihrem Weg in diese Berufsfelder eröffnet die Möglichkeit, Fachkräftesicherung und gelingende Integration sinnvoll miteinander zu verbinden. Als Berufsbegleiter im Landkreis Börde unterstütze ich bereits ausländische Auszubildende des DRK-Kreisverbandes auf ihrem Weg und verstehe diese anspruchsvolle Aufgabe als zukunftsorientiert und zugleich als große Chance, Integration im Alltag und im Beruf erlebbar zu machen.",
@@ -88,13 +110,35 @@
 
               en: {
                 navStart: "Home", navAbout: "About ProBe", navSupport: "Support", navTeam: "Team", navContact: "Contact",
-                heroKicker: "✦ Free support in Saxony-Anhalt",
-                heroTitle: "Building bridges. Strengthening potential. Securing the future.",
-                heroTitle2: "Building bridges. Strengthening potential. Securing the future.",
-                heroText: "ProBe supports international skilled workers and support staff as they arrive and settle in Saxony-Anhalt, helping to secure skilled professionals in the nursing and healthcare sector.",
-                primaryBtn: "Request advice →", secondaryBtn: "⬇ Download flyer",
-                visualTitle: "Strong support for strong care", visualText: "Personal. Clear. For people with a migration background.",
-                quick1: "Personal support", quick2: "Recognise opportunities", quick3: "Service point for care facilities", quick4: "Shape the future",
+                heroKicker: "Free career support in Saxony-Anhalt",
+                heroTitle: "Arrive together.<br><span>Move forward together.</span>",
+                heroTitle2: "Together, it works.",
+                heroText: "ProBe supports international trainees and professionals on their way into work and everyday life – and helps institutions create the conditions for a good arrival.",
+                primaryBtn: "I am looking for support", secondaryBtn: "We are an institution",
+                visualTitle: "Together, it works.", visualText: "Supporting people. Shaping the future.",
+                quick1: "Personal", quick2: "Individual", quick3: "As equals", quick4: "Free of charge",
+                homeAudienceLabel: "Who is ProBe for?",
+                homeAudienceTitle: "Two perspectives. One shared path.",
+                homeAudienceText: "Integration works when people find guidance and institutions receive reliable support.",
+                homePeopleLabel: "For international trainees & professionals",
+                homePeopleTitle: "New language.<br>New city.<br>New job.<br><span>New life.</span>",
+                homePeopleText: "ProBe helps people find their bearings, understand what comes next and settle in – with professional questions as well as challenges in everyday life.",
+                homePeopleCta: "Support for me",
+                homeOrgLabel: "For nursing and healthcare institutions",
+                homeOrgTitle: "You focus<br>on care.<br><span>ProBe helps with the rest.</span>",
+                homeOrgText: "We recognise the additional work that falls to your institution and provide support where the professional role normally ends.",
+                homeOrgCta: "Support for our institution",
+                homeStoryTag: "Support that works in everyday life.",
+                homePrincipleLabel: "What makes ProBe different",
+                homePrincipleTitle: "No standard solution. Support that fits.",
+                homePrincipleText: "ProBe listens, makes sense of the situation together with you and supports the next practical steps – personally, solution-focused and as equals.",
+                homeQuote: "“Integration takes time. In everyday care work, time is often scarce.”",
+                homeProcessLabel: "How the support works",
+                homeProcessTitle: "Simple. Personal. Tailored.",
+                homeStep1Title: "Get in touch.", homeStep1Text: "A short message is enough to get started.",
+                homeStep2Title: "We look at it together.", homeStep2Text: "What is needed, who is involved and which next step will help?",
+                homeStep3Title: "ProBe supports you.", homeStep3Text: "Individually and exactly where support makes sense.",
+                homeContactTitle: "Together, it works.",
                 offerLabel: "Our offer", supportTitle: "How we support you", freeTitle: "Free & confidential",
                 freeText: "The model project runs from 01/2026 to 12/2028. The service is free of charge and open to institutions of all types of provider.",
                 support1: "Guidance through the professional integration process",
@@ -105,7 +149,7 @@
                 support6: "Help with administrative matters",
                 downloadLabel: "Download", downloadTitle: "Flyer & information",
                 downloadText: "The current ProBe flyer can be downloaded here. Additional language versions will follow soon.",
-                downloadBtn: "View & download flyer",
+                downloadBtn: "Download flyer",
                 newsLabel: "News", newsTitle: "Latest news from ProBe",
                 news1Date: "2026", news1Title: "Project launch in Saxony-Anhalt",
                 news1Text: "ProBe supports international professionals, trainees and institutions as they enter and settle into the nursing and healthcare sector.",
@@ -131,7 +175,7 @@
                 
                 supportPageLabel: "Support",
                 supportHeroTitle: "Arrive.<br>Settle in.<br>Build your<br>professional future.",
-                supportHeroText: "ProBe supports international skilled workers and support staff not only with professional questions, but also as they arrive and settle in Saxony-Anhalt. The aim is successful professional and social integration and a long-term perspective in nursing and healthcare.",
+                supportHeroText: "ProBe supports international trainees and professionals as they settle into work and everyday life, and assists institutions with integration. The aim is a long-term perspective in nursing and healthcare.",
                 supportHeroFact: "The service is open to institutions of all types of provider.",
                 supportParticipantsLabel: "For participants",
                 supportParticipant1: "Support with professional recognition procedures",
@@ -153,7 +197,7 @@
                 supportFreeTitle: "Free & confidential",
                 supportFreeText: "The model project runs from January 2026 to December 2028. Support from the career support professionals is free of charge and confidential.",
                 
-                teamPageLabel: "Team", teamHeroTitle: "Your regional contacts", teamHeroText: "Personal support for trainees, schools and institutions in the project regions of Saxony-Anhalt.",
+                teamPageLabel: "Team", teamHeroTitle: "Your regional contacts", teamHeroText: "Personal support for international trainees, professionals and institutions in the northern project regions of Saxony-Anhalt.",
                 teamNataliaRegion: "ALTMARK DISTRICT OF SALZWEDEL", teamAnnelieRegion: "BÖRDE & MAGDEBURG", teamMathiasRegion: "JERICHOWER LAND & MAGDEBURG", teamSaschaRegion: "BÖRDE",
                 teamNataliaRole: "Career support professional, Stendal", teamAnnelieRole: "Career support professional, Wanzleben", teamMathiasRole: "Career support professional, Burg", teamSaschaRole: "Career support professional, Haldensleben",
                 teamNataliaAbout: "I came to Germany myself 29 years ago. From my own experience, I know how much courage, perseverance and support a successful new beginning requires. Today I support people with a migration background on their path into work and training in nursing and healthcare. I find it fulfilling to discover individual potential, highlight opportunities and help people successfully shape their own path in Germany.",
@@ -178,13 +222,35 @@
 
               ar: {
                 navStart: "الرئيسية", navAbout: "عن ProBe", navSupport: "الدعم", navTeam: "الفريق", navContact: "اتصال",
-                heroKicker: "✦ عرض مجاني في ساكسونيا أنهالت",
-                heroTitle: "نبني الجسور. نعزز الإمكانات. نؤمّن المستقبل.",
-                heroTitle2: "نبني الجسور. نعزز الإمكانات. نؤمّن المستقبل.",
-                heroText: "يدعم ProBe الكوادر الدولية والعاملين المساعدين عند الوصول والاستقرار في ساكسونيا أنهالت، ويسهم بذلك في تأمين الكفاءات في قطاعي الرعاية والصحة.",
-                primaryBtn: "طلب استشارة →", secondaryBtn: "⬇ تحميل المنشور",
-                visualTitle: "دعم قوي لرعاية قوية", visualText: "شخصي. واضح. للأشخاص ذوي تاريخ الهجرة.",
-                quick1: "مرافقة شخصية", quick2: "اكتشاف الفرص", quick3: "نقطة خدمة لمؤسسات الرعاية", quick4: "صناعة المستقبل",
+                heroKicker: "مرافقة مهنية مجانية في ساكسونيا-أنهالت",
+                heroTitle: "نصل معًا.<br><span>ونتقدم معًا.</span>",
+                heroTitle2: "معًا ننجح.",
+                heroText: "يرافق ProBe المتدربين والمتخصصين الدوليين في طريقهم إلى العمل والحياة اليومية، ويدعم المؤسسات في تهيئة ظروف جيدة للوصول والاندماج.",
+                primaryBtn: "أبحث عن الدعم", secondaryBtn: "نحن مؤسسة",
+                visualTitle: "معًا ننجح.", visualText: "نرافق الناس. ونصنع المستقبل.",
+                quick1: "شخصي", quick2: "فردي", quick3: "على قدم المساواة", quick4: "مجاني",
+                homeAudienceLabel: "لمن يقدم ProBe خدماته؟",
+                homeAudienceTitle: "منظوران. وطريق واحد مشترك.",
+                homeAudienceText: "ينجح الاندماج عندما يجد الناس التوجيه وتحصل المؤسسات على دعم موثوق.",
+                homePeopleLabel: "للمتدربين والمتخصصين الدوليين",
+                homePeopleTitle: "لغة جديدة.<br>مدينة جديدة.<br>عمل جديد.<br><span>حياة جديدة.</span>",
+                homePeopleText: "يساعد ProBe في التوجيه والفهم والاستقرار، سواء في الأسئلة المهنية أو تحديات الحياة اليومية.",
+                homePeopleCta: "الدعم المناسب لي",
+                homeOrgLabel: "لمؤسسات الرعاية والصحة",
+                homeOrgTitle: "أنتم تهتمون<br>بالرعاية.<br><span>وProBe يساعد في الباقي.</span>",
+                homeOrgText: "نحن ندرك الأعباء الإضافية التي تتحملها مؤسستكم ونرافقكم في الجوانب التي تنتهي عندها المهمة المهنية عادةً.",
+                homeOrgCta: "الدعم لمؤسستنا",
+                homeStoryTag: "مرافقة تصل إلى الحياة اليومية.",
+                homePrincipleLabel: "ما الذي يميز ProBe؟",
+                homePrincipleTitle: "لا حل موحدًا. بل مرافقة تناسب الحاجة.",
+                homePrincipleText: "يستمع ProBe، ويفهم الوضع معكم، ويرافق الخطوات العملية التالية بصورة شخصية وموجهة نحو الحل وعلى قدم المساواة.",
+                homeQuote: "«الاندماج يحتاج إلى وقت. وفي العمل اليومي في مجال الرعاية، غالبًا ما يكون الوقت محدودًا.»",
+                homeProcessLabel: "كيف تعمل المرافقة؟",
+                homeProcessTitle: "بسهولة. وبشكل شخصي. وبما يناسبكم.",
+                homeStep1Title: "تتواصلون معنا.", homeStep1Text: "يكفي تواصل قصير للبدء.",
+                homeStep2Title: "ننظر إلى الوضع معًا.", homeStep2Text: "ما المطلوب، ومن يشارك، وما الخطوة التالية المفيدة؟",
+                homeStep3Title: "يرافقكم ProBe.", homeStep3Text: "بشكل فردي وفي المكان الذي يكون فيه الدعم مفيدًا.",
+                homeContactTitle: "معًا ننجح.",
                 offerLabel: "العرض", supportTitle: "نحن ندعمكم", freeTitle: "مجاني وسري",
                 freeText: "تمتد فترة المشروع النموذجي من 01/2026 إلى 12/2028. العرض مجاني ومتاح للمؤسسات بجميع أنواع الجهات المشغلة.",
                 support1: "التوجيه في مسار الاندماج المهني",
@@ -195,7 +261,7 @@
                 support6: "المساعدة في الشؤون الإدارية والرسمية",
                 downloadLabel: "تحميل", downloadTitle: "المنشور والمعلومات",
                 downloadText: "يمكن تحميل منشور ProBe الحالي هنا. وستتبع نسخ بلغات إضافية قريبًا.",
-                downloadBtn: "عرض المنشور وتحميله",
+                downloadBtn: "تحميل المنشور",
                 newsLabel: "آخر الأخبار", newsTitle: "أخبار ProBe",
                 news1Date: "2026", news1Title: "انطلاق المشروع في ساكسونيا أنهالت",
                 news1Text: "يرافق ProBe الكوادر الدولية والمتدربين والمؤسسات عند الوصول والاندماج في قطاعي الرعاية والصحة.",
@@ -221,7 +287,7 @@
                 
                 supportPageLabel: "الدعم",
                 supportHeroTitle: "الوصول.<br>الاستقرار.<br>بناء مستقبل<br>مهني.",
-                supportHeroText: "يدعم ProBe الكوادر الدولية والعاملين المساعدين ليس فقط في الأسئلة المهنية، بل أيضًا عند الوصول والاستقرار في ساكسونيا أنهالت. والهدف هو اندماج مهني واجتماعي ناجح وبناء مستقبل طويل الأمد في قطاعي الرعاية والصحة.",
+                supportHeroText: "يدعم ProBe المتدربين الدوليين والكوادر عند بدء العمل والحياة اليومية، ويرافق المؤسسات في عملية الاندماج. والهدف هو بناء مستقبل طويل الأمد في قطاعي الرعاية والصحة.",
                 supportHeroFact: "الخدمة متاحة للمؤسسات بجميع أنواع الجهات المشغلة.",
                 supportParticipantsLabel: "للمشاركين",
                 supportParticipant1: "الدعم في إجراءات الاعتراف المهني",
@@ -243,7 +309,7 @@
                 supportFreeTitle: "مجاني وسري",
                 supportFreeText: "تمتد فترة المشروع النموذجي من يناير 2026 إلى ديسمبر 2028. دعم مرافقِي المسار المهني مجاني وسري.",
                 
-                teamPageLabel: "الفريق", teamHeroTitle: "جهات الاتصال الإقليمية", teamHeroText: "دعم شخصي للمتدربين والمدارس والمؤسسات في مناطق المشروع في ساكسونيا أنهالت.",
+                teamPageLabel: "الفريق", teamHeroTitle: "جهات الاتصال الإقليمية", teamHeroText: "دعم شخصي للمتدربين الدوليين والكوادر والمؤسسات في مناطق المشروع الواقعة شمال ساكسونيا أنهالت.",
                 teamNataliaRegion: "منطقة ألتمارك سالتسفيدل", teamAnnelieRegion: "بورده وماغديبورغ", teamMathiasRegion: "يريخوفر لاند وماغديبورغ", teamSaschaRegion: "بورده",
                 teamNataliaRole: "مرافقة مهنية، موقع شتندال", teamAnnelieRole: "مرافقة مهنية، موقع فانتسليبن", teamMathiasRole: "مرافق مهني، موقع بورغ", teamSaschaRole: "مرافق مهني، موقع هالدنسليبن",
                 teamNataliaAbout: "أتيت بنفسي إلى ألمانيا قبل 29 عامًا، ولذلك أعرف من تجربتي مقدار الشجاعة والمثابرة والدعم الذي تتطلبه بداية جديدة ناجحة. واليوم أرافق الأشخاص ذوي تاريخ الهجرة في طريقهم إلى العمل والتدريب في قطاعي الرعاية والصحة، ويسعدني اكتشاف الإمكانات الفردية وإظهار الفرص ودعم الناس في بناء طريقهم الخاص بنجاح في ألمانيا.",
@@ -268,13 +334,35 @@
 
               ru: {
                 navStart: "Главная", navAbout: "О ProBe", navSupport: "Поддержка", navTeam: "Команда", navContact: "Контакты",
-                heroKicker: "✦ Бесплатная поддержка в Саксонии-Анхальт",
-                heroTitle: "Строим мосты. Раскрываем потенциал. Обеспечиваем будущее.",
-                heroTitle2: "Строим мосты. Раскрываем потенциал. Обеспечиваем будущее.",
-                heroText: "ProBe помогает международным специалистам и вспомогательному персоналу освоиться в Саксонии-Анхальт и тем самым содействует обеспечению кадрами сферы ухода и здравоохранения.",
-                primaryBtn: "Запросить консультацию →", secondaryBtn: "⬇ Скачать флаер",
-                visualTitle: "Сильная поддержка для сильного ухода", visualText: "Лично. Понятно. Для людей с миграционной историей.",
-                quick1: "Личная поддержка", quick2: "Находить возможности", quick3: "Сервисный центр для учреждений ухода", quick4: "Формировать будущее",
+                heroKicker: "Бесплатное профессиональное сопровождение в Саксонии-Анхальт",
+                heroTitle: "Вместе освоиться.<br><span>Вместе двигаться дальше.</span>",
+                heroTitle2: "Вместе всё получится.",
+                heroText: "ProBe сопровождает иностранных учащихся и специалистов на пути к работе и повседневной жизни и помогает учреждениям создать условия для успешной адаптации.",
+                primaryBtn: "Мне нужна поддержка", secondaryBtn: "Мы представляем учреждение",
+                visualTitle: "Вместе всё получится.", visualText: "Поддерживаем людей. Формируем будущее.",
+                quick1: "Лично", quick2: "Индивидуально", quick3: "На равных", quick4: "Бесплатно",
+                homeAudienceLabel: "Для кого предназначен ProBe?",
+                homeAudienceTitle: "Два взгляда. Один общий путь.",
+                homeAudienceText: "Интеграция успешна, когда люди получают ориентиры, а учреждения — надёжную поддержку.",
+                homePeopleLabel: "Для иностранных учащихся и специалистов",
+                homePeopleTitle: "Новый язык.<br>Новый город.<br>Новая работа.<br><span>Новая жизнь.</span>",
+                homePeopleText: "ProBe помогает сориентироваться, понять следующие шаги и освоиться — как в профессиональных вопросах, так и в повседневной жизни.",
+                homePeopleCta: "Поддержка для меня",
+                homeOrgLabel: "Для учреждений ухода и здравоохранения",
+                homeOrgTitle: "Вы занимаетесь<br>уходом.<br><span>В остальном помогает ProBe.</span>",
+                homeOrgText: "Мы понимаем, какая дополнительная нагрузка ложится на учреждение, и помогаем там, где обычно заканчиваются его профессиональные задачи.",
+                homeOrgCta: "Поддержка для нашего учреждения",
+                homeStoryTag: "Сопровождение, которое помогает в повседневной жизни.",
+                homePrincipleLabel: "Что отличает ProBe",
+                homePrincipleTitle: "Не стандартное решение. А сопровождение по потребностям.",
+                homePrincipleText: "ProBe выслушивает, вместе с вами разбирается в ситуации и сопровождает следующие практические шаги — лично, на равных и с ориентацией на решение.",
+                homeQuote: "«Интеграция требует времени. В повседневной работе в сфере ухода его часто не хватает.»",
+                homeProcessLabel: "Как проходит сопровождение",
+                homeProcessTitle: "Просто. Лично. По потребностям.",
+                homeStep1Title: "Вы обращаетесь к нам.", homeStep1Text: "Для начала достаточно короткого сообщения.",
+                homeStep2Title: "Мы разбираемся вместе.", homeStep2Text: "Что требуется, кто участвует и какой следующий шаг поможет?",
+                homeStep3Title: "ProBe сопровождает.", homeStep3Text: "Индивидуально и именно там, где поддержка имеет смысл.",
+                homeContactTitle: "Вместе всё получится.",
                 offerLabel: "Предложение", supportTitle: "Мы поддерживаем вас", freeTitle: "Бесплатно и конфиденциально",
                 freeText: "Модельный проект действует с 01/2026 по 12/2028. Участие бесплатное и доступно учреждениям любой формы собственности.",
                 support1: "Ориентация в процессе профессиональной интеграции",
@@ -285,7 +373,7 @@
                 support6: "Помощь по административным вопросам",
                 downloadLabel: "Скачать", downloadTitle: "Флаер и информация",
                 downloadText: "Здесь можно скачать актуальный флаер ProBe. Другие языковые версии появятся позже.",
-                downloadBtn: "Открыть и скачать флаер",
+                downloadBtn: "Скачать флаер",
                 newsLabel: "Новости", newsTitle: "Новости ProBe",
                 news1Date: "2026", news1Title: "Старт проекта в Саксонии-Анхальт",
                 news1Text: "ProBe помогает международным специалистам, стажёрам и учреждениям адаптироваться в сфере ухода и здравоохранения.",
@@ -311,7 +399,7 @@
                 
                 supportPageLabel: "Поддержка",
                 supportHeroTitle: "Приехать.<br>Освоиться.<br>Уверенно начать<br>профессиональный путь.",
-                supportHeroText: "ProBe помогает международным специалистам и вспомогательному персоналу не только в профессиональных вопросах, но и при переезде и адаптации в Саксонии-Анхальт. Цель — успешная профессиональная и социальная интеграция и долгосрочная перспектива в сфере ухода и здравоохранения.",
+                supportHeroText: "ProBe помогает иностранным учащимся и специалистам освоиться в работе и повседневной жизни и сопровождает учреждения в процессе интеграции. Цель — долгосрочная перспектива в сфере ухода и здравоохранения.",
                 supportHeroFact: "Предложение открыто для учреждений любой формы собственности.",
                 supportParticipantsLabel: "Для участников",
                 supportParticipant1: "Поддержка в процедурах признания квалификации",
@@ -333,7 +421,7 @@
                 supportFreeTitle: "Бесплатно и конфиденциально",
                 supportFreeText: "Модельный проект действует с января 2026 по декабрь 2028 года. Поддержка специалистов по профессиональному сопровождению бесплатна и конфиденциальна.",
                 
-                teamPageLabel: "Команда", teamHeroTitle: "Ваши региональные контактные лица", teamHeroText: "Персональная поддержка для учащихся, школ и учреждений в проектных регионах Саксонии-Анхальт.",
+                teamPageLabel: "Команда", teamHeroTitle: "Ваши региональные контактные лица", teamHeroText: "Персональная поддержка иностранных учащихся, специалистов и учреждений в северных проектных регионах Саксонии-Анхальт.",
                 teamNataliaRegion: "АЛЬТМАРККРАЙС ЗАЛЬЦВЕДЕЛЬ", teamAnnelieRegion: "БЁРДЕ И МАГДЕБУРГ", teamMathiasRegion: "ЙЕРИХОВЕР-ЛАНД И МАГДЕБУРГ", teamSaschaRegion: "БЁРДЕ",
                 teamNataliaRole: "Специалист по профессиональному сопровождению, Штендаль", teamAnnelieRole: "Специалист по профессиональному сопровождению, Ванцлебен", teamMathiasRole: "Специалист по профессиональному сопровождению, Бург", teamSaschaRole: "Специалист по профессиональному сопровождению, Хальденслебен",
                 teamNataliaAbout: "Я сама приехала в Германию 29 лет назад и по собственному опыту знаю, сколько мужества, настойчивости и поддержки требует успешное новое начало. Сегодня я сопровождаю людей с миграционной историей на пути к работе и обучению в сфере ухода и здравоохранения. Мне особенно важно раскрывать индивидуальный потенциал, показывать перспективы и помогать людям успешно строить собственный путь в Германии.",
@@ -358,13 +446,35 @@
 
               tr: {
                 navStart: "Ana sayfa", navAbout: "ProBe hakkında", navSupport: "Destek", navTeam: "Ekip", navContact: "İletişim",
-                heroKicker: "✦ Saksonya-Anhalt'ta ücretsiz destek",
-                heroTitle: "Köprüler kuruyoruz. Potansiyeli güçlendiriyoruz. Geleceği güvenceye alıyoruz.",
-                heroTitle2: "Köprüler kuruyoruz. Potansiyeli güçlendiriyoruz. Geleceği güvenceye alıyoruz.",
-                heroText: "ProBe, uluslararası uzman ve yardımcı çalışanların Saksonya-Anhalt'a gelerek yerleşmelerini destekler ve bakım ile sağlık sektöründe nitelikli personelin güvence altına alınmasına katkıda bulunur.",
-                primaryBtn: "Danışmanlık iste →", secondaryBtn: "⬇ Broşürü indir",
-                visualTitle: "Güçlü bakım için güçlü destek", visualText: "Kişisel. Anlaşılır. Göç geçmişi olan insanlar için.",
-                quick1: "Kişisel destek", quick2: "Fırsatları görmek", quick3: "Bakım kuruluşları için hizmet noktası", quick4: "Geleceği şekillendirmek",
+                heroKicker: "Saksonya-Anhalt'ta ücretsiz mesleki destek",
+                heroTitle: "Birlikte varalım.<br><span>Birlikte ilerleyelim.</span>",
+                heroTitle2: "Birlikte başarırız.",
+                heroText: "ProBe, uluslararası kursiyer ve uzmanlara iş ve günlük yaşam yolunda eşlik eder; kurumların iyi bir başlangıç için uygun koşullar oluşturmasına destek olur.",
+                primaryBtn: "Destek arıyorum", secondaryBtn: "Biz bir kurumuz",
+                visualTitle: "Birlikte başarırız.", visualText: "İnsanlara eşlik etmek. Geleceği şekillendirmek.",
+                quick1: "Kişisel", quick2: "Bireysel", quick3: "Eşit düzeyde", quick4: "Ücretsiz",
+                homeAudienceLabel: "ProBe kimler için?",
+                homeAudienceTitle: "İki bakış açısı. Ortak bir yol.",
+                homeAudienceText: "İnsanlar yön bulduğunda ve kurumlar güvenilir biçimde desteklendiğinde entegrasyon başarılı olur.",
+                homePeopleLabel: "Uluslararası kursiyerler ve uzmanlar için",
+                homePeopleTitle: "Yeni dil.<br>Yeni şehir.<br>Yeni iş.<br><span>Yeni hayat.</span>",
+                homePeopleText: "ProBe; mesleki sorularda ve günlük yaşamın zorluklarında yön bulmaya, anlamaya ve yerleşmeye yardımcı olur.",
+                homePeopleCta: "Benim için destek",
+                homeOrgLabel: "Bakım ve sağlık kurumları için",
+                homeOrgTitle: "Siz bakımla<br>ilgilenin.<br><span>Gerisinde ProBe yardımcı olur.</span>",
+                homeOrgText: "Kurumunuzun üstlendiği ek yükleri görüyor ve mesleki görevin normalde sona erdiği noktada destek sağlıyoruz.",
+                homeOrgCta: "Kurumumuz için destek",
+                homeStoryTag: "Günlük hayatta karşılık bulan destek.",
+                homePrincipleLabel: "ProBe'yi farklı kılan nedir?",
+                homePrincipleTitle: "Standart çözüm değil. İhtiyaca uyan destek.",
+                homePrincipleText: "ProBe dinler, durumu sizinle birlikte değerlendirir ve sonraki anlamlı adımlara kişisel, çözüm odaklı ve eşit düzeyde eşlik eder.",
+                homeQuote: "“Entegrasyon zaman ister. Günlük bakım işlerinde bu zaman çoğu kez kısıtlıdır.”",
+                homeProcessLabel: "Destek nasıl işler?",
+                homeProcessTitle: "Kolay. Kişisel. İhtiyaca uygun.",
+                homeStep1Title: "Bizimle iletişime geçersiniz.", homeStep1Text: "Başlamak için kısa bir iletişim yeterlidir.",
+                homeStep2Title: "Birlikte değerlendiririz.", homeStep2Text: "Neye ihtiyaç var, kimler sürece dahil ve hangi sonraki adım yardımcı olur?",
+                homeStep3Title: "ProBe eşlik eder.", homeStep3Text: "Bireysel olarak ve desteğin anlamlı olduğu yerde.",
+                homeContactTitle: "Birlikte başarırız.",
                 offerLabel: "Hizmetler", supportTitle: "Size destek oluyoruz", freeTitle: "Ücretsiz ve gizli",
                 freeText: "Model projenin destek dönemi 01/2026 ile 12/2028 arasındadır. Hizmet ücretsizdir ve tüm kurum türlerine açıktır.",
                 support1: "Mesleki entegrasyon sürecinde yönlendirme",
@@ -375,7 +485,7 @@
                 support6: "Resmî ve idari işlemlerde yardım",
                 downloadLabel: "İndir", downloadTitle: "Broşür ve bilgiler",
                 downloadText: "Güncel ProBe broşürü buradan indirilebilir. Diğer dil sürümleri yakında eklenecektir.",
-                downloadBtn: "Broşürü görüntüle ve indir",
+                downloadBtn: "Broşürü indir",
                 newsLabel: "Güncel", newsTitle: "ProBe'den güncel haberler",
                 news1Date: "2026", news1Title: "Saksonya-Anhalt'ta proje başlangıcı",
                 news1Text: "ProBe, uluslararası uzmanları, stajyerleri ve kurumları bakım ve sağlık alanına uyum süreçlerinde destekler.",
@@ -401,7 +511,7 @@
                 
                 supportPageLabel: "Destek",
                 supportHeroTitle: "Gelmek.<br>Yerleşmek.<br>Mesleki olarak<br>sağlam adımlar atmak.",
-                supportHeroText: "ProBe, uluslararası uzman ve yardımcı çalışanları yalnızca mesleki konularda değil, Saksonya-Anhalt'a gelme ve yerleşme süreçlerinde de destekler. Amaç, başarılı bir mesleki ve sosyal entegrasyon ile bakım ve sağlık alanında uzun vadeli bir gelecek oluşturmaktır.",
+                supportHeroText: "ProBe, uluslararası kursiyerlerin ve uzmanların iş ve günlük yaşama uyumunu destekler; entegrasyon sürecinde kurumlara eşlik eder. Amaç, bakım ve sağlık alanında uzun vadeli bir gelecek oluşturmaktır.",
                 supportHeroFact: "Hizmet, tüm kurum ve kuruluş türlerine açıktır.",
                 supportParticipantsLabel: "Katılımcılar için",
                 supportParticipant1: "Denklik süreçlerinde destek",
@@ -423,7 +533,7 @@
                 supportFreeTitle: "Ücretsiz ve gizli",
                 supportFreeText: "Model proje Ocak 2026'dan Aralık 2028'e kadar devam eder. Mesleki rehberlik desteği ücretsiz ve gizlidir.",
                 
-                teamPageLabel: "Ekip", teamHeroTitle: "Bölgesel irtibat kişileriniz", teamHeroText: "Saksonya-Anhalt’taki proje bölgelerinde kursiyerler, okullar ve kurumlar için kişisel destek.",
+                teamPageLabel: "Ekip", teamHeroTitle: "Bölgesel irtibat kişileriniz", teamHeroText: "Saksonya-Anhalt’ın kuzeyindeki proje bölgelerinde uluslararası kursiyerler, uzmanlar ve kurumlar için kişisel destek.",
                 teamNataliaRegion: "ALTMARKKREIS SALZWEDEL", teamAnnelieRegion: "BÖRDE VE MAGDEBURG", teamMathiasRegion: "JERICHOWER LAND VE MAGDEBURG", teamSaschaRegion: "BÖRDE",
                 teamNataliaRole: "Mesleki rehber, Stendal", teamAnnelieRole: "Mesleki rehber, Wanzleben", teamMathiasRole: "Mesleki rehber, Burg", teamSaschaRole: "Mesleki rehber, Haldensleben",
                 teamNataliaAbout: "29 yıl önce ben de Almanya’ya geldim. Bu nedenle başarılı bir yeni başlangıcın ne kadar cesaret, sabır ve destek gerektirdiğini kendi deneyimimden biliyorum. Bugün göç geçmişi olan insanlara bakım ve sağlık alanında iş ve eğitim yolunda eşlik ediyorum. Bireysel potansiyelleri keşfetmek, yeni perspektifler göstermek ve insanların Almanya’daki kendi yollarını başarıyla şekillendirmelerine destek olmak bana büyük mutluluk veriyor.",
@@ -444,10 +554,271 @@
                         footerProject: "ProBe · Mesleki destek projesi", fundedBy: "Destekleyen",
                 inCooperationWith: "İş birliğiyle", footerCredit: "Dijital uygulama:",
                 imprint: "Yasal bilgiler", privacy: "Gizlilik"
+              },
+
+              uk: {
+                navStart: "Головна", navAbout: "Про ProBe", navSupport: "Підтримка", navTeam: "Команда", navContact: "Контакти",
+                heroKicker: "Безкоштовний професійний супровід у Саксонії-Ангальт",
+                heroTitle: "Разом адаптуватися.<br><span>Разом рухатися вперед.</span>",
+                heroTitle2: "Разом усе вдається.",
+                heroText: "ProBe супроводжує іноземних учнів професійної освіти та фахівців на шляху до роботи й повсякденного життя, а також допомагає закладам створювати умови для успішної адаптації.",
+                primaryBtn: "Я шукаю підтримку", secondaryBtn: "Ми представляємо заклад",
+                visualTitle: "Разом усе вдається.", visualText: "Супроводжувати людей. Формувати майбутнє.",
+                quick1: "Особисто", quick2: "Індивідуально", quick3: "На рівних", quick4: "Безкоштовно",
+                homeAudienceLabel: "Для кого працює ProBe?",
+                homeAudienceTitle: "Дві перспективи. Один спільний шлях.",
+                homeAudienceText: "Інтеграція вдається, коли люди отримують орієнтири, а заклади — надійну підтримку.",
+                homePeopleLabel: "Для іноземних учнів професійної освіти та фахівців",
+                homePeopleTitle: "Нова мова.<br>Нове місто.<br>Нова робота.<br><span>Нове життя.</span>",
+                homePeopleText: "ProBe допомагає зорієнтуватися, зрозуміти нове середовище й адаптуватися — як у професійних питаннях, так і в повсякденних труднощах.",
+                homePeopleCta: "Підтримка для мене",
+                homeOrgLabel: "Для закладів догляду та охорони здоров’я",
+                homeOrgTitle: "Ви дбаєте<br>про догляд.<br><span>З рештою допомагає ProBe.</span>",
+                homeOrgText: "Ми бачимо додаткові завдання, що виникають у вашому закладі, і допомагаємо там, де зазвичай закінчується професійна відповідальність.",
+                homeOrgCta: "Підтримка для нашого закладу",
+                homeStoryTag: "Супровід, що допомагає в повсякденному житті.",
+                homePrincipleLabel: "Що вирізняє ProBe",
+                homePrincipleTitle: "Не стандартне рішення. А супровід, який підходить саме вам.",
+                homePrincipleText: "ProBe слухає, разом із вами оцінює ситуацію та супроводжує наступні доцільні кроки — особисто, орієнтовано на рішення й на рівних.",
+                homeQuote: "«Інтеграція потребує часу. У щоденній роботі з догляду його часто бракує.»",
+                homeProcessLabel: "Як відбувається супровід",
+                homeProcessTitle: "Просто. Особисто. Відповідно до потреб.",
+                homeStep1Title: "Ви звертаєтеся до нас.", homeStep1Text: "Для початку достатньо короткого повідомлення.",
+                homeStep2Title: "Ми разом розглядаємо ситуацію.", homeStep2Text: "Що потрібно, хто залучений і який наступний крок допоможе?",
+                homeStep3Title: "ProBe супроводжує.", homeStep3Text: "Індивідуально й саме там, де підтримка має сенс.",
+                homeContactTitle: "Разом усе вдається.",
+                offerLabel: "Пропозиція", supportTitle: "Ми підтримуємо вас", freeTitle: "Безкоштовно та конфіденційно",
+                freeText: "Період фінансування модельного проєкту триває з 01/2026 до 12/2028. Послуги безкоштовні й доступні закладам будь-якої форми власності та підпорядкування.",
+                support1: "Орієнтація у процесі професійної інтеграції",
+                support2: "Направлення на мовні курси та програми підвищення кваліфікації",
+                support3: "Допомога з питаннями соціальної та громадської участі",
+                support4: "Допомога у підготовці документів для процедури визнання кваліфікації",
+                support5: "Супровід закладів під час інтеграції іноземних працівників",
+                support6: "Допомога у взаємодії з державними установами",
+                downloadLabel: "Завантаження", downloadTitle: "Флаєр та інформація",
+                downloadText: "Актуальний флаєр ProBe можна завантажити тут. Інші мовні версії з’являться незабаром.",
+                downloadBtn: "Завантажити флаєр",
+                newsLabel: "Новини", newsTitle: "Актуальне від ProBe",
+                news1Date: "2026", news1Title: "Початок проєкту в Саксонії-Ангальт",
+                news1Text: "ProBe допомагає іноземним фахівцям, учням професійної освіти та закладам адаптуватися у сфері догляду й охорони здоров’я.",
+                news2Date: "Інформація", news2Title: "Флаєр та матеріали доступні",
+                news2Text: "Інформацію про проєкт можна завантажити. Надалі можуть бути додані інші матеріали та мовні версії.",
+                news3Date: "Супровід", news3Title: "Доступна індивідуальна підтримка",
+                news3Text: "Зацікавлені учасники та заклади можуть звернутися до нас і безкоштовно отримати консультацію.",
+                contactLabel: "Контакти", contactTitle: "Зв’язатися",
+                contactText: "Ви хочете скористатися послугами ProBe, маєте запитання або бажаєте звернутися від імені закладу? Напишіть нам.",
+                namePlaceholder: "Ім’я", emailPlaceholder: "Електронна пошта", messagePlaceholder: "Повідомлення", sendBtn: "Надіслати запит",
+
+                aboutPageLabel: "Про ProBe", aboutHeroTitle: "Початок<br>професійного шляху —<br>це більше,<br>ніж трудовий договір.", aboutHeroText: "ProBe супроводжує людей з міграційним досвідом на шляху до професійного навчання, роботи та визнання кваліфікації у сфері догляду й охорони здоров’я — особисто, зрозуміло та близько до практики.",
+                aboutFact1: "Індивідуальний супровід", aboutFact2: "Визнання та кваліфікація", aboutFact3: "Навчання та робота", aboutFact4: "Безкоштовно",
+                aboutWhyLabel: "Чому ProBe?", aboutWhyTitle: "Тому що професійна інтеграція потребує орієнтирів.", aboutWhyText1: "Починаючи професійний шлях у Німеччині, люди часто мають багато запитань: які документи потрібні? Як відбувається визнання кваліфікації? Яке навчання підходить? І хто допоможе, якщо мова, державні установи чи місцеві структури ще незнайомі?", aboutWhyText2: "Саме тут допомагає ProBe. Фахівці з професійного супроводу надають індивідуальну підтримку — від першої орієнтації до конкретних кроків у навчанні, роботі чи підвищенні кваліфікації.",
+                aboutGoalsLabel: "Чого прагне ProBe", aboutGoalsTitle: "Наша мета — впевнений старт у сфері догляду та охорони здоров’я.",
+                aboutGoal1Title: "Зміцнювати людей", aboutGoal1Text: "Допомагати побачити особисті сильні сторони та розвивати реалістичні професійні перспективи.",
+                aboutGoal2Title: "Пояснювати шлях зрозуміло", aboutGoal2Text: "Зрозуміло пояснювати визнання, кваліфікацію, навчання та початок роботи.",
+                aboutGoal3Title: "Супроводжувати інтеграцію", aboutGoal3Text: "Допомагати адаптуватися у професійному повсякденні та зменшувати невпевненість.",
+                aboutGoal4Title: "Розвантажувати заклади", aboutGoal4Text: "Підтримувати заклади догляду та охорони здоров’я в інтеграції й залученні фахівців.",
+                aboutTargetLabel: "Для кого працює ProBe?", aboutTargetTitle: "Ми супроводжуємо людей і заклади.",
+                aboutTarget1: "Іноземні фахівці та учні професійної освіти у сфері догляду й охорони здоров’я", aboutTarget2: "Люди з міграційним досвідом, які шукають професійну перспективу у сфері догляду", aboutTarget3: "Учасники Федеральної добровільної служби, пов’язаної з доглядом", aboutTarget4: "Заклади догляду та охорони здоров’я під час інтеграції й залучення фахівців",
+                aboutCtaLabel: "Підтримка", aboutCtaTitle: "Хочете дізнатися, чи підходить ProBe до вашої ситуації?", aboutCtaBtn: "Зв’язатися",
+
+                supportPageLabel: "Підтримка",
+                supportHeroTitle: "Приїхати.<br>Облаштуватися.<br>Закріпитися<br>у професії.",
+                supportHeroText: "ProBe допомагає іноземним учням професійної освіти та фахівцям адаптуватися у роботі й повсякденному житті та супроводжує заклади у процесі інтеграції. Мета — довгострокова перспектива у сфері догляду та охорони здоров’я.",
+                supportHeroFact: "ProBe доступний закладам будь-якої форми власності та підпорядкування.",
+                supportParticipantsLabel: "Для учасників",
+                supportParticipant1: "Підтримка під час визнання кваліфікації",
+                supportParticipant2: "Направлення на мовні курси та програми підвищення кваліфікації",
+                supportParticipant3: "Супровід у взаємодії з державними установами",
+                supportParticipant4: "Професійна орієнтація та інтеграція",
+                supportParticipant5: "Консультації із соціальних питань",
+                supportInstitutionsLabel: "Для закладів",
+                supportInstitution1: "Підтримка інтеграційних процесів",
+                supportInstitution2: "Супровід у питаннях працевлаштування іноземних фахівців",
+                supportInstitution3: "Направлення до інших служб підтримки",
+                supportInstitution4: "Налагодження контактів із відповідними фахівцями та організаціями",
+                supportInstitution5: "Індивідуальні консультації з інтеграції та залучення фахівців",
+                supportProcessLabel: "Процес", supportProcessTitle: "Як відбувається підтримка",
+                supportStep1Title: "Звернутися", supportStep1Text: "Зацікавлені люди або заклади звертаються безпосередньо до ProBe.",
+                supportStep2Title: "З’ясувати ситуацію", supportStep2Text: "Разом ми розглядаємо запитання, цілі та конкретні потреби у підтримці.",
+                supportStep3Title: "Отримати індивідуальний супровід", supportStep3Text: "Фахівці з професійного супроводу допомагають із наступними кроками, процедурами та контактами.",
+                supportStep4Title: "Розвивати перспективи", supportStep4Text: "Разом ми супроводжуємо шлях до навчання, працевлаштування або визнання кваліфікації.",
+                supportFreeTitle: "Безкоштовно та конфіденційно",
+                supportFreeText: "Модельний проєкт триває із січня 2026 року до грудня 2028 року. Професійний супровід є безкоштовним і конфіденційним.",
+
+                teamPageLabel: "Команда", teamHeroTitle: "Ваші регіональні контактні особи", teamHeroText: "Особиста підтримка для іноземних учнів професійної освіти, фахівців і закладів у північних проєктних регіонах Саксонії-Ангальт.",
+                teamNataliaRegion: "АЛЬТМАРККРАЙС ЗАЛЬЦВЕДЕЛЬ", teamAnnelieRegion: "БЕРДЕ ТА МАГДЕБУРГ", teamMathiasRegion: "ЄРИХОВЕР-ЛАНД ТА МАГДЕБУРГ", teamSaschaRegion: "БЕРДЕ",
+                teamNataliaRole: "Фахівчиня з професійного супроводу, Штендаль", teamAnnelieRole: "Фахівчиня з професійного супроводу, Ванцлебен", teamMathiasRole: "Фахівець із професійного супроводу, Бург", teamSaschaRole: "Фахівець із професійного супроводу, Гальденслебен",
+                teamNataliaAbout: "«Я сама приїхала до Німеччини 29 років тому. Тому з власного досвіду знаю, скільки мужності, витримки й підтримки потребує успішний новий початок. Сьогодні я супроводжую людей з міграційним досвідом на шляху до роботи й професійного навчання у сфері догляду та охорони здоров’я. Мені приносить радість відкривати індивідуальний потенціал, показувати перспективи й допомагати людям успішно будувати власний шлях у Німеччині.»", teamAnnelieAbout: "«Кожна людина має власну історію, досвід і сильні сторони. Для мене важливо зробити цей потенціал видимим і супроводжувати людей на їхньому шляху в Німеччині. Як фахівчиня з професійного супроводу я допомагаю іноземним фахівцям та учням професійної освіти орієнтуватися у сфері догляду й охорони здоров’я, долати труднощі та відкривати нові перспективи. Йдеться не лише про формуляри, мову чи професійні питання, а насамперед про безпеку, орієнтацію та довіру. Бачити, як перші кроки перетворюються на нові можливості, — найкраща частина моєї роботи.»", teamMathiasAbout: "Мені 41 рік, я батько сім’ї та живу в Магдебурзі. Після вивчення спортивних наук зі спеціалізацією на оздоровчому спорті я майже десять років працював у сфері зміцнення здоров’я, профілактики, спортивної терапії та догляду. Паралельно з роботою я здобув ступінь магістра з управління охороною здоров’я, а потім працював керівником проєкту у сфері профілактики. Сьогодні я працюю референтом із професійного супроводу в Земельному об’єднанні Німецького Червоного Хреста Саксонії-Ангальт і підтримую як людей, яким потрібні професійна інтеграція та кваліфікація, так і підприємства й заклади у залученні, розвитку та довгостроковому утриманні фахівців.", teamSaschaAbout: "Як дипломований і офіційно визнаний соціальний працівник, я професійно цікавлюся суспільними змінами та тим, як ми на них реагуємо. Через демографічні, соціальні й економічні зміни професії у сфері догляду та охорони здоров’я набувають дедалі більшого значення. Уже сьогодні кваліфіковані фахівці з-за кордону є незамінними для задоволення потреб суспільства, що змінюється. Підтримка людей з міграційним досвідом відповідно до їхніх потреб на шляху до цих професій дає змогу поєднати забезпечення кадрами з успішною інтеграцією. Як фахівець із професійного супроводу в районі Берде я вже підтримую іноземних учнів місцевого об’єднання Німецького Червоного Хреста й бачу в цьому відповідальному завданні велику перспективну можливість зробити інтеграцію відчутною у повсякденному житті та професії.",
+                teamPhone: "Телефон:", teamEmail: "Ел. пошта:",
+
+                contactPageLabel: "Контакти",
+                contactBadge: "✦ Особисто • Конфіденційно • Безкоштовно",
+                contactHeroTitle: "Зв’язатися",
+                contactHeroText: "Ви хочете скористатися послугами ProBe, маєте запитання або бажаєте звернутися від імені закладу? Напишіть нам.",
+                contactBoxLabel: "ProBe",
+                contactBoxTitle: "Ми поруч із вами.",
+                contactBoxText: "Команда ProBe підтримує учасників і заклади особисто, конфіденційно та безкоштовно.",
+                contactOrg1: "Професійний супровід ProBe",
+                contactOrg2: "Земельне об’єднання Німецького Червоного Хреста Саксонії-Ангальт",
+                footerProject: "ProBe · Проєкт професійного супроводу", fundedBy: "За підтримки",
+                inCooperationWith: "У співпраці з", footerCredit: "Цифрова реалізація:",
+                imprint: "Вихідні дані", privacy: "Захист даних"
+              },
+
+              vi: {
+                navStart: "Trang chủ", navAbout: "Về ProBe", navSupport: "Hỗ trợ", navTeam: "Đội ngũ", navContact: "Liên hệ",
+                heroKicker: "Đồng hành nghề nghiệp miễn phí tại Sachsen-Anhalt",
+                heroTitle: "Cùng hòa nhập.<br><span>Cùng tiến xa hơn.</span>",
+                heroTitle2: "Đồng hành để thành công.",
+                heroText: "ProBe đồng hành cùng học viên nghề và nhân lực chuyên môn quốc tế trên con đường hòa nhập vào công việc và cuộc sống hằng ngày, đồng thời hỗ trợ các cơ sở tạo điều kiện thuận lợi cho một khởi đầu tốt đẹp.",
+                primaryBtn: "Tôi cần hỗ trợ", secondaryBtn: "Chúng tôi là một cơ sở",
+                visualTitle: "Đồng hành để thành công.", visualText: "Đồng hành cùng con người. Kiến tạo tương lai.",
+                quick1: "Tận tình", quick2: "Cá nhân hóa", quick3: "Bình đẳng", quick4: "Miễn phí",
+                homeAudienceLabel: "ProBe dành cho ai?",
+                homeAudienceTitle: "Hai góc nhìn. Một hành trình chung.",
+                homeAudienceText: "Hòa nhập thành công khi mỗi người tìm được định hướng và các cơ sở nhận được sự hỗ trợ đáng tin cậy.",
+                homePeopleLabel: "Dành cho học viên nghề và nhân lực chuyên môn quốc tế",
+                homePeopleTitle: "Ngôn ngữ mới.<br>Thành phố mới.<br>Công việc mới.<br><span>Cuộc sống mới.</span>",
+                homePeopleText: "ProBe giúp bạn định hướng, thấu hiểu và ổn định cuộc sống — trong cả những vấn đề nghề nghiệp lẫn những khó khăn thường ngày.",
+                homePeopleCta: "Hỗ trợ dành cho tôi",
+                homeOrgLabel: "Dành cho các cơ sở điều dưỡng và y tế",
+                homeOrgTitle: "Quý vị tập trung<br>chăm sóc.<br><span>Phần còn lại có ProBe hỗ trợ.</span>",
+                homeOrgText: "Chúng tôi nhận ra những công việc phát sinh tại cơ sở của quý vị và đồng hành ở những nơi trách nhiệm chuyên môn thông thường kết thúc.",
+                homeOrgCta: "Hỗ trợ cho cơ sở của chúng tôi",
+                homeStoryTag: "Sự đồng hành thiết thực trong cuộc sống hằng ngày.",
+                homePrincipleLabel: "Điều làm nên sự khác biệt của ProBe",
+                homePrincipleTitle: "Không phải giải pháp rập khuôn. Mà là sự đồng hành phù hợp.",
+                homePrincipleText: "ProBe lắng nghe, cùng bạn nhìn nhận tình huống và đồng hành trong các bước tiếp theo phù hợp — tận tình, hướng đến giải pháp và trên tinh thần bình đẳng.",
+                homeQuote: "“Hòa nhập cần thời gian. Trong công việc chăm sóc hằng ngày, thời gian ấy thường rất hạn hẹp.”",
+                homeProcessLabel: "Quy trình đồng hành",
+                homeProcessTitle: "Đơn giản. Tận tình. Phù hợp.",
+                homeStep1Title: "Bạn liên hệ với chúng tôi.", homeStep1Text: "Chỉ cần một tin nhắn ngắn để bắt đầu.",
+                homeStep2Title: "Chúng ta cùng xem xét.", homeStep2Text: "Cần điều gì, ai tham gia và bước tiếp theo nào sẽ hữu ích?",
+                homeStep3Title: "ProBe đồng hành.", homeStep3Text: "Theo nhu cầu cá nhân và đúng nơi sự hỗ trợ có ý nghĩa.",
+                homeContactTitle: "Đồng hành để thành công.",
+                offerLabel: "Dịch vụ", supportTitle: "Chúng tôi hỗ trợ quý vị", freeTitle: "Miễn phí và bảo mật",
+                freeText: "Thời gian tài trợ của dự án thí điểm kéo dài từ 01/2026 đến 12/2028. Dịch vụ hoàn toàn miễn phí và dành cho các cơ sở thuộc mọi loại hình chủ quản.",
+                support1: "Định hướng trong quá trình hòa nhập nghề nghiệp",
+                support2: "Kết nối với các khóa học tiếng và chương trình nâng cao trình độ",
+                support3: "Hỗ trợ các vấn đề về tham gia xã hội và cộng đồng",
+                support4: "Hỗ trợ chuẩn bị giấy tờ cho thủ tục công nhận văn bằng",
+                support5: "Đồng hành cùng các cơ sở trong quá trình hòa nhập nhân viên quốc tế",
+                support6: "Hỗ trợ các thủ tục hành chính",
+                downloadLabel: "Tải xuống", downloadTitle: "Tờ giới thiệu và thông tin",
+                downloadText: "Có thể tải tờ giới thiệu ProBe hiện tại tại đây. Các phiên bản ngôn ngữ khác sẽ sớm được bổ sung.",
+                downloadBtn: "Tải tờ giới thiệu",
+                newsLabel: "Tin mới", newsTitle: "Tin tức mới nhất từ ProBe",
+                news1Date: "2026", news1Title: "Khởi động dự án tại Sachsen-Anhalt",
+                news1Text: "ProBe hỗ trợ nhân lực chuyên môn quốc tế, học viên nghề và các cơ sở trong quá trình hòa nhập vào lĩnh vực điều dưỡng và y tế.",
+                news2Date: "Thông tin", news2Title: "Đã có tờ giới thiệu và tài liệu",
+                news2Text: "Thông tin về dự án đã sẵn sàng để tải xuống. Có thể bổ sung thêm tài liệu và các phiên bản ngôn ngữ khác.",
+                news3Date: "Đồng hành", news3Title: "Có hỗ trợ theo nhu cầu cá nhân",
+                news3Text: "Người tham gia và các cơ sở quan tâm có thể liên hệ với chúng tôi để được tư vấn miễn phí.",
+                contactLabel: "Liên hệ", contactTitle: "Liên hệ với chúng tôi",
+                contactText: "Bạn muốn sử dụng dịch vụ của ProBe, có câu hỏi hoặc muốn liên hệ với tư cách cơ sở? Hãy viết cho chúng tôi.",
+                namePlaceholder: "Họ và tên", emailPlaceholder: "Email", messagePlaceholder: "Nội dung", sendBtn: "Gửi yêu cầu",
+
+                aboutPageLabel: "Về ProBe", aboutHeroTitle: "Bắt đầu<br>một nghề nghiệp<br>không chỉ là<br>ký hợp đồng lao động.", aboutHeroText: "ProBe đồng hành cùng những người có trải nghiệm di cư trên con đường học nghề, làm việc và công nhận văn bằng trong lĩnh vực điều dưỡng và y tế — tận tình, dễ hiểu và sát với thực tế.",
+                aboutFact1: "Đồng hành cá nhân", aboutFact2: "Công nhận và nâng cao trình độ", aboutFact3: "Học nghề và việc làm", aboutFact4: "Miễn phí",
+                aboutWhyLabel: "Tại sao chọn ProBe?", aboutWhyTitle: "Bởi vì hòa nhập nghề nghiệp cần có định hướng.", aboutWhyText1: "Khi bắt đầu sự nghiệp tại Đức, nhiều người thường có rất nhiều câu hỏi: Cần những giấy tờ nào? Thủ tục công nhận văn bằng diễn ra như thế nào? Chương trình đào tạo nào phù hợp? Và ai có thể giúp khi ngôn ngữ, cơ quan hành chính hoặc các cơ cấu tại đây vẫn còn xa lạ?", aboutWhyText2: "ProBe hỗ trợ chính ở những điểm này. Các chuyên viên đồng hành nghề nghiệp hỗ trợ theo nhu cầu cá nhân — từ định hướng ban đầu đến những bước cụ thể trong học nghề, việc làm hoặc nâng cao trình độ.",
+                aboutGoalsLabel: "Mục tiêu của ProBe", aboutGoalsTitle: "Mục tiêu của chúng tôi là một khởi đầu vững chắc trong lĩnh vực điều dưỡng và y tế.",
+                aboutGoal1Title: "Trao thêm sức mạnh", aboutGoal1Text: "Giúp nhận ra thế mạnh cá nhân và xây dựng triển vọng nghề nghiệp thực tế.",
+                aboutGoal2Title: "Giải thích con đường rõ ràng", aboutGoal2Text: "Giải thích dễ hiểu về công nhận văn bằng, nâng cao trình độ, học nghề và bắt đầu công việc.",
+                aboutGoal3Title: "Đồng hành hòa nhập", aboutGoal3Text: "Hỗ trợ thích nghi với công việc hằng ngày và giảm bớt những điều chưa chắc chắn.",
+                aboutGoal4Title: "Giảm tải cho các cơ sở", aboutGoal4Text: "Hỗ trợ các cơ sở điều dưỡng và y tế trong quá trình hòa nhập và thu hút nhân lực chuyên môn.",
+                aboutTargetLabel: "ProBe dành cho ai?", aboutTargetTitle: "Chúng tôi đồng hành cùng con người và các cơ sở.",
+                aboutTarget1: "Nhân lực chuyên môn quốc tế và học viên nghề trong lĩnh vực điều dưỡng và y tế", aboutTarget2: "Người có trải nghiệm di cư đang tìm kiếm triển vọng nghề nghiệp trong lĩnh vực điều dưỡng", aboutTarget3: "Người tham gia chương trình Tình nguyện Liên bang có liên quan đến lĩnh vực chăm sóc", aboutTarget4: "Các cơ sở điều dưỡng và y tế trong quá trình hòa nhập và thu hút nhân lực chuyên môn",
+                aboutCtaLabel: "Hỗ trợ", aboutCtaTitle: "Bạn muốn biết ProBe có phù hợp với hoàn cảnh của mình không?", aboutCtaBtn: "Liên hệ",
+
+                supportPageLabel: "Hỗ trợ",
+                supportHeroTitle: "Đến nơi.<br>Ổn định cuộc sống.<br>Vững bước<br>trong nghề nghiệp.",
+                supportHeroText: "ProBe hỗ trợ học viên nghề và nhân lực chuyên môn quốc tế hòa nhập vào công việc và cuộc sống hằng ngày, đồng thời đồng hành cùng các cơ sở trong quá trình hội nhập. Mục tiêu là tạo ra triển vọng lâu dài trong lĩnh vực điều dưỡng và y tế.",
+                supportHeroFact: "ProBe dành cho các cơ sở thuộc mọi loại hình chủ quản.",
+                supportParticipantsLabel: "Dành cho người tham gia",
+                supportParticipant1: "Hỗ trợ trong thủ tục công nhận văn bằng",
+                supportParticipant2: "Kết nối với các khóa học tiếng và chương trình nâng cao trình độ",
+                supportParticipant3: "Đồng hành trong các thủ tục hành chính",
+                supportParticipant4: "Định hướng và hòa nhập nghề nghiệp",
+                supportParticipant5: "Tư vấn về các vấn đề xã hội",
+                supportInstitutionsLabel: "Dành cho các cơ sở",
+                supportInstitution1: "Hỗ trợ các quá trình hòa nhập",
+                supportInstitution2: "Đồng hành trong các vấn đề về tuyển dụng nhân lực chuyên môn quốc tế",
+                supportInstitution3: "Kết nối với các dịch vụ hỗ trợ",
+                supportInstitution4: "Kết nối với những đầu mối và tổ chức liên quan",
+                supportInstitution5: "Tư vấn cá nhân về hòa nhập và thu hút nhân lực chuyên môn",
+                supportProcessLabel: "Quy trình", supportProcessTitle: "Quá trình hỗ trợ diễn ra như thế nào",
+                supportStep1Title: "Liên hệ", supportStep1Text: "Cá nhân hoặc cơ sở quan tâm liên hệ trực tiếp với ProBe.",
+                supportStep2Title: "Làm rõ tình huống", supportStep2Text: "Chúng ta cùng xem xét các câu hỏi, mục tiêu và nhu cầu hỗ trợ cụ thể.",
+                supportStep3Title: "Đồng hành theo nhu cầu cá nhân", supportStep3Text: "Các chuyên viên đồng hành nghề nghiệp hỗ trợ những bước tiếp theo, thủ tục và các đầu mối liên hệ.",
+                supportStep4Title: "Xây dựng triển vọng", supportStep4Text: "Chúng ta cùng đồng hành trên con đường học nghề, việc làm hoặc công nhận văn bằng.",
+                supportFreeTitle: "Miễn phí và bảo mật",
+                supportFreeText: "Dự án thí điểm kéo dài từ tháng 1 năm 2026 đến tháng 12 năm 2028. Dịch vụ đồng hành nghề nghiệp hoàn toàn miễn phí và bảo mật.",
+
+                teamPageLabel: "Đội ngũ", teamHeroTitle: "Người phụ trách tại khu vực của bạn", teamHeroText: "Hỗ trợ tận tình cho học viên nghề, nhân lực chuyên môn quốc tế và các cơ sở tại những vùng dự án phía bắc Sachsen-Anhalt.",
+                teamNataliaRegion: "HUYỆN ALTMARK SALZWEDEL", teamAnnelieRegion: "BÖRDE VÀ MAGDEBURG", teamMathiasRegion: "JERICHOWER LAND VÀ MAGDEBURG", teamSaschaRegion: "BÖRDE",
+                teamNataliaRole: "Chuyên viên đồng hành nghề nghiệp, Stendal", teamAnnelieRole: "Chuyên viên đồng hành nghề nghiệp, Wanzleben", teamMathiasRole: "Chuyên viên đồng hành nghề nghiệp, Burg", teamSaschaRole: "Chuyên viên đồng hành nghề nghiệp, Haldensleben",
+                teamNataliaAbout: "“Tôi cũng đã đến Đức cách đây 29 năm. Vì vậy, từ chính trải nghiệm của mình, tôi hiểu một khởi đầu mới thành công cần bao nhiêu dũng khí, sự kiên trì và hỗ trợ. Hiện nay, tôi đồng hành cùng những người có trải nghiệm di cư trên con đường làm việc và học nghề trong lĩnh vực điều dưỡng và y tế. Tôi cảm thấy ý nghĩa khi được khám phá tiềm năng của từng người, mở ra những triển vọng và hỗ trợ họ tự xây dựng con đường thành công tại Đức.”", teamAnnelieAbout: "“Mỗi người đều mang theo câu chuyện, kinh nghiệm và thế mạnh riêng. Với tôi, điều quan trọng là làm cho những tiềm năng ấy được nhìn thấy và đồng hành cùng mọi người trên con đường của họ tại Đức. Là chuyên viên đồng hành nghề nghiệp, tôi hỗ trợ nhân lực chuyên môn và học viên nghề quốc tế định hướng trong lĩnh vực điều dưỡng và y tế, vượt qua khó khăn và phát triển những triển vọng mới. Công việc này không chỉ liên quan đến biểu mẫu, ngôn ngữ hay các câu hỏi nghề nghiệp, mà trên hết là tạo ra sự an tâm, định hướng và tin tưởng. Được chứng kiến những bước đi đầu tiên trở thành cơ hội mới là điều đẹp nhất trong công việc của tôi.”", teamMathiasAbout: "Tôi 41 tuổi, là một người cha và sống tại Magdeburg. Sau khi học khoa học thể thao với chuyên ngành thể thao sức khỏe, tôi đã làm việc gần mười năm trong các lĩnh vực nâng cao sức khỏe, phòng ngừa, trị liệu thể thao và điều dưỡng. Song song với công việc, tôi hoàn thành chương trình thạc sĩ quản lý y tế và sau đó làm quản lý dự án trong lĩnh vực chăm sóc sức khỏe dự phòng. Hiện nay, tôi phụ trách đồng hành nghề nghiệp tại Hội Chữ thập đỏ Đức bang Sachsen-Anhalt và hỗ trợ cả những người có nhu cầu hòa nhập, nâng cao trình độ nghề nghiệp lẫn doanh nghiệp và cơ sở trong việc thu hút, phát triển và gắn bó lâu dài với nhân lực chuyên môn.", teamSaschaAbout: "Là một nhân viên công tác xã hội có bằng thạc sĩ và được nhà nước công nhận, tôi đặc biệt quan tâm đến những thay đổi xã hội và cách chúng ta ứng phó. Trước những biến đổi về dân số, xã hội và kinh tế, các nghề trong lĩnh vực điều dưỡng và y tế ngày càng trở nên quan trọng. Ngay từ hôm nay, nhân lực chuyên môn từ nước ngoài đã đóng vai trò thiết yếu để đáp ứng nhu cầu ngày càng tăng của một xã hội đang thay đổi. Hỗ trợ phù hợp với nhu cầu của những người có trải nghiệm di cư trên con đường đến với các nghề này tạo cơ hội kết hợp việc bảo đảm nhân lực với hội nhập thành công. Là chuyên viên đồng hành nghề nghiệp tại huyện Börde, tôi đã hỗ trợ học viên quốc tế của hội Chữ thập đỏ địa phương và xem nhiệm vụ đầy thách thức này là một cơ hội lớn, hướng đến tương lai, để biến sự hòa nhập thành trải nghiệm thực tế trong cuộc sống và công việc.",
+                teamPhone: "Điện thoại:", teamEmail: "Email:",
+
+                contactPageLabel: "Liên hệ",
+                contactBadge: "✦ Tận tình • Bảo mật • Miễn phí",
+                contactHeroTitle: "Liên hệ với chúng tôi",
+                contactHeroText: "Bạn muốn sử dụng dịch vụ của ProBe, có câu hỏi hoặc muốn liên hệ với tư cách cơ sở? Hãy viết cho chúng tôi.",
+                contactBoxLabel: "ProBe",
+                contactBoxTitle: "Chúng tôi luôn sẵn sàng hỗ trợ.",
+                contactBoxText: "Đội ngũ ProBe hỗ trợ người tham gia và các cơ sở một cách tận tình, bảo mật và miễn phí.",
+                contactOrg1: "ProBe – Đồng hành nghề nghiệp",
+                contactOrg2: "Hội Chữ thập đỏ Đức bang Sachsen-Anhalt",
+                footerProject: "ProBe · Dự án đồng hành nghề nghiệp", fundedBy: "Được tài trợ bởi",
+                inCooperationWith: "Hợp tác cùng", footerCredit: "Triển khai kỹ thuật số bởi",
+                imprint: "Thông tin pháp lý", privacy: "Bảo vệ dữ liệu"
               }
             };
 
-            function setLanguage(lang) {
+            const supportedLanguages = Object.keys(translations);
+
+            function normalizeLanguage(lang) {
+              const baseLanguage = String(lang || "").trim().toLowerCase().split(/[-_]/)[0];
+              return supportedLanguages.includes(baseLanguage) ? baseLanguage : null;
+            }
+
+            function getStoredLanguage() {
+              try {
+                const preferredLanguage = normalizeLanguage(localStorage.getItem("probeLanguagePreference"));
+                if (preferredLanguage) return preferredLanguage;
+
+                // Preserve an earlier deliberate non-German choice, but ignore the
+                // old automatic German default so language detection can run once.
+                const legacyLanguage = normalizeLanguage(localStorage.getItem("probeLanguage"));
+                return legacyLanguage && legacyLanguage !== "de" ? legacyLanguage : null;
+              } catch {
+                return null;
+              }
+            }
+
+            function getBrowserLanguage() {
+              const browserLanguages = Array.isArray(navigator.languages) && navigator.languages.length
+                ? navigator.languages
+                : [navigator.language];
+
+              for (const browserLanguage of browserLanguages) {
+                const supportedLanguage = normalizeLanguage(browserLanguage);
+                if (supportedLanguage) return supportedLanguage;
+              }
+
+              return "de";
+            }
+
+            function saveLanguage(lang) {
+              try {
+                localStorage.setItem("probeLanguagePreference", lang);
+                localStorage.setItem("probeLanguage", lang);
+              } catch {
+                // The language still changes when browser storage is unavailable.
+              }
+            }
+
+            function setLanguage(lang, options = {}) {
               const selected = translations[lang] ? lang : "de";
               const dict = translations[selected];
               const fallback = translations.de;
@@ -478,18 +849,27 @@
                 button.classList.toggle("active", button.dataset.lang === selected);
               });
 
-              localStorage.setItem("probeLanguage", selected);
+              document.querySelectorAll("[data-language-select]").forEach((select) => {
+                select.value = selected;
+              });
+
+              if (options.persist) saveLanguage(selected);
               document.dispatchEvent(new CustomEvent("probe:languagechange", {
                 detail: { language: selected }
               }));
             }
 
             document.addEventListener("DOMContentLoaded", () => {
-              const savedLanguage = localStorage.getItem("probeLanguage") || "de";
+              const directLanguage = normalizeLanguage(new URLSearchParams(window.location.search).get("lang"));
+              const initialLanguage = directLanguage || getStoredLanguage() || getBrowserLanguage();
 
               document.querySelectorAll("[data-lang]").forEach((button) => {
-                button.addEventListener("click", () => setLanguage(button.dataset.lang));
+                button.addEventListener("click", () => setLanguage(button.dataset.lang, { persist: true }));
               });
 
-              setLanguage(savedLanguage);
+              document.querySelectorAll("[data-language-select]").forEach((select) => {
+                select.addEventListener("change", () => setLanguage(select.value, { persist: true }));
+              });
+
+              setLanguage(initialLanguage, { persist: Boolean(directLanguage) });
             });

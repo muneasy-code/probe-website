@@ -73,6 +73,24 @@ collections:
                   - { label: Datum / Kategorie, name: date, widget: string, required: false }
                   - { label: Überschrift, name: title, widget: string, required: false }
                   - { label: Text, name: text, widget: text, required: false }
+              - label: Ukrainisch (optional)
+                name: uk
+                widget: object
+                collapsed: true
+                required: false
+                fields:
+                  - { label: Datum / Kategorie, name: date, widget: string, required: false }
+                  - { label: Überschrift, name: title, widget: string, required: false }
+                  - { label: Text, name: text, widget: text, required: false }
+              - label: Vietnamesisch (optional)
+                name: vi
+                widget: object
+                collapsed: true
+                required: false
+                fields:
+                  - { label: Datum / Kategorie, name: date, widget: string, required: false }
+                  - { label: Überschrift, name: title, widget: string, required: false }
+                  - { label: Text, name: text, widget: text, required: false }
 
       - name: team
         label: Team
@@ -132,6 +150,24 @@ collections:
                       - { label: Vorstellungstext, name: about, widget: text, required: false }
                   - label: Türkisch (optional)
                     name: tr
+                    widget: object
+                    collapsed: true
+                    required: false
+                    fields:
+                      - { label: Region, name: region, widget: string, required: false }
+                      - { label: Funktion / Standort, name: role, widget: string, required: false }
+                      - { label: Vorstellungstext, name: about, widget: text, required: false }
+                  - label: Ukrainisch (optional)
+                    name: uk
+                    widget: object
+                    collapsed: true
+                    required: false
+                    fields:
+                      - { label: Region, name: region, widget: string, required: false }
+                      - { label: Funktion / Standort, name: role, widget: string, required: false }
+                      - { label: Vorstellungstext, name: about, widget: text, required: false }
+                  - label: Vietnamesisch (optional)
+                    name: vi
                     widget: object
                     collapsed: true
                     required: false
