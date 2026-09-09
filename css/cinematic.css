@@ -1275,6 +1275,7 @@ footer > span:first-child,
   top: -35px;
   left: 0;
   width: 300px;
+  height: auto;
   max-width: none;
   max-height: none;
 }
