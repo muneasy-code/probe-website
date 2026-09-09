@@ -778,9 +778,11 @@ html[dir="rtl"] .audience-card > a {
 }
 
 .page-team .team-hero h1 {
-  max-width: 900px;
+  max-width: 1050px;
   color: white;
-  overflow-wrap: anywhere;
+  font-size: clamp(3.8rem, 6vw, 6.2rem);
+  overflow-wrap: normal;
+  hyphens: auto;
   text-shadow: 0 8px 34px rgba(0, 0, 0, 0.34);
 }
 
