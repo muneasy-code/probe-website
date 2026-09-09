@@ -178,6 +178,45 @@ header {
   transition: border-color 180ms ease, color 180ms ease, transform 180ms ease;
 }
 
+.page-home .hero-provider-note {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  max-width: 590px;
+  margin-top: 22px;
+  padding: 10px 14px;
+  border: 1px solid rgba(91, 198, 191, 0.42);
+  background: rgba(3, 35, 47, 0.58);
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.94rem;
+  font-weight: 750;
+  line-height: 1.4;
+  backdrop-filter: blur(10px);
+}
+
+.page-home .hero-provider-note::before {
+  content: "✓";
+  display: grid;
+  flex: 0 0 24px;
+  width: 24px;
+  height: 24px;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--cinema-cyan);
+  color: var(--cinema-ink);
+  font-size: 0.82rem;
+}
+
+.page-home .audience-provider-note {
+  margin-top: 22px;
+  padding-left: 14px;
+  border-left: 3px solid var(--cinema-teal-soft);
+  color: rgba(255, 255, 255, 0.86);
+  font-size: 0.95rem;
+  font-weight: 750;
+  line-height: 1.5;
+}
+
 .page-home .campaign-flyer-button:hover {
   border-color: var(--cinema-cyan);
   color: white;
@@ -941,7 +980,7 @@ html[dir="rtl"] .audience-card > a {
 }
 
 .page-team .team-section {
-  padding-top: 76px;
+  padding-top: 34px;
   padding-bottom: 108px;
   background: var(--cinema-ink);
 }
@@ -1100,7 +1139,7 @@ html[dir="rtl"] .audience-card > a {
   align-items: center;
   padding: 96px 0 118px;
   background-image: url("../campaign-hero-arrival.webp");
-  background-position: 68% center;
+  background-position: 68% top;
   background-size: cover;
   color: white;
 }
@@ -1222,15 +1261,19 @@ footer {
 footer::after {
   content: "";
   position: absolute;
-  inset: 110px 0 82px;
+  inset: 0;
   z-index: 0;
   background: linear-gradient(
     180deg,
     transparent 0%,
-    rgba(223, 237, 237, 0.9) 10%,
-    rgba(235, 244, 244, 0.98) 22%,
-    rgba(235, 244, 244, 0.98) 80%,
-    rgba(223, 237, 237, 0.9) 92%,
+    rgba(223, 237, 237, 0.04) 15%,
+    rgba(223, 237, 237, 0.18) 24%,
+    rgba(227, 240, 240, 0.44) 33%,
+    rgba(231, 242, 242, 0.76) 42%,
+    rgba(235, 244, 244, 0.98) 52%,
+    rgba(235, 244, 244, 0.98) 82%,
+    rgba(223, 237, 237, 0.72) 91%,
+    rgba(223, 237, 237, 0.26) 97%,
     transparent 100%
   );
 }
@@ -1666,7 +1709,7 @@ html[dir="rtl"] .story-image-tag {
   }
 
   .page-team .team-section {
-    padding-top: 72px;
+    padding-top: 30px;
   }
 
   .page-team .team-grid {
@@ -1707,7 +1750,7 @@ html[dir="rtl"] .story-image-tag {
   .page-contact .contact-page-hero {
     min-height: 620px;
     padding: 70px 0 100px;
-    background-position: 69% center;
+    background-position: 69% top;
   }
 
   .page-contact .contact-page-hero::after {

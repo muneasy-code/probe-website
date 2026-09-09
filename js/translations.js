@@ -67,7 +67,7 @@
                 supportPageLabel: "Unterstützung",
                 supportHeroTitle: "Ankommen.<br>Einleben.<br>Beruflich<br>Fuß fassen.",
                 supportHeroText: "ProBe unterstützt internationale Auszubildende und Fachkräfte beim Ankommen in Beruf und Alltag und begleitet Einrichtungen bei der Integration. Ziel ist eine langfristige Perspektive im Pflege- und Gesundheitsbereich.",
-                supportHeroFact: "Das Angebot steht Einrichtungen aller Trägerschaften offen.",
+                supportHeroFact: "ProBe steht Einrichtungen jeder Trägerschaft zur Verfügung.",
                 supportParticipantsLabel: "Für Teilnehmende",
                 supportParticipant1: "Unterstützung bei Anerkennungsverfahren",
                 supportParticipant2: "Vermittlung zu Sprachkursen und Qualifizierungsangeboten",
