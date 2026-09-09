@@ -557,7 +557,50 @@
               }
             };
 
-            function setLanguage(lang) {
+            const supportedLanguages = Object.keys(translations);
+
+            function normalizeLanguage(lang) {
+              const baseLanguage = String(lang || "").trim().toLowerCase().split(/[-_]/)[0];
+              return supportedLanguages.includes(baseLanguage) ? baseLanguage : null;
+            }
+
+            function getStoredLanguage() {
+              try {
+                const preferredLanguage = normalizeLanguage(localStorage.getItem("probeLanguagePreference"));
+                if (preferredLanguage) return preferredLanguage;
+
+                // Preserve an earlier deliberate non-German choice, but ignore the
+                // old automatic German default so language detection can run once.
+                const legacyLanguage = normalizeLanguage(localStorage.getItem("probeLanguage"));
+                return legacyLanguage && legacyLanguage !== "de" ? legacyLanguage : null;
+              } catch {
+                return null;
+              }
+            }
+
+            function getBrowserLanguage() {
+              const browserLanguages = Array.isArray(navigator.languages) && navigator.languages.length
+                ? navigator.languages
+                : [navigator.language];
+
+              for (const browserLanguage of browserLanguages) {
+                const supportedLanguage = normalizeLanguage(browserLanguage);
+                if (supportedLanguage) return supportedLanguage;
+              }
+
+              return "de";
+            }
+
+            function saveLanguage(lang) {
+              try {
+                localStorage.setItem("probeLanguagePreference", lang);
+                localStorage.setItem("probeLanguage", lang);
+              } catch {
+                // The language still changes when browser storage is unavailable.
+              }
+            }
+
+            function setLanguage(lang, options = {}) {
               const selected = translations[lang] ? lang : "de";
               const dict = translations[selected];
               const fallback = translations.de;
@@ -588,18 +631,19 @@
                 button.classList.toggle("active", button.dataset.lang === selected);
               });
 
-              localStorage.setItem("probeLanguage", selected);
+              if (options.persist) saveLanguage(selected);
               document.dispatchEvent(new CustomEvent("probe:languagechange", {
                 detail: { language: selected }
               }));
             }
 
             document.addEventListener("DOMContentLoaded", () => {
-              const savedLanguage = localStorage.getItem("probeLanguage") || "de";
+              const directLanguage = normalizeLanguage(new URLSearchParams(window.location.search).get("lang"));
+              const initialLanguage = directLanguage || getStoredLanguage() || getBrowserLanguage();
 
               document.querySelectorAll("[data-lang]").forEach((button) => {
-                button.addEventListener("click", () => setLanguage(button.dataset.lang));
+                button.addEventListener("click", () => setLanguage(button.dataset.lang, { persist: true }));
               });
 
-              setLanguage(savedLanguage);
+              setLanguage(initialLanguage, { persist: Boolean(directLanguage) });
             });
