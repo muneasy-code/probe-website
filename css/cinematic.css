@@ -1296,6 +1296,11 @@ footer > span:first-child,
   color: #31505c;
 }
 
+.funding-section .funding-title {
+  color: rgba(255, 255, 255, 0.7);
+  text-shadow: 0 2px 18px rgba(2, 15, 24, 0.55);
+}
+
 .funding-logos img,
 .partner-main img,
 .partner-regions img {
@@ -1324,7 +1329,7 @@ footer > span:first-child,
 }
 
 .footer-credit {
-  color: rgba(255, 255, 255, 0.42);
+  color: #5d747e;
 }
 
 /* Language-aware typography */
