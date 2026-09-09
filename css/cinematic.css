@@ -665,6 +665,18 @@ html[dir="rtl"] .audience-card > a {
 
 .page-about .about-hero-content,
 .page-support .about-hero-content {
+  max-width: 1240px;
+}
+
+.page-about .about-hero-content h1,
+.page-support .about-hero-content h1 {
+  max-width: 1040px;
+}
+
+.page-about .about-hero-content .lead-text,
+.page-support .about-hero-content .lead-text,
+.page-about .about-quickfacts,
+.page-support .zusatzinfo {
   max-width: 760px;
 }
 
@@ -929,20 +941,21 @@ html[dir="rtl"] .audience-card > a {
 }
 
 .page-team .team-section {
-  padding-top: 112px;
+  padding-top: 76px;
+  padding-bottom: 108px;
   background: var(--cinema-ink);
 }
 
 .page-team .team-grid {
   max-width: 1240px;
-  gap: 0 54px;
+  grid-template-columns: 1fr;
+  gap: 0;
   margin-top: 0;
   padding: 0;
 }
 
 .page-team .team-card {
-  position: relative;
-  padding: 54px 24px 64px 0;
+  padding: 30px 0;
   border: 0;
   border-top: 1px solid var(--cinema-line);
   border-radius: 0;
@@ -955,54 +968,128 @@ html[dir="rtl"] .audience-card > a {
   transform: none;
 }
 
-.page-team .team-card:nth-child(1)::before { content: "01"; }
-.page-team .team-card:nth-child(2)::before { content: "02"; }
-.page-team .team-card:nth-child(3)::before { content: "03"; }
-.page-team .team-card:nth-child(4)::before { content: "04"; }
+.page-team .team-card:last-child {
+  border-bottom: 1px solid var(--cinema-line);
+}
 
-.page-team .team-card::before {
-  position: absolute;
-  top: 48px;
-  right: 0;
-  color: rgba(151, 220, 239, 0.28);
-  font-family: "Arial Narrow", Arial, sans-serif;
-  font-size: 3.4rem;
-  font-weight: 900;
-  line-height: 1;
+.page-team .team-card-header {
+  display: flex;
+  align-items: center;
+  gap: 28px;
 }
 
 .page-team .team-photo {
-  width: 138px;
-  height: 138px;
+  flex: 0 0 auto;
+  width: 116px;
+  height: 116px;
+  margin: 0;
   border: 1px solid rgba(255, 255, 255, 0.42);
-  box-shadow: 0 0 0 8px rgba(72, 181, 207, 0.1);
+  box-shadow: 0 0 0 7px rgba(72, 181, 207, 0.09);
   filter: saturate(0.82) contrast(1.03);
 }
 
 .page-team .team-region {
-  margin-top: 34px;
+  margin: 0 0 8px;
   padding: 0;
   background: transparent;
   color: var(--cinema-cyan-soft);
 }
 
-.page-team .team-card h3,
-.page-team .team-contact strong {
+.page-team .team-card h3 {
+  margin: 0 0 6px;
   color: white;
+  font-size: clamp(1.75rem, 3vw, 2.45rem);
 }
 
 .page-team .team-role,
-.page-team .team-about,
-.page-team .team-contact p {
+.page-team .team-about {
   color: rgba(255, 255, 255, 0.72);
 }
 
-.page-team .team-contact {
-  border-color: var(--cinema-line);
+.page-team .team-role {
+  margin: 0;
 }
 
-.page-team .team-contact p {
-  overflow-wrap: anywhere;
+.page-team .team-card-actions {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  margin: 20px 0 0 144px;
+}
+
+.page-team .team-details {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.page-team .team-details summary,
+.page-team .team-contact-button {
+  min-height: 48px;
+  border: 1px solid rgba(151, 220, 239, 0.35);
+  color: white;
+  font-weight: 800;
+}
+
+.page-team .team-details summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 12px 16px;
+  cursor: pointer;
+  list-style: none;
+}
+
+.page-team .team-details summary::-webkit-details-marker {
+  display: none;
+}
+
+.page-team .team-details summary span:last-child {
+  color: var(--cinema-cyan-soft);
+  transition: transform 180ms ease;
+}
+
+.page-team .team-details[open] summary span:last-child {
+  transform: rotate(45deg);
+}
+
+.page-team .team-details-body {
+  padding: 22px 18px 6px;
+  border-right: 1px solid var(--cinema-line);
+  border-bottom: 1px solid var(--cinema-line);
+  border-left: 1px solid var(--cinema-line);
+}
+
+.page-team .team-details-body .team-about {
+  max-width: 850px;
+  margin: 0 0 18px;
+  line-height: 1.75;
+}
+
+.page-team .team-details-body > a {
+  display: inline-block;
+  margin-bottom: 12px;
+  color: var(--cinema-cyan-soft);
+  font-weight: 750;
+}
+
+.page-team .team-contact-button {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 12px 16px;
+  border-color: var(--cinema-cyan);
+  background: var(--cinema-cyan);
+  color: var(--cinema-ink);
+  transition: background 180ms ease, border-color 180ms ease, transform 180ms ease;
+}
+
+.page-team .team-contact-button:hover {
+  border-color: var(--cinema-teal-soft);
+  background: var(--cinema-teal-soft);
+  transform: translateY(-2px);
 }
 
 /* Contact: direct, personal and dark */
@@ -1132,6 +1219,27 @@ footer {
   color: rgba(255, 255, 255, 0.62);
 }
 
+footer::after {
+  content: "";
+  position: absolute;
+  inset: 110px 0 82px;
+  z-index: 0;
+  background: linear-gradient(
+    180deg,
+    transparent 0%,
+    rgba(223, 237, 237, 0.9) 10%,
+    rgba(235, 244, 244, 0.98) 22%,
+    rgba(235, 244, 244, 0.98) 80%,
+    rgba(223, 237, 237, 0.9) 92%,
+    transparent 100%
+  );
+}
+
+footer > * {
+  position: relative;
+  z-index: 2;
+}
+
 footer::before {
   border-color: rgba(68, 187, 214, 0.13);
 }
@@ -1142,7 +1250,7 @@ footer > span:first-child,
 }
 
 .funding-title {
-  color: rgba(255, 255, 255, 0.52);
+  color: #31505c;
 }
 
 .funding-logos img,
@@ -1150,33 +1258,7 @@ footer > span:first-child,
 .partner-regions img {
   padding: 0;
   background: transparent;
-  filter:
-    invert(1)
-    hue-rotate(183deg)
-    saturate(7.8)
-    brightness(0.89)
-    drop-shadow(0 0 4px rgba(143, 207, 198, 0.28))
-    drop-shadow(0 8px 22px rgba(0, 0, 0, 0.18));
-}
-
-.partner-regions img:first-child {
-  filter:
-    invert(1)
-    hue-rotate(186.9deg)
-    saturate(8.3)
-    brightness(0.89)
-    drop-shadow(0 0 4px rgba(143, 207, 198, 0.28))
-    drop-shadow(0 8px 22px rgba(0, 0, 0, 0.18));
-}
-
-.partner-regions img:nth-child(n + 2) {
-  filter:
-    invert(1)
-    hue-rotate(180.9deg)
-    saturate(8.1)
-    brightness(0.89)
-    drop-shadow(0 0 4px rgba(143, 207, 198, 0.28))
-    drop-shadow(0 8px 22px rgba(0, 0, 0, 0.18));
+  filter: none;
 }
 
 .footer-credit {
@@ -1210,6 +1292,11 @@ html[dir="rtl"] .page-home .campaign-hero-copy {
 
 html[dir="rtl"] .page-home .campaign-flyer-button {
   flex-direction: row-reverse;
+}
+
+html[dir="rtl"] .page-team .team-card-actions {
+  margin-right: 144px;
+  margin-left: 0;
 }
 
 html[dir="rtl"] .story-image-tag {
@@ -1569,12 +1656,33 @@ html[dir="rtl"] .story-image-tag {
   }
 
   .page-team .team-card {
-    padding: 42px 0 50px;
+    padding: 28px 0;
   }
 
-  .page-team .team-card::before {
-    top: 42px;
-    font-size: 2.8rem;
+  .page-team .team-card-header {
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .page-team .team-photo {
+    width: 88px;
+    height: 88px;
+    box-shadow: 0 0 0 5px rgba(72, 181, 207, 0.09);
+  }
+
+  .page-team .team-card h3 {
+    font-size: 1.7rem;
+  }
+
+  .page-team .team-card-actions,
+  html[dir="rtl"] .page-team .team-card-actions {
+    flex-direction: column;
+    margin: 18px 0 0;
+  }
+
+  .page-team .team-details,
+  .page-team .team-contact-button {
+    width: 100%;
   }
 
   .page-contact .contact-page-hero {

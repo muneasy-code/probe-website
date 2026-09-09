@@ -9,6 +9,13 @@
     ru: { phone: "Телефон:", email: "Эл. почта:" },
     tr: { phone: "Telefon:", email: "E-posta:" }
   };
+  const TEAM_ACTION_LABELS = {
+    de: { more: "Mehr über", contact: "Kontakt aufnehmen" },
+    en: { more: "More about", contact: "Get in touch" },
+    ar: { more: "المزيد عن", contact: "تواصل معنا" },
+    ru: { more: "Подробнее о", contact: "Связаться" },
+    tr: { more: "Daha fazlası:", contact: "İletişime geç" }
+  };
 
   const state = {
     news: null,
@@ -74,17 +81,24 @@
 
     const lang = currentLanguage();
     const labels = CONTACT_LABELS[lang] || CONTACT_LABELS.de;
+    const actionLabels = TEAM_ACTION_LABELS[lang] || TEAM_ACTION_LABELS.de;
     container.innerHTML = "";
 
     state.team.members.forEach((member) => {
       const content = localized(member.translations, lang);
-      const card = document.createElement("div");
+      const card = document.createElement("article");
       card.className = "team-card";
+
+      const header = document.createElement("div");
+      header.className = "team-card-header";
 
       const image = document.createElement("img");
       image.className = "team-photo";
       image.src = member.image || "/foto-platzhalter.png";
       image.alt = member.name || "Teammitglied";
+
+      const identity = document.createElement("div");
+      identity.className = "team-card-identity";
 
       const region = document.createElement("p");
       region.className = "team-region";
@@ -97,33 +111,57 @@
       role.className = "team-role";
       role.textContent = safeText(content.role);
 
+      identity.append(region, name, role);
+      header.append(image, identity);
+
+      const actions = document.createElement("div");
+      actions.className = "team-card-actions";
+
+      const details = document.createElement("details");
+      details.className = "team-details";
+
+      const summary = document.createElement("summary");
+      const summaryText = document.createElement("span");
+      const firstName = safeText(member.name).split(/\s+/)[0];
+      summaryText.textContent = `${actionLabels.more} ${firstName}`;
+      const summaryIcon = document.createElement("span");
+      summaryIcon.setAttribute("aria-hidden", "true");
+      summaryIcon.textContent = "＋";
+      summary.append(summaryText, summaryIcon);
+
+      const detailsBody = document.createElement("div");
+      detailsBody.className = "team-details-body";
+
       const about = document.createElement("p");
       about.className = "team-about";
       about.textContent = safeText(content.about);
 
-      const contact = document.createElement("div");
-      contact.className = "team-contact";
-
       if (member.phone) {
-        const phone = document.createElement("p");
-        const strong = document.createElement("strong");
-        strong.textContent = labels.phone + " ";
-        phone.append(strong, document.createTextNode(member.phone));
-        contact.appendChild(phone);
+        const phone = document.createElement("a");
+        phone.href = `tel:${String(member.phone).replace(/[^+\d]/g, "")}`;
+        phone.textContent = `${labels.phone} ${member.phone}`;
+        detailsBody.appendChild(phone);
       }
+
+      detailsBody.prepend(about);
+      details.append(summary, detailsBody);
+      actions.appendChild(details);
 
       if (member.email) {
-        const email = document.createElement("p");
-        const strong = document.createElement("strong");
-        strong.textContent = labels.email + " ";
-        const link = document.createElement("a");
-        link.href = `mailto:${member.email}`;
-        link.textContent = member.email;
-        email.append(strong, link);
-        contact.appendChild(email);
+        const contactButton = document.createElement("a");
+        contactButton.className = "team-contact-button";
+        contactButton.href = `mailto:${member.email}`;
+        contactButton.setAttribute("aria-label", `${actionLabels.contact}: ${member.name}`);
+        const contactText = document.createElement("span");
+        contactText.textContent = actionLabels.contact;
+        const contactIcon = document.createElement("span");
+        contactIcon.setAttribute("aria-hidden", "true");
+        contactIcon.textContent = "↗";
+        contactButton.append(contactText, contactIcon);
+        actions.appendChild(contactButton);
       }
 
-      card.append(image, region, name, role, about, contact);
+      card.append(header, actions);
       container.appendChild(card);
     });
   }
