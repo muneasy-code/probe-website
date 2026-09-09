@@ -1261,6 +1261,24 @@ footer > span:first-child,
   filter: none;
 }
 
+.ministry-logo-viewport {
+  position: relative;
+  display: block;
+  width: min(300px, 78vw);
+  height: 92px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.funding-logos .ministry-logo-viewport img {
+  position: absolute;
+  top: -35px;
+  left: 0;
+  width: 300px;
+  max-width: none;
+  max-height: none;
+}
+
 .footer-credit {
   color: rgba(255, 255, 255, 0.42);
 }
