@@ -1136,6 +1136,26 @@ footer > span:first-child,
     drop-shadow(0 8px 22px rgba(0, 0, 0, 0.18));
 }
 
+.partner-regions img:first-child {
+  filter:
+    invert(1)
+    hue-rotate(186.9deg)
+    saturate(8.3)
+    brightness(0.89)
+    drop-shadow(0 0 4px rgba(143, 207, 198, 0.28))
+    drop-shadow(0 8px 22px rgba(0, 0, 0, 0.18));
+}
+
+.partner-regions img:nth-child(n + 2) {
+  filter:
+    invert(1)
+    hue-rotate(180.9deg)
+    saturate(8.1)
+    brightness(0.89)
+    drop-shadow(0 0 4px rgba(143, 207, 198, 0.28))
+    drop-shadow(0 8px 22px rgba(0, 0, 0, 0.18));
+}
+
 .footer-credit {
   color: rgba(255, 255, 255, 0.42);
 }
