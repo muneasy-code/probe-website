@@ -1581,12 +1581,20 @@ html[dir="rtl"] .story-image-tag {
   }
 
   .language-switcher button {
-    flex: 0 0 auto;
-    min-width: 32px;
-    min-height: 28px;
-    padding: 4px 7px;
+    display: none;
+  }
+
+  .language-select {
+    display: block;
+    width: 112px;
+    min-height: 32px;
+    padding: 4px 28px 4px 12px;
+    border: 0;
     border-radius: 999px;
-    font-size: 0.75rem;
+    background-color: rgba(36, 145, 145, 0.94);
+    color: white;
+    font-size: 0.74rem;
+    font-weight: 800;
   }
 }
 
@@ -1923,11 +1931,9 @@ html[dir="rtl"] .story-image-tag {
     font-size: 1.35rem;
   }
 
-  .language-switcher button {
-    min-width: 28px;
-    min-height: 26px;
-    padding-inline: 5px;
-    font-size: 0.75rem;
+  .language-select {
+    width: 102px;
+    font-size: 0.7rem;
   }
 }
 

@@ -1,20 +1,24 @@
 (() => {
   "use strict";
 
-  const SUPPORTED_LANGUAGES = ["de", "en", "ar", "ru", "tr"];
+  const SUPPORTED_LANGUAGES = ["de", "en", "ar", "ru", "tr", "uk", "vi"];
   const CONTACT_LABELS = {
     de: { phone: "Telefon:", email: "E-Mail:" },
     en: { phone: "Phone:", email: "Email:" },
     ar: { phone: "الهاتف:", email: "البريد الإلكتروني:" },
     ru: { phone: "Телефон:", email: "Эл. почта:" },
-    tr: { phone: "Telefon:", email: "E-posta:" }
+    tr: { phone: "Telefon:", email: "E-posta:" },
+    uk: { phone: "Телефон:", email: "Ел. пошта:" },
+    vi: { phone: "Điện thoại:", email: "Email:" }
   };
   const TEAM_ACTION_LABELS = {
     de: { more: "Mehr über", contact: "Kontakt aufnehmen" },
     en: { more: "More about", contact: "Get in touch" },
     ar: { more: "المزيد عن", contact: "تواصل معنا" },
     ru: { more: "Подробнее о", contact: "Связаться" },
-    tr: { more: "Daha fazlası:", contact: "İletişime geç" }
+    tr: { more: "Daha fazlası:", contact: "İletişime geç" },
+    uk: { more: "Більше про", contact: "Зв’язатися" },
+    vi: { more: "Tìm hiểu thêm về", contact: "Liên hệ" }
   };
 
   const state = {
