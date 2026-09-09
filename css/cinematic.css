@@ -1128,7 +1128,8 @@ footer > span:first-child,
   padding: 0;
   background: transparent;
   filter:
-    drop-shadow(0 0 1px rgba(255, 255, 255, 0.72))
+    drop-shadow(0 0 1px rgba(236, 253, 250, 0.98))
+    drop-shadow(0 0 4px rgba(143, 207, 198, 0.68))
     drop-shadow(0 8px 22px rgba(0, 0, 0, 0.18));
 }
 
