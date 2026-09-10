@@ -67,39 +67,6 @@
       }
     },
     {
-      "name": "Mathias Wilhelm",
-      "image": "/Mathias.png",
-      "phone": "0155 63 38 82 34",
-      "email": "mathias.wilhelm@sachsen-anhalt.drk.de",
-      "translations": {
-        "de": {
-          "region": "JERICHOWER LAND & MAGDEBURG",
-          "role": "Berufsbegleiter, Standort Burg",
-          "about": "Ich bin 41 Jahre alt, Familienvater und lebe in Magdeburg. Nach meinem Studium der Sportwissenschaften mit Schwerpunkt Gesundheitssport war ich nahezu zehn Jahre in den Bereichen Gesundheitsförderung, Prävention, Sporttherapie und Pflege tätig. Berufsbegleitend absolvierte ich ein Masterstudium im Gesundheitsmanagement und war anschließend als Projektleiter im Bereich präventiver Gesunderhaltung tätig. Heute arbeite ich als Referent Berufsbegleitung beim DRK Landesverband Sachsen-Anhalt e.V. und unterstütze sowohl Menschen mit beruflichen Integrations- und Qualifizierungsbedarfen als auch Unternehmen und Einrichtungen bei der Gewinnung, Entwicklung und nachhaltigen Bindung von Fachkräften."
-        },
-        "en": {
-          "region": "JERICHOWER LAND & MAGDEBURG",
-          "role": "Career support professional, Burg",
-          "about": "I am 41 years old, a father and live in Magdeburg. After studying sports science with a focus on health-oriented exercise, I worked for almost ten years in health promotion, prevention, sports therapy and nursing. Alongside my work, I completed a master’s degree in health management and later worked as a project manager in preventive health. Today I work in career support at the German Red Cross State Association of Saxony-Anhalt and support both people with professional integration and qualification needs and organisations in recruiting, developing and retaining skilled professionals."
-        },
-        "ar": {
-          "region": "يريخوفر لاند وماغديبورغ",
-          "role": "مرافق مهني، موقع بورغ",
-          "about": "أبلغ من العمر 41 عامًا، وأنا أب وأعيش في ماغديبورغ. بعد دراسة علوم الرياضة مع التركيز على الرياضة الصحية، عملت قرابة عشر سنوات في تعزيز الصحة والوقاية والعلاج الرياضي والرعاية. وأكملت أثناء عملي درجة الماجستير في إدارة الصحة، ثم عملت مديرًا لمشروع في مجال الحفاظ الوقائي على الصحة. واليوم أعمل في المرافقة المهنية لدى جمعية الصليب الأحمر الألماني في ساكسونيا أنهالت، وأدعم الأشخاص ذوي احتياجات الاندماج والتأهيل المهني وكذلك الشركات والمؤسسات في استقطاب الكفاءات وتطويرها والاحتفاظ بها."
-        },
-        "ru": {
-          "region": "ЙЕРИХОВЕР-ЛАНД И МАГДЕБУРГ",
-          "role": "Специалист по профессиональному сопровождению, Бург",
-          "about": "Мне 41 год, я отец семейства и живу в Магдебурге. После изучения спортивных наук со специализацией на оздоровительном спорте я почти десять лет работал в сферах укрепления здоровья, профилактики, спортивной терапии и ухода. Параллельно с работой я получил степень магистра в области управления здравоохранением, а затем работал руководителем проекта в сфере профилактического здоровья. Сегодня я работаю в сфере профессионального сопровождения в земельном объединении Немецкого Красного Креста Саксонии-Анхальт и поддерживаю как людей с потребностями в профессиональной интеграции и квалификации, так и организации в привлечении, развитии и долгосрочном удержании специалистов."
-        },
-        "tr": {
-          "region": "JERICHOWER LAND VE MAGDEBURG",
-          "role": "Mesleki rehber, Burg",
-          "about": "41 yaşındayım, aile babasıyım ve Magdeburg’da yaşıyorum. Sağlık sporu odaklı spor bilimleri eğitimimin ardından yaklaşık on yıl sağlık geliştirme, önleme, spor terapisi ve bakım alanlarında çalıştım. Çalışırken sağlık yönetimi alanında yüksek lisans yaptım ve daha sonra koruyucu sağlık alanında proje yöneticisi olarak görev aldım. Bugün Alman Kızılhaçı Saksonya-Anhalt Eyalet Birliği’nde mesleki rehberlik alanında çalışıyor; hem mesleki entegrasyon ve yeterlilik ihtiyacı olan insanları hem de kurumları nitelikli personelin kazanılması, geliştirilmesi ve uzun vadeli olarak elde tutulması konularında destekliyorum."
-        }
-      }
-    },
-    {
       "name": "Sascha Bornkampf",
       "image": "/sascha.png",
       "phone": "0155 63 38 82 24",
