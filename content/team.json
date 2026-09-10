@@ -100,15 +100,16 @@
       }
     },
     {
-      "name": "n.n.",
+      "name": "Maren Körner",
       "translations": {
         "de": {
           "region": "Jerichower Land",
-          "role": "Berufsbegleitung",
-          "about": "n.n."
+          "role": "Berufsbegleiterin, Standort Burg",
+          "about": "Vorstellung folgt."
         }
       },
-      "image": "/uploads/probe_logo_cmyk.jpg"
+      "image": "/uploads/probe_logo_cmyk.jpg",
+      "email": "probe@sachsen-anhalt.drk.de"
     }
   ]
 }
