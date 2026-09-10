@@ -98,6 +98,17 @@
           "about": "Devlet tarafından tanınan, yüksek lisans derecesine sahip bir sosyal hizmet uzmanı olarak mesleki ilgi alanlarım arasında toplumsal değişimler ve bunlarla nasıl başa çıktığımız yer alıyor. Demografik, sosyal ve ekonomik değişim nedeniyle bakım ve sağlık meslekleri giderek daha fazla önem kazanıyor. Değişen toplumun artan ihtiyaçlarını karşılamak için yurt dışından gelen nitelikli uzmanların vazgeçilmez olduğu şimdiden görülüyor. Göç geçmişi olan insanlara bu mesleklere giden yolda ihtiyaçlarına uygun destek sunmak, nitelikli personel güvencesi ile başarılı entegrasyonu anlamlı biçimde birleştirme fırsatı yaratıyor. Börde ilçesinde mesleki rehber olarak yerel Alman Kızılhaçı kuruluşundaki yabancı kursiyerleri destekliyorum ve bu zorlu görevi geleceğe dönük, entegrasyonu günlük yaşamda ve işte görünür kılmak için büyük bir fırsat olarak görüyorum."
         }
       }
+    },
+    {
+      "name": "n.n.",
+      "translations": {
+        "de": {
+          "region": "Jerichower Land",
+          "role": "Berufsbegleitung",
+          "about": "n.n."
+        }
+      },
+      "image": "/uploads/probe_logo_cmyk.jpg"
     }
   ]
 }
