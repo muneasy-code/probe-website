@@ -1990,7 +1990,7 @@ html[dir="rtl"] .story-image-tag {
 /* Keep the ProBe mark crisp in the navigation. */
 header::before { display: none; }
 header .logo {
-  padding: .4rem .65rem;
+  padding: .4rem .25rem;
   border-radius: .65rem;
   background: rgba(240, 248, 248, .96);
   box-shadow: 0 2px 10px rgba(0, 10, 18, .12);
