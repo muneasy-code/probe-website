@@ -1995,3 +1995,50 @@ header .logo {
   background: rgba(240, 248, 248, .96);
   box-shadow: 0 2px 10px rgba(0, 10, 18, .12);
 }
+
+/* The footer stays compact, white and readable in every device color scheme. */
+footer {
+  color-scheme: light;
+  padding: 2.5rem 1.25rem 1.5rem;
+  background: #fff !important;
+  color: #334155;
+}
+footer::before,
+footer::after { display: none; }
+footer > span:first-child { color: #334155; }
+footer .funding-title,
+footer .funding-section .funding-title {
+  margin: 0 0 .5rem;
+  color: #475569;
+  text-shadow: none;
+}
+footer .partner-section { margin-top: 1.25rem; }
+footer .partner-main {
+  gap: 2rem;
+  margin: .75rem 0 .5rem;
+}
+footer .partner-regions { gap: 1.5rem; }
+footer .funding-logos .ministry-logo-viewport {
+  height: 4.25rem;
+}
+footer .funding-logos .ministry-logo-viewport img { top: -1.65rem; }
+footer .funding-logos img { max-height: 3.5rem; }
+footer .partner-main img { max-height: 3rem; }
+footer .partner-regions img { max-height: 2rem; }
+footer .footer-credit {
+  margin-top: 1rem;
+  color: #64748b;
+}
+footer .footer-links {
+  margin-top: .6rem;
+  gap: 1.25rem;
+}
+footer .footer-links a { color: #334155; }
+footer .footer-links a:hover { color: #0b5968; }
+@media (max-width: 640px) {
+  footer { padding: 2rem 1rem 1.25rem; }
+  footer .partner-main { gap: 1.25rem; }
+  footer .partner-regions { gap: .9rem; }
+  footer .partner-main img { max-height: 2.5rem; }
+  footer .partner-regions img { max-height: 1.5rem; }
+}
