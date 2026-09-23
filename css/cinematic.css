@@ -1970,3 +1970,19 @@ html[dir="rtl"] .story-image-tag {
   from { transform: scaleX(-1) scale(1.055); }
   to { transform: scaleX(-1) scale(1.025); }
 }
+
+/* Network: specialist contacts within the existing campaign palette. */
+.network-section { background: var(--cinema-deep); color: var(--cinema-white); scroll-margin-top: 8rem; }
+.network-section .campaign-eyebrow { color: var(--cinema-teal-soft); }
+.network-section .section-intro h2 { color: var(--cinema-white); }
+.network-section .section-intro > p:last-child { color: var(--cinema-mist); max-width: 46rem; }
+.network-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.25rem; }
+.network-card { display: flex; flex-direction: column; align-items: flex-start; padding: clamp(1.25rem, 3vw, 2rem); background: var(--cinema-ink); border: 1px solid var(--cinema-line); border-radius: 1rem; min-width: 0; }
+.network-badge { display: inline-block; padding: .35rem .7rem; border-radius: 2rem; color: var(--cinema-cyan-soft); background: var(--cinema-deep); font-size: .875rem; line-height: 1.5; }
+.network-card h3 { color: var(--cinema-white); font-size: 1.5rem; line-height: 1.2; letter-spacing: -.025em; margin: 1.25rem 0 .75rem; overflow-wrap: anywhere; }
+.network-card p { color: var(--cinema-mist); font-size: 1rem; line-height: 1.65; margin: 0 0 1.5rem; }
+.network-card a { margin-top: auto; padding: .5rem 0; color: var(--cinema-cyan-soft); font-size: 1rem; font-weight: 700; text-underline-offset: .3em; }
+.network-card a:hover { color: white; text-decoration: underline; }
+.network-card a:focus-visible, a.ministry-logo-viewport:focus-visible { outline: 3px solid var(--cinema-cyan-soft); outline-offset: 5px; }
+@media (max-width: 1000px) { .network-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 640px) { .network-grid { grid-template-columns: minmax(0, 1fr); } }
