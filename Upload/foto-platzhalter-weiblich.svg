@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 360" role="img" aria-labelledby="title desc">
+<title id="title">Weibliche Platzhalterillustration</title>
+<desc id="desc">Stilisierte weibliche Silhouette als vorläufiger Teamplatzhalter</desc>
+<defs><linearGradient id="bg" x2="1" y2="1"><stop stop-color="#eff7f6"/><stop offset="1" stop-color="#cce4e1"/></linearGradient><linearGradient id="shirt" x2="0" y2="1"><stop stop-color="#47a9a4"/><stop offset="1" stop-color="#176a75"/></linearGradient></defs>
+<rect width="360" height="360" fill="url(#bg)"/>
+<circle cx="180" cy="151" r="117" fill="#fff" opacity=".28"/>
+<path d="M75 360c8-61 36-101 86-114l19-31h40l20 31c49 13 78 53 85 114z" fill="url(#shirt)"/>
+<path d="M121 146c-7-53 11-94 47-109 41-17 90 4 103 45 8 27 5 57 3 88l-7 83c-2 28-19 48-37 59l-27-26-28 26c-21-11-36-31-38-59z" fill="#26344b"/>
+<path d="M139 148c0-45 19-72 48-72 32 0 50 28 50 73v38c0 40-21 68-50 68-29 0-48-28-48-68z" fill="#dba58e"/>
+<path d="M128 151c0-63 29-99 71-99 38 0 62 31 64 79-19-8-32-22-39-40-19 22-51 35-95 36z" fill="#26344b"/>
+<path d="M165 248c7 10 15 15 23 15s17-5 23-15l10 30-33 29-33-29z" fill="#dba58e"/>
+<path d="M144 284l36 23 36-23 16 76h-105z" fill="#fff" opacity=".92"/>
+</svg>

@@ -96,10 +96,11 @@
       const header = document.createElement("div");
       header.className = "team-card-header";
 
+      const displayName = safeText(content.name || member.name);
       const image = document.createElement("img");
       image.className = "team-photo";
       image.src = member.image || "/foto-platzhalter.png";
-      image.alt = member.name || "Teammitglied";
+      image.alt = safeText(content.imageAlt || displayName || "Teammitglied");
 
       const identity = document.createElement("div");
       identity.className = "team-card-identity";
@@ -109,7 +110,7 @@
       region.textContent = safeText(content.region);
 
       const name = document.createElement("h3");
-      name.textContent = safeText(member.name);
+      name.textContent = displayName;
 
       const role = document.createElement("p");
       role.className = "team-role";
@@ -121,6 +122,7 @@
       const actions = document.createElement("div");
       actions.className = "team-card-actions";
 
+      if (safeText(content.about).trim()) {
       const details = document.createElement("details");
       details.className = "team-details";
 
@@ -150,12 +152,13 @@
       detailsBody.prepend(about);
       details.append(summary, detailsBody);
       actions.appendChild(details);
+      }
 
-      if (member.email) {
+      if (member.email || member.contactUrl) {
         const contactButton = document.createElement("a");
         contactButton.className = "team-contact-button";
-        contactButton.href = `mailto:${member.email}`;
-        contactButton.setAttribute("aria-label", `${actionLabels.contact}: ${member.name}`);
+        contactButton.href = member.email ? `mailto:${member.email}` : member.contactUrl;
+        contactButton.setAttribute("aria-label", `${actionLabels.contact}: ${displayName}`);
         const contactText = document.createElement("span");
         contactText.textContent = actionLabels.contact;
         const contactIcon = document.createElement("span");

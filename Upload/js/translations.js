@@ -1,3 +1,6 @@
+Warning: truncated output (original token count: 18020)
+Total output lines: 495
+
   const translations = {
               de: {
                 navStart: "Start", navAbout: "Über ProBe", navSupport: "Unterstützung", navTeam: "Team", navContact: "Kontakt",
@@ -41,7 +44,7 @@
                 aboutTargetLabel: "Für wen ist ProBe da?", aboutTargetTitle: "Wir begleiten Menschen und Einrichtungen.",
                 aboutTarget1: "Internationale Fachkräfte und Auszubildende im Pflege- und Gesundheitsbereich", aboutTarget2: "Personen mit Migrationsgeschichte, die eine berufliche Perspektive in der Pflege suchen", aboutTarget3: "Teilnehmende des Bundesfreiwilligendienstes mit Pflegebezug", aboutTarget4: "Pflege- und Gesundheitseinrichtungen bei Integration und Fachkräftegewinnung",
                 aboutCtaLabel: "Unterstützung", aboutCtaTitle: "Sie möchten wissen, ob ProBe zu Ihrer Situation passt?", aboutCtaBtn: "Kontakt aufnehmen",
-                
+
                 supportPageLabel: "Unterstützung",
                 supportHeroTitle: "Ankommen.<br>Einleben.<br>Beruflich<br>Fuß fassen.",
                 supportHeroText: "ProBe unterstützt internationale Fach- und Hilfskräfte nicht nur bei beruflichen Fragen, sondern auch beim Ankommen und Einleben in Sachsen-Anhalt. Ziel ist eine erfolgreiche berufliche und soziale Integration sowie eine langfristige Perspektive im Pflege- und Gesundheitsbereich.",
@@ -65,13 +68,13 @@
                 supportStep4Title: "Perspektiven entwickeln", supportStep4Text: "Gemeinsam wird der Weg in Ausbildung, Beschäftigung oder Anerkennung begleitet.",
                 supportFreeTitle: "Kostenfrei & vertraulich",
                 supportFreeText: "Der Förderzeitraum des Modellprojekts läuft von Januar 2026 bis Dezember 2028. Die Unterstützung durch die Berufs-Begleitung ist kostenfrei und vertraulich.",
-                
+
                 teamPageLabel: "Team", teamHeroTitle: "Ihre regionalen Ansprechpersonen", teamHeroText: "Persönliche Unterstützung für Auszubildende, Schulen und Einrichtungen in den Projektregionen Sachsen-Anhalts.",
-                teamNataliaRegion: "ALTMARKKREIS SALZWEDEL", teamAnnelieRegion: "BÖRDE & MAGDEBURG", teamMathiasRegion: "JERICHOWER LAND & MAGDEBURG", teamSaschaRegion: "BÖRDE",
-                teamNataliaRole: "Berufsbegleiterin, Standort Stendal", teamAnnelieRole: "Berufsbegleiterin, Standort Wanzleben", teamMathiasRole: "Berufsbegleiter, Standort Burg", teamSaschaRole: "Berufsbegleiter, Standort Haldensleben",
-                teamNataliaAbout: "„Vor 29 Jahren bin ich selbst nach Deutschland gekommen. Daher weiß ich aus eigener Erfahrung, wie viel Mut, Ausdauer und Unterstützung ein erfolgreicher Neuanfang braucht. Heute begleite ich Menschen mit Migrationsgeschichte auf ihrem Weg in Arbeit und Ausbildung im Pflege- und Gesundheitsbereich. Es erfüllt mich, individuelle Potenziale zu entdecken, Perspektiven aufzuzeigen und Menschen dabei zu unterstützen, ihren eigenen Weg in Deutschland erfolgreich zu gestalten.“", teamAnnelieAbout: "„Jeder Mensch bringt seine eigene Geschichte, Erfahrungen und Stärken mit. Mir ist es wichtig, diese Potenziale sichtbar zu machen und Menschen auf ihrem Weg in Deutschland zu begleiten. Als Berufsbegleiterin unterstütze ich internationale Fachkräfte und Auszubildende dabei, sich im Pflege- und Gesundheitsbereich zurechtzufinden, Herausforderungen zu meistern und neue Perspektiven zu entwickeln. Dabei geht es nicht nur um Formulare, Sprache oder berufliche Fragen – sondern vor allem darum, Sicherheit, Orientierung und Vertrauen zu schaffen. Zu erleben, wie aus ersten Schritten neue Chancen entstehen, ist für mich das Schönste an meiner Arbeit.“", teamMathiasAbout: "Ich bin 41 Jahre alt, Familienvater und lebe in Magdeburg. Nach meinem Studium der Sportwissenschaften mit Schwerpunkt Gesundheitssport war ich nahezu zehn Jahre in den Bereichen Gesundheitsförderung, Prävention, Sporttherapie und Pflege tätig. Berufsbegleitend absolvierte ich ein Masterstudium im Gesundheitsmanagement und war anschließend als Projektleiter im Bereich präventiver Gesunderhaltung tätig. Heute arbeite ich als Referent Berufsbegleitung beim DRK Landesverband Sachsen-Anhalt e.V. und unterstütze sowohl Menschen mit beruflichen Integrations- und Qualifizierungsbedarfen als auch Unternehmen und Einrichtungen bei der Gewinnung, Entwicklung und nachhaltigen Bindung von Fachkräften.", teamSaschaAbout: "Als staatlich anerkannter Sozialarbeiter M.A. gilt mein fachliches Interesse unter anderem gesellschaftlichen Veränderungen und wie wir damit umgehen. Durch den demografischen, sozialen und wirtschaftlichen Wandel gewinnen besonders Berufe im Pflege- und Gesundheitswesen zunehmend an Bedeutung. Bereits heute zeigt sich, dass qualifizierte Fachkräfte aus dem Ausland unverzichtbar sind, um den wachsenden Anforderungen einer sich verändernden Gesellschaft gerecht zu werden. Die bedarfsgerechte Unterstützung von Menschen mit Migrationsgeschichte auf ihrem Weg in diese Berufsfelder eröffnet die Möglichkeit, Fachkräftesicherung und gelingende Integration sinnvoll miteinander zu verbinden. Als Berufsbegleiter im Landkreis Börde unterstütze ich bereits ausländische Auszubildende des DRK-Kreisverbandes auf ihrem Weg und verstehe diese anspruchsvolle Aufgabe als zukunftsorientiert und zugleich als große Chance, Integration im Alltag und im Beruf erlebbar zu machen.",
+                teamPlaceholderRegion: "JERICHOWER LAND & MAGDEBURG", teamPlaceholderName: "Ansprechperson folgt", teamPlaceholderRole: "Berufsbegleitung am Standort Burg", teamNataliaRegion: "ALTMARKKREIS SALZWEDEL", teamAnnelieRegion: "BÖRDE & MAGDEBURG", teamSaschaRegion: "BÖRDE",
+                teamNataliaRole: "Berufsbegleiterin, Standort Stendal", teamAnnelieRole: "Berufsbegleiterin, Standort Wanzleben", teamSaschaRole: "Berufsbegleiter, Standort Haldensleben",
+                teamNataliaAbout: "„Vor 29 Jahren bin ich selbst nach Deutschland gekommen. Daher weiß ich aus eigener Erfahrung, wie viel Mut, Ausdauer und Unterstützung ein erfolgreicher Neuanfang braucht. Heute begleite ich Menschen mit Migrationsgeschichte auf ihrem Weg in Arbeit und Ausbildung im Pflege- und Gesundheitsbereich. Es erfüllt mich, individuelle Potenziale zu entdecken, Perspektiven aufzuzeigen und Menschen dabei zu unterstützen, ihren eigenen Weg in Deutschland erfolgreich zu gestalten.“", teamAnnelieAbout: "„Jeder Mensch bringt seine eigene Geschichte, Erfahrungen und Stärken mit. Mir ist es wichtig, diese Potenziale sichtbar zu machen und Menschen auf ihrem Weg in Deutschland zu begleiten. Als Berufsbegleiterin unterstütze ich internationale Fachkräfte und Auszubildende dabei, sich im Pflege- und Gesundheitsbereich zurechtzufinden, Herausforderungen zu meistern und neue Perspektiven zu entwickeln. Dabei geht es nicht nur um Formulare, Sprache oder berufliche Fragen – sondern vor allem darum, Sicherheit, Orientierung und Vertrauen zu schaffen. Zu erleben, wie aus ersten Schritten neue Chancen entstehen, ist für mich das Schönste an meiner Arbeit.“", teamSaschaAbout: "Als staatlich anerkannter Sozialarbeiter M.A. gilt mein fachliches Interesse unter anderem gesellschaftlichen Veränderungen und wie wir damit umgehen. Durch den demografischen, sozialen und wirtschaftlichen Wandel gewinnen besonders Berufe im Pflege- und Gesundheitswesen zunehmend an Bedeutung. Bereits heute zeigt sich, dass qualifizierte Fachkräfte aus dem Ausland unverzichtbar sind, um den wachsenden Anforderungen einer sich verändernden Gesellschaft gerecht zu werden. Die bedarfsgerechte Unterstützung von Menschen mit Migrationsgeschichte auf ihrem Weg in diese Berufsfelder eröffnet die Möglichkeit, Fachkräftesicherung und gelingende Integration sinnvoll miteinander zu verbinden. Als Berufsbegleiter im Landkreis Börde unterstütze ich bereits ausländische Auszubildende des DRK-Kreisverbandes auf ihrem Weg und verstehe diese anspruchsvolle Aufgabe als zukunftsorientiert und zugleich als große Chance, Integration im Alltag und im Beruf erlebbar zu machen.",
                 teamPhone: "Telefon:", teamEmail: "E-Mail:",
-                
+
                 contactPageLabel: "Kontakt",
                 contactBadge: "✦ Persönlich • Vertraulich • Kostenfrei",
                 contactHeroTitle: "Kontakt aufnehmen",
@@ -128,7 +131,7 @@
                 aboutTargetLabel: "Who is ProBe for?", aboutTargetTitle: "We support people and institutions.",
                 aboutTarget1: "International professionals and trainees in nursing and healthcare", aboutTarget2: "People with a migration background seeking a career in nursing", aboutTarget3: "Participants in the Federal Volunteer Service with a connection to nursing", aboutTarget4: "Nursing and healthcare institutions with integration and recruitment of skilled professionals",
                 aboutCtaLabel: "Support", aboutCtaTitle: "Would you like to know whether ProBe is right for your situation?", aboutCtaBtn: "Get in touch",
-                
+
                 supportPageLabel: "Support",
                 supportHeroTitle: "Arrive.<br>Settle in.<br>Build your<br>professional future.",
                 supportHeroText: "ProBe supports international skilled workers and support staff not only with professional questions, but also as they arrive and settle in Saxony-Anhalt. The aim is successful professional and social integration and a long-term perspective in nursing and healthcare.",
@@ -152,16 +155,16 @@
                 supportStep4Title: "Develop perspectives", supportStep4Text: "Together, we support the path into training, employment or professional recognition.",
                 supportFreeTitle: "Free & confidential",
                 supportFreeText: "The model project runs from January 2026 to December 2028. Support from the career support professionals is free of charge and confidential.",
-                
+
                 teamPageLabel: "Team", teamHeroTitle: "Your regional contacts", teamHeroText: "Personal support for trainees, schools and institutions in the project regions of Saxony-Anhalt.",
-                teamNataliaRegion: "ALTMARK DISTRICT OF SALZWEDEL", teamAnnelieRegion: "BÖRDE & MAGDEBURG", teamMathiasRegion: "JERICHOWER LAND & MAGDEBURG", teamSaschaRegion: "BÖRDE",
-                teamNataliaRole: "Career support professional, Stendal", teamAnnelieRole: "Career support professional, Wanzleben", teamMathiasRole: "Career support professional, Burg", teamSaschaRole: "Career support professional, Haldensleben",
+                teamPlaceholderRegion: "JERICHOWER LAND & MAGDEBURG", teamPlaceholderName: "Local contact to be announced", teamPlaceholderRole: "Career support, Burg location", teamNataliaRegion: "ALTMARK DISTRICT OF SALZWEDEL", teamAnnelieRegion: "BÖRDE & MAGDEBURG", teamSaschaRegion: "BÖRDE",
+                teamNataliaRole: "Career support professional, Stendal", teamAnnelieRole: "Career support professional, Wanzleben", teamSaschaRole: "Career support professional, Haldensleben",
                 teamNataliaAbout: "I came to Germany myself 29 years ago. From my own experience, I know how much courage, perseverance and support a successful new beginning requires. Today I support people with a migration background on their path into work and training in nursing and healthcare. I find it fulfilling to discover individual potential, highlight opportunities and help people successfully shape their own path in Germany.",
                 teamAnnelieAbout: "Everyone brings their own story, experiences and strengths. It is important to me to make this potential visible and support people on their journey in Germany. As a career support professional, I help international professionals and trainees find their way in nursing and healthcare, overcome challenges and develop new perspectives. This is not only about forms, language or professional questions, but above all about creating security, orientation and trust. Seeing first steps turn into new opportunities is the most rewarding part of my work.",
-                teamMathiasAbout: "I am 41 years old, a father and live in Magdeburg. After studying sports science with a focus on health-oriented exercise, I worked for almost ten years in health promotion, prevention, sports therapy and nursing. Alongside my work, I completed a master’s degree in health management and later worked as a project manager in preventive health. Today I work in career support at the German Red Cross State Association of Saxony-Anhalt and support both people with professional integration and qualification needs and organisations in recruiting, developing and retaining skilled professionals.",
+
                 teamSaschaAbout: "As a state-recognised social worker with a master’s degree, my professional interests include social change and how we respond to it. Demographic, social and economic change is making professions in nursing and healthcare increasingly important. Qualified professionals from abroad are already essential to meet the growing demands of a changing society. Providing needs-based support to people with a migration background on their path into these professions creates an opportunity to combine securing skilled professionals with successful integration. As a career support professional in the Börde district, I already support international trainees of the local German Red Cross association and see this demanding task as forward-looking and as a major opportunity to make integration tangible in everyday life and at work.",
                 teamPhone: "Phone:", teamEmail: "Email:",
-                
+
                 contactPageLabel: "Contact",
                 contactBadge: "✦ Personal • Confidential • Free of charge",
                 contactHeroTitle: "Get in touch",
@@ -218,62 +221,13 @@
                 aboutTargetLabel: "لمن يقدم ProBe خدماته؟", aboutTargetTitle: "نرافق الأشخاص والمؤسسات.",
                 aboutTarget1: "الكوادر الدولية والمتدربون في قطاعي الرعاية والصحة", aboutTarget2: "الأشخاص ذوو تاريخ الهجرة الذين يبحثون عن مستقبل مهني في مجال الرعاية", aboutTarget3: "المشاركون في الخدمة التطوعية الاتحادية المرتبطة بمجال الرعاية", aboutTarget4: "مؤسسات الرعاية والصحة في مجالي الاندماج واستقطاب الكفاءات",
                 aboutCtaLabel: "الدعم", aboutCtaTitle: "هل ترغبون في معرفة ما إذا كان ProBe مناسبًا لوضعكم؟", aboutCtaBtn: "تواصلوا معنا",
-                
+
                 supportPageLabel: "الدعم",
                 supportHeroTitle: "الوصول.<br>الاستقرار.<br>بناء مستقبل<br>مهني.",
                 supportHeroText: "يدعم ProBe الكوادر الدولية والعاملين المساعدين ليس فقط في الأسئلة المهنية، بل أيضًا عند الوصول والاستقرار في ساكسونيا أنهالت. والهدف هو اندماج مهني واجتماعي ناجح وبناء مستقبل طويل الأمد في قطاعي الرعاية والصحة.",
                 supportHeroFact: "الخدمة متاحة للمؤسسات بجميع أنواع الجهات المشغلة.",
                 supportParticipantsLabel: "للمشاركين",
-                supportParticipant1: "الدعم في إجراءات الاعتراف المهني",
-                supportParticipant2: "الإحالة إلى دورات اللغة وبرامج التأهيل",
-                supportParticipant3: "المساعدة في الشؤون الإدارية والرسمية",
-                supportParticipant4: "التوجيه والاندماج المهني",
-                supportParticipant5: "الاستشارة في القضايا الاجتماعية",
-                supportInstitutionsLabel: "للمؤسسات",
-                supportInstitution1: "الدعم في عمليات الاندماج",
-                supportInstitution2: "المرافقة في الأسئلة المتعلقة بتوظيف الكوادر الدولية",
-                supportInstitution3: "الإحالة إلى عروض الدعم المناسبة",
-                supportInstitution4: "الربط بجهات الاتصال ذات الصلة",
-                supportInstitution5: "استشارة فردية حول الاندماج واستقطاب الكفاءات",
-                supportProcessLabel: "سير العمل", supportProcessTitle: "كيف تسير عملية الدعم",
-                supportStep1Title: "التواصل معنا", supportStep1Text: "يتواصل الأشخاص أو المؤسسات المهتمة مباشرة مع ProBe.",
-                supportStep2Title: "توضيح الوضع", supportStep2Text: "ننظر معًا في الأسئلة والأهداف واحتياجات الدعم المحددة.",
-                supportStep3Title: "مرافقة فردية", supportStep3Text: "يدعم مرافقو المسار المهني الخطوات التالية والإجراءات والاتصالات اللازمة.",
-                supportStep4Title: "تطوير الآفاق", supportStep4Text: "نرافق معًا الطريق نحو التدريب أو العمل أو الاعتراف المهني.",
-                supportFreeTitle: "مجاني وسري",
-                supportFreeText: "تمتد فترة المشروع النموذجي من يناير 2026 إلى ديسمبر 2028. دعم مرافقِي المسار المهني مجاني وسري.",
-                
-                teamPageLabel: "الفريق", teamHeroTitle: "جهات الاتصال الإقليمية", teamHeroText: "دعم شخصي للمتدربين والمدارس والمؤسسات في مناطق المشروع في ساكسونيا أنهالت.",
-                teamNataliaRegion: "منطقة ألتمارك سالتسفيدل", teamAnnelieRegion: "بورده وماغديبورغ", teamMathiasRegion: "يريخوفر لاند وماغديبورغ", teamSaschaRegion: "بورده",
-                teamNataliaRole: "مرافقة مهنية، موقع شتندال", teamAnnelieRole: "مرافقة مهنية، موقع فانتسليبن", teamMathiasRole: "مرافق مهني، موقع بورغ", teamSaschaRole: "مرافق مهني، موقع هالدنسليبن",
-                teamNataliaAbout: "أتيت بنفسي إلى ألمانيا قبل 29 عامًا، ولذلك أعرف من تجربتي مقدار الشجاعة والمثابرة والدعم الذي تتطلبه بداية جديدة ناجحة. واليوم أرافق الأشخاص ذوي تاريخ الهجرة في طريقهم إلى العمل والتدريب في قطاعي الرعاية والصحة، ويسعدني اكتشاف الإمكانات الفردية وإظهار الفرص ودعم الناس في بناء طريقهم الخاص بنجاح في ألمانيا.",
-                teamAnnelieAbout: "لكل إنسان قصته وخبراته ونقاط قوته. من المهم بالنسبة لي إظهار هذه الإمكانات ومرافقة الناس في طريقهم في ألمانيا. بصفتي مرافقة مهنية، أدعم الكوادر الدولية والمتدربين في إيجاد طريقهم في قطاعي الرعاية والصحة وتجاوز التحديات وتطوير آفاق جديدة. ولا يتعلق الأمر فقط بالنماذج أو اللغة أو الأسئلة المهنية، بل قبل كل شيء بخلق الأمان والتوجيه والثقة. ورؤية الخطوات الأولى وهي تتحول إلى فرص جديدة هي أجمل ما في عملي.",
-                teamMathiasAbout: "أبلغ من العمر 41 عامًا، وأنا أب وأعيش في ماغديبورغ. بعد دراسة علوم الرياضة مع التركيز على الرياضة الصحية، عملت قرابة عشر سنوات في تعزيز الصحة والوقاية والعلاج الرياضي والرعاية. وأكملت أثناء عملي درجة الماجستير في إدارة الصحة، ثم عملت مديرًا لمشروع في مجال الحفاظ الوقائي على الصحة. واليوم أعمل في المرافقة المهنية لدى جمعية الصليب الأحمر الألماني في ساكسونيا أنهالت، وأدعم الأشخاص ذوي احتياجات الاندماج والتأهيل المهني وكذلك الشركات والمؤسسات في استقطاب الكفاءات وتطويرها والاحتفاظ بها.",
-                teamSaschaAbout: "بصفتي أخصائيًا اجتماعيًا معترفًا به رسميًا وحاصلًا على درجة الماجستير، تشمل اهتماماتي المهنية التغيرات المجتمعية وكيفية التعامل معها. ومع التحولات الديموغرافية والاجتماعية والاقتصادية تزداد أهمية المهن في قطاعي الرعاية والصحة. وتظهر الحاجة بالفعل إلى الكفاءات المؤهلة من الخارج لمواجهة متطلبات المجتمع المتغير. إن تقديم دعم مناسب لاحتياجات الأشخاص ذوي تاريخ الهجرة في طريقهم إلى هذه المهن يتيح الجمع بين تأمين الكفاءات والاندماج الناجح. وبصفتي مرافقًا مهنيًا في منطقة بورده، أدعم بالفعل متدربين دوليين في جمعية الصليب الأحمر المحلية وأرى في هذه المهمة فرصة مستقبلية كبيرة لجعل الاندماج ملموسًا في الحياة اليومية والعمل.",
-                teamPhone: "الهاتف:", teamEmail: "البريد الإلكتروني:",
-                
-                contactPageLabel: "اتصال",
-                contactBadge: "✦ شخصي • سري • مجاني",
-                contactHeroTitle: "تواصلوا معنا",
-                contactHeroText: "هل ترغبون في الاستفادة من ProBe، أو لديكم أسئلة، أو تريدون التواصل معنا بصفتكم مؤسسة؟ يسعدنا أن تكتبوا لنا.",
-                contactBoxLabel: "ProBe",
-                contactBoxTitle: "نحن هنا من أجلكم.",
-                contactBoxText: "يدعم فريق ProBe المشاركين والمؤسسات بشكل شخصي وسري ومجاني.",
-                contactOrg1: "ProBe للمرافقة المهنية",
-                contactOrg2: "الصليب الأحمر الألماني – رابطة ولاية ساكسونيا أنهالت",
-                        footerProject: "ProBe · مشروع المرافقة المهنية", fundedBy: "بدعم من",
-                inCooperationWith: "بالتعاون مع", footerCredit: "التنفيذ الرقمي بواسطة",
-                imprint: "بيانات الناشر", privacy: "حماية البيانات"
-              },
-
-              ru: {
-                navStart: "Главная", navAbout: "О ProBe", navSupport: "Поддержка", navTeam: "Команда", navContact: "Контакты",
-                heroKicker: "✦ Бесплатная поддержка в Саксонии-Анхальт",
-                heroTitle: "Строим мосты. Раскрываем потенциал. Обеспечиваем будущее.",
-                heroTitle2: "Строим мосты. Раскрываем потенциал. Обеспечиваем будущее.",
-                heroText: "ProBe помогает международным специалистам и вспомогательному персоналу освоиться в Саксонии-Анхальт и тем самым содействует обеспечению кадрами сферы ухода и здравоохранения.",
-                primaryBtn: "Запросить консультацию →", secondaryBtn: "⬇ Скачать флаер",
-                visualTitle: "Сильная поддержка для сильного ухода", visualText: "Лично. Понятно. Для людей с миграционной историей.",
+                supportParticipant1: "الدع…2020 tokens truncated…да", visualText: "Лично. Понятно. Для людей с миграционной историей.",
                 quick1: "Личная поддержка", quick2: "Находить возможности", quick3: "Сервисный центр для учреждений ухода", quick4: "Формировать будущее",
                 offerLabel: "Предложение", supportTitle: "Мы поддерживаем вас", freeTitle: "Бесплатно и конфиденциально",
                 freeText: "Модельный проект действует с 01/2026 по 12/2028. Участие бесплатное и доступно учреждениям любой формы собственности.",
@@ -308,7 +262,7 @@
                 aboutTargetLabel: "Для кого предназначен ProBe?", aboutTargetTitle: "Мы сопровождаем людей и учреждения.",
                 aboutTarget1: "Международные специалисты и учащиеся в сфере ухода и здравоохранения", aboutTarget2: "Люди с миграционной историей, которые ищут профессиональные перспективы в сфере ухода", aboutTarget3: "Участники Федеральной добровольной службы, связанные со сферой ухода", aboutTarget4: "Учреждения ухода и здравоохранения в вопросах интеграции и привлечения специалистов",
                 aboutCtaLabel: "Поддержка", aboutCtaTitle: "Хотите узнать, подходит ли ProBe для вашей ситуации?", aboutCtaBtn: "Связаться с нами",
-                
+
                 supportPageLabel: "Поддержка",
                 supportHeroTitle: "Приехать.<br>Освоиться.<br>Уверенно начать<br>профессиональный путь.",
                 supportHeroText: "ProBe помогает международным специалистам и вспомогательному персоналу не только в профессиональных вопросах, но и при переезде и адаптации в Саксонии-Анхальт. Цель — успешная профессиональная и социальная интеграция и долгосрочная перспектива в сфере ухода и здравоохранения.",
@@ -332,16 +286,16 @@
                 supportStep4Title: "Развивать перспективы", supportStep4Text: "Вместе мы сопровождаем путь к обучению, работе или признанию квалификации.",
                 supportFreeTitle: "Бесплатно и конфиденциально",
                 supportFreeText: "Модельный проект действует с января 2026 по декабрь 2028 года. Поддержка специалистов по профессиональному сопровождению бесплатна и конфиденциальна.",
-                
+
                 teamPageLabel: "Команда", teamHeroTitle: "Ваши региональные контактные лица", teamHeroText: "Персональная поддержка для учащихся, школ и учреждений в проектных регионах Саксонии-Анхальт.",
-                teamNataliaRegion: "АЛЬТМАРККРАЙС ЗАЛЬЦВЕДЕЛЬ", teamAnnelieRegion: "БЁРДЕ И МАГДЕБУРГ", teamMathiasRegion: "ЙЕРИХОВЕР-ЛАНД И МАГДЕБУРГ", teamSaschaRegion: "БЁРДЕ",
-                teamNataliaRole: "Специалист по профессиональному сопровождению, Штендаль", teamAnnelieRole: "Специалист по профессиональному сопровождению, Ванцлебен", teamMathiasRole: "Специалист по профессиональному сопровождению, Бург", teamSaschaRole: "Специалист по профессиональному сопровождению, Хальденслебен",
+                teamPlaceholderRegion: "Йериховер-Ланд и Магдебург", teamPlaceholderName: "Контактное лицо будет объявлено", teamPlaceholderRole: "Профессиональное сопровождение, Бург", teamNataliaRegion: "АЛЬТМАРККРАЙС ЗАЛЬЦВЕДЕЛЬ", teamAnnelieRegion: "БЁРДЕ И МАГДЕБУРГ", teamSaschaRegion: "БЁРДЕ",
+                teamNataliaRole: "Специалист по профессиональному сопровождению, Штендаль", teamAnnelieRole: "Специалист по профессиональному сопровождению, Ванцлебен", teamSaschaRole: "Специалист по профессиональному сопровождению, Хальденслебен",
                 teamNataliaAbout: "Я сама приехала в Германию 29 лет назад и по собственному опыту знаю, сколько мужества, настойчивости и поддержки требует успешное новое начало. Сегодня я сопровождаю людей с миграционной историей на пути к работе и обучению в сфере ухода и здравоохранения. Мне особенно важно раскрывать индивидуальный потенциал, показывать перспективы и помогать людям успешно строить собственный путь в Германии.",
                 teamAnnelieAbout: "У каждого человека своя история, опыт и сильные стороны. Для меня важно сделать этот потенциал видимым и сопровождать людей на их пути в Германии. Как специалист по профессиональному сопровождению я помогаю международным специалистам и учащимся ориентироваться в сфере ухода и здравоохранения, преодолевать трудности и находить новые перспективы. Речь идёт не только о документах, языке или профессиональных вопросах, но прежде всего о создании чувства безопасности, ориентации и доверия. Видеть, как первые шаги превращаются в новые возможности, — самое прекрасное в моей работе.",
-                teamMathiasAbout: "Мне 41 год, я отец семейства и живу в Магдебурге. После изучения спортивных наук со специализацией на оздоровительном спорте я почти десять лет работал в сферах укрепления здоровья, профилактики, спортивной терапии и ухода. Параллельно с работой я получил степень магистра в области управления здравоохранением, а затем работал руководителем проекта в сфере профилактического здоровья. Сегодня я работаю в сфере профессионального сопровождения в земельном объединении Немецкого Красного Креста Саксонии-Анхальт и поддерживаю как людей с потребностями в профессиональной интеграции и квалификации, так и организации в привлечении, развитии и долгосрочном удержании специалистов.",
+
                 teamSaschaAbout: "Как государственно признанный социальный работник со степенью магистра, я профессионально интересуюсь общественными изменениями и тем, как мы на них реагируем. Демографические, социальные и экономические изменения делают профессии в сфере ухода и здравоохранения всё более значимыми. Уже сегодня квалифицированные специалисты из-за рубежа необходимы для удовлетворения растущих потребностей меняющегося общества. Поддержка людей с миграционной историей с учётом их потребностей на пути в эти профессии позволяет разумно сочетать обеспечение кадрами и успешную интеграцию. Как специалист по профессиональному сопровождению в районе Бёрде я уже поддерживаю иностранных учащихся местного отделения Немецкого Красного Креста и считаю эту ответственную работу ориентированной на будущее и большой возможностью сделать интеграцию ощутимой в повседневной жизни и профессии.",
                 teamPhone: "Телефон:", teamEmail: "Эл. почта:",
-                
+
                 contactPageLabel: "Контакты",
                 contactBadge: "✦ Лично • Конфиденциально • Бесплатно",
                 contactHeroTitle: "Связаться с нами",
@@ -398,7 +352,7 @@
                 aboutTargetLabel: "ProBe kimler için?", aboutTargetTitle: "İnsanlara ve kurumlara destek oluyoruz.",
                 aboutTarget1: "Bakım ve sağlık alanındaki uluslararası uzmanlar ve stajyerler", aboutTarget2: "Bakım alanında mesleki bir gelecek arayan göç geçmişine sahip kişiler", aboutTarget3: "Bakımla bağlantılı Federal Gönüllü Hizmet katılımcıları", aboutTarget4: "Entegrasyon ve nitelikli personel kazanımı süreçlerindeki bakım ve sağlık kurumları",
                 aboutCtaLabel: "Destek", aboutCtaTitle: "ProBe'nin durumunuza uygun olup olmadığını öğrenmek ister misiniz?", aboutCtaBtn: "İletişime geçin",
-                
+
                 supportPageLabel: "Destek",
                 supportHeroTitle: "Gelmek.<br>Yerleşmek.<br>Mesleki olarak<br>sağlam adımlar atmak.",
                 supportHeroText: "ProBe, uluslararası uzman ve yardımcı çalışanları yalnızca mesleki konularda değil, Saksonya-Anhalt'a gelme ve yerleşme süreçlerinde de destekler. Amaç, başarılı bir mesleki ve sosyal entegrasyon ile bakım ve sağlık alanında uzun vadeli bir gelecek oluşturmaktır.",
@@ -422,16 +376,16 @@
                 supportStep4Title: "Perspektif geliştirin", supportStep4Text: "Eğitim, istihdam veya mesleki denklik yolunu birlikte destekleriz.",
                 supportFreeTitle: "Ücretsiz ve gizli",
                 supportFreeText: "Model proje Ocak 2026'dan Aralık 2028'e kadar devam eder. Mesleki rehberlik desteği ücretsiz ve gizlidir.",
-                
+
                 teamPageLabel: "Ekip", teamHeroTitle: "Bölgesel irtibat kişileriniz", teamHeroText: "Saksonya-Anhalt’taki proje bölgelerinde kursiyerler, okullar ve kurumlar için kişisel destek.",
-                teamNataliaRegion: "ALTMARKKREIS SALZWEDEL", teamAnnelieRegion: "BÖRDE VE MAGDEBURG", teamMathiasRegion: "JERICHOWER LAND VE MAGDEBURG", teamSaschaRegion: "BÖRDE",
-                teamNataliaRole: "Mesleki rehber, Stendal", teamAnnelieRole: "Mesleki rehber, Wanzleben", teamMathiasRole: "Mesleki rehber, Burg", teamSaschaRole: "Mesleki rehber, Haldensleben",
+                teamPlaceholderRegion: "JERICHOWER LAND VE MAGDEBURG", teamPlaceholderName: "İletişim kişisi yakında açıklanacak", teamPlaceholderRole: "Burg’da mesleki destek", teamNataliaRegion: "ALTMARKKREIS SALZWEDEL", teamAnnelieRegion: "BÖRDE VE MAGDEBURG", teamSaschaRegion: "BÖRDE",
+                teamNataliaRole: "Mesleki rehber, Stendal", teamAnnelieRole: "Mesleki rehber, Wanzleben", teamSaschaRole: "Mesleki rehber, Haldensleben",
                 teamNataliaAbout: "29 yıl önce ben de Almanya’ya geldim. Bu nedenle başarılı bir yeni başlangıcın ne kadar cesaret, sabır ve destek gerektirdiğini kendi deneyimimden biliyorum. Bugün göç geçmişi olan insanlara bakım ve sağlık alanında iş ve eğitim yolunda eşlik ediyorum. Bireysel potansiyelleri keşfetmek, yeni perspektifler göstermek ve insanların Almanya’daki kendi yollarını başarıyla şekillendirmelerine destek olmak bana büyük mutluluk veriyor.",
                 teamAnnelieAbout: "Her insan kendi hikâyesini, deneyimlerini ve güçlü yönlerini beraberinde getirir. Bu potansiyelleri görünür kılmak ve insanlara Almanya’daki yollarında eşlik etmek benim için önemlidir. Mesleki rehber olarak uluslararası uzmanların ve kursiyerlerin bakım ve sağlık alanında yollarını bulmalarına, zorlukların üstesinden gelmelerine ve yeni perspektifler geliştirmelerine destek oluyorum. Burada yalnızca formlar, dil veya mesleki sorular değil, her şeyden önce güven, yönlendirme ve emniyet duygusu oluşturmak önemlidir. İlk adımlardan yeni fırsatların doğduğunu görmek işimin en güzel yanıdır.",
-                teamMathiasAbout: "41 yaşındayım, aile babasıyım ve Magdeburg’da yaşıyorum. Sağlık sporu odaklı spor bilimleri eğitimimin ardından yaklaşık on yıl sağlık geliştirme, önleme, spor terapisi ve bakım alanlarında çalıştım. Çalışırken sağlık yönetimi alanında yüksek lisans yaptım ve daha sonra koruyucu sağlık alanında proje yöneticisi olarak görev aldım. Bugün Alman Kızılhaçı Saksonya-Anhalt Eyalet Birliği’nde mesleki rehberlik alanında çalışıyor; hem mesleki entegrasyon ve yeterlilik ihtiyacı olan insanları hem de kurumları nitelikli personelin kazanılması, geliştirilmesi ve uzun vadeli olarak elde tutulması konularında destekliyorum.",
+
                 teamSaschaAbout: "Devlet tarafından tanınan, yüksek lisans derecesine sahip bir sosyal hizmet uzmanı olarak mesleki ilgi alanlarım arasında toplumsal değişimler ve bunlarla nasıl başa çıktığımız yer alıyor. Demografik, sosyal ve ekonomik değişim nedeniyle bakım ve sağlık meslekleri giderek daha fazla önem kazanıyor. Değişen toplumun artan ihtiyaçlarını karşılamak için yurt dışından gelen nitelikli uzmanların vazgeçilmez olduğu şimdiden görülüyor. Göç geçmişi olan insanlara bu mesleklere giden yolda ihtiyaçlarına uygun destek sunmak, nitelikli personel güvencesi ile başarılı entegrasyonu anlamlı biçimde birleştirme fırsatı yaratıyor. Börde ilçesinde mesleki rehber olarak yerel Alman Kızılhaçı kuruluşundaki yabancı kursiyerleri destekliyorum ve bu zorlu görevi geleceğe dönük, entegrasyonu günlük yaşamda ve işte görünür kılmak için büyük bir fırsat olarak görüyorum.",
                 teamPhone: "Telefon:", teamEmail: "E-posta:",
-                
+
                 contactPageLabel: "İletişim",
                 contactBadge: "✦ Kişisel • Gizli • Ücretsiz",
                 contactHeroTitle: "Bizimle iletişime geçin",

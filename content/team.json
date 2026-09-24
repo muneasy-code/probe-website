@@ -87,45 +87,51 @@
       }
     },
     {
-      "name": "Mathias Wilhelm",
-      "image": "/Mathias.png",
-      "phone": "0155 63 38 82 34",
-      "email": "mathias.wilhelm@sachsen-anhalt.drk.de",
+      "name": "Ansprechperson folgt",
+      "image": "/foto-platzhalter-weiblich.svg",
+      "contactUrl": "/kontakt.html",
       "translations": {
         "de": {
+          "name": "Ansprechperson folgt",
+          "imageAlt": "Weibliche Platzhalterillustration für die Ansprechperson",
           "region": "JERICHOWER LAND & MAGDEBURG",
-          "role": "Berufsbegleiter, Standort Burg",
-          "about": "Ich bin 41 Jahre alt, Familienvater und lebe in Magdeburg. Nach meinem Studium der Sportwissenschaften mit Schwerpunkt Gesundheitssport war ich nahezu zehn Jahre in den Bereichen Gesundheitsförderung, Prävention, Sporttherapie und Pflege tätig. Berufsbegleitend absolvierte ich ein Masterstudium im Gesundheitsmanagement und war anschließend als Projektleiter im Bereich präventiver Gesunderhaltung tätig. Heute arbeite ich als Referent Berufsbegleitung beim DRK Landesverband Sachsen-Anhalt e.V. und unterstütze sowohl Menschen mit beruflichen Integrations- und Qualifizierungsbedarfen als auch Unternehmen und Einrichtungen bei der Gewinnung, Entwicklung und nachhaltigen Bindung von Fachkräften."
+          "role": "Berufsbegleitung am Standort Burg"
         },
         "en": {
+          "name": "Local contact to be announced",
+          "imageAlt": "Female placeholder illustration for the local contact",
           "region": "JERICHOWER LAND & MAGDEBURG",
-          "role": "Career support professional, Burg",
-          "about": "I am 41 years old, a father and live in Magdeburg. After studying sports science with a focus on health-oriented exercise, I worked for almost ten years in health promotion, prevention, sports therapy and nursing. Alongside my work, I completed a master’s degree in health management and later worked as a project manager in preventive health. Today I work in career support at the German Red Cross State Association of Saxony-Anhalt and support both people with professional integration and qualification needs and organisations in recruiting, developing and retaining skilled professionals."
+          "role": "Career support, Burg location"
         },
         "ar": {
+          "name": "سيُعلن عن جهة الاتصال قريبًا",
+          "imageAlt": "رسم توضيحي مؤقت لجهة الاتصال",
           "region": "يريخوفر لاند وماغديبورغ",
-          "role": "مرافق مهني، موقع بورغ",
-          "about": "أبلغ من العمر 41 عامًا، وأنا أب وأعيش في ماغديبورغ. بعد دراسة علوم الرياضة مع التركيز على الرياضة الصحية، عملت قرابة عشر سنوات في تعزيز الصحة والوقاية والعلاج الرياضي والرعاية. وأكملت أثناء عملي درجة الماجستير في إدارة الصحة، ثم عملت مديرًا لمشروع في مجال الحفاظ الوقائي على الصحة. واليوم أعمل في المرافقة المهنية لدى جمعية الصليب الأحمر الألماني في ساكسونيا أنهالت، وأدعم الأشخاص ذوي احتياجات الاندماج والتأهيل المهني وكذلك الشركات والمؤسسات في استقطاب الكفاءات وتطويرها والاحتفاظ بها."
+          "role": "المرافقة المهنية، موقع بورغ"
         },
         "ru": {
-          "region": "ЙЕРИХОВЕР-ЛАНД И МАГДЕБУРГ",
-          "role": "Специалист по профессиональному сопровождению, Бург",
-          "about": "Мне 41 год, я отец семейства и живу в Магдебурге. После изучения спортивных наук со специализацией на оздоровительном спорте я почти десять лет работал в сферах укрепления здоровья, профилактики, спортивной терапии и ухода. Параллельно с работой я получил степень магистра в области управления здравоохранением, а затем работал руководителем проекта в сфере профилактического здоровья. Сегодня я работаю в сфере профессионального сопровождения в земельном объединении Немецкого Красного Креста Саксонии-Анхальт и поддерживаю как людей с потребностями в профессиональной интеграции и квалификации, так и организации в привлечении, развитии и долгосрочном удержании специалистов."
+          "name": "Контактное лицо будет объявлено",
+          "imageAlt": "Иллюстрация-заполнитель для контактного лица",
+          "region": "Йериховер-Ланд и Магдебург",
+          "role": "Профессиональное сопровождение, Бург"
         },
         "tr": {
+          "name": "İletişim kişisi yakında açıklanacak",
+          "imageAlt": "İletişim kişisi için kadın placeholder çizimi",
           "region": "JERICHOWER LAND VE MAGDEBURG",
-          "role": "Mesleki rehber, Burg",
-          "about": "41 yaşındayım, aile babasıyım ve Magdeburg’da yaşıyorum. Sağlık sporu odaklı spor bilimleri eğitimimin ardından yaklaşık on yıl sağlık geliştirme, önleme, spor terapisi ve bakım alanlarında çalıştım. Çalışırken sağlık yönetimi alanında yüksek lisans yaptım ve daha sonra koruyucu sağlık alanında proje yöneticisi olarak görev aldım. Bugün Alman Kızılhaçı Saksonya-Anhalt Eyalet Birliği’nde mesleki rehberlik alanında çalışıyor; hem mesleki entegrasyon ve yeterlilik ihtiyacı olan insanları hem de kurumları nitelikli personelin kazanılması, geliştirilmesi ve uzun vadeli olarak elde tutulması konularında destekliyorum."
+          "role": "Burg’da mesleki destek"
         },
         "uk": {
-          "region": "ЄРИХОВЕР-ЛАНД ТА МАГДЕБУРГ",
-          "role": "Фахівець із професійного супроводу, Бург",
-          "about": "Мені 41 рік, я батько сім’ї та живу в Магдебурзі. Після вивчення спортивних наук зі спеціалізацією на оздоровчому спорті я майже десять років працював у сфері зміцнення здоров’я, профілактики, спортивної терапії та догляду. Паралельно з роботою я здобув ступінь магістра з управління охороною здоров’я, а потім працював керівником проєкту у сфері профілактики. Сьогодні я працюю референтом із професійного супроводу в Земельному об’єднанні Німецького Червоного Хреста Саксонії-Ангальт і підтримую як людей, яким потрібні професійна інтеграція та кваліфікація, так і підприємства й заклади у залученні, розвитку та довгостроковому утриманні фахівців."
+          "name": "Контактну особу буде оголошено",
+          "imageAlt": "Жіноча ілюстрація-заповнювач для контактної особи",
+          "region": "Єриховський район і Магдебург",
+          "role": "Професійний супровід, Бург"
         },
         "vi": {
+          "name": "Thông tin người liên hệ sẽ được cập nhật",
+          "imageAlt": "Hình minh họa nữ tạm thời cho người liên hệ",
           "region": "JERICHOWER LAND VÀ MAGDEBURG",
-          "role": "Chuyên viên đồng hành nghề nghiệp, Burg",
-          "about": "Tôi 41 tuổi, là một người cha và sống tại Magdeburg. Sau khi học khoa học thể thao với chuyên ngành thể thao sức khỏe, tôi đã làm việc gần mười năm trong các lĩnh vực nâng cao sức khỏe, phòng ngừa, trị liệu thể thao và điều dưỡng. Song song với công việc, tôi hoàn thành chương trình thạc sĩ quản lý y tế và sau đó làm quản lý dự án trong lĩnh vực chăm sóc sức khỏe dự phòng. Hiện nay, tôi phụ trách đồng hành nghề nghiệp tại Hội Chữ thập đỏ Đức bang Sachsen-Anhalt và hỗ trợ cả những người có nhu cầu hòa nhập, nâng cao trình độ nghề nghiệp lẫn doanh nghiệp và cơ sở trong việc thu hút, phát triển và gắn bó lâu dài với nhân lực chuyên môn."
+          "role": "Hỗ trợ nghề nghiệp tại Burg"
         }
       }
     },
