@@ -1,0 +1,327 @@
+{
+  "texts": {
+    "de": {
+      "navStart": "Start",
+      "navAbout": "Über ProBe",
+      "navSupport": "Unterstützung",
+      "navTeam": "Team",
+      "networkNav": "Netzwerk",
+      "navContact": "Kontakt",
+      "teamPageLabel": "Team",
+      "teamHeroTitle": "Ihre regionalen Ansprechpersonen",
+      "teamHeroText": "Persönliche Unterstützung für Menschen mit Migrationsgeschichte und Einrichtungen in den nördlichen Projektregionen Sachsen-Anhalts.",
+      "teamPlaceholderRegion": "JERICHOWER LAND & MAGDEBURG",
+      "teamPlaceholderName": "Ansprechperson folgt",
+      "teamPlaceholderRole": "Berufsbegleitung am Standort Burg",
+      "contactHeroTitle": "Kontakt aufnehmen",
+      "footerProject": "ProBe · Projekt Berufsbegleitung",
+      "fundedBy": "Gefördert durch",
+      "inCooperationWith": "In Kooperation mit",
+      "footerCredit": "Digital umgesetzt mit",
+      "imprint": "Impressum",
+      "privacy": "Datenschutz"
+    },
+    "en": {
+      "navStart": "Home",
+      "navAbout": "About ProBe",
+      "navSupport": "Support",
+      "navTeam": "Team",
+      "networkNav": "Network",
+      "navContact": "Contact",
+      "teamPageLabel": "Team",
+      "teamHeroTitle": "Your regional contacts",
+      "teamHeroText": "Personal support for people with a migration background and institutions in the northern project regions of Saxony-Anhalt.",
+      "teamPlaceholderRegion": "JERICHOWER LAND & MAGDEBURG",
+      "teamPlaceholderName": "Local contact to be announced",
+      "teamPlaceholderRole": "Career support, Burg location",
+      "contactHeroTitle": "Get in touch",
+      "footerProject": "ProBe · Career Support Project",
+      "fundedBy": "Funded by",
+      "inCooperationWith": "In cooperation with",
+      "footerCredit": "Digitally implemented by",
+      "imprint": "Legal notice",
+      "privacy": "Privacy"
+    },
+    "ar": {
+      "navStart": "الرئيسية",
+      "navAbout": "عن ProBe",
+      "navSupport": "الدعم",
+      "navTeam": "الفريق",
+      "networkNav": "شبكتنا",
+      "navContact": "اتصال",
+      "teamPageLabel": "الفريق",
+      "teamHeroTitle": "جهات الاتصال الإقليمية",
+      "teamHeroText": "دعم شخصي للأشخاص ذوي تجربة الهجرة والمؤسسات في مناطق المشروع الواقعة شمال ساكسونيا أنهالت.",
+      "teamPlaceholderRegion": "يريخوفر لاند وماغديبورغ",
+      "teamPlaceholderName": "سيُعلن عن جهة الاتصال قريبًا",
+      "teamPlaceholderRole": "المرافقة المهنية، موقع بورغ",
+      "contactHeroTitle": "تواصلوا معنا",
+      "footerProject": "ProBe · مشروع المرافقة المهنية",
+      "fundedBy": "بدعم من",
+      "inCooperationWith": "بالتعاون مع",
+      "footerCredit": "التنفيذ الرقمي بواسطة",
+      "imprint": "بيانات الناشر",
+      "privacy": "حماية البيانات"
+    },
+    "ru": {
+      "navStart": "Главная",
+      "navAbout": "О ProBe",
+      "navSupport": "Поддержка",
+      "navTeam": "Команда",
+      "networkNav": "Наша сеть",
+      "navContact": "Контакты",
+      "teamPageLabel": "Команда",
+      "teamHeroTitle": "Ваши региональные контактные лица",
+      "teamHeroText": "Персональная поддержка людей с миграционной историей и учреждений в северных проектных регионах Саксонии-Анхальт.",
+      "teamPlaceholderRegion": "Йериховер-Ланд и Магдебург",
+      "teamPlaceholderName": "Контактное лицо будет объявлено",
+      "teamPlaceholderRole": "Профессиональное сопровождение, Бург",
+      "contactHeroTitle": "Связаться с нами",
+      "footerProject": "ProBe · Проект профессионального сопровождения",
+      "fundedBy": "При поддержке",
+      "inCooperationWith": "В сотрудничестве с",
+      "footerCredit": "Цифровая реализация:",
+      "imprint": "Выходные данные",
+      "privacy": "Защита данных"
+    },
+    "tr": {
+      "navStart": "Ana sayfa",
+      "navAbout": "ProBe hakkında",
+      "navSupport": "Destek",
+      "navTeam": "Ekip",
+      "networkNav": "Ağımız",
+      "navContact": "İletişim",
+      "teamPageLabel": "Ekip",
+      "teamHeroTitle": "Bölgesel irtibat kişileriniz",
+      "teamHeroText": "Saksonya-Anhalt’ın kuzeyindeki proje bölgelerinde göç deneyimi olan kişiler ve kurumlar için kişisel destek.",
+      "teamPlaceholderRegion": "JERICHOWER LAND VE MAGDEBURG",
+      "teamPlaceholderName": "İletişim kişisi yakında açıklanacak",
+      "teamPlaceholderRole": "Burg’da mesleki destek",
+      "contactHeroTitle": "Bizimle iletişime geçin",
+      "footerProject": "ProBe · Mesleki destek projesi",
+      "fundedBy": "Destekleyen",
+      "inCooperationWith": "İş birliğiyle",
+      "footerCredit": "Dijital uygulama:",
+      "imprint": "Yasal bilgiler",
+      "privacy": "Gizlilik"
+    },
+    "uk": {
+      "navStart": "Головна",
+      "navAbout": "Про ProBe",
+      "navSupport": "Підтримка",
+      "navTeam": "Команда",
+      "networkNav": "Наша мережа",
+      "navContact": "Контакти",
+      "teamPageLabel": "Команда",
+      "teamHeroTitle": "Ваші регіональні контактні особи",
+      "teamHeroText": "Особиста підтримка для людей з міграційним досвідом і закладів у північних проєктних регіонах Саксонії-Ангальт.",
+      "teamPlaceholderRegion": "Єриховський район і Магдебург",
+      "teamPlaceholderName": "Контактну особу буде оголошено",
+      "teamPlaceholderRole": "Професійний супровід, Бург",
+      "contactHeroTitle": "Зв’язатися",
+      "footerProject": "ProBe · Проєкт професійного супроводу",
+      "fundedBy": "За підтримки",
+      "inCooperationWith": "У співпраці з",
+      "footerCredit": "Цифрова реалізація:",
+      "imprint": "Вихідні дані",
+      "privacy": "Захист даних"
+    },
+    "vi": {
+      "navStart": "Trang chủ",
+      "navAbout": "Về ProBe",
+      "navSupport": "Hỗ trợ",
+      "navTeam": "Đội ngũ",
+      "networkNav": "Mạng lưới",
+      "navContact": "Liên hệ",
+      "teamPageLabel": "Đội ngũ",
+      "teamHeroTitle": "Người phụ trách tại khu vực của bạn",
+      "teamHeroText": "Hỗ trợ tận tình cho người có trải nghiệm di cư và các cơ sở tại những vùng dự án phía bắc Sachsen-Anhalt.",
+      "teamPlaceholderRegion": "JERICHOWER LAND VÀ MAGDEBURG",
+      "teamPlaceholderName": "Thông tin người liên hệ sẽ được cập nhật",
+      "teamPlaceholderRole": "Hỗ trợ nghề nghiệp tại Burg",
+      "contactHeroTitle": "Liên hệ với chúng tôi",
+      "footerProject": "ProBe · Dự án đồng hành nghề nghiệp",
+      "fundedBy": "Được tài trợ bởi",
+      "inCooperationWith": "Hợp tác cùng",
+      "footerCredit": "Triển khai kỹ thuật số bởi",
+      "imprint": "Thông tin pháp lý",
+      "privacy": "Bảo vệ dữ liệu"
+    }
+  },
+  "plain": {
+    "text-0": "Natalia Giesbrecht",
+    "text-1": "Annelie Neumann",
+    "text-2": "Sascha Bornkampf"
+  },
+  "images": [
+    {
+      "key": "image-0",
+      "label": "ProBe",
+      "source": "probe-logo.png",
+      "alt": "ProBe",
+      "position": "",
+      "background": false
+    },
+    {
+      "key": "image-1",
+      "label": "Ministerium für Arbeit, Soziales, Gesundheit und Gleichstellung des Landes Sachsen-Anhalt",
+      "source": "ms-logo.png",
+      "alt": "Ministerium für Arbeit, Soziales, Gesundheit und Gleichstellung des Landes Sachsen-Anhalt",
+      "position": "",
+      "background": false
+    },
+    {
+      "key": "image-2",
+      "label": "DRK Landesverband Sachsen-Anhalt",
+      "source": "drk-logo.png",
+      "alt": "DRK Landesverband Sachsen-Anhalt",
+      "position": "",
+      "background": false
+    },
+    {
+      "key": "image-3",
+      "label": "Bundesverband privater Anbieter sozialer Dienste",
+      "source": "bpa-png.png",
+      "alt": "Bundesverband privater Anbieter sozialer Dienste",
+      "position": "",
+      "background": false
+    },
+    {
+      "key": "image-4",
+      "label": "DRK Kreisverband Altmark",
+      "source": "drkalt.png",
+      "alt": "DRK Kreisverband Altmark",
+      "position": "",
+      "background": false
+    },
+    {
+      "key": "image-5",
+      "label": "DRK Kreisverband Börde",
+      "source": "drkbö.png",
+      "alt": "DRK Kreisverband Börde",
+      "position": "",
+      "background": false
+    },
+    {
+      "key": "image-6",
+      "label": "DRK Regionalverband Magdeburg–Jerichower Land",
+      "source": "drkjl.png",
+      "alt": "DRK Regionalverband Magdeburg–Jerichower Land",
+      "position": "",
+      "background": false
+    },
+    {
+      "key": "image-7",
+      "label": "DRK Kreisverband Wanzleben",
+      "source": "drkwnz.png",
+      "alt": "DRK Kreisverband Wanzleben",
+      "position": "",
+      "background": false
+    },
+    {
+      "key": ".team-hero",
+      "label": "Titelbild",
+      "source": "map-hero.png",
+      "alt": "",
+      "position": "",
+      "background": true
+    }
+  ],
+  "links": [
+    {
+      "key": "link-0",
+      "label": "index.html",
+      "url": "index.html"
+    },
+    {
+      "key": "link-1",
+      "label": "index.html",
+      "url": "index.html"
+    },
+    {
+      "key": "link-2",
+      "label": "ueber-probe.html",
+      "url": "ueber-probe.html"
+    },
+    {
+      "key": "link-3",
+      "label": "unterstuetzung.html",
+      "url": "unterstuetzung.html"
+    },
+    {
+      "key": "link-4",
+      "label": "team.html",
+      "url": "team.html"
+    },
+    {
+      "key": "link-5",
+      "label": "index.html#netzwerk",
+      "url": "index.html#netzwerk"
+    },
+    {
+      "key": "link-6",
+      "label": "kontakt.html",
+      "url": "kontakt.html"
+    },
+    {
+      "key": "link-7",
+      "label": "tel:+4915563388432",
+      "url": "tel:+4915563388432"
+    },
+    {
+      "key": "link-8",
+      "label": "mailto:natalia.giesbrecht@sachsen-anhalt.drk.de",
+      "url": "mailto:natalia.giesbrecht@sachsen-anhalt.drk.de"
+    },
+    {
+      "key": "link-9",
+      "label": "tel:+4915563378907",
+      "url": "tel:+4915563378907"
+    },
+    {
+      "key": "link-10",
+      "label": "mailto:annelie.neumann@sachsen-anhalt.drk.de",
+      "url": "mailto:annelie.neumann@sachsen-anhalt.drk.de"
+    },
+    {
+      "key": "link-11",
+      "label": "kontakt.html",
+      "url": "kontakt.html"
+    },
+    {
+      "key": "link-12",
+      "label": "tel:+4915563388224",
+      "url": "tel:+4915563388224"
+    },
+    {
+      "key": "link-13",
+      "label": "mailto:sascha.bornkampf@sachsen-anhalt.drk.de",
+      "url": "mailto:sascha.bornkampf@sachsen-anhalt.drk.de"
+    },
+    {
+      "key": "link-14",
+      "label": "https://ms.sachsen-anhalt.de/",
+      "url": "https://ms.sachsen-anhalt.de/"
+    },
+    {
+      "key": "link-15",
+      "label": "index.html#netzwerk",
+      "url": "index.html#netzwerk"
+    },
+    {
+      "key": "link-16",
+      "label": "https://instagram.com/probe.sachsenanhalt",
+      "url": "https://instagram.com/probe.sachsenanhalt"
+    },
+    {
+      "key": "link-17",
+      "label": "impressum.html",
+      "url": "impressum.html"
+    },
+    {
+      "key": "link-18",
+      "label": "datenschutz.html",
+      "url": "datenschutz.html"
+    }
+  ]
+}

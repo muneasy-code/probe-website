@@ -1,0 +1,335 @@
+{
+  "texts": {
+    "de": {
+      "navStart": "Start",
+      "navAbout": "Über ProBe",
+      "navSupport": "Unterstützung",
+      "navTeam": "Team",
+      "networkNav": "Netzwerk",
+      "navContact": "Kontakt",
+      "contactPageLabel": "Kontakt",
+      "contactBadge": "✦ Persönlich • Auf Augenhöhe • Kostenfrei",
+      "contactHeroTitle": "Kontakt aufnehmen",
+      "contactHeroText": "Sie möchten ProBe nutzen, haben Fragen oder möchten als Einrichtung Kontakt aufnehmen? Schreiben Sie uns gern.",
+      "contactBoxLabel": "ProBe",
+      "contactBoxTitle": "Wir sind für Sie da.",
+      "contactBoxText": "Das ProBe-Team unterstützt Teilnehmende und Einrichtungen persönlich, vertraulich und kostenfrei.",
+      "contactOrg1": "ProBe Berufs-Begleitung",
+      "contactOrg2": "Deutsches Rotes Kreuz Landesverband Sachsen-Anhalt e.V.",
+      "namePlaceholder": "Name",
+      "emailPlaceholder": "E-Mail",
+      "messagePlaceholder": "Nachricht",
+      "sendBtn": "Anfrage senden",
+      "footerProject": "ProBe · Projekt Berufsbegleitung",
+      "fundedBy": "Gefördert durch",
+      "inCooperationWith": "In Kooperation mit",
+      "footerCredit": "Digital umgesetzt mit",
+      "imprint": "Impressum",
+      "privacy": "Datenschutz"
+    },
+    "en": {
+      "navStart": "Home",
+      "navAbout": "About ProBe",
+      "navSupport": "Support",
+      "navTeam": "Team",
+      "networkNav": "Network",
+      "navContact": "Contact",
+      "contactPageLabel": "Contact",
+      "contactBadge": "✦ Personal • As equals • Free of charge",
+      "contactHeroTitle": "Get in touch",
+      "contactHeroText": "Would you like to use ProBe, do you have questions, or would you like to contact us as an institution? We look forward to hearing from you.",
+      "contactBoxLabel": "ProBe",
+      "contactBoxTitle": "We are here for you.",
+      "contactBoxText": "The ProBe team supports participants and institutions personally, confidentially and free of charge.",
+      "contactOrg1": "ProBe Career Support",
+      "contactOrg2": "German Red Cross State Association of Saxony-Anhalt",
+      "namePlaceholder": "Name",
+      "emailPlaceholder": "Email",
+      "messagePlaceholder": "Message",
+      "sendBtn": "Send enquiry",
+      "footerProject": "ProBe · Career Support Project",
+      "fundedBy": "Funded by",
+      "inCooperationWith": "In cooperation with",
+      "footerCredit": "Digitally implemented by",
+      "imprint": "Legal notice",
+      "privacy": "Privacy"
+    },
+    "ar": {
+      "navStart": "الرئيسية",
+      "navAbout": "عن ProBe",
+      "navSupport": "الدعم",
+      "navTeam": "الفريق",
+      "networkNav": "شبكتنا",
+      "navContact": "اتصال",
+      "contactPageLabel": "اتصال",
+      "contactBadge": "✦ شخصي • على قدم المساواة • مجاني",
+      "contactHeroTitle": "تواصلوا معنا",
+      "contactHeroText": "هل ترغبون في الاستفادة من ProBe، أو لديكم أسئلة، أو تريدون التواصل معنا بصفتكم مؤسسة؟ يسعدنا أن تكتبوا لنا.",
+      "contactBoxLabel": "ProBe",
+      "contactBoxTitle": "نحن هنا من أجلكم.",
+      "contactBoxText": "يدعم فريق ProBe المشاركين والمؤسسات بشكل شخصي وسري ومجاني.",
+      "contactOrg1": "ProBe للمرافقة المهنية",
+      "contactOrg2": "الصليب الأحمر الألماني – رابطة ولاية ساكسونيا أنهالت",
+      "namePlaceholder": "الاسم",
+      "emailPlaceholder": "البريد الإلكتروني",
+      "messagePlaceholder": "الرسالة",
+      "sendBtn": "إرسال الطلب",
+      "footerProject": "ProBe · مشروع المرافقة المهنية",
+      "fundedBy": "بدعم من",
+      "inCooperationWith": "بالتعاون مع",
+      "footerCredit": "التنفيذ الرقمي بواسطة",
+      "imprint": "بيانات الناشر",
+      "privacy": "حماية البيانات"
+    },
+    "ru": {
+      "navStart": "Главная",
+      "navAbout": "О ProBe",
+      "navSupport": "Поддержка",
+      "navTeam": "Команда",
+      "networkNav": "Наша сеть",
+      "navContact": "Контакты",
+      "contactPageLabel": "Контакты",
+      "contactBadge": "✦ Лично • На равных • Бесплатно",
+      "contactHeroTitle": "Связаться с нами",
+      "contactHeroText": "Хотите воспользоваться ProBe, у вас есть вопросы или вы представляете учреждение? Напишите нам.",
+      "contactBoxLabel": "ProBe",
+      "contactBoxTitle": "Мы готовы помочь.",
+      "contactBoxText": "Команда ProBe оказывает участникам и учреждениям персональную, конфиденциальную и бесплатную поддержку.",
+      "contactOrg1": "ProBe — профессиональное сопровождение",
+      "contactOrg2": "Земельное объединение Немецкого Красного Креста Саксонии-Анхальт",
+      "namePlaceholder": "Имя",
+      "emailPlaceholder": "Электронная почта",
+      "messagePlaceholder": "Сообщение",
+      "sendBtn": "Отправить запрос",
+      "footerProject": "ProBe · Проект профессионального сопровождения",
+      "fundedBy": "При поддержке",
+      "inCooperationWith": "В сотрудничестве с",
+      "footerCredit": "Цифровая реализация:",
+      "imprint": "Выходные данные",
+      "privacy": "Защита данных"
+    },
+    "tr": {
+      "navStart": "Ana sayfa",
+      "navAbout": "ProBe hakkında",
+      "navSupport": "Destek",
+      "navTeam": "Ekip",
+      "networkNav": "Ağımız",
+      "navContact": "İletişim",
+      "contactPageLabel": "İletişim",
+      "contactBadge": "✦ Kişisel • Eşit düzeyde • Ücretsiz",
+      "contactHeroTitle": "Bizimle iletişime geçin",
+      "contactHeroText": "ProBe'den yararlanmak, soru sormak veya kurum olarak bizimle iletişime geçmek mi istiyorsunuz? Bize yazabilirsiniz.",
+      "contactBoxLabel": "ProBe",
+      "contactBoxTitle": "Sizin için buradayız.",
+      "contactBoxText": "ProBe ekibi katılımcılara ve kurumlara kişisel, gizli ve ücretsiz destek sunar.",
+      "contactOrg1": "ProBe Mesleki Destek",
+      "contactOrg2": "Alman Kızılhaçı Saksonya-Anhalt Eyalet Birliği",
+      "namePlaceholder": "Ad",
+      "emailPlaceholder": "E-posta",
+      "messagePlaceholder": "Mesaj",
+      "sendBtn": "Talep gönder",
+      "footerProject": "ProBe · Mesleki destek projesi",
+      "fundedBy": "Destekleyen",
+      "inCooperationWith": "İş birliğiyle",
+      "footerCredit": "Dijital uygulama:",
+      "imprint": "Yasal bilgiler",
+      "privacy": "Gizlilik"
+    },
+    "uk": {
+      "navStart": "Головна",
+      "navAbout": "Про ProBe",
+      "navSupport": "Підтримка",
+      "navTeam": "Команда",
+      "networkNav": "Наша мережа",
+      "navContact": "Контакти",
+      "contactPageLabel": "Контакти",
+      "contactBadge": "✦ Особисто • На рівних • Безкоштовно",
+      "contactHeroTitle": "Зв’язатися",
+      "contactHeroText": "Ви хочете скористатися послугами ProBe, маєте запитання або бажаєте звернутися від імені закладу? Напишіть нам.",
+      "contactBoxLabel": "ProBe",
+      "contactBoxTitle": "Ми поруч із вами.",
+      "contactBoxText": "Команда ProBe підтримує учасників і заклади особисто, конфіденційно та безкоштовно.",
+      "contactOrg1": "Професійний супровід ProBe",
+      "contactOrg2": "Земельне об’єднання Німецького Червоного Хреста Саксонії-Ангальт",
+      "namePlaceholder": "Ім’я",
+      "emailPlaceholder": "Електронна пошта",
+      "messagePlaceholder": "Повідомлення",
+      "sendBtn": "Надіслати запит",
+      "footerProject": "ProBe · Проєкт професійного супроводу",
+      "fundedBy": "За підтримки",
+      "inCooperationWith": "У співпраці з",
+      "footerCredit": "Цифрова реалізація:",
+      "imprint": "Вихідні дані",
+      "privacy": "Захист даних"
+    },
+    "vi": {
+      "navStart": "Trang chủ",
+      "navAbout": "Về ProBe",
+      "navSupport": "Hỗ trợ",
+      "navTeam": "Đội ngũ",
+      "networkNav": "Mạng lưới",
+      "navContact": "Liên hệ",
+      "contactPageLabel": "Liên hệ",
+      "contactBadge": "✦ Tận tình • Bình đẳng • Miễn phí",
+      "contactHeroTitle": "Liên hệ với chúng tôi",
+      "contactHeroText": "Bạn muốn sử dụng dịch vụ của ProBe, có câu hỏi hoặc muốn liên hệ với tư cách cơ sở? Hãy viết cho chúng tôi.",
+      "contactBoxLabel": "ProBe",
+      "contactBoxTitle": "Chúng tôi luôn sẵn sàng hỗ trợ.",
+      "contactBoxText": "Đội ngũ ProBe hỗ trợ người tham gia và các cơ sở một cách tận tình, bảo mật và miễn phí.",
+      "contactOrg1": "ProBe – Đồng hành nghề nghiệp",
+      "contactOrg2": "Hội Chữ thập đỏ Đức bang Sachsen-Anhalt",
+      "namePlaceholder": "Họ và tên",
+      "emailPlaceholder": "Email",
+      "messagePlaceholder": "Nội dung",
+      "sendBtn": "Gửi yêu cầu",
+      "footerProject": "ProBe · Dự án đồng hành nghề nghiệp",
+      "fundedBy": "Được tài trợ bởi",
+      "inCooperationWith": "Hợp tác cùng",
+      "footerCredit": "Triển khai kỹ thuật số bởi",
+      "imprint": "Thông tin pháp lý",
+      "privacy": "Bảo vệ dữ liệu"
+    }
+  },
+  "plain": {},
+  "images": [
+    {
+      "key": "image-0",
+      "label": "ProBe",
+      "source": "probe-logo.png",
+      "alt": "ProBe",
+      "position": "",
+      "background": false
+    },
+    {
+      "key": "image-1",
+      "label": "Ministerium für Arbeit, Soziales, Gesundheit und Gleichstellung des Landes Sachsen-Anhalt",
+      "source": "ms-logo.png",
+      "alt": "Ministerium für Arbeit, Soziales, Gesundheit und Gleichstellung des Landes Sachsen-Anhalt",
+      "position": "",
+      "background": false
+    },
+    {
+      "key": "image-2",
+      "label": "DRK Landesverband Sachsen-Anhalt",
+      "source": "drk-logo.png",
+      "alt": "DRK Landesverband Sachsen-Anhalt",
+      "position": "",
+      "background": false
+    },
+    {
+      "key": "image-3",
+      "label": "Bundesverband privater Anbieter sozialer Dienste",
+      "source": "bpa-png.png",
+      "alt": "Bundesverband privater Anbieter sozialer Dienste",
+      "position": "",
+      "background": false
+    },
+    {
+      "key": "image-4",
+      "label": "DRK Kreisverband Altmark",
+      "source": "drkalt.png",
+      "alt": "DRK Kreisverband Altmark",
+      "position": "",
+      "background": false
+    },
+    {
+      "key": "image-5",
+      "label": "DRK Kreisverband Börde",
+      "source": "drkbö.png",
+      "alt": "DRK Kreisverband Börde",
+      "position": "",
+      "background": false
+    },
+    {
+      "key": "image-6",
+      "label": "DRK Regionalverband Magdeburg–Jerichower Land",
+      "source": "drkjl.png",
+      "alt": "DRK Regionalverband Magdeburg–Jerichower Land",
+      "position": "",
+      "background": false
+    },
+    {
+      "key": "image-7",
+      "label": "DRK Kreisverband Wanzleben",
+      "source": "drkwnz.png",
+      "alt": "DRK Kreisverband Wanzleben",
+      "position": "",
+      "background": false
+    },
+    {
+      "key": ".contact-page-hero",
+      "label": "Titelbild",
+      "source": "campaign-hero-arrival.webp",
+      "alt": "",
+      "position": "",
+      "background": true
+    }
+  ],
+  "links": [
+    {
+      "key": "link-0",
+      "label": "index.html",
+      "url": "index.html"
+    },
+    {
+      "key": "link-1",
+      "label": "index.html",
+      "url": "index.html"
+    },
+    {
+      "key": "link-2",
+      "label": "ueber-probe.html",
+      "url": "ueber-probe.html"
+    },
+    {
+      "key": "link-3",
+      "label": "unterstuetzung.html",
+      "url": "unterstuetzung.html"
+    },
+    {
+      "key": "link-4",
+      "label": "team.html",
+      "url": "team.html"
+    },
+    {
+      "key": "link-5",
+      "label": "index.html#netzwerk",
+      "url": "index.html#netzwerk"
+    },
+    {
+      "key": "link-6",
+      "label": "kontakt.html",
+      "url": "kontakt.html"
+    },
+    {
+      "key": "link-7",
+      "label": "datenschutz.html",
+      "url": "datenschutz.html"
+    },
+    {
+      "key": "link-8",
+      "label": "https://ms.sachsen-anhalt.de/",
+      "url": "https://ms.sachsen-anhalt.de/"
+    },
+    {
+      "key": "link-9",
+      "label": "index.html#netzwerk",
+      "url": "index.html#netzwerk"
+    },
+    {
+      "key": "link-10",
+      "label": "https://instagram.com/probe.sachsenanhalt",
+      "url": "https://instagram.com/probe.sachsenanhalt"
+    },
+    {
+      "key": "link-11",
+      "label": "impressum.html",
+      "url": "impressum.html"
+    },
+    {
+      "key": "link-12",
+      "label": "datenschutz.html",
+      "url": "datenschutz.html"
+    }
+  ]
+}

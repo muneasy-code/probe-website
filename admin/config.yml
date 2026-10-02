@@ -1,196 +1,3418 @@
 backend:
   name: github
   repo: muneasy-code/probe-website
-  branch: main
-
-site_url: https://probe-sachsen-anhalt.de
-display_url: https://probe-sachsen-anhalt.de
+  branch: redesign
+site_url: https://deploy-preview-1--probe-lsa.netlify.app
+display_url: https://deploy-preview-1--probe-lsa.netlify.app
 logo_url: /probe-logo.png
 media_folder: uploads
 public_folder: /uploads
 locale: de
-
 collections:
-  - name: website
-    label: Website pflegen
-    files:
-      - name: news
-        label: Aktuelles
-        file: content/news.json
-        format: json
-        editor:
-          preview: false
+- name: website
+  label: Website pflegen
+  files:
+  - name: news
+    label: Aktuelles
+    file: content/news.json
+    format: json
+    editor:
+      preview: true
+    fields:
+    - label: Meldungen
+      name: items
+      widget: list
+      collapsed: true
+      add_to_top: true
+      summary: '{{fields.de.date}} – {{fields.de.title}}'
+      label_singular: Meldung
+      fields:
+      - label: Deutsch
+        name: de
+        widget: object
+        summary: '{{fields.title}}'
         fields:
-          - label: Meldungen
-            name: items
-            widget: list
-            collapsed: true
-            add_to_top: true
-            summary: "{{fields.de.date}} – {{fields.de.title}}"
-            label_singular: Meldung
-            fields:
-              - label: Deutsch
-                name: de
-                widget: object
-                summary: "{{fields.title}}"
-                fields:
-                  - { label: Datum / Kategorie, name: date, widget: string, hint: "Zum Beispiel: 21.07.2026 oder Information" }
-                  - { label: Überschrift, name: title, widget: string }
-                  - { label: Text, name: text, widget: text }
-              - label: Englisch (optional)
-                name: en
-                widget: object
-                collapsed: true
-                required: false
-                fields:
-                  - { label: Datum / Kategorie, name: date, widget: string, required: false }
-                  - { label: Überschrift, name: title, widget: string, required: false }
-                  - { label: Text, name: text, widget: text, required: false }
-              - label: Arabisch (optional)
-                name: ar
-                widget: object
-                collapsed: true
-                required: false
-                fields:
-                  - { label: Datum / Kategorie, name: date, widget: string, required: false }
-                  - { label: Überschrift, name: title, widget: string, required: false }
-                  - { label: Text, name: text, widget: text, required: false }
-              - label: Russisch (optional)
-                name: ru
-                widget: object
-                collapsed: true
-                required: false
-                fields:
-                  - { label: Datum / Kategorie, name: date, widget: string, required: false }
-                  - { label: Überschrift, name: title, widget: string, required: false }
-                  - { label: Text, name: text, widget: text, required: false }
-              - label: Türkisch (optional)
-                name: tr
-                widget: object
-                collapsed: true
-                required: false
-                fields:
-                  - { label: Datum / Kategorie, name: date, widget: string, required: false }
-                  - { label: Überschrift, name: title, widget: string, required: false }
-                  - { label: Text, name: text, widget: text, required: false }
-              - label: Ukrainisch (optional)
-                name: uk
-                widget: object
-                collapsed: true
-                required: false
-                fields:
-                  - { label: Datum / Kategorie, name: date, widget: string, required: false }
-                  - { label: Überschrift, name: title, widget: string, required: false }
-                  - { label: Text, name: text, widget: text, required: false }
-              - label: Vietnamesisch (optional)
-                name: vi
-                widget: object
-                collapsed: true
-                required: false
-                fields:
-                  - { label: Datum / Kategorie, name: date, widget: string, required: false }
-                  - { label: Überschrift, name: title, widget: string, required: false }
-                  - { label: Text, name: text, widget: text, required: false }
-
-      - name: team
-        label: Team
-        file: content/team.json
-        format: json
-        editor:
-          preview: false
+        - label: Datum / Kategorie
+          name: date
+          widget: string
+          hint: 'Zum Beispiel: 21.07.2026 oder Information'
+        - label: Überschrift
+          name: title
+          widget: string
+        - label: Text
+          name: text
+          widget: text
+      - label: Englisch (optional)
+        name: en
+        widget: object
+        collapsed: true
+        required: false
         fields:
-          - label: Teammitglieder
-            name: members
-            widget: list
-            collapsed: true
-            summary: "{{fields.name}} – {{fields.translations.de.role}}"
-            label_singular: Teammitglied
-            fields:
-              - { label: Name, name: name, widget: string }
-              - { label: Foto, name: image, widget: image, hint: "Am besten ein bereits passend zugeschnittenes Teamfoto hochladen." }
-              - { label: Telefon, name: phone, widget: string, required: false }
-              - { label: E-Mail, name: email, widget: string, required: false }
-              - label: Texte
-                name: translations
-                widget: object
-                fields:
-                  - label: Deutsch
-                    name: de
-                    widget: object
-                    fields:
-                      - { label: Region, name: region, widget: string }
-                      - { label: Funktion / Standort, name: role, widget: string }
-                      - { label: Vorstellungstext, name: about, widget: text }
-                  - label: Englisch (optional)
-                    name: en
-                    widget: object
-                    collapsed: true
-                    required: false
-                    fields:
-                      - { label: Region, name: region, widget: string, required: false }
-                      - { label: Funktion / Standort, name: role, widget: string, required: false }
-                      - { label: Vorstellungstext, name: about, widget: text, required: false }
-                  - label: Arabisch (optional)
-                    name: ar
-                    widget: object
-                    collapsed: true
-                    required: false
-                    fields:
-                      - { label: Region, name: region, widget: string, required: false }
-                      - { label: Funktion / Standort, name: role, widget: string, required: false }
-                      - { label: Vorstellungstext, name: about, widget: text, required: false }
-                  - label: Russisch (optional)
-                    name: ru
-                    widget: object
-                    collapsed: true
-                    required: false
-                    fields:
-                      - { label: Region, name: region, widget: string, required: false }
-                      - { label: Funktion / Standort, name: role, widget: string, required: false }
-                      - { label: Vorstellungstext, name: about, widget: text, required: false }
-                  - label: Türkisch (optional)
-                    name: tr
-                    widget: object
-                    collapsed: true
-                    required: false
-                    fields:
-                      - { label: Region, name: region, widget: string, required: false }
-                      - { label: Funktion / Standort, name: role, widget: string, required: false }
-                      - { label: Vorstellungstext, name: about, widget: text, required: false }
-                  - label: Ukrainisch (optional)
-                    name: uk
-                    widget: object
-                    collapsed: true
-                    required: false
-                    fields:
-                      - { label: Region, name: region, widget: string, required: false }
-                      - { label: Funktion / Standort, name: role, widget: string, required: false }
-                      - { label: Vorstellungstext, name: about, widget: text, required: false }
-                  - label: Vietnamesisch (optional)
-                    name: vi
-                    widget: object
-                    collapsed: true
-                    required: false
-                    fields:
-                      - { label: Region, name: region, widget: string, required: false }
-                      - { label: Funktion / Standort, name: role, widget: string, required: false }
-                      - { label: Vorstellungstext, name: about, widget: text, required: false }
-
-      - name: settings
-        label: Kontakt & Flyer
-        file: content/settings.json
-        format: json
-        editor:
-          preview: false
+        - &id001
+          label: Datum / Kategorie
+          name: date
+          widget: string
+          required: false
+        - &id002
+          label: Überschrift
+          name: title
+          widget: string
+          required: false
+        - &id003
+          label: Text
+          name: text
+          widget: text
+          required: false
+      - label: Arabisch (optional)
+        name: ar
+        widget: object
+        collapsed: true
+        required: false
         fields:
-          - label: Kontaktdaten
-            name: contact
-            widget: object
-            fields:
-              - { label: E-Mail, name: email, widget: string }
-              - { label: Telefon, name: phone, widget: string }
-              - { label: Adresse, name: address, widget: string }
-          - label: Aktueller Flyer
-            name: flyer
-            widget: file
-            hint: "PDF hochladen oder den bestehenden Flyer auswählen."
+        - *id001
+        - *id002
+        - *id003
+      - label: Russisch (optional)
+        name: ru
+        widget: object
+        collapsed: true
+        required: false
+        fields:
+        - *id001
+        - *id002
+        - *id003
+      - label: Türkisch (optional)
+        name: tr
+        widget: object
+        collapsed: true
+        required: false
+        fields:
+        - *id001
+        - *id002
+        - *id003
+      - label: Ukrainisch (optional)
+        name: uk
+        widget: object
+        collapsed: true
+        required: false
+        fields:
+        - *id001
+        - *id002
+        - *id003
+      - label: Vietnamesisch (optional)
+        name: vi
+        widget: object
+        collapsed: true
+        required: false
+        fields:
+        - *id001
+        - *id002
+        - *id003
+  - name: team
+    label: Team
+    file: content/team.json
+    format: json
+    editor:
+      preview: true
+    fields:
+    - label: Teammitglieder
+      name: members
+      widget: list
+      collapsed: true
+      summary: '{{fields.name}} – {{fields.translations.de.role}}'
+      label_singular: Teammitglied
+      fields:
+      - label: Name
+        name: name
+        widget: string
+      - label: Auf Website anzeigen
+        name: visible
+        widget: boolean
+        default: true
+        required: false
+      - label: Foto
+        name: image
+        widget: image
+        hint: Am besten ein bereits passend zugeschnittenes Teamfoto hochladen.
+      - label: Bildbeschreibung
+        name: imageAlt
+        widget: string
+        required: false
+      - label: Bildausschnitt (horizontal vertikal)
+        name: imagePosition
+        widget: string
+        default: 50% 50%
+        required: false
+        hint: Zum Beispiel 50% 30% – Vorschau rechts prüfen.
+      - label: Telefon
+        name: phone
+        widget: string
+        required: false
+      - label: E-Mail
+        name: email
+        widget: string
+        required: false
+      - label: Kontakt-Link (wenn keine E-Mail)
+        name: contactUrl
+        widget: string
+        required: false
+      - label: Texte
+        name: translations
+        widget: object
+        fields:
+        - label: Deutsch
+          name: de
+          widget: object
+          fields:
+          - label: Region
+            name: region
+            widget: string
+          - label: Funktion / Standort
+            name: role
+            widget: string
+          - &id004
+            label: Vorstellungstext
+            name: about
+            widget: text
+            required: false
+        - label: Englisch (optional)
+          name: en
+          widget: object
+          collapsed: true
+          required: false
+          fields:
+          - &id005
+            label: Region
+            name: region
+            widget: string
+            required: false
+          - &id006
+            label: Funktion / Standort
+            name: role
+            widget: string
+            required: false
+          - *id004
+        - label: Arabisch (optional)
+          name: ar
+          widget: object
+          collapsed: true
+          required: false
+          fields:
+          - *id005
+          - *id006
+          - *id004
+        - label: Russisch (optional)
+          name: ru
+          widget: object
+          collapsed: true
+          required: false
+          fields:
+          - *id005
+          - *id006
+          - *id004
+        - label: Türkisch (optional)
+          name: tr
+          widget: object
+          collapsed: true
+          required: false
+          fields:
+          - *id005
+          - *id006
+          - *id004
+        - label: Ukrainisch (optional)
+          name: uk
+          widget: object
+          collapsed: true
+          required: false
+          fields:
+          - *id005
+          - *id006
+          - *id004
+        - label: Vietnamesisch (optional)
+          name: vi
+          widget: object
+          collapsed: true
+          required: false
+          fields:
+          - *id005
+          - *id006
+          - *id004
+  - name: settings
+    label: Zentrale Kontaktdaten & Hauptflyer
+    file: content/settings.json
+    format: json
+    editor:
+      preview: true
+    fields:
+    - label: Kontaktdaten
+      name: contact
+      widget: object
+      fields:
+      - label: E-Mail
+        name: email
+        widget: string
+      - label: Telefon
+        name: phone
+        widget: string
+      - label: Adresse
+        name: address
+        widget: string
+    - label: Aktueller Flyer
+      name: flyer
+      widget: file
+      hint: PDF hochladen oder den bestehenden Flyer auswählen.
+  - name: page-index
+    label: Startseite – Texte, Bilder & Links
+    file: content/page-index.json
+    format: json
+    preview_path: index.html
+    fields:
+    - label: Seitentexte & Sprachversionen
+      name: texts
+      widget: object
+      fields:
+      - label: Deutsch
+        name: de
+        widget: object
+        collapsed: false
+        required: false
+        fields:
+        - &id007
+          label: Start
+          name: navStart
+          widget: text
+          required: false
+          hint: Leer = deutsche Fassung. Bei formatierten Überschriften sind <br>, <span>, <strong> und <em> möglich.
+        - &id008
+          label: Über ProBe
+          name: navAbout
+          widget: text
+          required: false
+          hint: Leer = deutsche Fassung. Bei formatierten Überschriften sind <br>, <span>, <strong> und <em> möglich.
+        - &id009
+          label: Unterstützung
+          name: navSupport
+          widget: text
+          required: false
+          hint: Leer = deutsche Fassung. Bei formatierten Überschriften sind <br>, <span>, <strong> und <em> möglich.
+        - &id010
+          label: Team
+          name: navTeam
+          widget: text
+          required: false
+          hint: Leer = deutsche Fassung. Bei formatierten Überschriften sind <br>, <span>, <strong> und <em> möglich.
+        - &id011
+          label: Netzwerk
+          name: networkNav
+          widget: text
+          required: false
+          hint: Leer = deutsche Fassung. Bei formatierten Überschriften sind <br>, <span>, <strong> und <em> möglich.
+        - &id012
+          label: Kontakt
+          name: navContact
+          widget: text
+          required: false
+          hint: Leer = deutsche Fassung. Bei formatierten Überschriften sind <br>, <span>, <strong> und <em> möglich.
+        - &id013
+          label: Kostenfreie Berufsbegleitung in Sachsen-Anhalt
+          name: heroKicker
+          widget: text
+          required: false
+          hint: Leer = deutsche Fassung. Bei formatierten Überschriften sind <br>, <span>, <strong> und <em> möglich.
+        - &id014
+          label: 'Dein Weg in die Pflege. Wir gehen ihn mit dir. '
+          name: heroTitle
+          widget: text
+          required: false
+          hint: Leer = deutsche Fassung. Bei formatierten Überschriften sind <br>, <span>, <strong> und <em> möglich.
+        - &id015
+          label: Du interessierst dich für die Pflege, möchtest ein FSJ oder einen BFD machen, eine Au
+          name: heroText
+          widget: text
+          required: false
+          hint: Leer = deutsche Fassung. Bei formatierten Überschriften sind <br>, <span>, <strong> und <em> möglich.
+        - &id016
+          label: Ich suche Unterstützung
+          name: primaryBtn
+          widget: text
+          required: false
+          hint: Leer = deutsche Fassung. Bei formatierten Überschriften sind <br>, <span>, <strong> und <em> möglich.
+        - &id017
+          label: Wir sind eine Einrichtung
+          name: secondaryBtn
+          widget: text
+          required: false
+          hint: Leer = deutsche Fassung. Bei formatierten Überschriften sind <br>, <span>, <strong> und <em> möglich.
+        - &id018
+          label: Flyer herunterladen
+          name: downloadBtn
+          widget: text
+          required: false
+          hint: Leer = deutsche Fassung. Bei formatierten Überschriften sind <br>, <span>, <strong> und <em> möglich.
+        - &id019
+          label: ProBe steht Einrichtungen jeder Trägerschaft zur Verfügung.
+          name: supportHeroFact
+          widget: text
+          required: false
+          hint: Leer = deutsche Fassung. Bei formatierten Überschriften sind <br>, <span>, <strong> und <em> möglich.
+        - &id020
+          label: Gemeinsam gelingt’s.
+          name: visualTitle
+          widget: text
+          required: false
+          hint: Leer = deutsche Fassung. Bei formatierten Überschriften sind <br>, <span>, <strong> und <em> möglich.
+        - &id021
+          label: Menschen begleiten. Zukunft gestalten.
+          name: visualText
+          widget: text
+          required: false
+          hint: Leer = deutsche Fassung. Bei formatierten Überschriften sind <br>, <span>, <strong> und <em> möglich.
+        - &id022
+          label: Persönlich
+          name: quick1
+          widget: text
+          required: false
+          hint: Leer = deutsche Fassung. Bei formatierten Überschriften sind <br>, <span>, <strong> und <em> möglich.
+        - &id023
+          label: Individuell
+          name: quick2
+          widget: text
+          required: false
+          hint: Leer = deutsche Fassung. Bei formatierten Überschriften sind <br>, <span>, <strong> und <em> möglich.
+        - &id024
+          label: Auf Augenhöhe
+          name: quick3
+          widget: text
+          required: false
+          hint: Leer = deutsche Fassung. Bei formatierten Überschriften sind <br>, <span>, <strong> und <em> möglich.
+        - &id025
+          label: Kostenfrei
+          name: quick4
+          widget: text
+          required: false
+          hint: Leer = deutsche Fassung. Bei formatierten Überschriften sind <br>, <span>, <strong> und <em> möglich.
+        - &id026
+          label: Für wen ist ProBe da?
+          name: homeAudienceLabel
+          widget: text
+          required: false
+          hint: Leer = deutsche Fassung. Bei formatierten Überschriften sind <br>, <span>, <strong> und <em> möglich.
+        - &id027
+          label: Zwei Perspektiven. Ein gemeinsamer Weg.
+          name: homeAudienceTitle
+          widget: text
+          required: false
+          hint: Leer = deutsche Fassung. Bei formatierten Überschriften sind <br>, <span>, <strong> und <em> möglich.
+        - &id028
+          label: ProBe unterstützt Menschen mit Migrationsgeschichte auf ihrem Weg in die Pflege und b
+          name: homeAudienceText
+          widget: text
+          required: false
+          hint: Leer = deutsche Fassung. Bei formatierten Überschriften sind <br>, <span>, <strong> und <em> möglich.
+        - &id029
+          label: Für Menschen mit Migrationsgeschichte
+          name: homePeopleLabel
+          widget: text
+          required: false
+          hint: Leer = deutsche Fassung. Bei formatierten Überschriften sind <br>, <span>, <strong> und <em> möglich.
+        - &id030
+          label: 'Pflege entdecken. Einsteigen. Anerkennung klären. Weiterkommen. '
+          name: homePeopleTitle
+          widget: text
+          required: false
+          hint: Leer = deutsche Fassung. Bei formatierten Überschriften sind <br>, <span>, <strong> und <em> möglich.
+        - &id031
+          label: Ob FSJ/BFD, Ausbildung, Anerkennung, Berufseinstieg oder bereits mitten im Pflegeallt
+          name: homePeopleText
+          widget: text
+          required: false
+          hint: Leer = deutsche Fassung. Bei formatierten Überschriften sind <br>, <span>, <strong> und <em> möglich.
+        - &id032
+          label: Unterstützung für mich
+          name: homePeopleCta
+          widget: text
+          required: false
+          hint: Leer = deutsche Fassung. Bei formatierten Überschriften sind <br>, <span>, <strong> und <em> möglich.
+        - &id033
+          label: Für Pflege- und Gesundheitseinrichtungen
+          name: homeOrgLabel
+          widget: text
+          required: false
+          hint: Leer = deutsche Fassung. Bei formatierten Überschriften sind <br>, <span>, <strong> und <em> möglich.
+        - &id034
+          label: 'Sie kümmern sich um die Pflege. Beim Rest hilft ProBe. '
+          name: homeOrgTitle
+          widget: text
+          required: false
+          hint: Leer = deutsche Fassung. Bei formatierten Überschriften sind <br>, <span>, <strong> und <em> möglich.
+        - &id035
+          label: 'Wir sehen, was zusätzlich an Ihrer Einrichtung hängenbleibt – und begleiten dort, wo '
+          name: homeOrgText
+          widget: text
+          required: false
+          hint: Leer = deutsche Fassung. Bei formatierten Überschriften sind <br>, <span>, <strong> und <em> möglich.
+        - &id036
+          label: Unterstützung für unsere Einrichtung
+          name: homeOrgCta
+          widget: text
+          required: false
+          hint: Leer = deutsche Fassung. Bei formatierten Überschriften sind <br>, <span>, <strong> und <em> möglich.
+        - &id037
+          label: Begleitung, die zu deinem Weg passt.
+          name: homeStoryTag
+          widget: text
+          required: false
+          hint: Leer = deutsche Fassung. Bei formatierten Überschriften sind <br>, <span>, <strong> und <em> möglich.
+        - &id038
+          label: Was ProBe besonders macht
+          name: homePrincipleLabel
+          widget: text
+          required: false
+          hint: Leer = deutsche Fassung. Bei formatierten Überschriften sind <br>, <span>, <strong> und <em> möglich.
+        - &id039
+          label: Keine Standardlösung. Sondern Begleitung, die passt.
+          name: homePrincipleTitle
+          widget: text
+          required: false
+          hint: Leer = deutsche Fassung. Bei formatierten Überschriften sind <br>, <span>, <strong> und <em> möglich.
+        - &id040
+          label: ProBe hört zu, ordnet gemeinsam die Situation und begleitet die nächsten sinnvollen S
+          name: homePrincipleText
+          widget: text
+          required: false
+          hint: Leer = deutsche Fassung. Bei formatierten Überschriften sind <br>, <span>, <strong> und <em> möglich.
+        - &id041
+          label: „Integration braucht Zeit. Im Pflegealltag ist sie oft knapp.“
+          name: homeQuote
+          widget: text
+          required: false
+          hint: Leer = deutsche Fassung. Bei formatierten Überschriften sind <br>, <span>, <strong> und <em> möglich.
+        - &id042
+          label: So funktioniert die Begleitung
+          name: homeProcessLabel
+          widget: text
+          required: false
+          hint: Leer = deutsche Fassung. Bei formatierten Überschriften sind <br>, <span>, <strong> und <em> möglich.
+        - &id043
+          label: Unkompliziert. Persönlich. Passend.
+          name: homeProcessTitle
+          widget: text
+          required: false
+          hint: Leer = deutsche Fassung. Bei formatierten Überschriften sind <br>, <span>, <strong> und <em> möglich.
+        - &id044
+          label: Sie melden sich.
+          name: homeStep1Title
+          widget: text
+          required: false
+          hint: Leer = deutsche Fassung. Bei formatierten Überschriften sind <br>, <span>, <strong> und <em> möglich.
+        - &id045
+          label: Ein kurzer Kontakt reicht für den Einstieg.
+          name: homeStep1Text
+          widget: text
+          required: false
+          hint: Leer = deutsche Fassung. Bei formatierten Überschriften sind <br>, <span>, <strong> und <em> möglich.
+        - &id046
+          label: Wir schauen gemeinsam.
+          name: homeStep2Title
+          widget: text
+          required: false
+          hint: Leer = deutsche Fassung. Bei formatierten Überschriften sind <br>, <span>, <strong> und <em> möglich.
+        - &id047
+          label: Was wird gebraucht, wer ist beteiligt und welcher nächste Schritt hilft?
+          name: homeStep2Text
+          widget: text
+          required: false
+          hint: Leer = deutsche Fassung. Bei formatierten Überschriften sind <br>, <span>, <strong> und <em> möglich.
+        - &id048
+          label: ProBe begleitet.
+          name: homeStep3Title
+          widget: text
+          required: false
+          hint: Leer = deutsche Fassung. Bei formatierten Überschriften sind <br>, <span>, <strong> und <em> möglich.
+        - &id049
+          label: Individuell und genau dort, wo Unterstützung sinnvoll ist.
+          name: homeStep3Text
+          widget: text
+          required: false
+          hint: Leer = deutsche Fassung. Bei formatierten Überschriften sind <br>, <span>, <strong> und <em> möglich.
+        - &id050
+          label: Aktuelles
+          name: newsLabel
+          widget: text
+          required: false
+          hint: Leer = deutsche Fassung. Bei formatierten Überschriften sind <br>, <span>, <strong> und <em> möglich.
+        - &id051
+          label: Aktuelles aus ProBe
+          name: newsTitle
+          widget: text
+          required: false
+          hint: Leer = deutsche Fassung. Bei formatierten Überschriften sind <br>, <span>, <strong> und <em> möglich.
+        - &id052
+          label: Gemeinsam gelingt’s.
+          name: networkTitle
+          widget: text
+          required: false
+          hint: Leer = deutsche Fassung. Bei formatierten Überschriften sind <br>, <span>, <strong> und <em> möglich.
+        - &id053
+          label: 'Ankommen, Anerkennung, Arbeit: In unserem Netzwerk finden Sie spezialisierte Anlaufst'
+          name: networkIntro
+          widget: text
+          required: false
+          hint: Leer = deutsche Fassung. Bei formatierten Überschriften sind <br>, <span>, <strong> und <em> möglich.
+        - &id054
+          label: Anerkennung
+          name: networkRecognition
+          widget: text
+          required: false
+          hint: Leer = deutsche Fassung. Bei formatierten Überschriften sind <br>, <span>, <strong> und <em> möglich.
+        - &id055
+          label: Beratung und Qualifizierung für Menschen mit ausländischen Berufsabschlüssen.
+          name: networkIq
+          widget: text
+          required: false
+          hint: Leer = deutsche Fassung. Bei formatierten Überschriften sind <br>, <span>, <strong> und <em> möglich.
+        - &id056
+          label: Website besuchen
+          name: networkVisit
+          widget: text
+          required: false
+          hint: Leer = deutsche Fassung. Bei formatierten Überschriften sind <br>, <span>, <strong> und <em> möglich.
+        - &id057
+          label: Ankommen
+          name: networkArrival
+          widget: text
+          required: false
+          hint: Leer = deutsche Fassung. Bei formatierten Überschriften sind <br>, <span>, <strong> und <em> möglich.
+        - &id058
+          label: 'Unterstützung für internationale Fachkräfte und Unternehmen beim Ankommen, Leben und '
+          name: networkWelcome
+          widget: text
+          required: false
+          hint: Leer = deutsche Fassung. Bei formatierten Überschriften sind <br>, <span>, <strong> und <em> möglich.
+        - &id059
+          label: Fachkräfte
+          name: networkWorkforce
+          widget: text
+          required: false
+          hint: Leer = deutsche Fassung. Bei formatierten Überschriften sind <br>, <span>, <strong> und <em> möglich.
+        - &id060
+          label: Beratung für Fachkräfte und Unternehmen zu Weiterbildung und Fachkräftesicherung.
+          name: networkFocus
+          widget: text
+          required: false
+          hint: Leer = deutsche Fassung. Bei formatierten Überschriften sind <br>, <span>, <strong> und <em> möglich.
+        - &id061
+          label: Arbeit & Ausbildung
+          name: networkWork
+          widget: text
+          required: false
+          hint: Leer = deutsche Fassung. Bei formatierten Überschriften sind <br>, <span>, <strong> und <em> möglich.
+        - &id062
+          label: Beratung zu Arbeit, Ausbildung und Fördermöglichkeiten. Der Link führt zur Agentur fü
+          name: networkAgency
+          widget: text
+          required: false
+          hint: Leer = deutsche Fassung. Bei formatierten Überschriften sind <br>, <span>, <strong> und <em> möglich.
+        - &id063
+          label: Pflege
+          name: networkCare
+          widget: text
+          required: false
+          hint: Leer = deutsche Fassung. Bei formatierten Überschriften sind <br>, <span>, <strong> und <em> möglich.
+        - &id064
+          label: Interessenvertretung und Unterstützung privater Anbieter sozialer Dienste in Sachsen-
+          name: networkBpa
+          widget: text
+          required: false
+          hint: Leer = deutsche Fassung. Bei formatierten Überschriften sind <br>, <span>, <strong> und <em> möglich.
+        - &id065
+          label: Beratung
+          name: networkAdvice
+          widget: text
+          required: false
+          hint: Leer = deutsche Fassung. Bei formatierten Überschriften sind <br>, <span>, <strong> und <em> möglich.
+        - &id066
+          label: Beratung zur Anerkennung ausländischer Bildungs- und Berufsabschlüsse durch die Carit
+          name: networkCaritas
+          widget: text
+          required: false
+          hint: Leer = deutsche Fassung. Bei formatierten Überschriften sind <br>, <span>, <strong> und <em> möglich.
+        - &id067
+          label: Kontakt
+          name: contactLabel
+          widget: text
+          required: false
+          hint: Leer = deutsche Fassung. Bei formatierten Überschriften sind <br>, <span>, <strong> und <em> möglich.
+        - &id068
+          label: Gemeinsam gelingt’s.
+          name: homeContactTitle
+          widget: text
+          required: false
+          hint: Leer = deutsche Fassung. Bei formatierten Überschriften sind <br>, <span>, <strong> und <em> möglich.
+        - &id069
+          label: Sie möchten ProBe nutzen, haben Fragen oder möchten als Einrichtung Kontakt aufnehmen
+          name: contactText
+          widget: text
+          required: false
+          hint: Leer = deutsche Fassung. Bei formatierten Überschriften sind <br>, <span>, <strong> und <em> möglich.
+        - &id070
+          label: Name
+          name: namePlaceholder
+          widget: text
+          required: false
+          hint: Leer = deutsche Fassung. Bei formatierten Überschriften sind <br>, <span>, <strong> und <em> möglich.
+        - &id071
+          label: E-Mail
+          name: emailPlaceholder
+          widget: text
+          required: false
+          hint: Leer = deutsche Fassung. Bei formatierten Überschriften sind <br>, <span>, <strong> und <em> möglich.
+        - &id072
+          label: Nachricht
+          name: messagePlaceholder
+          widget: text
+          required: false
+          hint: Leer = deutsche Fassung. Bei formatierten Überschriften sind <br>, <span>, <strong> und <em> möglich.
+        - &id073
+          label: Anfrage senden
+          name: sendBtn
+          widget: text
+          required: false
+          hint: Leer = deutsche Fassung. Bei formatierten Überschriften sind <br>, <span>, <strong> und <em> möglich.
+        - &id074
+          label: ProBe · Projekt Berufsbegleitung
+          name: footerProject
+          widget: text
+          required: false
+          hint: Leer = deutsche Fassung. Bei formatierten Überschriften sind <br>, <span>, <strong> und <em> möglich.
+        - &id075
+          label: Gefördert durch
+          name: fundedBy
+          widget: text
+          required: false
+          hint: Leer = deutsche Fassung. Bei formatierten Überschriften sind <br>, <span>, <strong> und <em> möglich.
+        - &id076
+          label: In Kooperation mit
+          name: inCooperationWith
+          widget: text
+          required: false
+          hint: Leer = deutsche Fassung. Bei formatierten Überschriften sind <br>, <span>, <strong> und <em> möglich.
+        - &id077
+          label: Digital umgesetzt mit
+          name: footerCredit
+          widget: text
+          required: false
+          hint: Leer = deutsche Fassung. Bei formatierten Überschriften sind <br>, <span>, <strong> und <em> möglich.
+        - &id078
+          label: Impressum
+          name: imprint
+          widget: text
+          required: false
+          hint: Leer = deutsche Fassung. Bei formatierten Überschriften sind <br>, <span>, <strong> und <em> möglich.
+        - &id079
+          label: Datenschutz
+          name: privacy
+          widget: text
+          required: false
+          hint: Leer = deutsche Fassung. Bei formatierten Überschriften sind <br>, <span>, <strong> und <em> möglich.
+      - label: Englisch
+        name: en
+        widget: object
+        collapsed: true
+        required: false
+        fields:
+        - *id007
+        - *id008
+        - *id009
+        - *id010
+        - *id011
+        - *id012
+        - *id013
+        - *id014
+        - *id015
+        - *id016
+        - *id017
+        - *id018
+        - *id019
+        - *id020
+        - *id021
+        - *id022
+        - *id023
+        - *id024
+        - *id025
+        - *id026
+        - *id027
+        - *id028
+        - *id029
+        - *id030
+        - *id031
+        - *id032
+        - *id033
+        - *id034
+        - *id035
+        - *id036
+        - *id037
+        - *id038
+        - *id039
+        - *id040
+        - *id041
+        - *id042
+        - *id043
+        - *id044
+        - *id045
+        - *id046
+        - *id047
+        - *id048
+        - *id049
+        - *id050
+        - *id051
+        - *id052
+        - *id053
+        - *id054
+        - *id055
+        - *id056
+        - *id057
+        - *id058
+        - *id059
+        - *id060
+        - *id061
+        - *id062
+        - *id063
+        - *id064
+        - *id065
+        - *id066
+        - *id067
+        - *id068
+        - *id069
+        - *id070
+        - *id071
+        - *id072
+        - *id073
+        - *id074
+        - *id075
+        - *id076
+        - *id077
+        - *id078
+        - *id079
+      - label: Arabisch
+        name: ar
+        widget: object
+        collapsed: true
+        required: false
+        fields:
+        - *id007
+        - *id008
+        - *id009
+        - *id010
+        - *id011
+        - *id012
+        - *id013
+        - *id014
+        - *id015
+        - *id016
+        - *id017
+        - *id018
+        - *id019
+        - *id020
+        - *id021
+        - *id022
+        - *id023
+        - *id024
+        - *id025
+        - *id026
+        - *id027
+        - *id028
+        - *id029
+        - *id030
+        - *id031
+        - *id032
+        - *id033
+        - *id034
+        - *id035
+        - *id036
+        - *id037
+        - *id038
+        - *id039
+        - *id040
+        - *id041
+        - *id042
+        - *id043
+        - *id044
+        - *id045
+        - *id046
+        - *id047
+        - *id048
+        - *id049
+        - *id050
+        - *id051
+        - *id052
+        - *id053
+        - *id054
+        - *id055
+        - *id056
+        - *id057
+        - *id058
+        - *id059
+        - *id060
+        - *id061
+        - *id062
+        - *id063
+        - *id064
+        - *id065
+        - *id066
+        - *id067
+        - *id068
+        - *id069
+        - *id070
+        - *id071
+        - *id072
+        - *id073
+        - *id074
+        - *id075
+        - *id076
+        - *id077
+        - *id078
+        - *id079
+      - label: Russisch
+        name: ru
+        widget: object
+        collapsed: true
+        required: false
+        fields:
+        - *id007
+        - *id008
+        - *id009
+        - *id010
+        - *id011
+        - *id012
+        - *id013
+        - *id014
+        - *id015
+        - *id016
+        - *id017
+        - *id018
+        - *id019
+        - *id020
+        - *id021
+        - *id022
+        - *id023
+        - *id024
+        - *id025
+        - *id026
+        - *id027
+        - *id028
+        - *id029
+        - *id030
+        - *id031
+        - *id032
+        - *id033
+        - *id034
+        - *id035
+        - *id036
+        - *id037
+        - *id038
+        - *id039
+        - *id040
+        - *id041
+        - *id042
+        - *id043
+        - *id044
+        - *id045
+        - *id046
+        - *id047
+        - *id048
+        - *id049
+        - *id050
+        - *id051
+        - *id052
+        - *id053
+        - *id054
+        - *id055
+        - *id056
+        - *id057
+        - *id058
+        - *id059
+        - *id060
+        - *id061
+        - *id062
+        - *id063
+        - *id064
+        - *id065
+        - *id066
+        - *id067
+        - *id068
+        - *id069
+        - *id070
+        - *id071
+        - *id072
+        - *id073
+        - *id074
+        - *id075
+        - *id076
+        - *id077
+        - *id078
+        - *id079
+      - label: Türkisch
+        name: tr
+        widget: object
+        collapsed: true
+        required: false
+        fields:
+        - *id007
+        - *id008
+        - *id009
+        - *id010
+        - *id011
+        - *id012
+        - *id013
+        - *id014
+        - *id015
+        - *id016
+        - *id017
+        - *id018
+        - *id019
+        - *id020
+        - *id021
+        - *id022
+        - *id023
+        - *id024
+        - *id025
+        - *id026
+        - *id027
+        - *id028
+        - *id029
+        - *id030
+        - *id031
+        - *id032
+        - *id033
+        - *id034
+        - *id035
+        - *id036
+        - *id037
+        - *id038
+        - *id039
+        - *id040
+        - *id041
+        - *id042
+        - *id043
+        - *id044
+        - *id045
+        - *id046
+        - *id047
+        - *id048
+        - *id049
+        - *id050
+        - *id051
+        - *id052
+        - *id053
+        - *id054
+        - *id055
+        - *id056
+        - *id057
+        - *id058
+        - *id059
+        - *id060
+        - *id061
+        - *id062
+        - *id063
+        - *id064
+        - *id065
+        - *id066
+        - *id067
+        - *id068
+        - *id069
+        - *id070
+        - *id071
+        - *id072
+        - *id073
+        - *id074
+        - *id075
+        - *id076
+        - *id077
+        - *id078
+        - *id079
+      - label: Ukrainisch
+        name: uk
+        widget: object
+        collapsed: true
+        required: false
+        fields:
+        - *id007
+        - *id008
+        - *id009
+        - *id010
+        - *id011
+        - *id012
+        - *id013
+        - *id014
+        - *id015
+        - *id016
+        - *id017
+        - *id018
+        - *id019
+        - *id020
+        - *id021
+        - *id022
+        - *id023
+        - *id024
+        - *id025
+        - *id026
+        - *id027
+        - *id028
+        - *id029
+        - *id030
+        - *id031
+        - *id032
+        - *id033
+        - *id034
+        - *id035
+        - *id036
+        - *id037
+        - *id038
+        - *id039
+        - *id040
+        - *id041
+        - *id042
+        - *id043
+        - *id044
+        - *id045
+        - *id046
+        - *id047
+        - *id048
+        - *id049
+        - *id050
+        - *id051
+        - *id052
+        - *id053
+        - *id054
+        - *id055
+        - *id056
+        - *id057
+        - *id058
+        - *id059
+        - *id060
+        - *id061
+        - *id062
+        - *id063
+        - *id064
+        - *id065
+        - *id066
+        - *id067
+        - *id068
+        - *id069
+        - *id070
+        - *id071
+        - *id072
+        - *id073
+        - *id074
+        - *id075
+        - *id076
+        - *id077
+        - *id078
+        - *id079
+      - label: Vietnamesisch
+        name: vi
+        widget: object
+        collapsed: true
+        required: false
+        fields:
+        - *id007
+        - *id008
+        - *id009
+        - *id010
+        - *id011
+        - *id012
+        - *id013
+        - *id014
+        - *id015
+        - *id016
+        - *id017
+        - *id018
+        - *id019
+        - *id020
+        - *id021
+        - *id022
+        - *id023
+        - *id024
+        - *id025
+        - *id026
+        - *id027
+        - *id028
+        - *id029
+        - *id030
+        - *id031
+        - *id032
+        - *id033
+        - *id034
+        - *id035
+        - *id036
+        - *id037
+        - *id038
+        - *id039
+        - *id040
+        - *id041
+        - *id042
+        - *id043
+        - *id044
+        - *id045
+        - *id046
+        - *id047
+        - *id048
+        - *id049
+        - *id050
+        - *id051
+        - *id052
+        - *id053
+        - *id054
+        - *id055
+        - *id056
+        - *id057
+        - *id058
+        - *id059
+        - *id060
+        - *id061
+        - *id062
+        - *id063
+        - *id064
+        - *id065
+        - *id066
+        - *id067
+        - *id068
+        - *id069
+        - *id070
+        - *id071
+        - *id072
+        - *id073
+        - *id074
+        - *id075
+        - *id076
+        - *id077
+        - *id078
+        - *id079
+    - label: Weitere Beschriftungen und Texte
+      name: plain
+      widget: object
+      collapsed: true
+      fields:
+      - label: '01'
+        name: text-0
+        widget: text
+        required: false
+      - label: '02'
+        name: text-1
+        widget: text
+        required: false
+      - label: IQ-Netzwerk Sachsen-Anhalt
+        name: text-2
+        widget: text
+        required: false
+      - label: WelcomeCenter Sachsen-Anhalt
+        name: text-3
+        widget: text
+        required: false
+      - label: Fachkraft im Fokus
+        name: text-4
+        widget: text
+        required: false
+      - label: Agentur für Arbeit / Jobcenter
+        name: text-5
+        widget: text
+        required: false
+      - label: bpa Sachsen-Anhalt
+        name: text-6
+        widget: text
+        required: false
+      - label: Anerkennungsberatung der Caritas
+        name: text-7
+        widget: text
+        required: false
+      - label: Name
+        name: text-8
+        widget: text
+        required: false
+      - label: E-Mail
+        name: text-9
+        widget: text
+        required: false
+      - label: Nachricht
+        name: text-10
+        widget: text
+        required: false
+    - label: Bilder & Logos
+      name: images
+      widget: list
+      collapsed: true
+      allow_add: false
+      allow_delete: false
+      summary: '{{fields.label}}'
+      fields:
+      - &id111
+        label: Bereich
+        name: label
+        widget: string
+      - &id080
+        name: key
+        widget: hidden
+      - &id112
+        name: background
+        widget: hidden
+      - &id113
+        label: Bild austauschen
+        name: source
+        widget: image
+      - &id114
+        label: Bildbeschreibung
+        name: alt
+        widget: string
+        required: false
+      - &id115
+        label: Bildausschnitt
+        name: position
+        widget: string
+        hint: Horizontal vertikal, z. B. 50% 30%
+        required: false
+    - label: Links & Button-Ziele
+      name: links
+      widget: list
+      collapsed: true
+      allow_add: false
+      allow_delete: false
+      summary: '{{fields.label}}'
+      fields:
+      - *id080
+      - &id116
+        label: Bezeichnung im CMS
+        name: label
+        widget: string
+      - &id117
+        label: Ziel-Adresse
+        name: url
+        widget: string
+  - name: page-ueber-probe
+    label: Über ProBe – Texte, Bilder & Links
+    file: content/page-ueber-probe.json
+    format: json
+    preview_path: ueber-probe.html
+    fields:
+    - label: Seitentexte & Sprachversionen
+      name: texts
+      widget: object
+      fields:
+      - label: Deutsch
+        name: de
+        widget: object
+        collapsed: false
+        required: false
+        fields:
+        - *id007
+        - *id008
+        - *id009
+        - *id010
+        - *id011
+        - *id012
+        - &id081
+          label: Über ProBe
+          name: aboutPageLabel
+          widget: text
+          required: false
+          hint: Leer = deutsche Fassung. Bei formatierten Überschriften sind <br>, <span>, <strong> und <em> möglich.
+        - &id082
+          label: 'Viele Wege. Ein Ziel: deine Perspektive in der Pflege.'
+          name: aboutHeroTitle
+          widget: text
+          required: false
+          hint: Leer = deutsche Fassung. Bei formatierten Überschriften sind <br>, <span>, <strong> und <em> möglich.
+        - &id083
+          label: ProBe begleitet Menschen mit Migrationsgeschichte auf ihrem Weg in die Pflege – vom e
+          name: aboutHeroText
+          widget: text
+          required: false
+          hint: Leer = deutsche Fassung. Bei formatierten Überschriften sind <br>, <span>, <strong> und <em> möglich.
+        - &id084
+          label: Individuelle Begleitung
+          name: aboutFact1
+          widget: text
+          required: false
+          hint: Leer = deutsche Fassung. Bei formatierten Überschriften sind <br>, <span>, <strong> und <em> möglich.
+        - &id085
+          label: Anerkennung & Qualifizierung
+          name: aboutFact2
+          widget: text
+          required: false
+          hint: Leer = deutsche Fassung. Bei formatierten Überschriften sind <br>, <span>, <strong> und <em> möglich.
+        - &id086
+          label: Ausbildung & Arbeit
+          name: aboutFact3
+          widget: text
+          required: false
+          hint: Leer = deutsche Fassung. Bei formatierten Überschriften sind <br>, <span>, <strong> und <em> möglich.
+        - &id087
+          label: Kostenfrei
+          name: aboutFact4
+          widget: text
+          required: false
+          hint: Leer = deutsche Fassung. Bei formatierten Überschriften sind <br>, <span>, <strong> und <em> möglich.
+        - &id088
+          label: Warum ProBe?
+          name: aboutWhyLabel
+          widget: text
+          required: false
+          hint: Leer = deutsche Fassung. Bei formatierten Überschriften sind <br>, <span>, <strong> und <em> möglich.
+        - &id089
+          label: Weil berufliche Integration Orientierung braucht.
+          name: aboutWhyTitle
+          widget: text
+          required: false
+          hint: Leer = deutsche Fassung. Bei formatierten Überschriften sind <br>, <span>, <strong> und <em> möglich.
+        - &id090
+          label: 'Der Weg in die Pflege kann an ganz unterschiedlichen Punkten beginnen: mit Interesse '
+          name: aboutWhyText1
+          widget: text
+          required: false
+          hint: Leer = deutsche Fassung. Bei formatierten Überschriften sind <br>, <span>, <strong> und <em> möglich.
+        - &id091
+          label: 'ProBe setzt genau dort an. Die Berufs-Begleiter*innen unterstützen individuell – bei '
+          name: aboutWhyText2
+          widget: text
+          required: false
+          hint: Leer = deutsche Fassung. Bei formatierten Überschriften sind <br>, <span>, <strong> und <em> möglich.
+        - &id092
+          label: Was ProBe erreichen möchte
+          name: aboutGoalsLabel
+          widget: text
+          required: false
+          hint: Leer = deutsche Fassung. Bei formatierten Überschriften sind <br>, <span>, <strong> und <em> möglich.
+        - &id093
+          label: 'Unser Ziel: gute Perspektiven in Pflege und Gesundheit.'
+          name: aboutGoalsTitle
+          widget: text
+          required: false
+          hint: Leer = deutsche Fassung. Bei formatierten Überschriften sind <br>, <span>, <strong> und <em> möglich.
+        - &id094
+          label: Menschen stärken
+          name: aboutGoal1Title
+          widget: text
+          required: false
+          hint: Leer = deutsche Fassung. Bei formatierten Überschriften sind <br>, <span>, <strong> und <em> möglich.
+        - &id095
+          label: Individuelle Stärken sichtbar machen und realistische berufliche Perspektiven entwick
+          name: aboutGoal1Text
+          widget: text
+          required: false
+          hint: Leer = deutsche Fassung. Bei formatierten Überschriften sind <br>, <span>, <strong> und <em> möglich.
+        - &id096
+          label: Wege verständlich machen
+          name: aboutGoal2Title
+          widget: text
+          required: false
+          hint: Leer = deutsche Fassung. Bei formatierten Überschriften sind <br>, <span>, <strong> und <em> möglich.
+        - &id097
+          label: FSJ/BFD, Anerkennung, Qualifizierung, Ausbildung und Berufseinstieg nachvollziehbar e
+          name: aboutGoal2Text
+          widget: text
+          required: false
+          hint: Leer = deutsche Fassung. Bei formatierten Überschriften sind <br>, <span>, <strong> und <em> möglich.
+        - &id098
+          label: Integration begleiten
+          name: aboutGoal3Title
+          widget: text
+          required: false
+          hint: Leer = deutsche Fassung. Bei formatierten Überschriften sind <br>, <span>, <strong> und <em> möglich.
+        - &id099
+          label: Im Berufsalltag unterstützen, Orientierung geben und Unsicherheiten abbauen.
+          name: aboutGoal3Text
+          widget: text
+          required: false
+          hint: Leer = deutsche Fassung. Bei formatierten Überschriften sind <br>, <span>, <strong> und <em> möglich.
+        - &id100
+          label: Einrichtungen entlasten
+          name: aboutGoal4Title
+          widget: text
+          required: false
+          hint: Leer = deutsche Fassung. Bei formatierten Überschriften sind <br>, <span>, <strong> und <em> möglich.
+        - &id101
+          label: Pflege- und Gesundheitseinrichtungen bei Integration und Fachkräftegewinnung begleite
+          name: aboutGoal4Text
+          widget: text
+          required: false
+          hint: Leer = deutsche Fassung. Bei formatierten Überschriften sind <br>, <span>, <strong> und <em> möglich.
+        - &id102
+          label: Für wen ist ProBe da?
+          name: aboutTargetLabel
+          widget: text
+          required: false
+          hint: Leer = deutsche Fassung. Bei formatierten Überschriften sind <br>, <span>, <strong> und <em> möglich.
+        - &id103
+          label: Wir begleiten Menschen und Einrichtungen.
+          name: aboutTargetTitle
+          widget: text
+          required: false
+          hint: Leer = deutsche Fassung. Bei formatierten Überschriften sind <br>, <span>, <strong> und <em> möglich.
+        - &id104
+          label: Menschen mit Migrationsgeschichte, die sich für einen Einstieg in Pflege und Gesundhe
+          name: aboutTarget1
+          widget: text
+          required: false
+          hint: Leer = deutsche Fassung. Bei formatierten Überschriften sind <br>, <span>, <strong> und <em> möglich.
+        - &id105
+          label: Auszubildende und Fachkräfte – auch bei Fragen zu Anerkennung, Qualifizierung oder Be
+          name: aboutTarget2
+          widget: text
+          required: false
+          hint: Leer = deutsche Fassung. Bei formatierten Überschriften sind <br>, <span>, <strong> und <em> möglich.
+        - &id106
+          label: Interessierte und Teilnehmende in FSJ oder BFD mit Pflegebezug
+          name: aboutTarget3
+          widget: text
+          required: false
+          hint: Leer = deutsche Fassung. Bei formatierten Überschriften sind <br>, <span>, <strong> und <em> möglich.
+        - &id107
+          label: Pflege- und Gesundheitseinrichtungen bei Integration und Fachkräftegewinnung
+          name: aboutTarget4
+          widget: text
+          required: false
+          hint: Leer = deutsche Fassung. Bei formatierten Überschriften sind <br>, <span>, <strong> und <em> möglich.
+        - &id108
+          label: Unterstützung
+          name: aboutCtaLabel
+          widget: text
+          required: false
+          hint: Leer = deutsche Fassung. Bei formatierten Überschriften sind <br>, <span>, <strong> und <em> möglich.
+        - &id109
+          label: Sie möchten wissen, ob ProBe zu Ihrer Situation passt?
+          name: aboutCtaTitle
+          widget: text
+          required: false
+          hint: Leer = deutsche Fassung. Bei formatierten Überschriften sind <br>, <span>, <strong> und <em> möglich.
+        - &id110
+          label: Kontakt aufnehmen
+          name: aboutCtaBtn
+          widget: text
+          required: false
+          hint: Leer = deutsche Fassung. Bei formatierten Überschriften sind <br>, <span>, <strong> und <em> möglich.
+        - *id074
+        - *id075
+        - *id076
+        - *id077
+        - *id078
+        - *id079
+      - label: Englisch
+        name: en
+        widget: object
+        collapsed: true
+        required: false
+        fields:
+        - *id007
+        - *id008
+        - *id009
+        - *id010
+        - *id011
+        - *id012
+        - *id081
+        - *id082
+        - *id083
+        - *id084
+        - *id085
+        - *id086
+        - *id087
+        - *id088
+        - *id089
+        - *id090
+        - *id091
+        - *id092
+        - *id093
+        - *id094
+        - *id095
+        - *id096
+        - *id097
+        - *id098
+        - *id099
+        - *id100
+        - *id101
+        - *id102
+        - *id103
+        - *id104
+        - *id105
+        - *id106
+        - *id107
+        - *id108
+        - *id109
+        - *id110
+        - *id074
+        - *id075
+        - *id076
+        - *id077
+        - *id078
+        - *id079
+      - label: Arabisch
+        name: ar
+        widget: object
+        collapsed: true
+        required: false
+        fields:
+        - *id007
+        - *id008
+        - *id009
+        - *id010
+        - *id011
+        - *id012
+        - *id081
+        - *id082
+        - *id083
+        - *id084
+        - *id085
+        - *id086
+        - *id087
+        - *id088
+        - *id089
+        - *id090
+        - *id091
+        - *id092
+        - *id093
+        - *id094
+        - *id095
+        - *id096
+        - *id097
+        - *id098
+        - *id099
+        - *id100
+        - *id101
+        - *id102
+        - *id103
+        - *id104
+        - *id105
+        - *id106
+        - *id107
+        - *id108
+        - *id109
+        - *id110
+        - *id074
+        - *id075
+        - *id076
+        - *id077
+        - *id078
+        - *id079
+      - label: Russisch
+        name: ru
+        widget: object
+        collapsed: true
+        required: false
+        fields:
+        - *id007
+        - *id008
+        - *id009
+        - *id010
+        - *id011
+        - *id012
+        - *id081
+        - *id082
+        - *id083
+        - *id084
+        - *id085
+        - *id086
+        - *id087
+        - *id088
+        - *id089
+        - *id090
+        - *id091
+        - *id092
+        - *id093
+        - *id094
+        - *id095
+        - *id096
+        - *id097
+        - *id098
+        - *id099
+        - *id100
+        - *id101
+        - *id102
+        - *id103
+        - *id104
+        - *id105
+        - *id106
+        - *id107
+        - *id108
+        - *id109
+        - *id110
+        - *id074
+        - *id075
+        - *id076
+        - *id077
+        - *id078
+        - *id079
+      - label: Türkisch
+        name: tr
+        widget: object
+        collapsed: true
+        required: false
+        fields:
+        - *id007
+        - *id008
+        - *id009
+        - *id010
+        - *id011
+        - *id012
+        - *id081
+        - *id082
+        - *id083
+        - *id084
+        - *id085
+        - *id086
+        - *id087
+        - *id088
+        - *id089
+        - *id090
+        - *id091
+        - *id092
+        - *id093
+        - *id094
+        - *id095
+        - *id096
+        - *id097
+        - *id098
+        - *id099
+        - *id100
+        - *id101
+        - *id102
+        - *id103
+        - *id104
+        - *id105
+        - *id106
+        - *id107
+        - *id108
+        - *id109
+        - *id110
+        - *id074
+        - *id075
+        - *id076
+        - *id077
+        - *id078
+        - *id079
+      - label: Ukrainisch
+        name: uk
+        widget: object
+        collapsed: true
+        required: false
+        fields:
+        - *id007
+        - *id008
+        - *id009
+        - *id010
+        - *id011
+        - *id012
+        - *id081
+        - *id082
+        - *id083
+        - *id084
+        - *id085
+        - *id086
+        - *id087
+        - *id088
+        - *id089
+        - *id090
+        - *id091
+        - *id092
+        - *id093
+        - *id094
+        - *id095
+        - *id096
+        - *id097
+        - *id098
+        - *id099
+        - *id100
+        - *id101
+        - *id102
+        - *id103
+        - *id104
+        - *id105
+        - *id106
+        - *id107
+        - *id108
+        - *id109
+        - *id110
+        - *id074
+        - *id075
+        - *id076
+        - *id077
+        - *id078
+        - *id079
+      - label: Vietnamesisch
+        name: vi
+        widget: object
+        collapsed: true
+        required: false
+        fields:
+        - *id007
+        - *id008
+        - *id009
+        - *id010
+        - *id011
+        - *id012
+        - *id081
+        - *id082
+        - *id083
+        - *id084
+        - *id085
+        - *id086
+        - *id087
+        - *id088
+        - *id089
+        - *id090
+        - *id091
+        - *id092
+        - *id093
+        - *id094
+        - *id095
+        - *id096
+        - *id097
+        - *id098
+        - *id099
+        - *id100
+        - *id101
+        - *id102
+        - *id103
+        - *id104
+        - *id105
+        - *id106
+        - *id107
+        - *id108
+        - *id109
+        - *id110
+        - *id074
+        - *id075
+        - *id076
+        - *id077
+        - *id078
+        - *id079
+    - label: Bilder & Logos
+      name: images
+      widget: list
+      collapsed: true
+      allow_add: false
+      allow_delete: false
+      summary: '{{fields.label}}'
+      fields:
+      - *id111
+      - *id080
+      - *id112
+      - *id113
+      - *id114
+      - *id115
+    - label: Links & Button-Ziele
+      name: links
+      widget: list
+      collapsed: true
+      allow_add: false
+      allow_delete: false
+      summary: '{{fields.label}}'
+      fields:
+      - *id080
+      - *id116
+      - *id117
+  - name: page-unterstuetzung
+    label: Unterstützung – Texte, Bilder & Links
+    file: content/page-unterstuetzung.json
+    format: json
+    preview_path: unterstuetzung.html
+    fields:
+    - label: Seitentexte & Sprachversionen
+      name: texts
+      widget: object
+      fields:
+      - label: Deutsch
+        name: de
+        widget: object
+        collapsed: false
+        required: false
+        fields:
+        - *id007
+        - *id008
+        - *id009
+        - *id010
+        - *id011
+        - *id012
+        - &id118
+          label: Unterstützung
+          name: supportPageLabel
+          widget: text
+          required: false
+          hint: Leer = deutsche Fassung. Bei formatierten Überschriften sind <br>, <span>, <strong> und <em> möglich.
+        - &id119
+          label: Orientieren. Einsteigen. Anerkennung klären. Weiterkommen.
+          name: supportHeroTitle
+          widget: text
+          required: false
+          hint: Leer = deutsche Fassung. Bei formatierten Überschriften sind <br>, <span>, <strong> und <em> möglich.
+        - &id120
+          label: ProBe unterstützt Menschen mit Migrationsgeschichte, die sich für die Pflege interess
+          name: supportHeroText
+          widget: text
+          required: false
+          hint: Leer = deutsche Fassung. Bei formatierten Überschriften sind <br>, <span>, <strong> und <em> möglich.
+        - *id019
+        - &id121
+          label: Für Teilnehmende
+          name: supportParticipantsLabel
+          widget: text
+          required: false
+          hint: Leer = deutsche Fassung. Bei formatierten Überschriften sind <br>, <span>, <strong> und <em> möglich.
+        - &id122
+          label: Unterstützung bei Anerkennungsverfahren
+          name: supportParticipant1
+          widget: text
+          required: false
+          hint: Leer = deutsche Fassung. Bei formatierten Überschriften sind <br>, <span>, <strong> und <em> möglich.
+        - &id123
+          label: Vermittlung zu Sprachkursen und Qualifizierungsangeboten
+          name: supportParticipant2
+          widget: text
+          required: false
+          hint: Leer = deutsche Fassung. Bei formatierten Überschriften sind <br>, <span>, <strong> und <em> möglich.
+        - &id124
+          label: Begleitung bei behördlichen Angelegenheiten
+          name: supportParticipant3
+          widget: text
+          required: false
+          hint: Leer = deutsche Fassung. Bei formatierten Überschriften sind <br>, <span>, <strong> und <em> möglich.
+        - &id125
+          label: Orientierung zu FSJ, BFD, Ausbildung und Berufseinstieg
+          name: supportParticipant4
+          widget: text
+          required: false
+          hint: Leer = deutsche Fassung. Bei formatierten Überschriften sind <br>, <span>, <strong> und <em> möglich.
+        - &id126
+          label: Beratung zu sozialen Fragestellungen
+          name: supportParticipant5
+          widget: text
+          required: false
+          hint: Leer = deutsche Fassung. Bei formatierten Überschriften sind <br>, <span>, <strong> und <em> möglich.
+        - &id127
+          label: Für Einrichtungen
+          name: supportInstitutionsLabel
+          widget: text
+          required: false
+          hint: Leer = deutsche Fassung. Bei formatierten Überschriften sind <br>, <span>, <strong> und <em> möglich.
+        - &id128
+          label: Unterstützung bei Integrationsprozessen
+          name: supportInstitution1
+          widget: text
+          required: false
+          hint: Leer = deutsche Fassung. Bei formatierten Überschriften sind <br>, <span>, <strong> und <em> möglich.
+        - &id129
+          label: Begleitung bei Fragen zur Beschäftigung internationaler Fachkräfte
+          name: supportInstitution2
+          widget: text
+          required: false
+          hint: Leer = deutsche Fassung. Bei formatierten Überschriften sind <br>, <span>, <strong> und <em> möglich.
+        - &id130
+          label: Vermittlung von Unterstützungsangeboten
+          name: supportInstitution3
+          widget: text
+          required: false
+          hint: Leer = deutsche Fassung. Bei formatierten Überschriften sind <br>, <span>, <strong> und <em> möglich.
+        - &id131
+          label: Vernetzung mit relevanten Ansprechpartnern
+          name: supportInstitution4
+          widget: text
+          required: false
+          hint: Leer = deutsche Fassung. Bei formatierten Überschriften sind <br>, <span>, <strong> und <em> möglich.
+        - &id132
+          label: Individuelle Beratung rund um Integration und Fachkräftegewinnung
+          name: supportInstitution5
+          widget: text
+          required: false
+          hint: Leer = deutsche Fassung. Bei formatierten Überschriften sind <br>, <span>, <strong> und <em> möglich.
+        - &id133
+          label: Ablauf
+          name: supportProcessLabel
+          widget: text
+          required: false
+          hint: Leer = deutsche Fassung. Bei formatierten Überschriften sind <br>, <span>, <strong> und <em> möglich.
+        - &id134
+          label: So läuft die Unterstützung ab
+          name: supportProcessTitle
+          widget: text
+          required: false
+          hint: Leer = deutsche Fassung. Bei formatierten Überschriften sind <br>, <span>, <strong> und <em> möglich.
+        - &id135
+          label: Kontakt aufnehmen
+          name: supportStep1Title
+          widget: text
+          required: false
+          hint: Leer = deutsche Fassung. Bei formatierten Überschriften sind <br>, <span>, <strong> und <em> möglich.
+        - &id136
+          label: Interessierte Personen oder Einrichtungen melden sich direkt bei ProBe.
+          name: supportStep1Text
+          widget: text
+          required: false
+          hint: Leer = deutsche Fassung. Bei formatierten Überschriften sind <br>, <span>, <strong> und <em> möglich.
+        - &id137
+          label: Situation klären
+          name: supportStep2Title
+          widget: text
+          required: false
+          hint: Leer = deutsche Fassung. Bei formatierten Überschriften sind <br>, <span>, <strong> und <em> möglich.
+        - &id138
+          label: Gemeinsam schauen wir auf Fragen, Ziele und konkrete Unterstützungsbedarfe.
+          name: supportStep2Text
+          widget: text
+          required: false
+          hint: Leer = deutsche Fassung. Bei formatierten Überschriften sind <br>, <span>, <strong> und <em> möglich.
+        - &id139
+          label: Individuell begleiten
+          name: supportStep3Title
+          widget: text
+          required: false
+          hint: Leer = deutsche Fassung. Bei formatierten Überschriften sind <br>, <span>, <strong> und <em> möglich.
+        - &id140
+          label: Die Berufs-Begleiter*innen unterstützen bei nächsten Schritten, Verfahren und Kontakt
+          name: supportStep3Text
+          widget: text
+          required: false
+          hint: Leer = deutsche Fassung. Bei formatierten Überschriften sind <br>, <span>, <strong> und <em> möglich.
+        - &id141
+          label: Perspektiven entwickeln
+          name: supportStep4Title
+          widget: text
+          required: false
+          hint: Leer = deutsche Fassung. Bei formatierten Überschriften sind <br>, <span>, <strong> und <em> möglich.
+        - &id142
+          label: Gemeinsam begleiten wir den nächsten Schritt – zum Beispiel in FSJ/BFD, Ausbildung, B
+          name: supportStep4Text
+          widget: text
+          required: false
+          hint: Leer = deutsche Fassung. Bei formatierten Überschriften sind <br>, <span>, <strong> und <em> möglich.
+        - &id143
+          label: Persönlich. Auf Augenhöhe. Kostenfrei.
+          name: supportFreeTitle
+          widget: text
+          required: false
+          hint: Leer = deutsche Fassung. Bei formatierten Überschriften sind <br>, <span>, <strong> und <em> möglich.
+        - &id144
+          label: Die Berufs-Begleitung von ProBe ist persönlich, vertraulich und kostenfrei. Der Förde
+          name: supportFreeText
+          widget: text
+          required: false
+          hint: Leer = deutsche Fassung. Bei formatierten Überschriften sind <br>, <span>, <strong> und <em> möglich.
+        - *id074
+        - *id075
+        - *id076
+        - *id077
+        - *id078
+        - *id079
+      - label: Englisch
+        name: en
+        widget: object
+        collapsed: true
+        required: false
+        fields:
+        - *id007
+        - *id008
+        - *id009
+        - *id010
+        - *id011
+        - *id012
+        - *id118
+        - *id119
+        - *id120
+        - *id019
+        - *id121
+        - *id122
+        - *id123
+        - *id124
+        - *id125
+        - *id126
+        - *id127
+        - *id128
+        - *id129
+        - *id130
+        - *id131
+        - *id132
+        - *id133
+        - *id134
+        - *id135
+        - *id136
+        - *id137
+        - *id138
+        - *id139
+        - *id140
+        - *id141
+        - *id142
+        - *id143
+        - *id144
+        - *id074
+        - *id075
+        - *id076
+        - *id077
+        - *id078
+        - *id079
+      - label: Arabisch
+        name: ar
+        widget: object
+        collapsed: true
+        required: false
+        fields:
+        - *id007
+        - *id008
+        - *id009
+        - *id010
+        - *id011
+        - *id012
+        - *id118
+        - *id119
+        - *id120
+        - *id019
+        - *id121
+        - *id122
+        - *id123
+        - *id124
+        - *id125
+        - *id126
+        - *id127
+        - *id128
+        - *id129
+        - *id130
+        - *id131
+        - *id132
+        - *id133
+        - *id134
+        - *id135
+        - *id136
+        - *id137
+        - *id138
+        - *id139
+        - *id140
+        - *id141
+        - *id142
+        - *id143
+        - *id144
+        - *id074
+        - *id075
+        - *id076
+        - *id077
+        - *id078
+        - *id079
+      - label: Russisch
+        name: ru
+        widget: object
+        collapsed: true
+        required: false
+        fields:
+        - *id007
+        - *id008
+        - *id009
+        - *id010
+        - *id011
+        - *id012
+        - *id118
+        - *id119
+        - *id120
+        - *id019
+        - *id121
+        - *id122
+        - *id123
+        - *id124
+        - *id125
+        - *id126
+        - *id127
+        - *id128
+        - *id129
+        - *id130
+        - *id131
+        - *id132
+        - *id133
+        - *id134
+        - *id135
+        - *id136
+        - *id137
+        - *id138
+        - *id139
+        - *id140
+        - *id141
+        - *id142
+        - *id143
+        - *id144
+        - *id074
+        - *id075
+        - *id076
+        - *id077
+        - *id078
+        - *id079
+      - label: Türkisch
+        name: tr
+        widget: object
+        collapsed: true
+        required: false
+        fields:
+        - *id007
+        - *id008
+        - *id009
+        - *id010
+        - *id011
+        - *id012
+        - *id118
+        - *id119
+        - *id120
+        - *id019
+        - *id121
+        - *id122
+        - *id123
+        - *id124
+        - *id125
+        - *id126
+        - *id127
+        - *id128
+        - *id129
+        - *id130
+        - *id131
+        - *id132
+        - *id133
+        - *id134
+        - *id135
+        - *id136
+        - *id137
+        - *id138
+        - *id139
+        - *id140
+        - *id141
+        - *id142
+        - *id143
+        - *id144
+        - *id074
+        - *id075
+        - *id076
+        - *id077
+        - *id078
+        - *id079
+      - label: Ukrainisch
+        name: uk
+        widget: object
+        collapsed: true
+        required: false
+        fields:
+        - *id007
+        - *id008
+        - *id009
+        - *id010
+        - *id011
+        - *id012
+        - *id118
+        - *id119
+        - *id120
+        - *id019
+        - *id121
+        - *id122
+        - *id123
+        - *id124
+        - *id125
+        - *id126
+        - *id127
+        - *id128
+        - *id129
+        - *id130
+        - *id131
+        - *id132
+        - *id133
+        - *id134
+        - *id135
+        - *id136
+        - *id137
+        - *id138
+        - *id139
+        - *id140
+        - *id141
+        - *id142
+        - *id143
+        - *id144
+        - *id074
+        - *id075
+        - *id076
+        - *id077
+        - *id078
+        - *id079
+      - label: Vietnamesisch
+        name: vi
+        widget: object
+        collapsed: true
+        required: false
+        fields:
+        - *id007
+        - *id008
+        - *id009
+        - *id010
+        - *id011
+        - *id012
+        - *id118
+        - *id119
+        - *id120
+        - *id019
+        - *id121
+        - *id122
+        - *id123
+        - *id124
+        - *id125
+        - *id126
+        - *id127
+        - *id128
+        - *id129
+        - *id130
+        - *id131
+        - *id132
+        - *id133
+        - *id134
+        - *id135
+        - *id136
+        - *id137
+        - *id138
+        - *id139
+        - *id140
+        - *id141
+        - *id142
+        - *id143
+        - *id144
+        - *id074
+        - *id075
+        - *id076
+        - *id077
+        - *id078
+        - *id079
+    - label: Bilder & Logos
+      name: images
+      widget: list
+      collapsed: true
+      allow_add: false
+      allow_delete: false
+      summary: '{{fields.label}}'
+      fields:
+      - *id111
+      - *id080
+      - *id112
+      - *id113
+      - *id114
+      - *id115
+    - label: Links & Button-Ziele
+      name: links
+      widget: list
+      collapsed: true
+      allow_add: false
+      allow_delete: false
+      summary: '{{fields.label}}'
+      fields:
+      - *id080
+      - *id116
+      - *id117
+  - name: page-team
+    label: Teamseite – Texte, Bilder & Links
+    file: content/page-team.json
+    format: json
+    preview_path: team.html
+    fields:
+    - label: Seitentexte & Sprachversionen
+      name: texts
+      widget: object
+      fields:
+      - label: Deutsch
+        name: de
+        widget: object
+        collapsed: false
+        required: false
+        fields:
+        - *id007
+        - *id008
+        - *id009
+        - *id010
+        - *id011
+        - *id012
+        - &id145
+          label: Team
+          name: teamPageLabel
+          widget: text
+          required: false
+          hint: Leer = deutsche Fassung. Bei formatierten Überschriften sind <br>, <span>, <strong> und <em> möglich.
+        - &id146
+          label: Ihre regionalen Ansprechpersonen
+          name: teamHeroTitle
+          widget: text
+          required: false
+          hint: Leer = deutsche Fassung. Bei formatierten Überschriften sind <br>, <span>, <strong> und <em> möglich.
+        - &id147
+          label: 'Persönliche Unterstützung für Menschen mit Migrationsgeschichte und Einrichtungen in '
+          name: teamHeroText
+          widget: text
+          required: false
+          hint: Leer = deutsche Fassung. Bei formatierten Überschriften sind <br>, <span>, <strong> und <em> möglich.
+        - &id148
+          label: JERICHOWER LAND & MAGDEBURG
+          name: teamPlaceholderRegion
+          widget: text
+          required: false
+          hint: Leer = deutsche Fassung. Bei formatierten Überschriften sind <br>, <span>, <strong> und <em> möglich.
+        - &id149
+          label: Ansprechperson folgt
+          name: teamPlaceholderName
+          widget: text
+          required: false
+          hint: Leer = deutsche Fassung. Bei formatierten Überschriften sind <br>, <span>, <strong> und <em> möglich.
+        - &id150
+          label: Berufsbegleitung am Standort Burg
+          name: teamPlaceholderRole
+          widget: text
+          required: false
+          hint: Leer = deutsche Fassung. Bei formatierten Überschriften sind <br>, <span>, <strong> und <em> möglich.
+        - &id151
+          label: Kontakt aufnehmen
+          name: contactHeroTitle
+          widget: text
+          required: false
+          hint: Leer = deutsche Fassung. Bei formatierten Überschriften sind <br>, <span>, <strong> und <em> möglich.
+        - *id074
+        - *id075
+        - *id076
+        - *id077
+        - *id078
+        - *id079
+      - label: Englisch
+        name: en
+        widget: object
+        collapsed: true
+        required: false
+        fields:
+        - *id007
+        - *id008
+        - *id009
+        - *id010
+        - *id011
+        - *id012
+        - *id145
+        - *id146
+        - *id147
+        - *id148
+        - *id149
+        - *id150
+        - *id151
+        - *id074
+        - *id075
+        - *id076
+        - *id077
+        - *id078
+        - *id079
+      - label: Arabisch
+        name: ar
+        widget: object
+        collapsed: true
+        required: false
+        fields:
+        - *id007
+        - *id008
+        - *id009
+        - *id010
+        - *id011
+        - *id012
+        - *id145
+        - *id146
+        - *id147
+        - *id148
+        - *id149
+        - *id150
+        - *id151
+        - *id074
+        - *id075
+        - *id076
+        - *id077
+        - *id078
+        - *id079
+      - label: Russisch
+        name: ru
+        widget: object
+        collapsed: true
+        required: false
+        fields:
+        - *id007
+        - *id008
+        - *id009
+        - *id010
+        - *id011
+        - *id012
+        - *id145
+        - *id146
+        - *id147
+        - *id148
+        - *id149
+        - *id150
+        - *id151
+        - *id074
+        - *id075
+        - *id076
+        - *id077
+        - *id078
+        - *id079
+      - label: Türkisch
+        name: tr
+        widget: object
+        collapsed: true
+        required: false
+        fields:
+        - *id007
+        - *id008
+        - *id009
+        - *id010
+        - *id011
+        - *id012
+        - *id145
+        - *id146
+        - *id147
+        - *id148
+        - *id149
+        - *id150
+        - *id151
+        - *id074
+        - *id075
+        - *id076
+        - *id077
+        - *id078
+        - *id079
+      - label: Ukrainisch
+        name: uk
+        widget: object
+        collapsed: true
+        required: false
+        fields:
+        - *id007
+        - *id008
+        - *id009
+        - *id010
+        - *id011
+        - *id012
+        - *id145
+        - *id146
+        - *id147
+        - *id148
+        - *id149
+        - *id150
+        - *id151
+        - *id074
+        - *id075
+        - *id076
+        - *id077
+        - *id078
+        - *id079
+      - label: Vietnamesisch
+        name: vi
+        widget: object
+        collapsed: true
+        required: false
+        fields:
+        - *id007
+        - *id008
+        - *id009
+        - *id010
+        - *id011
+        - *id012
+        - *id145
+        - *id146
+        - *id147
+        - *id148
+        - *id149
+        - *id150
+        - *id151
+        - *id074
+        - *id075
+        - *id076
+        - *id077
+        - *id078
+        - *id079
+    - label: Weitere Beschriftungen und Texte
+      name: plain
+      widget: object
+      collapsed: true
+      fields:
+      - label: Natalia Giesbrecht
+        name: text-0
+        widget: text
+        required: false
+      - label: Annelie Neumann
+        name: text-1
+        widget: text
+        required: false
+      - label: Sascha Bornkampf
+        name: text-2
+        widget: text
+        required: false
+    - label: Bilder & Logos
+      name: images
+      widget: list
+      collapsed: true
+      allow_add: false
+      allow_delete: false
+      summary: '{{fields.label}}'
+      fields:
+      - *id111
+      - *id080
+      - *id112
+      - *id113
+      - *id114
+      - *id115
+    - label: Links & Button-Ziele
+      name: links
+      widget: list
+      collapsed: true
+      allow_add: false
+      allow_delete: false
+      summary: '{{fields.label}}'
+      fields:
+      - *id080
+      - *id116
+      - *id117
+  - name: page-kontakt
+    label: Kontaktseite – Texte, Bilder & Links
+    file: content/page-kontakt.json
+    format: json
+    preview_path: kontakt.html
+    fields:
+    - label: Seitentexte & Sprachversionen
+      name: texts
+      widget: object
+      fields:
+      - label: Deutsch
+        name: de
+        widget: object
+        collapsed: false
+        required: false
+        fields:
+        - *id007
+        - *id008
+        - *id009
+        - *id010
+        - *id011
+        - *id012
+        - &id152
+          label: Kontakt
+          name: contactPageLabel
+          widget: text
+          required: false
+          hint: Leer = deutsche Fassung. Bei formatierten Überschriften sind <br>, <span>, <strong> und <em> möglich.
+        - &id153
+          label: ✦ Persönlich • Auf Augenhöhe • Kostenfrei
+          name: contactBadge
+          widget: text
+          required: false
+          hint: Leer = deutsche Fassung. Bei formatierten Überschriften sind <br>, <span>, <strong> und <em> möglich.
+        - *id151
+        - &id154
+          label: Sie möchten ProBe nutzen, haben Fragen oder möchten als Einrichtung Kontakt aufnehmen
+          name: contactHeroText
+          widget: text
+          required: false
+          hint: Leer = deutsche Fassung. Bei formatierten Überschriften sind <br>, <span>, <strong> und <em> möglich.
+        - &id155
+          label: ProBe
+          name: contactBoxLabel
+          widget: text
+          required: false
+          hint: Leer = deutsche Fassung. Bei formatierten Überschriften sind <br>, <span>, <strong> und <em> möglich.
+        - &id156
+          label: Wir sind für Sie da.
+          name: contactBoxTitle
+          widget: text
+          required: false
+          hint: Leer = deutsche Fassung. Bei formatierten Überschriften sind <br>, <span>, <strong> und <em> möglich.
+        - &id157
+          label: Das ProBe-Team unterstützt Teilnehmende und Einrichtungen persönlich, vertraulich und
+          name: contactBoxText
+          widget: text
+          required: false
+          hint: Leer = deutsche Fassung. Bei formatierten Überschriften sind <br>, <span>, <strong> und <em> möglich.
+        - &id158
+          label: ProBe Berufs-Begleitung
+          name: contactOrg1
+          widget: text
+          required: false
+          hint: Leer = deutsche Fassung. Bei formatierten Überschriften sind <br>, <span>, <strong> und <em> möglich.
+        - &id159
+          label: Deutsches Rotes Kreuz Landesverband Sachsen-Anhalt e.V.
+          name: contactOrg2
+          widget: text
+          required: false
+          hint: Leer = deutsche Fassung. Bei formatierten Überschriften sind <br>, <span>, <strong> und <em> möglich.
+        - *id070
+        - *id071
+        - *id072
+        - *id073
+        - *id074
+        - *id075
+        - *id076
+        - *id077
+        - *id078
+        - *id079
+      - label: Englisch
+        name: en
+        widget: object
+        collapsed: true
+        required: false
+        fields:
+        - *id007
+        - *id008
+        - *id009
+        - *id010
+        - *id011
+        - *id012
+        - *id152
+        - *id153
+        - *id151
+        - *id154
+        - *id155
+        - *id156
+        - *id157
+        - *id158
+        - *id159
+        - *id070
+        - *id071
+        - *id072
+        - *id073
+        - *id074
+        - *id075
+        - *id076
+        - *id077
+        - *id078
+        - *id079
+      - label: Arabisch
+        name: ar
+        widget: object
+        collapsed: true
+        required: false
+        fields:
+        - *id007
+        - *id008
+        - *id009
+        - *id010
+        - *id011
+        - *id012
+        - *id152
+        - *id153
+        - *id151
+        - *id154
+        - *id155
+        - *id156
+        - *id157
+        - *id158
+        - *id159
+        - *id070
+        - *id071
+        - *id072
+        - *id073
+        - *id074
+        - *id075
+        - *id076
+        - *id077
+        - *id078
+        - *id079
+      - label: Russisch
+        name: ru
+        widget: object
+        collapsed: true
+        required: false
+        fields:
+        - *id007
+        - *id008
+        - *id009
+        - *id010
+        - *id011
+        - *id012
+        - *id152
+        - *id153
+        - *id151
+        - *id154
+        - *id155
+        - *id156
+        - *id157
+        - *id158
+        - *id159
+        - *id070
+        - *id071
+        - *id072
+        - *id073
+        - *id074
+        - *id075
+        - *id076
+        - *id077
+        - *id078
+        - *id079
+      - label: Türkisch
+        name: tr
+        widget: object
+        collapsed: true
+        required: false
+        fields:
+        - *id007
+        - *id008
+        - *id009
+        - *id010
+        - *id011
+        - *id012
+        - *id152
+        - *id153
+        - *id151
+        - *id154
+        - *id155
+        - *id156
+        - *id157
+        - *id158
+        - *id159
+        - *id070
+        - *id071
+        - *id072
+        - *id073
+        - *id074
+        - *id075
+        - *id076
+        - *id077
+        - *id078
+        - *id079
+      - label: Ukrainisch
+        name: uk
+        widget: object
+        collapsed: true
+        required: false
+        fields:
+        - *id007
+        - *id008
+        - *id009
+        - *id010
+        - *id011
+        - *id012
+        - *id152
+        - *id153
+        - *id151
+        - *id154
+        - *id155
+        - *id156
+        - *id157
+        - *id158
+        - *id159
+        - *id070
+        - *id071
+        - *id072
+        - *id073
+        - *id074
+        - *id075
+        - *id076
+        - *id077
+        - *id078
+        - *id079
+      - label: Vietnamesisch
+        name: vi
+        widget: object
+        collapsed: true
+        required: false
+        fields:
+        - *id007
+        - *id008
+        - *id009
+        - *id010
+        - *id011
+        - *id012
+        - *id152
+        - *id153
+        - *id151
+        - *id154
+        - *id155
+        - *id156
+        - *id157
+        - *id158
+        - *id159
+        - *id070
+        - *id071
+        - *id072
+        - *id073
+        - *id074
+        - *id075
+        - *id076
+        - *id077
+        - *id078
+        - *id079
+    - label: Bilder & Logos
+      name: images
+      widget: list
+      collapsed: true
+      allow_add: false
+      allow_delete: false
+      summary: '{{fields.label}}'
+      fields:
+      - *id111
+      - *id080
+      - *id112
+      - *id113
+      - *id114
+      - *id115
+    - label: Links & Button-Ziele
+      name: links
+      widget: list
+      collapsed: true
+      allow_add: false
+      allow_delete: false
+      summary: '{{fields.label}}'
+      fields:
+      - *id080
+      - *id116
+      - *id117
+  - name: page-impressum
+    label: Impressum – Texte, Bilder & Links
+    file: content/page-impressum.json
+    format: json
+    preview_path: impressum.html
+    fields:
+    - label: Seitentexte & Sprachversionen
+      name: texts
+      widget: object
+      fields:
+      - label: Deutsch
+        name: de
+        widget: object
+        collapsed: false
+        required: false
+        fields:
+        - *id011
+        - &id160
+          label: footer
+          name: footer
+          widget: text
+          required: false
+          hint: Leer = deutsche Fassung. Bei formatierten Überschriften sind <br>, <span>, <strong> und <em> möglich.
+      - label: Englisch
+        name: en
+        widget: object
+        collapsed: true
+        required: false
+        fields:
+        - *id011
+        - *id160
+      - label: Arabisch
+        name: ar
+        widget: object
+        collapsed: true
+        required: false
+        fields:
+        - *id011
+        - *id160
+      - label: Russisch
+        name: ru
+        widget: object
+        collapsed: true
+        required: false
+        fields:
+        - *id011
+        - *id160
+      - label: Türkisch
+        name: tr
+        widget: object
+        collapsed: true
+        required: false
+        fields:
+        - *id011
+        - *id160
+      - label: Ukrainisch
+        name: uk
+        widget: object
+        collapsed: true
+        required: false
+        fields:
+        - *id011
+        - *id160
+      - label: Vietnamesisch
+        name: vi
+        widget: object
+        collapsed: true
+        required: false
+        fields:
+        - *id011
+        - *id160
+    - label: Weitere Beschriftungen und Texte
+      name: plain
+      widget: object
+      collapsed: true
+      fields:
+      - label: Impressum
+        name: text-0
+        widget: text
+        required: false
+      - label: Anbieterkennung nach § 5 DDG
+        name: text-1
+        widget: text
+        required: false
+      - label: IT-Support
+        name: text-2
+        widget: text
+        required: false
+      - label: 'E-Mail: probe@sachsen-anhalt.drk.de'
+        name: text-3
+        widget: text
+        required: false
+      - label: Internet-Redaktion
+        name: text-4
+        widget: text
+        required: false
+      - label: Vereinsregister
+        name: text-5
+        widget: text
+        required: false
+      - label: Der DRK Landesverband Sachsen-Anhalt e.V. ist im Zentralen Vereinsregister beim Amtsg
+        name: text-6
+        widget: text
+        required: false
+      - label: Umsatzsteuer-Identifikationsnummer
+        name: text-7
+        widget: text
+        required: false
+      - label: Vertretungsberechtigte
+        name: text-8
+        widget: text
+        required: false
+      - label: Zur rechtlichen Vertretung sind der Präsident des Landesverbandes, Herr Roland Halang
+        name: text-9
+        widget: text
+        required: false
+      - label: Der geschäftsführende Vorstand (Landesgeschäftsführerin), Frau Katja Fischer, ist bes
+        name: text-10
+        widget: text
+        required: false
+      - label: Haftungsausschluss
+        name: text-11
+        widget: text
+        required: false
+      - label: 1. Inhalt der Seiten
+        name: text-12
+        widget: text
+        required: false
+      - label: Der DRK-Landesverband Sachsen-Anhalt e.V. übernimmt keinerlei Gewähr für die Aktualit
+        name: text-13
+        widget: text
+        required: false
+      - label: Haftungsansprüche gegen den DRK-Landesverband Sachsen-Anhalt e.V., welche sich auf Sc
+        name: text-14
+        widget: text
+        required: false
+      - label: 2. Verweise und Links
+        name: text-15
+        widget: text
+        required: false
+      - label: Die Verantwortlichkeit des Diensteanbieters beschränkt sich gemäß § 7 Abs. 1 DDG auss
+        name: text-16
+        widget: text
+        required: false
+      - label: Darüber hinaus enthält die Website auch entsprechend gekennzeichnete Verweise oder Li
+        name: text-17
+        widget: text
+        required: false
+      - label: 'Für den Inhalt der Seite ist allein der jeweilige Anbieter der Seite verantwortlich, '
+        name: text-18
+        widget: text
+        required: false
+      - label: Der DRK-Landesverband Sachsen-Anhalt e.V. erklärt hiermit ausdrücklich, dass zum Zeit
+        name: text-19
+        widget: text
+        required: false
+      - label: Bei Bekanntwerden von Rechtsverletzungen werden derartige Links umgehend entfernt.
+        name: text-20
+        widget: text
+        required: false
+      - label: 3. Urheber- und Kennzeichenrecht
+        name: text-21
+        widget: text
+        required: false
+      - label: Der DRK-Landesverband Sachsen-Anhalt e.V. ist bestrebt, in allen Publikationen die Ur
+        name: text-22
+        widget: text
+        required: false
+      - label: Alle innerhalb des Internetangebotes genannten und ggf. durch Dritte geschützten Mark
+        name: text-23
+        widget: text
+        required: false
+      - label: Das Copyright für veröffentlichte, vom DRK-Landesverband Sachsen-Anhalt e.V. selbst e
+        name: text-24
+        widget: text
+        required: false
+      - label: Downloads und Kopien sind nur für den privaten, nicht aber den kommerziellen Gebrauch
+        name: text-25
+        widget: text
+        required: false
+      - label: 4. Datenschutz
+        name: text-26
+        widget: text
+        required: false
+      - label: Sofern innerhalb der Website die Möglichkeit zur Eingabe persönlicher oder geschäftli
+        name: text-27
+        widget: text
+        required: false
+      - label: Eine Weiterleitung an Dritte erfolgt nicht ohne ausdrückliche Zustimmung des Nutzers.
+        name: text-28
+        widget: text
+        required: false
+      - label: Die Nutzung der im Rahmen des Impressums veröffentlichten Kontaktdaten zur Übersendun
+        name: text-29
+        widget: text
+        required: false
+      - label: 5. Rechtswirksamkeit dieses Haftungsausschlusses
+        name: text-30
+        widget: text
+        required: false
+      - label: Dieser Haftungsausschluss ist als Teil des Informationsangebotes zu betrachten, von d
+        name: text-31
+        widget: text
+        required: false
+      - label: Sofern Teile oder einzelne Formulierungen dieses Textes der geltenden Rechtslage nich
+        name: text-32
+        widget: text
+        required: false
+      - label: 6. Hinweis auf EU-Streitschlichtung
+        name: text-33
+        widget: text
+        required: false
+      - label: Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bere
+        name: text-34
+        widget: text
+        required: false
+      - label: ec.europa.eu/consumers/odr/
+        name: text-35
+        widget: text
+        required: false
+      - label: 'Hinweis: Dieser Link führt auf die Seite eines anderen Anbieters und Sie verlassen un'
+        name: text-36
+        widget: text
+        required: false
+      - label: Unsere E-Mail-Adresse finden Sie oben im Impressum.
+        name: text-37
+        widget: text
+        required: false
+      - label: Hinweis auf Verbraucherstreitbeilegung gemäß VSBG
+        name: text-38
+        widget: text
+        required: false
+      - label: Der DRK-Landesverband Sachsen-Anhalt e.V. nimmt nicht an Streitbeilegungsverfahren vo
+        name: text-39
+        widget: text
+        required: false
+      - label: Gefördert durch
+        name: text-40
+        widget: text
+        required: false
+      - label: In Kooperation mit
+        name: text-41
+        widget: text
+        required: false
+    - label: Bilder & Logos
+      name: images
+      widget: list
+      collapsed: true
+      allow_add: false
+      allow_delete: false
+      summary: '{{fields.label}}'
+      fields:
+      - *id111
+      - *id080
+      - *id112
+      - *id113
+      - *id114
+      - *id115
+    - label: Links & Button-Ziele
+      name: links
+      widget: list
+      collapsed: true
+      allow_add: false
+      allow_delete: false
+      summary: '{{fields.label}}'
+      fields:
+      - *id080
+      - *id116
+      - *id117
+  - name: page-datenschutz
+    label: Datenschutz – Texte, Bilder & Links
+    file: content/page-datenschutz.json
+    format: json
+    preview_path: datenschutz.html
+    fields:
+    - label: Seitentexte & Sprachversionen
+      name: texts
+      widget: object
+      fields:
+      - label: Deutsch
+        name: de
+        widget: object
+        collapsed: false
+        required: false
+        fields:
+        - *id011
+        - *id160
+      - label: Englisch
+        name: en
+        widget: object
+        collapsed: true
+        required: false
+        fields:
+        - *id011
+        - *id160
+      - label: Arabisch
+        name: ar
+        widget: object
+        collapsed: true
+        required: false
+        fields:
+        - *id011
+        - *id160
+      - label: Russisch
+        name: ru
+        widget: object
+        collapsed: true
+        required: false
+        fields:
+        - *id011
+        - *id160
+      - label: Türkisch
+        name: tr
+        widget: object
+        collapsed: true
+        required: false
+        fields:
+        - *id011
+        - *id160
+      - label: Ukrainisch
+        name: uk
+        widget: object
+        collapsed: true
+        required: false
+        fields:
+        - *id011
+        - *id160
+      - label: Vietnamesisch
+        name: vi
+        widget: object
+        collapsed: true
+        required: false
+        fields:
+        - *id011
+        - *id160
+    - label: Weitere Beschriftungen und Texte
+      name: plain
+      widget: object
+      collapsed: true
+      fields:
+      - label: Datenschutz
+        name: text-0
+        widget: text
+        required: false
+      - label: Informationen zur Verarbeitung Ihrer personenbezogenen Daten auf der Internetseite de
+        name: text-1
+        widget: text
+        required: false
+      - label: Mit der Nutzung dieser Internetseite werden personenbezogene Daten erfasst und verarb
+        name: text-2
+        widget: text
+        required: false
+      - label: Verantwortlicher
+        name: text-3
+        widget: text
+        required: false
+      - label: Datenschutzbeauftragter
+        name: text-4
+        widget: text
+        required: false
+      - label: 'Unseren Datenschutzbeauftragten erreichen Sie unter:'
+        name: text-5
+        widget: text
+        required: false
+      - label: datenschutz@drksachsen.de
+        name: text-6
+        widget: text
+        required: false
+      - label: Ihre Betroffenenrechte
+        name: text-7
+        widget: text
+        required: false
+      - label: Als betroffene Person haben Sie nach der Datenschutz-Grundverordnung (DS-GVO) verschi
+        name: text-8
+        widget: text
+        required: false
+      - label: Beschwerderecht
+        name: text-9
+        widget: text
+        required: false
+      - label: Sie haben das Recht, sich bei einer Datenschutzaufsichtsbehörde zu beschweren. Die fü
+        name: text-10
+        widget: text
+        required: false
+      - label: Protokollierung der Seitenzugriffe
+        name: text-11
+        widget: text
+        required: false
+      - label: Beim Besuch dieser Internetseite werden technisch notwendige Informationen an den Web
+        name: text-12
+        widget: text
+        required: false
+      - label: Diese Daten werden aus Gründen der technischen Sicherheit und zur Abwehr von Angriffs
+        name: text-13
+        widget: text
+        required: false
+      - label: Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DS-GVO.
+        name: text-14
+        widget: text
+        required: false
+      - label: Kontaktformular und Kontaktaufnahme
+        name: text-15
+        widget: text
+        required: false
+      - label: Sie können über die auf dieser Website angegebenen Kontaktmöglichkeiten mit uns in Ve
+        name: text-16
+        widget: text
+        required: false
+      - label: Soweit Sie personenbezogene Daten übermitteln, werden diese ausschließlich zur Bearbe
+        name: text-17
+        widget: text
+        required: false
+      - label: Eine Weitergabe an Dritte erfolgt grundsätzlich nicht, sofern keine gesetzliche Verpf
+        name: text-18
+        widget: text
+        required: false
+      - label: Die übermittelten Daten werden gelöscht, sobald sie für die Bearbeitung Ihres Anliege
+        name: text-19
+        widget: text
+        required: false
+      - label: Rechtsgrundlage der Verarbeitung ist Art. 6 Abs. 1 lit. f DS-GVO.
+        name: text-20
+        widget: text
+        required: false
+      - label: Datensicherheit
+        name: text-21
+        widget: text
+        required: false
+      - label: Wir setzen technische und organisatorische Sicherheitsmaßnahmen ein, um Ihre personen
+        name: text-22
+        widget: text
+        required: false
+      - label: Änderungen dieser Datenschutzerklärung
+        name: text-23
+        widget: text
+        required: false
+      - label: Wir behalten uns vor, diese Datenschutzerklärung anzupassen, damit sie stets den aktu
+        name: text-24
+        widget: text
+        required: false
+      - label: Gefördert durch
+        name: text-25
+        widget: text
+        required: false
+      - label: In Kooperation mit
+        name: text-26
+        widget: text
+        required: false
+    - label: Bilder & Logos
+      name: images
+      widget: list
+      collapsed: true
+      allow_add: false
+      allow_delete: false
+      summary: '{{fields.label}}'
+      fields:
+      - *id111
+      - *id080
+      - *id112
+      - *id113
+      - *id114
+      - *id115
+    - label: Links & Button-Ziele
+      name: links
+      widget: list
+      collapsed: true
+      allow_add: false
+      allow_delete: false
+      summary: '{{fields.label}}'
+      fields:
+      - *id080
+      - *id116
+      - *id117
+  - name: downloads
+    label: Downloads & Materialien
+    file: content/downloads.json
+    format: json
+    preview_path: index.html#downloads
+    fields:
+    - label: Materialien
+      name: items
+      widget: list
+      collapsed: true
+      summary: '{{fields.translations.de.title}}'
+      fields:
+      - label: Anzeigen
+        name: visible
+        widget: boolean
+        default: true
+      - label: Datei hochladen / ersetzen
+        name: file
+        widget: file
+      - label: Texte
+        name: translations
+        widget: object
+        fields:
+        - label: Deutsch
+          name: de
+          widget: object
+          collapsed: false
+          required: false
+          fields:
+          - &id161
+            label: Titel
+            name: title
+            widget: string
+          - &id162
+            label: Beschreibung
+            name: description
+            widget: text
+            required: false
+        - label: Englisch
+          name: en
+          widget: object
+          collapsed: true
+          required: false
+          fields:
+          - *id161
+          - *id162
+        - label: Arabisch
+          name: ar
+          widget: object
+          collapsed: true
+          required: false
+          fields:
+          - *id161
+          - *id162
+        - label: Russisch
+          name: ru
+          widget: object
+          collapsed: true
+          required: false
+          fields:
+          - *id161
+          - *id162
+        - label: Türkisch
+          name: tr
+          widget: object
+          collapsed: true
+          required: false
+          fields:
+          - *id161
+          - *id162
+        - label: Ukrainisch
+          name: uk
+          widget: object
+          collapsed: true
+          required: false
+          fields:
+          - *id161
+          - *id162
+        - label: Vietnamesisch
+          name: vi
+          widget: object
+          collapsed: true
+          required: false
+          fields:
+          - *id161
+          - *id162
+publish_mode: editorial_workflow
+show_preview_links: true

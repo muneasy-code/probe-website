@@ -1,0 +1,204 @@
+{
+  "texts": {
+    "de": {
+      "networkNav": "Netzwerk",
+      "footer": ""
+    },
+    "en": {
+      "networkNav": "Network",
+      "footer": ""
+    },
+    "ar": {
+      "networkNav": "شبكتنا",
+      "footer": ""
+    },
+    "ru": {
+      "networkNav": "Наша сеть",
+      "footer": ""
+    },
+    "tr": {
+      "networkNav": "Ağımız",
+      "footer": ""
+    },
+    "uk": {
+      "networkNav": "Наша мережа",
+      "footer": ""
+    },
+    "vi": {
+      "networkNav": "Mạng lưới",
+      "footer": ""
+    }
+  },
+  "plain": {
+    "text-0": "Impressum",
+    "text-1": "Anbieterkennung nach § 5 DDG",
+    "text-2": "IT-Support",
+    "text-3": "E-Mail: probe@sachsen-anhalt.drk.de",
+    "text-4": "Internet-Redaktion",
+    "text-5": "Vereinsregister",
+    "text-6": "Der DRK Landesverband Sachsen-Anhalt e.V. ist im Zentralen Vereinsregister beim Amtsgericht Stendal unter VR-Nr. 20211 eingetragen.",
+    "text-7": "Umsatzsteuer-Identifikationsnummer",
+    "text-8": "Vertretungsberechtigte",
+    "text-9": "Zur rechtlichen Vertretung sind der Präsident des Landesverbandes, Herr Roland Halang, allein oder ein Vizepräsident gemeinsam mit dem Landesschatzmeister oder dem geschäftsführenden Vorstand (Landesgeschäftsführerin), Frau Katja Fischer, befugt.",
+    "text-10": "Der geschäftsführende Vorstand (Landesgeschäftsführerin), Frau Katja Fischer, ist besonderer Vertreter gemäß § 30 BGB. Insoweit genügt für die rechtswirksame Verpflichtung ihre Unterschrift.",
+    "text-11": "Haftungsausschluss",
+    "text-12": "1. Inhalt der Seiten",
+    "text-13": "Der DRK-Landesverband Sachsen-Anhalt e.V. übernimmt keinerlei Gewähr für die Aktualität, Korrektheit, Vollständigkeit oder Qualität der bereitgestellten Inhalte.",
+    "text-14": "Haftungsansprüche gegen den DRK-Landesverband Sachsen-Anhalt e.V., welche sich auf Schäden materieller oder ideeller Art beziehen, die durch die Nutzung oder Nichtnutzung der dargebotenen Informationen bzw. durch die Nutzung fehlerhafter und unvollständiger Informationen verursacht wurden, sind grundsätzlich ausgeschlossen, sofern seitens des DRK-Landesverbands Sachsen-Anhalt e.V. kein nachweislich vorsätzliches oder grob fahrlässiges Verschulden vorliegt.",
+    "text-15": "2. Verweise und Links",
+    "text-16": "Die Verantwortlichkeit des Diensteanbieters beschränkt sich gemäß § 7 Abs. 1 DDG ausschließlich auf die vom Diensteanbieter bereitgehaltenen eigenen Inhalte.",
+    "text-17": "Darüber hinaus enthält die Website auch entsprechend gekennzeichnete Verweise oder Links auf Websites Dritter. Auf die aktuelle und zukünftige Gestaltung, die Inhalte oder die Urheberschaft der verlinkten bzw. verknüpften Seiten hat der DRK-Landesverband Sachsen-Anhalt e.V. keinerlei Einfluss.",
+    "text-18": "Für den Inhalt der Seite ist allein der jeweilige Anbieter der Seite verantwortlich, weshalb der DRK-Landesverband Sachsen-Anhalt e.V. diesbezüglich keine Gewähr übernimmt.",
+    "text-19": "Der DRK-Landesverband Sachsen-Anhalt e.V. erklärt hiermit ausdrücklich, dass zum Zeitpunkt der Linksetzung keine illegalen Inhalte auf den zu verlinkenden Seiten erkennbar waren.",
+    "text-20": "Bei Bekanntwerden von Rechtsverletzungen werden derartige Links umgehend entfernt.",
+    "text-21": "3. Urheber- und Kennzeichenrecht",
+    "text-22": "Der DRK-Landesverband Sachsen-Anhalt e.V. ist bestrebt, in allen Publikationen die Urheberrechte der verwendeten Bilder, Grafiken, Tondokumente, Videosequenzen und Texte zu beachten.",
+    "text-23": "Alle innerhalb des Internetangebotes genannten und ggf. durch Dritte geschützten Marken- und Warenzeichen unterliegen uneingeschränkt den Bestimmungen des jeweils gültigen Kennzeichenrechts und den Besitzrechten der jeweiligen Eigentümer.",
+    "text-24": "Das Copyright für veröffentlichte, vom DRK-Landesverband Sachsen-Anhalt e.V. selbst erstellte Objekte bleibt allein beim Autor der Seiten.",
+    "text-25": "Downloads und Kopien sind nur für den privaten, nicht aber den kommerziellen Gebrauch gestattet.",
+    "text-26": "4. Datenschutz",
+    "text-27": "Sofern innerhalb der Website die Möglichkeit zur Eingabe persönlicher oder geschäftlicher Daten besteht, erfolgt die Preisgabe dieser Daten seitens des Nutzers auf ausdrücklich freiwilliger Basis.",
+    "text-28": "Eine Weiterleitung an Dritte erfolgt nicht ohne ausdrückliche Zustimmung des Nutzers.",
+    "text-29": "Die Nutzung der im Rahmen des Impressums veröffentlichten Kontaktdaten zur Übersendung nicht ausdrücklich angeforderter Informationen ist nicht gestattet.",
+    "text-30": "5. Rechtswirksamkeit dieses Haftungsausschlusses",
+    "text-31": "Dieser Haftungsausschluss ist als Teil des Informationsangebotes zu betrachten, von dem aus auf diese Seite verwiesen wurde.",
+    "text-32": "Sofern Teile oder einzelne Formulierungen dieses Textes der geltenden Rechtslage nicht, nicht mehr oder nicht vollständig entsprechen sollten, bleiben die übrigen Teile des Dokumentes davon unberührt.",
+    "text-33": "6. Hinweis auf EU-Streitschlichtung",
+    "text-34": "Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit:",
+    "text-35": "ec.europa.eu/consumers/odr/",
+    "text-36": "Hinweis: Dieser Link führt auf die Seite eines anderen Anbieters und Sie verlassen unsere Webseite.",
+    "text-37": "Unsere E-Mail-Adresse finden Sie oben im Impressum.",
+    "text-38": "Hinweis auf Verbraucherstreitbeilegung gemäß VSBG",
+    "text-39": "Der DRK-Landesverband Sachsen-Anhalt e.V. nimmt nicht an Streitbeilegungsverfahren vor einer Streitbeilegungsstelle teil.",
+    "text-40": "Gefördert durch",
+    "text-41": "In Kooperation mit"
+  },
+  "images": [
+    {
+      "key": "image-0",
+      "label": "ProBe",
+      "source": "probe-logo.png",
+      "alt": "ProBe",
+      "position": "",
+      "background": false
+    },
+    {
+      "key": "image-1",
+      "label": "Ministerium für Arbeit, Soziales, Gesundheit und Gleichstellung des Landes Sachsen-Anhalt",
+      "source": "ms-logo.png",
+      "alt": "Ministerium für Arbeit, Soziales, Gesundheit und Gleichstellung des Landes Sachsen-Anhalt",
+      "position": "",
+      "background": false
+    },
+    {
+      "key": "image-2",
+      "label": "DRK Landesverband Sachsen-Anhalt",
+      "source": "drk-logo.png",
+      "alt": "DRK Landesverband Sachsen-Anhalt",
+      "position": "",
+      "background": false
+    },
+    {
+      "key": "image-3",
+      "label": "Bundesverband privater Anbieter sozialer Dienste",
+      "source": "bpa-png.png",
+      "alt": "Bundesverband privater Anbieter sozialer Dienste",
+      "position": "",
+      "background": false
+    },
+    {
+      "key": "image-4",
+      "label": "DRK Kreisverband Altmark",
+      "source": "drkalt.png",
+      "alt": "DRK Kreisverband Altmark",
+      "position": "",
+      "background": false
+    },
+    {
+      "key": "image-5",
+      "label": "DRK Kreisverband Börde",
+      "source": "drkbö.png",
+      "alt": "DRK Kreisverband Börde",
+      "position": "",
+      "background": false
+    },
+    {
+      "key": "image-6",
+      "label": "DRK Regionalverband Magdeburg–Jerichower Land",
+      "source": "drkjl.png",
+      "alt": "DRK Regionalverband Magdeburg–Jerichower Land",
+      "position": "",
+      "background": false
+    },
+    {
+      "key": "image-7",
+      "label": "DRK Kreisverband Wanzleben",
+      "source": "drkwnz.png",
+      "alt": "DRK Kreisverband Wanzleben",
+      "position": "",
+      "background": false
+    }
+  ],
+  "links": [
+    {
+      "key": "link-0",
+      "label": "index.html",
+      "url": "index.html"
+    },
+    {
+      "key": "link-1",
+      "label": "index.html",
+      "url": "index.html"
+    },
+    {
+      "key": "link-2",
+      "label": "ueber-probe.html",
+      "url": "ueber-probe.html"
+    },
+    {
+      "key": "link-3",
+      "label": "unterstuetzung.html",
+      "url": "unterstuetzung.html"
+    },
+    {
+      "key": "link-4",
+      "label": "team.html",
+      "url": "team.html"
+    },
+    {
+      "key": "link-5",
+      "label": "index.html#netzwerk",
+      "url": "index.html#netzwerk"
+    },
+    {
+      "key": "link-6",
+      "label": "kontakt.html",
+      "url": "kontakt.html"
+    },
+    {
+      "key": "link-7",
+      "label": "https://ms.sachsen-anhalt.de/",
+      "url": "https://ms.sachsen-anhalt.de/"
+    },
+    {
+      "key": "link-8",
+      "label": "index.html#netzwerk",
+      "url": "index.html#netzwerk"
+    },
+    {
+      "key": "link-9",
+      "label": "https://instagram.com/probe.sachsenanhalt",
+      "url": "https://instagram.com/probe.sachsenanhalt"
+    },
+    {
+      "key": "link-10",
+      "label": "impressum.html",
+      "url": "impressum.html"
+    },
+    {
+      "key": "link-11",
+      "label": "datenschutz.html",
+      "url": "datenschutz.html"
+    }
+  ]
+}

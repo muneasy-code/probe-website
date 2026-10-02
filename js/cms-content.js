@@ -24,7 +24,9 @@
   const state = {
     news: null,
     team: null,
-    settings: null
+    settings: null,
+    page: null,
+    downloads: null
   };
 
   function currentLanguage() {
@@ -54,7 +56,7 @@
 
   function renderNews() {
     const container = document.querySelector("[data-cms-news-list]");
-    if (!container || !state.news?.items?.length) return;
+    if (!container || !Array.isArray(state.news?.items)) return;
 
     const lang = currentLanguage();
     container.innerHTML = "";
@@ -81,7 +83,7 @@
 
   function renderTeam() {
     const container = document.querySelector("[data-cms-team-list]");
-    if (!container || !state.team?.members?.length) return;
+    if (!container || !Array.isArray(state.team?.members)) return;
 
     const lang = currentLanguage();
     const labels = CONTACT_LABELS[lang] || CONTACT_LABELS.de;
@@ -89,6 +91,7 @@
     container.innerHTML = "";
 
     state.team.members.forEach((member) => {
+      if (member.visible === false) return;
       const content = localized(member.translations, lang);
       const card = document.createElement("article");
       card.className = "team-card";
@@ -99,8 +102,9 @@
       const displayName = safeText(content.name || member.name);
       const image = document.createElement("img");
       image.className = "team-photo";
-      image.src = member.image || "/foto-platzhalter.png";
-      image.alt = safeText(content.imageAlt || displayName || "Teammitglied");
+      image.src = safeUrl(member.image) || "/foto-platzhalter.png";
+      image.alt = safeText(member.imageAlt || content.imageAlt || displayName || "Teammitglied");
+      image.style.objectPosition = imagePosition(member.imagePosition);
 
       const identity = document.createElement("div");
       identity.className = "team-card-identity";
@@ -157,7 +161,7 @@
       if (member.email || member.contactUrl) {
         const contactButton = document.createElement("a");
         contactButton.className = "team-contact-button";
-        contactButton.href = member.email ? `mailto:${member.email}` : member.contactUrl;
+        contactButton.href = member.email ? `mailto:${member.email}` : safeUrl(member.contactUrl);
         contactButton.setAttribute("aria-label", `${actionLabels.contact}: ${displayName}`);
         const contactText = document.createElement("span");
         contactText.textContent = actionLabels.contact;
@@ -166,6 +170,14 @@
         contactIcon.textContent = "↗";
         contactButton.append(contactText, contactIcon);
         actions.appendChild(contactButton);
+      }
+
+      if (member.phone && !safeText(content.about).trim()) {
+        const phone = document.createElement("a");
+        phone.className = "team-contact-button";
+        phone.href = `tel:${String(member.phone).replace(/[^+\d]/g, "")}`;
+        phone.textContent = `${labels.phone} ${member.phone}`;
+        actions.appendChild(phone);
       }
 
       card.append(header, actions);
@@ -198,9 +210,103 @@
 
     if (settings.flyer) {
       document.querySelectorAll("[data-cms-flyer-link]").forEach((element) => {
-        element.href = settings.flyer;
+        element.href = safeUrl(settings.flyer);
       });
     }
+  }
+
+  function safeUrl(value) {
+    if (typeof value !== "string" || !value.trim()) return "";
+    try {
+      const url = new URL(value, location.href);
+      if (url.protocol === "blob:" && window.parent !== window && new URLSearchParams(location.search).has("cms-preview")) return url.href;
+      return ["http:", "https:", "mailto:", "tel:"].includes(url.protocol) ? url.href : "";
+    } catch { return ""; }
+  }
+
+  function imagePosition(value) {
+    return /^\d{1,3}%\s+\d{1,3}%$/.test(value || "") ? value : "50% 50%";
+  }
+
+  function formattedText(value) {
+    const template = document.createElement("template");
+    template.innerHTML = safeText(value);
+    const clean = document.createDocumentFragment();
+    function copy(node, target) {
+      if (node.nodeType === 3) { target.appendChild(document.createTextNode(node.textContent)); return; }
+      if (node.nodeType !== 1) return;
+      if (["SCRIPT", "STYLE", "IFRAME", "OBJECT"].includes(node.tagName)) return;
+      const allowed = ["BR", "SPAN", "STRONG", "EM", "B", "I"].includes(node.tagName);
+      const element = allowed ? document.createElement(node.tagName.toLowerCase()) : target;
+      if (allowed) target.appendChild(element);
+      node.childNodes.forEach(child => copy(child, element));
+    }
+    template.content.childNodes.forEach(node => copy(node, clean));
+    return clean;
+  }
+
+  function applyPage() {
+    const page = state.page;
+    if (!page) return;
+    const texts = localized(page.texts, currentLanguage());
+    document.querySelectorAll("[data-i18n], [data-i18n-html], [data-i18n-placeholder]").forEach(element => {
+      const key = element.dataset.i18n || element.dataset.i18nHtml || element.dataset.i18nPlaceholder;
+      if (!Object.hasOwn(texts, key)) return;
+      if (element.dataset.i18nPlaceholder) element.setAttribute("placeholder", texts[key]);
+      else if (element.dataset.i18nHtml) element.replaceChildren(formattedText(texts[key]));
+      else element.textContent = texts[key];
+    });
+    document.querySelectorAll("[data-cms-text]").forEach(element => {
+      const value = page.plain?.[element.dataset.cmsText];
+      if (typeof value === "string") element.textContent = value;
+    });
+    (page.images || []).forEach(item => {
+      const url = safeUrl(item.source);
+      if (!url) return;
+      if (item.background) {
+        document.querySelectorAll(item.key).forEach(element => {
+          // Replace only the image layer; retain the design's gradient overlays.
+          const background = getComputedStyle(element).backgroundImage;
+          const replacement = `url(${JSON.stringify(url)})`;
+          element.style.setProperty("background-image", /url\(.*?\)/.test(background) ? background.replace(/url\(.*?\)/g, replacement) : replacement, "important");
+          if (item.position) element.style.setProperty("background-position", imagePosition(item.position), "important");
+        });
+      } else {
+        document.querySelectorAll("[data-cms-image]").forEach(element => {
+          if (element.dataset.cmsImage !== item.key) return;
+          element.src = url;
+          element.alt = safeText(item.alt);
+          if (item.position) element.style.objectPosition = imagePosition(item.position);
+        });
+      }
+    });
+    (page.links || []).forEach(item => {
+      document.querySelectorAll("[data-cms-link]").forEach(element => {
+        if (element.dataset.cmsLink === item.key && safeUrl(item.url)) element.href = safeUrl(item.url);
+      });
+    });
+  }
+
+  function renderDownloads() {
+    const container = document.querySelector("[data-cms-download-list]");
+    if (!container || !Array.isArray(state.downloads?.items)) return;
+    const headings = {de:"Downloads & Materialien",en:"Downloads & materials",ar:"التنزيلات والمواد",ru:"Загрузки и материалы",tr:"İndirmeler ve materyaller",uk:"Завантаження та матеріали",vi:"Tải xuống và tài liệu"};
+    document.querySelector("[data-cms-download-heading]").textContent = headings[currentLanguage()];
+    container.replaceChildren();
+    state.downloads.items.filter(item => item.visible !== false).forEach(item => {
+      if (!safeUrl(item.file)) return;
+      const content = localized(item.translations, currentLanguage());
+      const card = document.createElement("article"); card.className = "news-preview-card";
+      const title = document.createElement("h3"); title.textContent = safeText(content.title);
+      const text = document.createElement("p"); text.textContent = safeText(content.description);
+      const link = document.createElement("a"); link.href = safeUrl(item.file); link.download = ""; link.textContent = safeText(content.title) + " ↓";
+      card.append(title, text, link); container.appendChild(card);
+    });
+    container.closest("section").hidden = container.children.length === 0;
+  }
+
+  function renderAll() {
+    applyPage(); renderNews(); renderTeam(); applySettings(); renderDownloads();
   }
 
   async function fetchJson(url) {
@@ -213,7 +319,9 @@
     const tasks = [
       fetchJson("/content/news.json").then((data) => { state.news = data; }),
       fetchJson("/content/team.json").then((data) => { state.team = data; }),
-      fetchJson("/content/settings.json").then((data) => { state.settings = data; })
+      fetchJson("/content/settings.json").then((data) => { state.settings = data; }),
+      fetchJson(`/content/page-${location.pathname.split("/").pop()?.replace(/\.html$/, "") || "index"}.json`).then(data => { state.page = data; }),
+      fetchJson("/content/downloads.json").then(data => { state.downloads = data; })
     ];
 
     const results = await Promise.allSettled(tasks);
@@ -223,14 +331,22 @@
       }
     });
 
-    renderNews();
-    renderTeam();
-    applySettings();
+    renderAll();
+    document.dispatchEvent(new CustomEvent("probe:cmsready"));
   }
 
   document.addEventListener("probe:languagechange", () => {
-    renderNews();
-    renderTeam();
+    renderAll();
+  });
+
+  window.addEventListener("message", event => {
+    if (!new URLSearchParams(location.search).has("cms-preview") || event.origin !== location.origin || window.parent === window) return;
+    if (event.source !== window.parent && event.source !== window.top) return;
+    if (event.data?.type !== "probe:cms-preview") return;
+    const { kind, data } = event.data;
+    if (!["page", "news", "team", "settings", "downloads"].includes(kind) || !data || typeof data !== "object") return;
+    state[kind] = data;
+    renderAll();
   });
 
   document.addEventListener("DOMContentLoaded", loadCmsContent);

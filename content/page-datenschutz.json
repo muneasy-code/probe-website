@@ -1,0 +1,189 @@
+{
+  "texts": {
+    "de": {
+      "networkNav": "Netzwerk",
+      "footer": ""
+    },
+    "en": {
+      "networkNav": "Network",
+      "footer": ""
+    },
+    "ar": {
+      "networkNav": "شبكتنا",
+      "footer": ""
+    },
+    "ru": {
+      "networkNav": "Наша сеть",
+      "footer": ""
+    },
+    "tr": {
+      "networkNav": "Ağımız",
+      "footer": ""
+    },
+    "uk": {
+      "networkNav": "Наша мережа",
+      "footer": ""
+    },
+    "vi": {
+      "networkNav": "Mạng lưới",
+      "footer": ""
+    }
+  },
+  "plain": {
+    "text-0": "Datenschutz",
+    "text-1": "Informationen zur Verarbeitung Ihrer personenbezogenen Daten auf der Internetseite des Projekts ProBe – Berufs-Begleitung.",
+    "text-2": "Mit der Nutzung dieser Internetseite werden personenbezogene Daten erfasst und verarbeitet.",
+    "text-3": "Verantwortlicher",
+    "text-4": "Datenschutzbeauftragter",
+    "text-5": "Unseren Datenschutzbeauftragten erreichen Sie unter:",
+    "text-6": "datenschutz@drksachsen.de",
+    "text-7": "Ihre Betroffenenrechte",
+    "text-8": "Als betroffene Person haben Sie nach der Datenschutz-Grundverordnung (DS-GVO) verschiedene Rechte hinsichtlich der Verarbeitung Ihrer personenbezogenen Daten.",
+    "text-9": "Beschwerderecht",
+    "text-10": "Sie haben das Recht, sich bei einer Datenschutzaufsichtsbehörde zu beschweren. Die für uns zuständige Aufsichtsbehörde ist:",
+    "text-11": "Protokollierung der Seitenzugriffe",
+    "text-12": "Beim Besuch dieser Internetseite werden technisch notwendige Informationen an den Webserver übertragen und verarbeitet.",
+    "text-13": "Diese Daten werden aus Gründen der technischen Sicherheit und zur Abwehr von Angriffsversuchen gespeichert und anschließend gelöscht.",
+    "text-14": "Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DS-GVO.",
+    "text-15": "Kontaktformular und Kontaktaufnahme",
+    "text-16": "Sie können über die auf dieser Website angegebenen Kontaktmöglichkeiten mit uns in Verbindung treten.",
+    "text-17": "Soweit Sie personenbezogene Daten übermitteln, werden diese ausschließlich zur Bearbeitung Ihrer Anfrage verarbeitet.",
+    "text-18": "Eine Weitergabe an Dritte erfolgt grundsätzlich nicht, sofern keine gesetzliche Verpflichtung hierzu besteht.",
+    "text-19": "Die übermittelten Daten werden gelöscht, sobald sie für die Bearbeitung Ihres Anliegens nicht mehr erforderlich sind und keine gesetzlichen Aufbewahrungspflichten entgegenstehen.",
+    "text-20": "Rechtsgrundlage der Verarbeitung ist Art. 6 Abs. 1 lit. f DS-GVO.",
+    "text-21": "Datensicherheit",
+    "text-22": "Wir setzen technische und organisatorische Sicherheitsmaßnahmen ein, um Ihre personenbezogenen Daten gegen Verlust, Manipulation und unberechtigten Zugriff zu schützen.",
+    "text-23": "Änderungen dieser Datenschutzerklärung",
+    "text-24": "Wir behalten uns vor, diese Datenschutzerklärung anzupassen, damit sie stets den aktuellen rechtlichen Anforderungen entspricht.",
+    "text-25": "Gefördert durch",
+    "text-26": "In Kooperation mit"
+  },
+  "images": [
+    {
+      "key": "image-0",
+      "label": "ProBe",
+      "source": "probe-logo.png",
+      "alt": "ProBe",
+      "position": "",
+      "background": false
+    },
+    {
+      "key": "image-1",
+      "label": "Ministerium für Arbeit, Soziales, Gesundheit und Gleichstellung des Landes Sachsen-Anhalt",
+      "source": "ms-logo.png",
+      "alt": "Ministerium für Arbeit, Soziales, Gesundheit und Gleichstellung des Landes Sachsen-Anhalt",
+      "position": "",
+      "background": false
+    },
+    {
+      "key": "image-2",
+      "label": "DRK Landesverband Sachsen-Anhalt",
+      "source": "drk-logo.png",
+      "alt": "DRK Landesverband Sachsen-Anhalt",
+      "position": "",
+      "background": false
+    },
+    {
+      "key": "image-3",
+      "label": "Bundesverband privater Anbieter sozialer Dienste",
+      "source": "bpa-png.png",
+      "alt": "Bundesverband privater Anbieter sozialer Dienste",
+      "position": "",
+      "background": false
+    },
+    {
+      "key": "image-4",
+      "label": "DRK Kreisverband Altmark",
+      "source": "drkalt.png",
+      "alt": "DRK Kreisverband Altmark",
+      "position": "",
+      "background": false
+    },
+    {
+      "key": "image-5",
+      "label": "DRK Kreisverband Börde",
+      "source": "drkbö.png",
+      "alt": "DRK Kreisverband Börde",
+      "position": "",
+      "background": false
+    },
+    {
+      "key": "image-6",
+      "label": "DRK Regionalverband Magdeburg–Jerichower Land",
+      "source": "drkjl.png",
+      "alt": "DRK Regionalverband Magdeburg–Jerichower Land",
+      "position": "",
+      "background": false
+    },
+    {
+      "key": "image-7",
+      "label": "DRK Kreisverband Wanzleben",
+      "source": "drkwnz.png",
+      "alt": "DRK Kreisverband Wanzleben",
+      "position": "",
+      "background": false
+    }
+  ],
+  "links": [
+    {
+      "key": "link-0",
+      "label": "index.html",
+      "url": "index.html"
+    },
+    {
+      "key": "link-1",
+      "label": "index.html",
+      "url": "index.html"
+    },
+    {
+      "key": "link-2",
+      "label": "ueber-probe.html",
+      "url": "ueber-probe.html"
+    },
+    {
+      "key": "link-3",
+      "label": "unterstuetzung.html",
+      "url": "unterstuetzung.html"
+    },
+    {
+      "key": "link-4",
+      "label": "team.html",
+      "url": "team.html"
+    },
+    {
+      "key": "link-5",
+      "label": "index.html#netzwerk",
+      "url": "index.html#netzwerk"
+    },
+    {
+      "key": "link-6",
+      "label": "kontakt.html",
+      "url": "kontakt.html"
+    },
+    {
+      "key": "link-7",
+      "label": "https://ms.sachsen-anhalt.de/",
+      "url": "https://ms.sachsen-anhalt.de/"
+    },
+    {
+      "key": "link-8",
+      "label": "index.html#netzwerk",
+      "url": "index.html#netzwerk"
+    },
+    {
+      "key": "link-9",
+      "label": "https://instagram.com/probe.sachsenanhalt",
+      "url": "https://instagram.com/probe.sachsenanhalt"
+    },
+    {
+      "key": "link-10",
+      "label": "impressum.html",
+      "url": "impressum.html"
+    },
+    {
+      "key": "link-11",
+      "label": "datenschutz.html",
+      "url": "datenschutz.html"
+    }
+  ]
+}

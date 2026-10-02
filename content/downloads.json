@@ -1,0 +1,38 @@
+{
+  "items": [
+    {
+      "visible": true,
+      "file": "/uploads/probe_4seiter_weboptimiert.pdf",
+      "translations": {
+        "de": {
+          "title": "Flyer herunterladen",
+          "description": ""
+        },
+        "en": {
+          "title": "Download flyer",
+          "description": ""
+        },
+        "ar": {
+          "title": "تحميل المنشور",
+          "description": ""
+        },
+        "ru": {
+          "title": "Скачать флаер",
+          "description": ""
+        },
+        "tr": {
+          "title": "Broşürü indir",
+          "description": ""
+        },
+        "uk": {
+          "title": "Завантажити флаєр",
+          "description": ""
+        },
+        "vi": {
+          "title": "Tải tờ giới thiệu",
+          "description": ""
+        }
+      }
+    }
+  ]
+}
