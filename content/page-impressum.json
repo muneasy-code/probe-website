@@ -1,32 +1,25 @@
 {
   "texts": {
     "de": {
-      "networkNav": "Netzwerk",
-      "footer": ""
+      "networkNav": "Netzwerk"
     },
     "en": {
-      "networkNav": "Network",
-      "footer": ""
+      "networkNav": "Network"
     },
     "ar": {
-      "networkNav": "شبكتنا",
-      "footer": ""
+      "networkNav": "شبكتنا"
     },
     "ru": {
-      "networkNav": "Наша сеть",
-      "footer": ""
+      "networkNav": "Наша сеть"
     },
     "tr": {
-      "networkNav": "Ağımız",
-      "footer": ""
+      "networkNav": "Ağımız"
     },
     "uk": {
-      "networkNav": "Наша мережа",
-      "footer": ""
+      "networkNav": "Наша мережа"
     },
     "vi": {
-      "networkNav": "Mạng lưới",
-      "footer": ""
+      "networkNav": "Mạng lưới"
     }
   },
   "plain": {

@@ -2872,12 +2872,6 @@ collections:
         required: false
         fields:
         - *id011
-        - &id160
-          label: footer
-          name: footer
-          widget: text
-          required: false
-          hint: Leer = deutsche Fassung. Bei formatierten Überschriften sind <br>, <span>, <strong> und <em> möglich.
       - label: Englisch
         name: en
         widget: object
@@ -2885,7 +2879,6 @@ collections:
         required: false
         fields:
         - *id011
-        - *id160
       - label: Arabisch
         name: ar
         widget: object
@@ -2893,7 +2886,6 @@ collections:
         required: false
         fields:
         - *id011
-        - *id160
       - label: Russisch
         name: ru
         widget: object
@@ -2901,7 +2893,6 @@ collections:
         required: false
         fields:
         - *id011
-        - *id160
       - label: Türkisch
         name: tr
         widget: object
@@ -2909,7 +2900,6 @@ collections:
         required: false
         fields:
         - *id011
-        - *id160
       - label: Ukrainisch
         name: uk
         widget: object
@@ -2917,7 +2907,6 @@ collections:
         required: false
         fields:
         - *id011
-        - *id160
       - label: Vietnamesisch
         name: vi
         widget: object
@@ -2925,7 +2914,6 @@ collections:
         required: false
         fields:
         - *id011
-        - *id160
     - label: Weitere Beschriftungen und Texte
       name: plain
       widget: object
@@ -3141,7 +3129,6 @@ collections:
         required: false
         fields:
         - *id011
-        - *id160
       - label: Englisch
         name: en
         widget: object
@@ -3149,7 +3136,6 @@ collections:
         required: false
         fields:
         - *id011
-        - *id160
       - label: Arabisch
         name: ar
         widget: object
@@ -3157,7 +3143,6 @@ collections:
         required: false
         fields:
         - *id011
-        - *id160
       - label: Russisch
         name: ru
         widget: object
@@ -3165,7 +3150,6 @@ collections:
         required: false
         fields:
         - *id011
-        - *id160
       - label: Türkisch
         name: tr
         widget: object
@@ -3173,7 +3157,6 @@ collections:
         required: false
         fields:
         - *id011
-        - *id160
       - label: Ukrainisch
         name: uk
         widget: object
@@ -3181,7 +3164,6 @@ collections:
         required: false
         fields:
         - *id011
-        - *id160
       - label: Vietnamesisch
         name: vi
         widget: object
@@ -3189,7 +3171,6 @@ collections:
         required: false
         fields:
         - *id011
-        - *id160
     - label: Weitere Beschriftungen und Texte
       name: plain
       widget: object
@@ -3357,11 +3338,11 @@ collections:
           collapsed: false
           required: false
           fields:
-          - &id161
+          - &id160
             label: Titel
             name: title
             widget: string
-          - &id162
+          - &id161
             label: Beschreibung
             name: description
             widget: text
@@ -3372,47 +3353,47 @@ collections:
           collapsed: true
           required: false
           fields:
+          - *id160
           - *id161
-          - *id162
         - label: Arabisch
           name: ar
           widget: object
           collapsed: true
           required: false
           fields:
+          - *id160
           - *id161
-          - *id162
         - label: Russisch
           name: ru
           widget: object
           collapsed: true
           required: false
           fields:
+          - *id160
           - *id161
-          - *id162
         - label: Türkisch
           name: tr
           widget: object
           collapsed: true
           required: false
           fields:
+          - *id160
           - *id161
-          - *id162
         - label: Ukrainisch
           name: uk
           widget: object
           collapsed: true
           required: false
           fields:
+          - *id160
           - *id161
-          - *id162
         - label: Vietnamesisch
           name: vi
           widget: object
           collapsed: true
           required: false
           fields:
+          - *id160
           - *id161
-          - *id162
 publish_mode: editorial_workflow
 show_preview_links: true
