@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Aktuelle Meldungen, Beiträge und Neuigkeiten aus dem Projekt ProBe in Sachsen-Anhalt.">
+<title>Aktuelles · ProBe Sachsen-Anhalt</title>
+<link rel="icon" href="/probe-logo.png">
+<link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/css/redesign.css">
+<link rel="stylesheet" href="/css/probe-studio-news.css">
+<style>body{margin:0;background:#f3f7f9;font-family:Inter,Arial,sans-serif}*{box-sizing:border-box}</style>
+</head>
+<body>
+<header class="probe-archive-header">
+ <div class="probe-archive-head-inner">
+  <div class="probe-archive-top">
+   <a href="/index.html" aria-label="ProBe Startseite"><img src="/probe-logo.png" alt="ProBe"></a>
+   <nav aria-label="Hauptnavigation">
+    <a href="/index.html">Startseite</a><a href="/ueber-probe.html">Über ProBe</a>
+    <a href="/unterstuetzung.html">Unterstützung</a><a href="/team.html">Team</a><a href="/kontakt.html">Kontakt</a>
+   </nav>
+   <label for="archive-language">Sprache
+    <select id="archive-language" aria-label="Sprache auswählen">
+     <option value="de">Deutsch</option><option value="en">English</option><option value="ar">العربية</option>
+     <option value="ru">Русский</option><option value="tr">Türkçe</option>
+     <option value="uk">Українська</option><option value="vi">Tiếng Việt</option>
+    </select>
+   </label>
+  </div>
+  <h1 class="probe-archive-title" id="archive-title">Aktuelles aus ProBe</h1>
+  <p id="archive-subtitle">Neuigkeiten und Einblicke aus unserem Projekt.</p>
+ </div>
+</header>
+<main class="probe-news-archive" id="news-main">
+ <div class="news-preview-grid" data-cms-news-archive></div>
+</main>
+<footer class="probe-archive-footer">ProBe Sachsen-Anhalt · <a href="/impressum.html">Impressum</a> · <a href="/datenschutz.html">Datenschutz</a></footer>
+<script>
+(function(){
+ const labels={
+  de:["Aktuelles aus ProBe","Neuigkeiten und Einblicke aus unserem Projekt.","Aktuelles · ProBe"],
+  en:["ProBe News","Updates and insights from our project.","News · ProBe"],
+  ar:["أخبار ProBe","آخر الأخبار والمستجدات من مشروعنا.","الأخبار · ProBe"],
+  ru:["Новости ProBe","Новости и события нашего проекта.","Новости · ProBe"],
+  tr:["ProBe Haberleri","Projemizden haberler ve gelişmeler.","Haberler · ProBe"],
+  uk:["Новини ProBe","Новини та події нашого проєкту.","Новини · ProBe"],
+  vi:["Tin tức ProBe","Tin tức và hoạt động từ dự án.","Tin tức · ProBe"]
+ };
+ const select=document.getElementById("archive-language");
+ function use(lang){
+   if(!labels[lang])lang="de";
+   document.documentElement.lang=lang;document.documentElement.dir=lang==="ar"?"rtl":"ltr";
+   select.value=lang;localStorage.setItem("probeLanguage",lang);
+   document.getElementById("archive-title").textContent=labels[lang][0];
+   document.getElementById("archive-subtitle").textContent=labels[lang][1];
+   document.title=labels[lang][2];
+   document.dispatchEvent(new Event("probe:languagechange"));
+ }
+ select.addEventListener("change",()=>use(select.value));
+ use(localStorage.getItem("probeLanguage")||"de");
+ if(new URLSearchParams(location.search).has("beitrag"))document.getElementById("news-main").classList.add("detail");
+})();
+</script>
+<script src="/js/cms-content.js"></script>
+</body></html>
