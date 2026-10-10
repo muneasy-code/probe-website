@@ -55,30 +55,89 @@
   }
 
   function renderNews() {
-    const container = document.querySelector("[data-cms-news-list]");
+    const container = document.querySelector("[data-cms-news-list], [data-cms-news-archive]");
     if (!container || !Array.isArray(state.news?.items)) return;
-
     const lang = currentLanguage();
-    container.innerHTML = "";
-
-    state.news.items.forEach((item) => {
-      const content = localized(item, lang);
+    const isArchive = container.hasAttribute("data-cms-news-archive");
+    const activeId = isArchive ? new URLSearchParams(location.search).get("beitrag") : null;
+    const links = {
+      de: { more: "Alle Meldungen ansehen", read: "Beitrag lesen", back: "Zurück zur Übersicht" },
+      en: { more: "All news", read: "Read article", back: "Back to news" },
+      ar: { more: "كل الأخبار", read: "قراءة الخبر", back: "العودة إلى الأخبار" },
+      ru: { more: "Все новости", read: "Читать статью", back: "Назад к новостям" },
+      tr: { more: "Tüm haberler", read: "Haberi oku", back: "Haberlere dön" },
+      uk: { more: "Усі новини", read: "Читати новину", back: "Назад до новин" },
+      vi: { more: "Tất cả tin tức", read: "Đọc bài viết", back: "Quay lại tin tức" }
+    };
+    const labels = links[lang] || links.de;
+    const dateValue = (item) => {
+      const val = item.date || item.de?.date || "";
+      if (/^\d{4}-\d{2}-\d{2}$/.test(val)) return Date.parse(val+"T12:00:00") || 0;
+      const german = val.match(/^(\d{2})\.(\d{2})\.(\d{4})$/);
+      return german ? Date.parse(german[3]+"-"+german[2]+"-"+german[1]+"T12:00:00") || 0 : 0;
+    };
+    const entries = state.news.items.map((item,i) => ({item,i}))
+      .filter(({item}) => item.visible !== false)
+      .sort((a,b) => dateValue(b.item)-dateValue(a.item) || a.i-b.i);
+    const filtered = activeId ? entries.filter(({item,i}) => String(item.id||"beitrag-"+i)===activeId) : entries;
+    const shown = isArchive ? filtered : filtered.slice(0,3);
+    container.replaceChildren();
+    shown.forEach(({item,i}) => {
+      const content = localized(item,lang);
       const article = document.createElement("article");
-      article.className = "news-preview-card";
-
+      article.className = "news-preview-card probe-news-card";
+      const id = safeText(item.id || "beitrag-"+i);
+      const href = "/aktuelles.html?beitrag="+encodeURIComponent(id);
+      if (safeUrl(item.image)) {
+        const image = document.createElement("img");
+        image.src = safeUrl(item.image);
+        image.className = "probe-news-image";
+        image.alt = safeText(content.title);
+        image.loading = "lazy";
+        article.appendChild(image);
+      }
       const date = document.createElement("p");
       date.className = "news-date";
-      date.textContent = safeText(content.date);
-
+      const dateText = item.date || content.date || "";
+      date.textContent = /^\d{4}-\d{2}-\d{2}$/.test(dateText) ? new Intl.DateTimeFormat(lang, {day:"2-digit",month:"long",year:"numeric"}).format(new Date(dateText+"T12:00:00")) : safeText(dateText);
       const title = document.createElement("h3");
-      title.textContent = safeText(content.title);
-
+      if (!activeId) {
+        const titleLink = document.createElement("a");
+        titleLink.href = href;
+        titleLink.textContent = safeText(content.title);
+        title.append(titleLink);
+      } else title.textContent = safeText(content.title);
       const text = document.createElement("p");
+      text.className = "probe-news-text";
       text.textContent = safeText(content.text);
-
-      article.append(date, title, text);
+      article.append(date,title,text);
+      if (!activeId) {
+        const link = document.createElement("a");
+        link.className = "probe-news-read";
+        link.href = href;
+        link.textContent = labels.read+" →";
+        article.append(link);
+      }
       container.appendChild(article);
     });
+    if (activeId) {
+      const back = document.createElement("a");
+      back.href = "/aktuelles.html";
+      back.className = "probe-news-more";
+      back.textContent = "← "+labels.back;
+      container.append(back);
+    }
+    if (!isArchive) {
+      document.querySelectorAll("[data-cms-news-more]").forEach(n=>n.remove());
+      if (entries.length>3) {
+        const more = document.createElement("a");
+        more.setAttribute("data-cms-news-more","");
+        more.className = "probe-news-more";
+        more.href = "/aktuelles.html";
+        more.textContent = labels.more+" →";
+        container.after(more);
+      }
+    }
   }
 
   function renderTeam() {
@@ -312,7 +371,29 @@
   async function fetchJson(url) {
     const response = await fetch(url, { cache: "no-store" });
     if (!response.ok) throw new Error(`${url}: HTTP ${response.status}`);
-    return response.json();
+    const fallback = await response.json();
+    // Nur im Redesign integrierte Seiten lesen öffentliche Freigaben.
+    // Die bestehende produktive main-Website enthält diese Anbindung nicht.
+    const match = url.match(/\/content\/(.+)\.json/);
+    if (!match) return fallback;
+    const slug = match[1];
+    const api = "https://gwdfakptvnjixighnxiy.supabase.co/rest/v1/probe_cms_published?slug=eq."+encodeURIComponent(slug)+"&select=content";
+    try {
+      const result = await fetch(api, {
+        headers: {
+          "apikey": "sb_publishable_Y-Oi7-tSnpKRauu2BiX5dA_QJ1SXY4h",
+          "Accept": "application/json"
+        },
+        cache: "no-store",
+        signal: AbortSignal.timeout(3500)
+      });
+      if (!result.ok) return fallback;
+      const rows = await result.json();
+      return rows?.[0]?.content || fallback;
+    } catch (error) {
+      console.warn("ProBe Redaktion: statische Fallback-Inhalte werden verwendet.", error);
+      return fallback;
+    }
   }
 
   async function loadCmsContent() {
