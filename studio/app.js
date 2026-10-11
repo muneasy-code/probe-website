@@ -2,6 +2,7 @@ import { createClient } from "https://cdn.jsdelivr.net/npm/@supabase/supabase-js
 const API="https://gwdfakptvnjixighnxiy.supabase.co";
 const KEY="sb_publishable_Y-Oi7-tSnpKRauu2BiX5dA_QJ1SXY4h";
 const db=createClient(API,KEY,{auth:{persistSession:true,autoRefreshToken:true}});
+const DEMO=new URLSearchParams(location.search).get("demo")==="1";
 const languages={de:"Deutsch",en:"Englisch",ar:"Arabisch",ru:"Russisch",tr:"Türkisch",uk:"Ukrainisch",vi:"Vietnamesisch"};
 const sections=[
 {id:"news",label:"Aktuelles / NEWS",file:"news.json",page:"index.html"},
@@ -64,7 +65,21 @@ async function editable(){
  const result=await db.from("probe_cms_editors").select("active").eq("user_id",user.id).maybeSingle();
  if(result.error)throw result.error;return result.data?.active===true;
 }
-function loggedIn(){ $("#auth-screen").classList.add("hidden");$("#studio").classList.remove("hidden");switchSection("news");}
+function loggedIn(){
+ $("#auth-screen").classList.add("hidden");$("#studio").classList.remove("hidden");
+ if(DEMO){
+  $("#save-state").textContent="Demo: keine Verbindung zum CMS";
+  $("#logout").textContent="↩ Zum echten Login";
+  const topbar=$(".topbar");
+  if(!$("#demo-notice")){
+   const notice=el("div","note");notice.id="demo-notice";
+   notice.style.margin="10px 16px";notice.style.background="#edfbfe";
+   notice.textContent="DEMO-MODUS · Probiere die Redaktion aus. Änderungen werden weder gespeichert noch veröffentlicht.";
+   topbar.after(notice);
+  }
+ }
+ switchSection("news");
+}
 async function authenticate(){
  const {data:{session}}=await db.auth.getSession();
  if(session){if(await editable()){state.session=session;loggedIn();}else{$("#auth-message").textContent="Dieses Konto ist noch nicht für die Redaktion freigeschaltet.";await db.auth.signOut();}}
@@ -77,7 +92,7 @@ $("#login-form").addEventListener("submit",async e=>{
  state.session=data.session;$("#auth-message").textContent="";loggedIn();
  }catch(err){$("#auth-message").textContent=errorMessage(err);}finally{submit.disabled=false;}
 });
-$("#logout").addEventListener("click",async()=>{await db.auth.signOut();location.reload();});
+$("#logout").addEventListener("click",async()=>{if(DEMO){location.href="/studio/";return;}await db.auth.signOut();location.reload();});
 async function switchSection(id){
  if(state.dirty&&!confirm("Ungespeicherte Änderungen verwerfen?"))return;
  state.section=id;state.selection=0;state.language="de";state.dirty=false;renderNav();
@@ -90,11 +105,14 @@ async function switchSection(id){
  const s=currentSection(),resp=await fetch("/content/"+s.file,{cache:"no-store"});
  if(!resp.ok)throw Error("Basisdatei nicht gefunden: "+s.file);
  const baseline=await resp.json();
- const [pub,draft]=await Promise.all([
+ let pub={data:null},draft={data:null};
+ if(!DEMO){
+ [pub,draft]=await Promise.all([
  db.from("probe_cms_published").select("content").eq("slug",id).maybeSingle(),
  db.from("probe_cms_drafts").select("content").eq("slug",id).maybeSingle()
  ]);
  if(pub.error)throw pub.error;if(draft.error)throw draft.error;
+ }
  state.published=pub.data?.content||baseline;
  state.data=clone(draft.data?.content||state.published);
  render();
@@ -134,6 +152,10 @@ function mediaField(parent,label,value,onChange,folder){
  const file=el("input");file.type="file";file.accept=folder==="documents"?"image/jpeg,image/png,image/webp,application/pdf":"image/jpeg,image/png,image/webp";
  file.classList.add("hidden");file.addEventListener("change",async()=>{
   const selected=file.files?.[0];if(!selected)return;if(selected.size>10*1024*1024)return toast("Maximal 10 MB je Datei.",true);
+  if(DEMO){
+   const localUrl=URL.createObjectURL(selected);url.value=localUrl;onChange(localUrl);mark();sendPreview();
+   file.value="";toast("Demo-Datei nur vorübergehend im Browser geladen.");return;
+  }
   upload.disabled=true;upload.textContent="Lädt hoch …";
   try{
    const ext=selected.name.split(".").pop().toLowerCase();
@@ -233,6 +255,12 @@ function renderMedia(){
 function render(){renderNav();if(state.section==="news")renderNews();else if(state.section==="team")renderTeam();else if(state.section==="settings")renderSettings();else if(state.section==="downloads")renderDownloads();else if(state.section==="media")renderMedia();else renderPage();}
 async function save(publish=false){
  if(!state.data)return;
+ if(DEMO){
+  state.dirty=false;
+  $("#save-state").textContent=publish?"Demo: Veröffentlichung simuliert":"Demo: Speichern simuliert";
+  toast(publish?"Demovorschau: Nichts wurde auf der Website veröffentlicht.":"Demovorschau: Nichts wurde in der Datenbank gespeichert.");
+  return;
+ }
  const button=$(publish?"#publish":"#save-draft");button.disabled=true;
  $("#save-state").textContent=publish?"Veröffentliche …":"Speichere …";
  try{
@@ -249,4 +277,4 @@ $("#save-draft").addEventListener("click",()=>save(false));
 $("#publish").addEventListener("click",()=>{
  if(confirm("Diese Inhalte für die Redesign-Vorschau veröffentlichen? Die bestehende Live-Website bleibt unverändert."))save(true);
 });
-authenticate().catch(err=>{$("#auth-message").textContent="Verbindung nicht verfügbar: "+errorMessage(err);});
+if(DEMO)loggedIn();else authenticate().catch(err=>{$("#auth-message").textContent="Verbindung nicht verfügbar: "+errorMessage(err);});
