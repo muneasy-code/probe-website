@@ -467,3 +467,13 @@ footer .funding-section .funding-title { color: var(--muted); }
   .audience-card h3, .audience-card-organisations h3 { font-size: clamp(2.25rem, 10vw, 3.2rem); }
   .page-team .team-card { padding: 24px 20px; }
 }
+
+/* Keep direct mobile audience links visible below the sticky header. */
+#fuer-teilnehmende, #fuer-einrichtungen {
+  scroll-margin-top: 110px;
+}
+.page-support .support-column:target {
+  border-inline-start: 3px solid #18968b;
+  padding-inline-start: clamp(14px,2vw,22px);
+  background-color: rgba(237,248,245,.68);
+}
