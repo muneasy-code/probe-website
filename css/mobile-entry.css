@@ -1,0 +1,192 @@
+/* ProBe Redesign Light — mobile-first audience entry (home page only).
+   Desktop preserves the original campaign hero.
+   The gateway is deliberately unavailable outside <=820px screens.
+*/
+.page-home .mobile-entry { display: none; }
+
+@media (max-width: 820px) {
+  /* Replace the oversized photographic hero on the mobile start page. */
+  .page-home .campaign-hero { display: none !important; }
+
+  .page-home .mobile-entry {
+    display: block;
+    padding: clamp(25px, 5vw, 34px) 0 30px;
+    min-height: calc(100svh - 66px);
+    color: #1c3f67;
+    background:
+      radial-gradient(65% 36% at 100% 0%, rgba(24,150,139,.11), transparent 90%),
+      linear-gradient(180deg,#fff 0%,#f4faf8 100%);
+  }
+  .page-home .mobile-entry .container { width: min(100% - 32px, 550px); }
+  .page-home .mobile-entry-eyebrow {
+    margin: 0 0 6px;
+    color: #147d75;
+    font-size: .76rem;
+    font-weight: 850;
+    line-height: 1.35;
+    letter-spacing: .13em;
+    text-transform: uppercase;
+  }
+  .page-home .mobile-entry h1 {
+    margin: 0;
+    color: #1c3f67;
+    max-width: 500px;
+    font-size: clamp(1.8rem, 6.7vw, 2.55rem);
+    letter-spacing: -.04em;
+    line-height: 1.09;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 850;
+    text-wrap: balance;
+  }
+  .page-home .mobile-entry-intro {
+    margin: 10px 0 20px;
+    color: #526b79;
+    font-size: .94rem;
+    line-height: 1.45;
+  }
+  .page-home .mobile-entry-choices { display: grid; gap: 12px; }
+  .page-home .mobile-entry-card {
+    position: relative;
+    display: flex;
+    min-height: 192px;
+    padding: 19px 18px 18px;
+    isolation: isolate;
+    overflow: hidden;
+    border: 1px solid rgba(28,63,103,.14);
+    border-radius: 19px;
+    background-color: white;
+    box-shadow: 0 8px 24px rgba(28,63,103,.07);
+    text-decoration: none;
+    color: #1c3f67;
+    -webkit-tap-highlight-color: transparent;
+    transition: border-color .18s ease, transform .18s ease, box-shadow .18s ease;
+  }
+  .page-home .mobile-entry-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 69% center;
+    opacity: 1;
+  }
+  .page-home .mobile-entry-card--org { border-inline-start: 4px solid #1c3f67; }
+  .page-home .mobile-entry-card--org::before {
+    background-image:
+      linear-gradient(90deg, #fff 7%, rgba(255,255,255,.99) 38%,
+        rgba(255,255,255,.86) 60%, rgba(255,255,255,.16) 100%),
+      url("../probe-light-einrichtungen.webp");
+  }
+  .page-home .mobile-entry-card--person { border-inline-start: 4px solid #18968b; }
+  .page-home .mobile-entry-card--person::before {
+    background-image:
+      linear-gradient(90deg, #fff 7%, rgba(255,255,255,.99) 38%,
+        rgba(255,255,255,.85) 60%, rgba(255,255,255,.16) 100%),
+      url("../probe-light-beratung.webp");
+  }
+  .page-home .mobile-entry-card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 78%;
+    min-width: 0;
+  }
+  .page-home .mobile-entry-card-label {
+    display: inline-flex;
+    margin-bottom: 7px;
+    color: #147d75;
+    font-size: .69rem;
+    line-height: 1.35;
+    font-weight: 800;
+    letter-spacing: .075em;
+    text-transform: uppercase;
+  }
+  .page-home .mobile-entry-card h2 {
+    margin: 0;
+    color: #1c3f67;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 850;
+    font-size: clamp(1.08rem, 4.5vw, 1.36rem);
+    line-height: 1.15;
+    letter-spacing: -.025em;
+    overflow-wrap: break-word;
+  }
+  .page-home .mobile-entry-card p {
+    margin: 8px 0 10px;
+    color: #405968;
+    font-size: .83rem;
+    line-height: 1.42;
+  }
+  .page-home .mobile-entry-card-action {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    margin-top: auto;
+    padding-top: 2px;
+    color: #146d68;
+    font-size: .81rem;
+    line-height: 1.35;
+    font-weight: 850;
+  }
+  .page-home .mobile-entry-card-action span[aria-hidden] { font-size: 1.02rem; }
+  .page-home .mobile-entry-card:hover,
+  .page-home .mobile-entry-card:focus-visible {
+    border-color: #18968b;
+    box-shadow: 0 12px 30px rgba(28,63,103,.15);
+    transform: translateY(-2px);
+  }
+  .page-home .mobile-entry-card:focus-visible {
+    outline: 3px solid #18968b;
+    outline-offset: 3px;
+  }
+  .page-home .mobile-entry-bottom {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 9px;
+    margin-top: 16px;
+  }
+  .page-home .mobile-entry-bottom p {
+    margin: 0;
+    color: #536f75;
+    font-size: .76rem;
+  }
+  .page-home .mobile-entry-more {
+    color: #1c3f67;
+    text-decoration: underline;
+    text-decoration-color: #18968b;
+    text-underline-offset: 4px;
+    font-size: .78rem;
+    font-weight: 750;
+  }
+  /* Remaining content is reachable but no longer blocks the first choice. */
+  .page-home .promise-strip { padding: 10px 0 16px; }
+  .page-home .audience-section { padding-top: 46px; padding-bottom: 60px; }
+  .page-home .audience-section .section-intro { margin-bottom: 24px; }
+  .page-home .audience-card { min-height: 485px; }
+}
+@media (max-width: 380px) {
+  .page-home .mobile-entry-card {
+    padding: 16px 13px 15px;
+    min-height: 196px;
+  }
+  .page-home .mobile-entry-card-content { width: 82%; }
+  .page-home .mobile-entry-card h2 { font-size: 1.04rem; }
+  .page-home .mobile-entry-card p { font-size: .78rem; }
+  .page-home .mobile-entry-bottom { align-items: flex-start; }
+}
+/* Keep the leading text next to its photo in Arabic as well. */
+@media (max-width: 820px) {
+  html[dir="rtl"] .page-home .mobile-entry-card--org::before,
+  html[dir="rtl"] .page-home .mobile-entry-card--person::before {
+    transform: scaleX(-1);
+  }
+  html[dir="rtl"] .page-home .mobile-entry-card h2,
+  html[dir="rtl"] .page-home .mobile-entry-card p { text-align: start; }
+  html[dir="rtl"] .page-home .mobile-entry-card-action span[aria-hidden] {
+    display: inline-block;
+    transform: scaleX(-1);
+  }
+}
