@@ -12,6 +12,7 @@
 <link rel="stylesheet" href="css/redesign.css">
 <link rel="stylesheet" href="css/cinematic.css">
 <link rel="stylesheet" href="css/light-theme.css">
+<link rel="stylesheet" href="css/mobile-entry.css">
 <script defer src="js/light-images.js"></script>
 </head>
 
@@ -59,6 +60,37 @@
   </header>
 
   <main id="top" class="home-v2">
+    <!-- Mobile-only entry: two clearly differentiated support pathways. -->
+    <section class="mobile-entry" aria-labelledby="mobile-entry-title">
+      <div class="container">
+        <p class="mobile-entry-eyebrow" data-i18n="mobileEntryWelcome">Willkommen bei ProBe</p>
+        <h1 id="mobile-entry-title" data-i18n="mobileEntryTitle">Wie können wir helfen?</h1>
+        <p class="mobile-entry-intro" data-i18n="mobileEntryIntro">Wählen Sie den passenden Bereich.</p>
+        <div class="mobile-entry-choices">
+          <a class="mobile-entry-card mobile-entry-card--org" href="unterstuetzung.html#fuer-einrichtungen">
+            <div class="mobile-entry-card-content">
+              <span class="mobile-entry-card-label" data-i18n="mobileEntryOrgLabel">Für Einrichtungen</span>
+              <h2 data-i18n="mobileEntryOrgTitle">Ich bin eine Einrichtung</h2>
+              <p data-i18n="mobileEntryOrgText">Wir suchen Unterstützung bei Einarbeitung und Integration.</p>
+              <span class="mobile-entry-card-action"><span data-i18n="mobileEntryAction">Unterstützung finden</span><span aria-hidden="true">↗</span></span>
+            </div>
+          </a>
+          <a class="mobile-entry-card mobile-entry-card--person" href="unterstuetzung.html#fuer-teilnehmende">
+            <div class="mobile-entry-card-content">
+              <span class="mobile-entry-card-label" data-i18n="mobileEntryPeopleLabel">Für Menschen mit Migrationsgeschichte</span>
+              <h2 data-i18n="mobileEntryPeopleTitle">Ich habe eine Migrationsgeschichte</h2>
+              <p data-i18n="mobileEntryPeopleText">Ich möchte in die Pflege einsteigen oder arbeite bereits dort.</p>
+              <span class="mobile-entry-card-action"><span data-i18n="mobileEntryAction">Unterstützung finden</span><span aria-hidden="true">↗</span></span>
+            </div>
+          </a>
+        </div>
+        <div class="mobile-entry-bottom">
+          <p data-i18n="mobileEntryBenefit">Kostenfrei. Persönlich. Auf Augenhöhe.</p>
+          <a class="mobile-entry-more" href="#wege" data-i18n="mobileEntryMore">Mehr über ProBe erfahren ↓</a>
+        </div>
+      </div>
+    </section>
+
     <section class="campaign-hero" aria-labelledby="home-title">
       <div class="container campaign-hero-grid">
         <div class="campaign-hero-copy">
