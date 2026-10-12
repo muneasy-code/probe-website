@@ -268,11 +268,4 @@ document.addEventListener("DOMContentLoaded", () => {
   if (view) view.hidden = false;
   document.title = audience === "einrichtung" ? "ProBe | Für Einrichtungen" : "ProBe | Für Menschen mit Migrationsgeschichte";
 
-  // Keep the returning visitor's selected language when they switch between views.
-  const backLinks = document.querySelectorAll('.offer-back, .offer-legal a[href="index.html"], .offer-logo');
-  backLinks.forEach((link) => {
-    link.addEventListener("click", () => {
-      // The existing translations.js module persists explicit language selections.
-    });
-  });
 });
