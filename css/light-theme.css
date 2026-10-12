@@ -417,11 +417,20 @@ footer .funding-section .funding-title { color: var(--muted); }
 /* Responsive: actual light mobile version, without a dark image behind text */
 @media (max-width: 800px) {
   header, header .header-inner { background: #fff; }
-  .main-nav.open, header .main-nav.open { background: #fff; color: var(--blue-dark); }
+  .main-nav, .main-nav.open, header .main-nav.open {
+    background: #fff;
+    color: var(--blue-dark);
+    border-color: var(--border);
+  }
+  .main-nav a, .main-nav.open a,
+  header .main-nav a[href="kontakt.html"] { color: var(--blue-dark); }
+  header .main-nav a[href="kontakt.html"] { color: var(--teal); }
   .page-home .campaign-hero { min-height: 0; }
   .page-home .campaign-hero-media::after {
-    background: linear-gradient(180deg, rgba(255,255,255,.04) 0%,
-       rgba(255,255,255,.12) 51%, #fff 100%);
+    /* White over headline and body copy; image can breathe at the bottom. */
+    background: linear-gradient(180deg, #fff 0%,
+      rgba(255,255,255,.99) 38%,rgba(255,255,255,.95) 54%,
+      rgba(255,255,255,.25) 83%,rgba(255,255,255,.02) 100%);
   }
   .page-home .campaign-hero-copy {
     width: 100%;
