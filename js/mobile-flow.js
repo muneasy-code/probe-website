@@ -37,7 +37,12 @@
     headerMenu?.classList.remove("open");
     if (flow) flow.dataset.activeRoute = route;
     if (route !== lastRoute) {
-      window.scrollTo({top:0,behavior:"instant"});
+      if (route === "full") {
+        const target = document.querySelector(window.location.hash || "body");
+        if (target) requestAnimationFrame(() => target.scrollIntoView({block:"start"}));
+      } else {
+        window.scrollTo({top:0,behavior:"instant"});
+      }
       if (focus && (route === "einrichtung" || route === "pflege")) {
         query("[data-mobile-heading]", views.find(v=>v.dataset.mobileView===route))?.focus({preventScroll:true});
       } else if (focus && route === "start" && lastChoice) {
