@@ -4,12 +4,12 @@
    Reference: original ProBe blue/teal logo and the lighter flyer direction.
 */
 :root {
-  --blue: #20436b;
-  --blue-dark: #20436b;
+  --blue: #1c3f67;
+  --blue-dark: #1c3f67;
   --blue-bright: #2c658c;
   --blue-soft: #e5f0f5;
   --blue-pale: #f2f8fa;
-  --teal: #19988f;
+  --teal: #18968b;
   --teal-light: #cce9e5;
   --mint: #f0faf8;
   --sand: #f7faf9;
@@ -23,15 +23,15 @@
   --primary: var(--blue-dark);
   --cinema-ink: #ffffff;
   --cinema-deep: #f4faf9;
-  --cinema-blue: #20436b;
-  --cinema-navy-brand: #20436b;
-  --cinema-teal: #19988f;
+  --cinema-blue: #1c3f67;
+  --cinema-navy-brand: #1c3f67;
+  --cinema-teal: #18968b;
   --cinema-teal-bright: #1fa399;
   --cinema-teal-soft: #cce9e5;
   --cinema-tide: #f2f9f8;
   --cinema-swell: #eaf5f3;
-  --cinema-cyan: #19988f;
-  --cinema-cyan-soft: #19988f;
+  --cinema-cyan: #18968b;
+  --cinema-cyan-soft: #18968b;
   --cinema-paper: #ffffff;
   --cinema-mist: #536976;
   --cinema-line: rgba(32,67,107,.15);
