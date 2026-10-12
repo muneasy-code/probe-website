@@ -60,34 +60,83 @@
   </header>
 
   <main id="top" class="home-v2">
-    <!-- Mobile-only entry: two clearly differentiated support pathways. -->
-    <section class="mobile-entry" aria-labelledby="mobile-entry-title">
-      <div class="container">
-        <p class="mobile-entry-eyebrow" data-i18n="mobileEntryWelcome">Willkommen bei ProBe</p>
-        <h1 id="mobile-entry-title" data-i18n="mobileEntryTitle">Wie können wir helfen?</h1>
-        <p class="mobile-entry-intro" data-i18n="mobileEntryIntro">Wählen Sie den passenden Bereich.</p>
-        <div class="mobile-entry-choices">
-          <a class="mobile-entry-card mobile-entry-card--org" href="mobil-angebot.html?bereich=einrichtung">
-            <div class="mobile-entry-card-content">
-              <span class="mobile-entry-card-label" data-i18n="mobileEntryOrgLabel">Für Einrichtungen</span>
-              <h2 data-i18n="mobileEntryOrgTitle">Ich bin eine Einrichtung</h2>
-              <p data-i18n="mobileEntryOrgText">Wir suchen Unterstützung bei Einarbeitung und Integration.</p>
-              <span class="mobile-entry-card-action"><span data-i18n="mobileEntryAction">Unterstützung finden</span><span aria-hidden="true">↗</span></span>
-            </div>
-          </a>
-          <a class="mobile-entry-card mobile-entry-card--person" href="mobil-angebot.html?bereich=person">
-            <div class="mobile-entry-card-content">
-              <span class="mobile-entry-card-label" data-i18n="mobileEntryPeopleLabel">Für Menschen mit Migrationsgeschichte</span>
-              <h2 data-i18n="mobileEntryPeopleTitle">Ich habe eine Migrationsgeschichte</h2>
-              <p data-i18n="mobileEntryPeopleText">Ich möchte in die Pflege einsteigen oder arbeite bereits dort.</p>
-              <span class="mobile-entry-card-action"><span data-i18n="mobileEntryAction">Unterstützung finden</span><span aria-hidden="true">↗</span></span>
-            </div>
-          </a>
+    <!-- Mobile-only journey: pick a target group, then see only relevant support. -->
+    <section class="mobile-entry" aria-label="ProBe – Unterstützung wählen">
+      <div class="container mobile-flow-container">
+        <div class="mobile-entry-landing" data-mobile-landing>
+          <p class="mobile-entry-eyebrow" data-i18n="mobileEntryWelcome">Willkommen bei ProBe</p>
+          <h1 id="mobile-entry-title" data-i18n="mobileEntryTitle">Wie können wir helfen?</h1>
+          <p class="mobile-entry-intro" data-i18n="mobileEntryIntro">Wählen Sie den passenden Bereich.</p>
+          <div class="mobile-entry-choices">
+            <a class="mobile-entry-card mobile-entry-card--org" href="#einrichtung" data-mobile-choice="einrichtung">
+              <div class="mobile-entry-card-content">
+                <span class="mobile-entry-card-label" data-i18n="mobileEntryOrgLabel">Für Einrichtungen</span>
+                <h2 data-i18n="mobileEntryOrgTitle">Ich bin eine Einrichtung</h2>
+                <p data-i18n="mobileEntryOrgText">Wir suchen Unterstützung bei Einarbeitung und Integration.</p>
+                <span class="mobile-entry-card-action"><span data-i18n="mobileEntryAction">Unterstützung finden</span><span aria-hidden="true">↗</span></span>
+              </div>
+            </a>
+            <a class="mobile-entry-card mobile-entry-card--person" href="#pflege" data-mobile-choice="pflege">
+              <div class="mobile-entry-card-content">
+                <span class="mobile-entry-card-label" data-i18n="mobileEntryPeopleLabel">Für Menschen mit Migrationsgeschichte</span>
+                <h2 data-i18n="mobileEntryPeopleTitle">Ich habe eine Migrationsgeschichte</h2>
+                <p data-i18n="mobileEntryPeopleText">Ich möchte in die Pflege einsteigen oder arbeite bereits dort.</p>
+                <span class="mobile-entry-card-action"><span data-i18n="mobileEntryAction">Unterstützung finden</span><span aria-hidden="true">↗</span></span>
+              </div>
+            </a>
+          </div>
+          <p class="mobile-entry-benefit" data-i18n="mobileEntryBenefit">Kostenfrei. Persönlich. Auf Augenhöhe.</p>
         </div>
-        <div class="mobile-entry-bottom">
-          <p data-i18n="mobileEntryBenefit">Kostenfrei. Persönlich. Auf Augenhöhe.</p>
-          <nav class="mobile-entry-legal" aria-label="Rechtliches"><a href="impressum.html" data-i18n="imprint">Impressum</a><a href="datenschutz.html" data-i18n="privacy">Datenschutz</a></nav>
+
+        <div class="mobile-entry-detail" id="einrichtung" data-mobile-view="einrichtung" hidden>
+          <a href="#start" class="mobile-flow-back" data-mobile-back aria-label="Zurück zur Auswahl">
+            <span aria-hidden="true">←</span> <span data-i18n="mobileBack">Zurück zur Auswahl</span>
+          </a>
+          <div class="mobile-flow-image mobile-flow-image--org" role="img" aria-label="Pflegekräfte tauschen sich im Team aus"></div>
+          <p class="mobile-flow-kicker" data-i18n="mobileOrgKicker">Für Pflege- und Gesundheitseinrichtungen</p>
+          <h1 tabindex="-1" data-mobile-heading data-i18n="mobileOrgHeading">Wir unterstützen Ihre Einrichtung.</h1>
+          <p class="mobile-flow-lead" data-i18n="mobileOrgIntro">Beim Ankommen internationaler Auszubildender und Fachkräfte – persönlich und kostenfrei, für jede Trägerschaft.</p>
+          <h2 data-i18n="mobileWhatWeDo">Dabei hilft ProBe:</h2>
+          <ul class="mobile-flow-services">
+            <li><span class="mobile-flow-icon" aria-hidden="true">✓</span><span data-i18n="mobileOrgPoint1">Begleitung bei Einarbeitung und Integration im Pflegealltag</span></li>
+            <li><span class="mobile-flow-icon" aria-hidden="true">✓</span><span data-i18n="mobileOrgPoint2">Unterstützung bei Fragen zur Beschäftigung internationaler Fachkräfte</span></li>
+            <li><span class="mobile-flow-icon" aria-hidden="true">✓</span><span data-i18n="mobileOrgPoint3">Vernetzung mit passenden Beratungs- und Unterstützungsangeboten</span></li>
+          </ul>
+          <div class="mobile-flow-contact">
+            <h2 data-i18n="mobileFlowContactTitle">Sprechen wir miteinander.</h2>
+            <p data-i18n="mobileFlowContactIntro">Schildern Sie uns kurz, wobei Sie Unterstützung brauchen.</p>
+            <a class="mobile-flow-primary" href="mailto:probe@sachsen-anhalt.drk.de" data-cms-contact-email>probe@sachsen-anhalt.drk.de</a>
+            <a class="mobile-flow-phone" href="tel:+4939161068972" data-cms-contact-phone>0391 / 61068972</a>
+          </div>
         </div>
+
+        <div class="mobile-entry-detail" id="pflege" data-mobile-view="pflege" hidden>
+          <a href="#start" class="mobile-flow-back" data-mobile-back aria-label="Zurück zur Auswahl">
+            <span aria-hidden="true">←</span> <span data-i18n="mobileBack">Zurück zur Auswahl</span>
+          </a>
+          <div class="mobile-flow-image mobile-flow-image--person" role="img" aria-label="Zwei Pflegekräfte besprechen Unterlagen"></div>
+          <p class="mobile-flow-kicker" data-i18n="mobilePeopleKicker">Für Menschen mit Migrationsgeschichte</p>
+          <h1 tabindex="-1" data-mobile-heading data-i18n="mobilePeopleHeading">Dein Weg in die Pflege. Wir begleiten dich.</h1>
+          <p class="mobile-flow-lead" data-i18n="mobilePeopleIntro">Ganz gleich, ob du dich erst orientierst, deine Anerkennung klärst oder schon in der Pflege arbeitest.</p>
+          <h2 data-i18n="mobileWhatWeDo">Dabei hilft ProBe:</h2>
+          <ul class="mobile-flow-services">
+            <li><span class="mobile-flow-icon" aria-hidden="true">✓</span><span data-i18n="mobilePeoplePoint1">Orientierung zu FSJ, BFD, Ausbildung und Berufseinstieg</span></li>
+            <li><span class="mobile-flow-icon" aria-hidden="true">✓</span><span data-i18n="mobilePeoplePoint2">Unterstützung bei Anerkennung, Sprache und Behörden</span></li>
+            <li><span class="mobile-flow-icon" aria-hidden="true">✓</span><span data-i18n="mobilePeoplePoint3">Begleitung bei Fragen im Pflegeberuf und Alltag</span></li>
+          </ul>
+          <div class="mobile-flow-contact">
+            <h2 data-i18n="mobileFlowContactTitle">Sprechen wir miteinander.</h2>
+            <p data-i18n="mobilePeopleContactIntro">Melde dich gern bei uns. Wir schauen gemeinsam, was dir weiterhilft.</p>
+            <a class="mobile-flow-primary" href="mailto:probe@sachsen-anhalt.drk.de" data-cms-contact-email>probe@sachsen-anhalt.drk.de</a>
+            <a class="mobile-flow-phone" href="tel:+4939161068972" data-cms-contact-phone>0391 / 61068972</a>
+          </div>
+        </div>
+
+        <nav class="mobile-flow-legal" aria-label="Rechtliche Informationen">
+          <a href="impressum.html" data-i18n="imprint">Impressum</a>
+          <span aria-hidden="true">·</span>
+          <a href="datenschutz.html" data-i18n="privacy">Datenschutz</a>
+        </nav>
       </div>
     </section>
 
@@ -362,6 +411,7 @@
 </div>
 </footer>
 
+  <script src="js/mobile-flow.js" defer></script>
   <script src="js/translations.js"></script>
 <script src="js/cms-content.js"></script>
   <script>
