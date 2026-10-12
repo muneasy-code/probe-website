@@ -913,6 +913,109 @@ const networkTranslations = {
 };
 Object.entries(networkTranslations).forEach(([lang, entries]) => Object.assign(translations[lang], entries));
 
+/* Mobile landing choices; uses the existing 7-language translation system. */
+const mobileEntryTranslations = {
+  "de": {
+    "mobileEntryWelcome": "Willkommen bei ProBe",
+    "mobileEntryTitle": "Wie können wir helfen?",
+    "mobileEntryIntro": "Wählen Sie den passenden Bereich.",
+    "mobileEntryOrgLabel": "Für Einrichtungen",
+    "mobileEntryOrgTitle": "Ich bin eine Einrichtung",
+    "mobileEntryOrgText": "Wir suchen Unterstützung bei Einarbeitung und Integration.",
+    "mobileEntryPeopleLabel": "Für Menschen mit Migrationsgeschichte",
+    "mobileEntryPeopleTitle": "Ich habe eine Migrationsgeschichte",
+    "mobileEntryPeopleText": "Ich möchte in die Pflege einsteigen oder arbeite bereits dort.",
+    "mobileEntryAction": "Unterstützung finden",
+    "mobileEntryBenefit": "Kostenfrei. Persönlich. Auf Augenhöhe.",
+    "mobileEntryMore": "Mehr über ProBe erfahren ↓"
+  },
+  "en": {
+    "mobileEntryWelcome": "Welcome to ProBe",
+    "mobileEntryTitle": "How can we help?",
+    "mobileEntryIntro": "Choose the type of support you need.",
+    "mobileEntryOrgLabel": "For care organisations",
+    "mobileEntryOrgTitle": "I represent a care organisation",
+    "mobileEntryOrgText": "We need support with onboarding and integration.",
+    "mobileEntryPeopleLabel": "For people with a migration background",
+    "mobileEntryPeopleTitle": "I have a migration background",
+    "mobileEntryPeopleText": "I want to work in care or already work in the care sector.",
+    "mobileEntryAction": "Find support",
+    "mobileEntryBenefit": "Free. Personal. On equal terms.",
+    "mobileEntryMore": "Learn more about ProBe ↓"
+  },
+  "ar": {
+    "mobileEntryWelcome": "مرحبًا بك في ProBe",
+    "mobileEntryTitle": "كيف يمكننا مساعدتك؟",
+    "mobileEntryIntro": "اختر المجال المناسب لك.",
+    "mobileEntryOrgLabel": "لمؤسسات الرعاية",
+    "mobileEntryOrgTitle": "أمثل مؤسسة رعاية",
+    "mobileEntryOrgText": "نبحث عن دعم في التهيئة للعمل والاندماج.",
+    "mobileEntryPeopleLabel": "للأشخاص ذوي الخلفية المهاجرة",
+    "mobileEntryPeopleTitle": "لدي خلفية مهاجرة",
+    "mobileEntryPeopleText": "أرغب في العمل في مجال الرعاية أو أعمل فيه بالفعل.",
+    "mobileEntryAction": "اعرف المزيد عن الدعم",
+    "mobileEntryBenefit": "مجانًا. بشكل شخصي. على قدم المساواة.",
+    "mobileEntryMore": "المزيد عن ProBe ↓"
+  },
+  "ru": {
+    "mobileEntryWelcome": "Добро пожаловать в ProBe",
+    "mobileEntryTitle": "Чем мы можем помочь?",
+    "mobileEntryIntro": "Выберите подходящий раздел.",
+    "mobileEntryOrgLabel": "Для учреждений",
+    "mobileEntryOrgTitle": "Я представляю учреждение",
+    "mobileEntryOrgText": "Нам нужна поддержка при адаптации и интеграции сотрудников.",
+    "mobileEntryPeopleLabel": "Для людей с миграционным опытом",
+    "mobileEntryPeopleTitle": "У меня есть миграционный опыт",
+    "mobileEntryPeopleText": "Я хочу работать в сфере ухода или уже работаю в ней.",
+    "mobileEntryAction": "Получить поддержку",
+    "mobileEntryBenefit": "Бесплатно. Лично. На равных.",
+    "mobileEntryMore": "Подробнее о ProBe ↓"
+  },
+  "tr": {
+    "mobileEntryWelcome": "ProBe'ye hoş geldiniz",
+    "mobileEntryTitle": "Size nasıl yardımcı olabiliriz?",
+    "mobileEntryIntro": "Size uygun destek alanını seçin.",
+    "mobileEntryOrgLabel": "Kurumlar için",
+    "mobileEntryOrgTitle": "Bir bakım kurumunu temsil ediyorum",
+    "mobileEntryOrgText": "İşe uyum ve entegrasyon konusunda desteğe ihtiyacımız var.",
+    "mobileEntryPeopleLabel": "Göç geçmişi olan kişiler için",
+    "mobileEntryPeopleTitle": "Göç geçmişim var",
+    "mobileEntryPeopleText": "Bakım alanında çalışmak istiyorum veya zaten bu alanda çalışıyorum.",
+    "mobileEntryAction": "Destek alın",
+    "mobileEntryBenefit": "Ücretsiz. Kişisel. Eşit düzeyde.",
+    "mobileEntryMore": "ProBe hakkında daha fazla bilgi ↓"
+  },
+  "uk": {
+    "mobileEntryWelcome": "Ласкаво просимо до ProBe",
+    "mobileEntryTitle": "Чим ми можемо допомогти?",
+    "mobileEntryIntro": "Оберіть відповідний розділ.",
+    "mobileEntryOrgLabel": "Для закладів",
+    "mobileEntryOrgTitle": "Я представляю заклад",
+    "mobileEntryOrgText": "Нам потрібна допомога з адаптацією та інтеграцією.",
+    "mobileEntryPeopleLabel": "Для людей із міграційним досвідом",
+    "mobileEntryPeopleTitle": "Я маю міграційний досвід",
+    "mobileEntryPeopleText": "Я хочу працювати у сфері догляду або вже працюю в ній.",
+    "mobileEntryAction": "Знайти підтримку",
+    "mobileEntryBenefit": "Безкоштовно. Особисто. На рівних.",
+    "mobileEntryMore": "Докладніше про ProBe ↓"
+  },
+  "vi": {
+    "mobileEntryWelcome": "Chào mừng đến với ProBe",
+    "mobileEntryTitle": "Chúng tôi có thể giúp gì?",
+    "mobileEntryIntro": "Hãy chọn nhóm hỗ trợ phù hợp.",
+    "mobileEntryOrgLabel": "Dành cho cơ sở chăm sóc",
+    "mobileEntryOrgTitle": "Tôi đại diện cho một cơ sở chăm sóc",
+    "mobileEntryOrgText": "Chúng tôi cần hỗ trợ trong việc tiếp nhận và hội nhập nhân viên.",
+    "mobileEntryPeopleLabel": "Dành cho người có xuất thân di cư",
+    "mobileEntryPeopleTitle": "Tôi có xuất thân di cư",
+    "mobileEntryPeopleText": "Tôi muốn làm việc trong ngành chăm sóc hoặc đã làm trong ngành này.",
+    "mobileEntryAction": "Tìm hỗ trợ",
+    "mobileEntryBenefit": "Miễn phí. Cá nhân. Bình đẳng.",
+    "mobileEntryMore": "Tìm hiểu thêm về ProBe ↓"
+  }
+};
+Object.entries(mobileEntryTranslations).forEach(([lang, entries]) => Object.assign(translations[lang], entries));
+
             const supportedLanguages = Object.keys(translations);
 
             function normalizeLanguage(lang) {
