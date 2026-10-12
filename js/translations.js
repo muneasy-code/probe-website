@@ -1153,6 +1153,51 @@ const mobileFlowTranslations = {
   }
 };
 Object.entries(mobileFlowTranslations).forEach(([lang, values]) => Object.assign(translations[lang], values));
+const mobileFlyerHeadingsTranslations = {
+  "de": {
+    "mobileOrgHeadingMain": "Gute Einarbeitung.",
+    "mobileOrgHeadingAccent": "Gute Begleitung.",
+    "mobilePeopleHeadingMain": "Dein Weg in die Pflege.",
+    "mobilePeopleHeadingAccent": "Wir begleiten dich."
+  },
+  "en": {
+    "mobileOrgHeadingMain": "A good start.",
+    "mobileOrgHeadingAccent": "Reliable support.",
+    "mobilePeopleHeadingMain": "Your path into care.",
+    "mobilePeopleHeadingAccent": "We're by your side."
+  },
+  "ar": {
+    "mobileOrgHeadingMain": "بداية عمل جيدة.",
+    "mobileOrgHeadingAccent": "ومرافقة جيدة.",
+    "mobilePeopleHeadingMain": "طريقك إلى مجال الرعاية.",
+    "mobilePeopleHeadingAccent": "نرافقك في خطواتك."
+  },
+  "ru": {
+    "mobileOrgHeadingMain": "Хорошая адаптация.",
+    "mobileOrgHeadingAccent": "Надёжная поддержка.",
+    "mobilePeopleHeadingMain": "Ваш путь в сферу ухода.",
+    "mobilePeopleHeadingAccent": "Мы рядом."
+  },
+  "tr": {
+    "mobileOrgHeadingMain": "İyi bir başlangıç.",
+    "mobileOrgHeadingAccent": "Güçlü bir destek.",
+    "mobilePeopleHeadingMain": "Bakım mesleğine giden yolun.",
+    "mobilePeopleHeadingAccent": "Yanındayız."
+  },
+  "uk": {
+    "mobileOrgHeadingMain": "Хороша адаптація.",
+    "mobileOrgHeadingAccent": "Надійна підтримка.",
+    "mobilePeopleHeadingMain": "Твій шлях у сферу догляду.",
+    "mobilePeopleHeadingAccent": "Ми поруч."
+  },
+  "vi": {
+    "mobileOrgHeadingMain": "Khởi đầu thuận lợi.",
+    "mobileOrgHeadingAccent": "Đồng hành tận tâm.",
+    "mobilePeopleHeadingMain": "Con đường vào ngành chăm sóc.",
+    "mobilePeopleHeadingAccent": "Chúng tôi đồng hành cùng bạn."
+  }
+};
+Object.entries(mobileFlyerHeadingsTranslations).forEach(([lang, entries]) => Object.assign(translations[lang], entries));
 
             const supportedLanguages = Object.keys(translations);
 
