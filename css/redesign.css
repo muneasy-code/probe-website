@@ -484,7 +484,7 @@ h3 {
 
 .promise-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
 }
@@ -1582,7 +1582,7 @@ html[dir="rtl"] .team-hero::after {
   }
 
   .promise-grid {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
   }
 
   .promise-grid > div {
