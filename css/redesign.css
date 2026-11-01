@@ -1179,6 +1179,13 @@ section.content,
   box-shadow: 0 0 0 8px var(--blue-pale);
 }
 
+.team-photo--logo {
+  object-fit: contain;
+  padding: 24px;
+  background: #ffffff;
+  box-sizing: border-box;
+}
+
 .team-region {
   border-radius: 0;
   background: var(--blue-pale);
