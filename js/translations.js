@@ -806,7 +806,7 @@ const networkTranslations = {
   "en": {
     "networkNav": "Network",
     "networkTitle": "Find further support",
-    "networkIntro": "Settling in, recognition, employment: explore specialist contacts and further services in Saxony-Anhalt through our network.",
+    "networkIntro": "Recognition, work, qualifications and everyday life: Our network connects you with specialised contacts and further support services in Saxony-Anhalt.",
     "networkVisit": "Visit website",
     "networkRecognition": "Recognition",
     "networkArrival": "Advice & orientation",
@@ -825,7 +825,7 @@ const networkTranslations = {
   "ar": {
     "networkNav": "شبكتنا",
     "networkTitle": "العثور على دعم إضافي",
-    "networkIntro": "الاستقرار والاعتراف بالمؤهلات والعمل: تعرّفوا على جهات متخصصة وخدمات إضافية في ساكسونيا أنهالت ضمن شبكتنا.",
+    "networkIntro": "الاعتراف بالمؤهلات والعمل والتأهيل والحياة اليومية: ستجدون في شبكتنا جهات اتصال متخصصة وعروض دعم إضافية في ساكسونيا أنهالت.",
     "networkVisit": "زيارة الموقع",
     "networkRecognition": "الاعتراف بالمؤهلات",
     "networkArrival": "المشورة والتوجيه",
@@ -844,7 +844,7 @@ const networkTranslations = {
   "ru": {
     "networkNav": "Наша сеть",
     "networkTitle": "Найти дополнительную поддержку",
-    "networkIntro": "Адаптация, признание квалификации, работа: специализированные консультации и дополнительные предложения в Саксонии-Анхальт.",
+    "networkIntro": "Признание квалификации, работа, обучение и повседневная жизнь: в нашей сети вы найдёте специализированные консультации и дополнительные предложения поддержки в Саксонии-Анхальт.",
     "networkVisit": "Перейти на сайт",
     "networkRecognition": "Признание квалификации",
     "networkArrival": "Консультации и ориентация",
@@ -863,7 +863,7 @@ const networkTranslations = {
   "tr": {
     "networkNav": "Ağımız",
     "networkTitle": "Daha fazla destek bulun",
-    "networkIntro": "Uyum, denklik, iş: Ağımız aracılığıyla Saksonya-Anhalt’taki uzman danışma noktalarını ve diğer hizmetleri keşfedin.",
+    "networkIntro": "Denklik, iş, yeterlilik ve günlük yaşam: Ağımızda Saksonya-Anhalt’taki uzman danışma noktalarını ve diğer destek hizmetlerini bulabilirsiniz.",
     "networkVisit": "Web sitesini ziyaret et",
     "networkRecognition": "Denklik",
     "networkArrival": "Danışmanlık ve yönlendirme",
@@ -882,7 +882,7 @@ const networkTranslations = {
   "uk": {
     "networkNav": "Наша мережа",
     "networkTitle": "Знайти додаткову підтримку",
-    "networkIntro": "Адаптація, визнання кваліфікації, робота: спеціалізовані консультації та додаткові послуги в Саксонії-Ангальт у нашій мережі.",
+    "networkIntro": "Визнання кваліфікації, робота, навчання та повсякденне життя: у нашій мережі ви знайдете спеціалізовані консультаційні служби та додаткові пропозиції підтримки в Саксонії-Ангальт.",
     "networkVisit": "Відвідати сайт",
     "networkRecognition": "Визнання кваліфікації",
     "networkArrival": "Консультації та орієнтація",
@@ -901,7 +901,7 @@ const networkTranslations = {
   "vi": {
     "networkNav": "Mạng lưới",
     "networkTitle": "Tìm thêm hỗ trợ",
-    "networkIntro": "Ổn định cuộc sống, công nhận bằng cấp, việc làm: tìm các đầu mối chuyên môn và dịch vụ bổ sung tại Sachsen-Anhalt trong mạng lưới của chúng tôi.",
+    "networkIntro": "Công nhận bằng cấp, việc làm, nâng cao trình độ và cuộc sống hằng ngày: Trong mạng lưới của chúng tôi, bạn sẽ tìm thấy các đầu mối chuyên môn và các dịch vụ hỗ trợ bổ sung tại Sachsen-Anhalt.",
     "networkVisit": "Truy cập trang web",
     "networkRecognition": "Công nhận bằng cấp",
     "networkArrival": "Tư vấn & định hướng",
