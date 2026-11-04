@@ -293,15 +293,35 @@
     padding: 26px 28px 28px;
   }
 
+  .page-home .audience-card-people,
+  .page-home .audience-card-organisations {
+    background-image: none !important;
+    background-position: initial !important;
+  }
+
   .page-home .audience-card .audience-label,
   .page-home .audience-card-organisations .audience-label {
-    margin: 0 0 12px;
-    color: var(--teal);
-    font-size: .72rem;
-    font-weight: 900;
-    letter-spacing: .09em;
+    align-self: stretch;
+    width: auto;
+    margin: -26px -28px 22px;
+    padding: 13px 28px 12px;
+    color: #fff;
+    font-size: .83rem;
+    font-weight: 950;
+    letter-spacing: .12em;
+    line-height: 1;
     text-transform: uppercase;
   }
+
+  .page-home .audience-card-people .audience-label {
+    background: var(--teal);
+  }
+
+  .page-home .audience-card-organisations .audience-label {
+    background: var(--blue-dark);
+  }
+
+
 
   .page-home .audience-card h3,
   .page-home .audience-card-organisations h3 {
