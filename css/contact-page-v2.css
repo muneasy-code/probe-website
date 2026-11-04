@@ -36,11 +36,14 @@
 }
 
 .page-contact .contact-page-hero-v2 h1 {
-  margin:0;
+  width:100%;
+  max-width:none !important;
+  margin:0 auto;
   color:var(--blue-dark) !important;
   font-size:clamp(2.7rem,4.2vw,4.2rem) !important;
   line-height:.98 !important;
   letter-spacing:-.045em;
+  text-align:center !important;
   text-shadow:none !important;
 }
 
