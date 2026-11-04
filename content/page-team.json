@@ -219,12 +219,12 @@
       "background": false
     },
     {
-      "key": ".team-hero",
-      "label": "Titelbild",
+      "key": "image-8",
+      "label": "Projektregionen Sachsen-Anhalt",
       "source": "map-hero.png",
-      "alt": "",
+      "alt": "Projektregionen von ProBe in Sachsen-Anhalt",
       "position": "",
-      "background": true
+      "background": false
     }
   ],
   "links": [
