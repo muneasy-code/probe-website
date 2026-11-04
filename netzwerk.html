@@ -10,27 +10,55 @@
     }
   </script>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/redesign.css">
+  <link rel="stylesheet" href="css/cinematic.css">
   <link rel="stylesheet" href="css/light-theme.css">
-  <link rel="stylesheet" href="css/network-mobile.css">
+  <link rel="stylesheet" href="css/desktop-compact.css">
   <link rel="stylesheet" href="css/rtl-light-fix.css">
+  <link rel="stylesheet" href="css/network-mobile.css">
 </head>
 <body class="page-network-mobile">
 
-<header class="network-mobile-header">
-  <div class="network-mobile-top">
-    <a class="network-mobile-logo" href="index.html" aria-label="ProBe Startseite">
-      <img src="probe-logo.png" alt="ProBe – Projekt Berufsbegleitung">
-    </a>
+<header>
+  <div class="container header-inner">
+    <div class="mobile-header-top">
+      <a class="logo" href="index.html" aria-label="ProBe Startseite">
+        <img src="probe-logo.png" alt="ProBe" class="logo-img">
+      </a>
 
-    <select class="network-mobile-language" data-language-select aria-label="Sprache auswählen">
-      <option value="de">DE · Deutsch</option>
-      <option value="en">EN · English</option>
-      <option value="ar">AR · العربية</option>
-      <option value="ru">RU · Русский</option>
-      <option value="tr">TR · Türkçe</option>
-      <option value="uk">UK · Українська</option>
-      <option value="vi">VI · Tiếng Việt</option>
-    </select>
+      <button class="menu-toggle" aria-label="Menü öffnen">
+        ☰
+      </button>
+    </div>
+
+    <nav class="main-nav">
+      <a href="index.html" data-i18n="navStart">Start</a>
+      <a href="ueber-probe.html" data-i18n="navAbout">Über ProBe</a>
+      <a href="unterstuetzung.html" data-i18n="navSupport">Unterstützung</a>
+      <a href="team.html" data-i18n="navTeam">Team</a>
+      <a href="netzwerk.html" data-i18n="networkNav" aria-current="page">Netzwerk</a>
+      <a href="kontakt.html" data-i18n="navContact">Kontakt</a>
+    </nav>
+
+    <div class="language-switcher" aria-label="Sprachauswahl">
+      <button class="active" type="button" data-lang="de">DE</button>
+      <button type="button" data-lang="en">EN</button>
+      <button type="button" data-lang="ar">AR</button>
+      <button type="button" data-lang="ru">RU</button>
+      <button type="button" data-lang="tr">TR</button>
+      <button type="button" data-lang="uk">UK</button>
+      <button type="button" data-lang="vi">VI</button>
+      <select class="language-select" data-language-select aria-label="Sprache auswählen">
+        <option value="de">Deutsch</option>
+        <option value="en">English</option>
+        <option value="ar">العربية</option>
+        <option value="ru">Русский</option>
+        <option value="tr">Türkçe</option>
+        <option value="uk">Українська</option>
+        <option value="vi">Tiếng Việt</option>
+      </select>
+    </div>
   </div>
 </header>
 
@@ -123,6 +151,15 @@
 </footer>
 
 <script src="js/translations.js"></script>
+<script src="js/network-route.js" defer></script>
+<script>
+  const menuToggle = document.querySelector(".menu-toggle");
+  const mainNav = document.querySelector(".main-nav");
+
+  menuToggle?.addEventListener("click", () => {
+    mainNav?.classList.toggle("open");
+  });
+</script>
 <script>
   const desktopMedia = window.matchMedia("(min-width: 821px)");
   const leaveMobileNetwork = (event) => {
