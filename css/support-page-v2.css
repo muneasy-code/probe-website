@@ -248,6 +248,9 @@
 }
 
 .page-support .process-step span {
+  position: static !important;
+  left: auto !important;
+  top: auto !important;
   display: inline-flex;
   width: 34px !important;
   height: 34px !important;
