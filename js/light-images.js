@@ -4,10 +4,6 @@
 */
 (() => {
   const assets = [
-    {path:"probe-light-hero.webp", image:".page-home .campaign-hero-media img"},
-    {path:"probe-light-begleitung.webp", image:".page-home .campaign-story-image img"},
-    {path:"probe-light-einrichtungen.webp", surface:".page-home .audience-card-organisations", gradient:"linear-gradient(90deg,rgba(255,255,255,.98),rgba(255,255,255,.90) 40%,rgba(255,255,255,.15) 100%)"},
-    {path:"probe-light-team.webp", surface:".page-home .audience-card-people", gradient:"linear-gradient(90deg,rgba(255,255,255,.98),rgba(255,255,255,.90) 40%,rgba(255,255,255,.15) 100%)"},
     {path:"probe-light-einrichtungen.webp", surface:".page-team .team-hero", gradient:"linear-gradient(90deg,rgba(255,255,255,.99),rgba(255,255,255,.9) 49%,rgba(255,255,255,.1))"},
     {path:"probe-light-beratung.webp", surface:".page-about .about-hero", gradient:"linear-gradient(90deg,rgba(255,255,255,.99),rgba(255,255,255,.9) 48%,rgba(255,255,255,.12))"},
     {path:"probe-light-begleitung.webp", surface:".page-support .support-hero-image", gradient:"linear-gradient(90deg,rgba(255,255,255,.99),rgba(255,255,255,.9) 47%,rgba(255,255,255,.12))"},
