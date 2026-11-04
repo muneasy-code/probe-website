@@ -153,8 +153,11 @@
 
 .page-support .support-column .label {
   display: block;
-  margin: 0 -28px 22px;
+  width: calc(100% + 56px) !important;
+  max-width: none !important;
+  margin: 0 -28px 22px !important;
   padding: 13px 28px 12px;
+  box-sizing: border-box;
   color: #fff !important;
   line-height: 1;
 }
@@ -373,8 +376,11 @@ html[dir="rtl"] .page-support .support-info-box {
   }
 
   .page-support .support-column .label {
-    margin: 0 -22px 18px;
+    width: calc(100% + 44px) !important;
+    max-width: none !important;
+    margin: 0 -22px 18px !important;
     padding: 12px 22px;
+    box-sizing: border-box;
   }
 }
 
