@@ -1,0 +1,63 @@
+/* ProBe light – RTL fixes
+   Fixes full-bleed hero geometry and light-theme overlay for Arabic desktop. */
+
+@media (min-width: 821px) {
+  html[dir="rtl"] body.page-home .campaign-hero {
+    overflow: hidden;
+  }
+
+  html[dir="rtl"] body.page-home .campaign-hero-media {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: auto;
+    width: 100vw;
+    margin-right: calc(50% - 50vw);
+    margin-left: 0;
+  }
+
+  html[dir="rtl"] body.page-home .campaign-hero-media::after {
+    background:
+      linear-gradient(270deg,
+        #fff 0%,
+        rgba(255,255,255,.98) 27%,
+        rgba(255,255,255,.90) 41%,
+        rgba(255,255,255,.55) 57%,
+        rgba(255,255,255,.07) 76%,
+        rgba(255,255,255,.02) 100%),
+      linear-gradient(0deg, #f6faf9 0%, transparent 30%);
+  }
+
+  html[dir="rtl"] body.page-home .campaign-hero-copy {
+    width: min(57%, 700px);
+    margin-right: 0;
+    margin-left: auto;
+    text-align: right;
+  }
+
+  html[dir="rtl"] body.page-home .campaign-hero h1 {
+    max-width: 650px;
+    font-size: clamp(2.7rem, 4.2vw, 4.35rem);
+    line-height: 1.08;
+  }
+
+  html[dir="rtl"] body.page-home .campaign-lead {
+    max-width: 610px;
+    line-height: 1.75;
+  }
+
+  html[dir="rtl"] body.page-home .campaign-actions {
+    justify-content: flex-start;
+  }
+
+  html[dir="rtl"] body.page-home .hero-provider-note {
+    margin-right: 0;
+    margin-left: auto;
+  }
+}
+
+/* Prevent directional full-bleed elements from creating horizontal page drift. */
+html[dir="rtl"],
+html[dir="rtl"] body {
+  overflow-x: clip;
+}
