@@ -220,9 +220,9 @@
     },
     {
       "key": "image-8",
-      "label": "Projektregionen Sachsen-Anhalt",
-      "source": "map-hero.png",
-      "alt": "Projektregionen von ProBe in Sachsen-Anhalt",
+      "label": "ProBe-Projektregionen",
+      "source": "assets/probe-regionen-team.png",
+      "alt": "ProBe-Projektregionen mit Stendal, Haldensleben, Burg und Wanzleben",
       "position": "",
       "background": false
     }
