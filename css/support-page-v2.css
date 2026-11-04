@@ -404,3 +404,36 @@ html[dir="rtl"] .page-support .support-info-box {
     padding: 24px !important;
   }
 }
+
+
+/* Mobile: keep process numbers in their own column so they never overlap headings */
+@media (max-width: 620px) {
+  .page-support .process-step {
+    display: grid !important;
+    grid-template-columns: 38px minmax(0, 1fr) !important;
+    column-gap: 14px !important;
+    row-gap: 4px !important;
+    align-items: start !important;
+    padding: 18px !important;
+  }
+
+  .page-support .process-step span {
+    position: static !important;
+    grid-column: 1 !important;
+    grid-row: 1 / span 2 !important;
+    align-self: start !important;
+    margin: 0 !important;
+  }
+
+  .page-support .process-step h3 {
+    grid-column: 2 !important;
+    margin: 2px 0 6px !important;
+    min-width: 0 !important;
+  }
+
+  .page-support .process-step p {
+    grid-column: 2 !important;
+    margin: 0 !important;
+    min-width: 0 !important;
+  }
+}
