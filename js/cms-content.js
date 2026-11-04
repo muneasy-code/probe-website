@@ -339,7 +339,7 @@
       const card = document.createElement("article"); card.className = "news-preview-card";
       const title = document.createElement("h3"); title.textContent = safeText(content.title);
       const text = document.createElement("p"); text.textContent = safeText(content.description);
-      const link = document.createElement("a"); link.href = safeUrl(item.file); link.download = ""; link.textContent = safeText(content.title) + " ↓";
+      const link = document.createElement("a"); link.href = safeUrl(item.file); link.download = ""; link.textContent = "Download ↓";
       card.append(title, text, link); container.appendChild(card);
     });
     const wrapper = container.closest("[data-cms-download-section]");
