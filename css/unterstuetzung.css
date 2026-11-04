@@ -327,3 +327,22 @@ html[dir="rtl"] .support-hero-image {
 
   background-position: 20% center !important;
 }
+
+.page-support .support-column .label {
+  display: block;
+  width: calc(100% + 56px);
+  max-width: none;
+  margin: 0 -28px 22px;
+  padding: 13px 28px 12px;
+  box-sizing: border-box;
+  color: #fff !important;
+  line-height: 1;
+}
+
+@media (max-width: 820px) {
+  .page-support .support-column .label {
+    width: calc(100% + 44px);
+    margin: 0 -22px 18px;
+    padding: 12px 22px;
+  }
+}
