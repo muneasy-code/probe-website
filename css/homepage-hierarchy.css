@@ -276,6 +276,17 @@
     margin: 0;
   }
 
+  .page-home .audience-card > *,
+  .page-home .audience-card-organisations > * {
+    max-width: none !important;
+  }
+
+  .page-home .audience-card-media {
+    grid-column: 1 / -1;
+    justify-self: stretch;
+    align-self: stretch;
+  }
+
   .page-home .audience-card-media img {
     display: block;
     width: 100%;
