@@ -76,6 +76,21 @@
   object-position: center;
 }
 
+
+.page-team .team-details summary {
+  color: var(--blue-dark) !important;
+  background: #fff;
+  border-color: var(--border) !important;
+}
+
+.page-team .team-details summary span:first-child {
+  color: var(--blue-dark) !important;
+}
+
+.page-team .team-details summary span:last-child {
+  color: var(--teal) !important;
+}
+
 .page-team .team-section {
   padding-top: 30px !important;
   padding-bottom: 70px !important;
