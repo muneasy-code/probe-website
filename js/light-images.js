@@ -5,7 +5,6 @@
 (() => {
   const assets = [
     {path:"probe-light-einrichtungen.webp", surface:".page-team .team-hero", gradient:"linear-gradient(90deg,rgba(255,255,255,.99),rgba(255,255,255,.9) 49%,rgba(255,255,255,.1))"},
-    {path:"probe-light-team.webp", surface:".page-contact .contact-page-hero", gradient:"linear-gradient(90deg,rgba(255,255,255,.99),rgba(255,255,255,.9) 47%,rgba(255,255,255,.12))"}
   ];
   const cache = new Map();
   const assetUrl = (path) => new URL(path, document.baseURI).href;
