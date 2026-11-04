@@ -13,6 +13,7 @@
 <link rel="stylesheet" href="css/cinematic.css">
 <link rel="stylesheet" href="css/light-theme.css">
 <link rel="stylesheet" href="css/desktop-compact.css">
+<link rel="stylesheet" href="css/news-ticker.css">
 <link rel="stylesheet" href="css/mobile-entry.css">
 <script defer src="js/light-images.js"></script>
 </head>
@@ -59,6 +60,24 @@
       </div>
     </div>
   </header>
+
+  <aside class="news-ticker" aria-label="Aktuelles" data-cms-news-ticker>
+    <span class="news-ticker-label" data-i18n="newsLabel">Aktuelles</span>
+    <div class="news-ticker-window">
+      <div class="news-ticker-track" data-cms-news-ticker-track>
+        <div class="news-ticker-group">
+          <a class="news-ticker-item" href="#aktuelles">Projektstart in Sachsen-Anhalt</a>
+          <a class="news-ticker-item" href="#aktuelles">Flyer und Materialien verfügbar</a>
+          <a class="news-ticker-item" href="#aktuelles">Individuelle Unterstützung möglich</a>
+        </div>
+        <div class="news-ticker-group" aria-hidden="true">
+          <a class="news-ticker-item" href="#aktuelles" tabindex="-1">Projektstart in Sachsen-Anhalt</a>
+          <a class="news-ticker-item" href="#aktuelles" tabindex="-1">Flyer und Materialien verfügbar</a>
+          <a class="news-ticker-item" href="#aktuelles" tabindex="-1">Individuelle Unterstützung möglich</a>
+        </div>
+      </div>
+    </div>
+  </aside>
 
   <main id="top" class="home-v2">
     <!-- Mobile-only journey: pick a target group, then see only relevant support. -->
@@ -264,7 +283,7 @@
       </div>
     </section>
 
-    <section class="campaign-section news-preview-section-v2">
+    <section id="aktuelles" class="campaign-section news-preview-section-v2">
       <div class="container">
         <div class="section-intro compact">
           <p class="campaign-eyebrow" data-i18n="newsLabel">Aktuelles</p>
