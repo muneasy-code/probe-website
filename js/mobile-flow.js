@@ -6,6 +6,12 @@
   "use strict";
   const query = (selector, root = document) => root.querySelector(selector);
   const media = window.matchMedia("(max-width: 820px)");
+
+  if (media.matches && decodeURIComponent(window.location.hash || "").toLowerCase() === "#netzwerk") {
+    window.location.replace("netzwerk.html");
+    return;
+  }
+
   const landing = query("[data-mobile-landing]");
   const views = [...document.querySelectorAll("[data-mobile-view]")];
   if (!landing || views.length !== 2) return;
