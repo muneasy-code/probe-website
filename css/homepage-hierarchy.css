@@ -259,7 +259,11 @@
   .page-home .audience-card-people,
   .page-home .audience-card-organisations {
     display: grid;
+    grid-template-columns: minmax(0, 1fr);
     grid-template-rows: 250px auto;
+    justify-content: stretch !important;
+    justify-items: stretch !important;
+    align-items: stretch !important;
     min-height: 0;
     padding: 0;
     border: 1px solid var(--border);
