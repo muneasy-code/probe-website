@@ -270,10 +270,20 @@
     overflow: hidden;
   }
 
+  .page-home .audience-card,
+  .page-home .audience-card-people,
+  .page-home .audience-card-organisations {
+    padding: 0 !important;
+  }
+
   .page-home .audience-card-media {
-    width: 100%;
+    width: 100% !important;
+    max-width: 100% !important;
     height: 250px;
-    margin: 0;
+    margin: 0 !important;
+    padding: 0 !important;
+    transform: none !important;
+    box-sizing: border-box;
   }
 
   .page-home .audience-card > *,
@@ -315,7 +325,10 @@
     display: flex;
     flex-direction: column;
     align-items: stretch;
+    width: 100% !important;
+    max-width: 100% !important;
     padding: 0 28px 28px;
+    box-sizing: border-box;
   }
 
   .page-home .audience-card-people,
@@ -327,9 +340,11 @@
   .page-home .audience-card .audience-label,
   .page-home .audience-card-organisations .audience-label {
     align-self: stretch;
-    width: auto;
-    margin: 0 -28px 22px;
+    width: calc(100% + 56px) !important;
+    max-width: none !important;
+    margin: 0 -28px 22px !important;
     padding: 13px 28px 12px;
+    box-sizing: border-box;
     color: #fff;
     font-size: .83rem;
     font-weight: 950;
