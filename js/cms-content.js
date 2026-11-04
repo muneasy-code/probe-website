@@ -330,7 +330,8 @@
     const container = document.querySelector("[data-cms-download-list]");
     if (!container || !Array.isArray(state.downloads?.items)) return;
     const headings = {de:"Downloads & Materialien",en:"Downloads & materials",ar:"التنزيلات والمواد",ru:"Загрузки и материалы",tr:"İndirmeler ve materyaller",uk:"Завантаження та матеріали",vi:"Tải xuống và tài liệu"};
-    document.querySelector("[data-cms-download-heading]").textContent = headings[currentLanguage()];
+    const heading = document.querySelector("[data-cms-download-heading]");
+    if (heading) heading.textContent = headings[currentLanguage()];
     container.replaceChildren();
     state.downloads.items.filter(item => item.visible !== false).forEach(item => {
       if (!safeUrl(item.file)) return;
@@ -341,7 +342,8 @@
       const link = document.createElement("a"); link.href = safeUrl(item.file); link.download = ""; link.textContent = safeText(content.title) + " ↓";
       card.append(title, text, link); container.appendChild(card);
     });
-    container.closest("section").hidden = container.children.length === 0;
+    const wrapper = container.closest("[data-cms-download-section]");
+    if (wrapper) wrapper.hidden = container.children.length === 0;
   }
 
   function renderAll() {
