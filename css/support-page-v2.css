@@ -134,7 +134,7 @@
   display: grid !important;
   grid-template-columns: repeat(2,minmax(0,1fr));
   gap: 22px !important;
-  margin: 0 !important;
+  margin: 0 auto !important;
   border: 0 !important;
 }
 
@@ -157,6 +157,10 @@
   padding: 13px 28px 12px;
   color: #fff !important;
   line-height: 1;
+}
+
+.page-support section.support-section-tight .support-column .label {
+  color: #fff !important;
 }
 
 .page-support #fuer-teilnehmende .label {
