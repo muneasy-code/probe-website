@@ -24,7 +24,7 @@
 
 .page-about .about-hero-grid {
   display: grid;
-  grid-template-columns: minmax(0,1.02fr) minmax(430px,.98fr);
+  grid-template-columns: minmax(0,1.08fr) minmax(420px,.92fr);
   gap: clamp(34px,4.5vw,60px);
   align-items: center;
 }
@@ -52,10 +52,14 @@
   max-width: 680px !important;
   margin: 0;
   color: var(--blue-dark) !important;
-  font-size: clamp(3rem,4.7vw,4.8rem) !important;
+  font-size: clamp(3rem,4.35vw,4.45rem) !important;
   line-height: .95 !important;
   letter-spacing: -.055em;
   text-transform: none !important;
+}
+
+.page-about .about-hero-keep {
+  white-space: nowrap;
 }
 
 .page-about .about-hero .lead-text {
@@ -385,6 +389,10 @@ html[dir="rtl"] .page-about .about-story .text-box {
 
   .page-about .about-hero h1 {
     font-size: clamp(2.55rem,12vw,3.65rem) !important;
+  }
+
+  .page-about .about-hero-keep {
+    white-space: normal;
   }
 
   .page-about .about-hero-media {
