@@ -1,0 +1,232 @@
+/* ProBe – mobile-only network page */
+
+.page-network-mobile {
+  margin: 0;
+  background: #f7fbfa;
+  color: #173f67;
+}
+
+.network-mobile-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: rgba(255,255,255,.96);
+  border-bottom: 1px solid #dce9e7;
+  backdrop-filter: blur(12px);
+}
+
+.network-mobile-top,
+.network-mobile-container {
+  width: min(100% - 28px, 560px);
+  margin-inline: auto;
+}
+
+.network-mobile-top {
+  min-height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.network-mobile-logo img {
+  display: block;
+  width: 112px;
+  height: auto;
+}
+
+.network-mobile-language {
+  min-width: 122px;
+  min-height: 42px;
+  padding: 0 34px 0 12px;
+  border: 1px solid #cfe2df;
+  border-radius: 12px;
+  background: #f7fbfa;
+  color: #173f67;
+  font: inherit;
+  font-size: .82rem;
+  font-weight: 800;
+}
+
+.network-mobile-hero {
+  padding: 26px 0 28px;
+  background:
+    radial-gradient(circle at 90% 0%, rgba(25,152,143,.09), transparent 38%),
+    #f7fbfa;
+}
+
+.network-mobile-back {
+  display: inline-flex;
+  gap: 5px;
+  margin-bottom: 26px;
+  color: #56707c;
+  font-size: .82rem;
+  font-weight: 750;
+  text-decoration: none;
+}
+
+.network-mobile-eyebrow {
+  margin: 0 0 8px;
+  color: #19988f;
+  font-size: .72rem;
+  font-weight: 950;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+.network-mobile-hero h1 {
+  margin: 0;
+  color: #173f67;
+  font-size: clamp(2.25rem, 10vw, 3.4rem);
+  line-height: .98;
+  letter-spacing: -.045em;
+}
+
+.network-mobile-intro {
+  margin: 16px 0 0;
+  color: #607783;
+  font-size: .96rem;
+  line-height: 1.6;
+}
+
+.network-mobile-list {
+  padding: 18px 0 28px;
+  background: #fff;
+}
+
+.network-mobile-list .network-mobile-container {
+  display: grid;
+  gap: 12px;
+}
+
+.network-mobile-card {
+  padding: 18px;
+  border: 1px solid #dce9e7;
+  border-radius: 18px;
+  background: #fff;
+  box-shadow: 0 10px 24px rgba(21,62,76,.055);
+}
+
+.network-mobile-badge {
+  display: inline-flex;
+  margin-bottom: 10px;
+  padding: 5px 9px;
+  border-radius: 999px;
+  background: #e9f7f4;
+  color: #147f78;
+  font-size: .7rem;
+  font-weight: 900;
+}
+
+.network-mobile-card h3 {
+  margin: 0;
+  color: #173f67;
+  font-size: 1.12rem;
+  line-height: 1.2;
+}
+
+.network-mobile-card p {
+  margin: 8px 0 14px;
+  color: #667c86;
+  font-size: .86rem;
+  line-height: 1.5;
+}
+
+.network-mobile-card > a {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  min-height: 42px;
+  padding: 0 13px;
+  border-radius: 10px;
+  background: #19988f;
+  color: #fff;
+  font-size: .82rem;
+  font-weight: 850;
+  text-decoration: none;
+}
+
+.network-mobile-cta {
+  padding: 24px 0 30px;
+  background: #eef8f6;
+}
+
+.network-mobile-cta .network-mobile-container {
+  display: grid;
+  gap: 14px;
+}
+
+.network-mobile-cta p {
+  margin: 0;
+  color: #486671;
+  font-size: .9rem;
+  line-height: 1.55;
+}
+
+.network-mobile-contact {
+  display: inline-flex;
+  width: fit-content;
+  min-height: 44px;
+  align-items: center;
+  padding: 0 16px;
+  border-radius: 10px;
+  background: #173f67;
+  color: #fff;
+  font-size: .84rem;
+  font-weight: 850;
+  text-decoration: none;
+}
+
+.network-mobile-footer {
+  padding: 26px 0 max(28px, env(safe-area-inset-bottom));
+  background: #fff;
+  color: #607783;
+  font-size: .74rem;
+}
+
+.network-mobile-footer .network-mobile-container {
+  display: grid;
+  gap: 12px;
+}
+
+.network-mobile-footer > .network-mobile-container > span {
+  color: #173f67;
+  font-weight: 800;
+}
+
+.network-mobile-footer div div {
+  display: flex;
+  gap: 16px;
+}
+
+.network-mobile-footer a {
+  color: #173f67;
+  font-weight: 750;
+  text-decoration: none;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+  border: 0;
+}
+
+html[dir="rtl"] .network-mobile-language {
+  padding: 0 12px 0 34px;
+}
+
+html[dir="rtl"] .network-mobile-back {
+  direction: rtl;
+}
+
+@media (min-width: 821px) {
+  .page-network-mobile {
+    display: none;
+  }
+}
