@@ -255,14 +255,6 @@
       "alt": "DRK Kreisverband Wanzleben",
       "position": "",
       "background": false
-    },
-    {
-      "key": ".contact-page-hero",
-      "label": "Titelbild",
-      "source": "campaign-hero-arrival.webp",
-      "alt": "",
-      "position": "",
-      "background": true
     }
   ],
   "links": [
