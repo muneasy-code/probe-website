@@ -213,6 +213,63 @@
   .contact-page-section {
     padding: 68px 0;
   }
+
+  .page-home #downloads {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+
+  .page-home #downloads .section-heading {
+    margin-bottom: 24px;
+  }
+
+  footer {
+    padding: 52px 24px 30px;
+  }
+
+  footer::before {
+    top: -110px;
+    height: 105px;
+  }
+
+  .partner-section {
+    margin-top: 28px;
+  }
+
+  .funding-title {
+    margin-bottom: 12px;
+  }
+
+  .funding-logos img {
+    max-height: 58px;
+  }
+
+  .partner-main {
+    gap: 2.5rem;
+    margin-top: 1.2rem;
+    margin-bottom: 1rem;
+  }
+
+  .partner-main img {
+    max-height: 56px;
+  }
+
+  .partner-regions {
+    gap: 2rem;
+  }
+
+  .partner-regions img {
+    max-height: 38px;
+  }
+
+  .footer-credit {
+    margin-top: 22px;
+  }
+
+  .footer-links {
+    margin-top: 14px;
+  }
+
 }
 
 @media (min-width: 821px) and (max-width: 1050px) {
