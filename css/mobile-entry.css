@@ -209,7 +209,7 @@
 @media (max-width: 365px) {
   .page-home .header-inner { width: calc(100% - 24px); gap: 4px; }
   .page-home .logo-img { width: 92px; }
-  .page-home .language-select { width: 90px; padding-inline-start: 8px; }
+  .page-home .language-select { width: 120px; max-width: 40vw; padding-inline-start: 10px; }
   .page-home .menu-toggle { width: 32px; height: 32px; }
 }
 
