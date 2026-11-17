@@ -216,13 +216,13 @@
       }
 
       const email = safeText(member.email).trim();
-      if (email && /^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/.test(email)) {
+      if (email && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
         addQuickAction("email", "mailto:" + email, actionLabels.email, email);
       }
 
       const phone = safeText(member.phone).trim();
       if (phone) {
-        const dial = phone.replace(/[^+\\d]/g, "");
+        const dial = phone.replace(/[^+\d]/g, "");
         if (dial) addQuickAction("call", "tel:" + dial, actionLabels.call, phone);
       }
 
@@ -242,7 +242,7 @@
         details.className = "team-details";
         const summary = document.createElement("summary");
         const summaryText = document.createElement("span");
-        const firstName = displayName.split(/\\s+/)[0];
+        const firstName = displayName.split(/\s+/)[0];
         summaryText.textContent = actionLabels.more + " " + firstName;
         const summaryIcon = document.createElement("span");
         summaryIcon.setAttribute("aria-hidden", "true");
