@@ -221,7 +221,7 @@
     {
       "key": "image-8",
       "label": "ProBe-Projektregionen",
-      "source": "assets/probe-regionen-team.png",
+      "source": "probe-regionen.png",
       "alt": "ProBe-Projektregionen mit Stendal, Haldensleben, Burg und Wanzleben",
       "position": "",
       "background": false
