@@ -148,6 +148,13 @@ export default async function handler(req) {
       const entries=await store().list({prefix:'media/'});
       return reply({images:(entries.blobs||[]).map(e=>'/api/probe-cms?media='+encodeURIComponent(e.key.slice(6)))});
     }
+    if(req.method==='GET' && url.searchParams.get('mode')==='history'){
+      if(!sessionOk(req))return reply({error:'Nicht angemeldet.'},401);
+      const entries=await store().list({prefix:'history/'});
+      const versions=(entries.blobs||[]).map(e=>({key:e.key,at:Number((e.key||'').split('/')[1]?.split('-')[0])||null}))
+        .sort((a,b)=>(b.at||0)-(a.at||0)).slice(0,15);
+      return reply({versions});
+    }
     if(req.method==='GET' && url.searchParams.get('mode')==='draft'){
       if(!sessionOk(req))return reply({error:'Nicht angemeldet.'},401);
       const {doc,etag}=await getDocument('draft');
@@ -192,7 +199,24 @@ export default async function handler(req) {
       const opts=published.etag?{onlyIfMatch:published.etag}:{onlyIfNew:true};
       const result=await store().setJSON('published',draft.doc,opts);
       if(result.modified===false)return reply({error:'Inzwischen wurde eine andere Version veröffentlicht. Bitte neu laden.'},409);
+      if(published.doc){
+        const name='history/'+Date.now()+'-'+randomUUID();
+        await store().setJSON(name,published.doc);
+      }
       return reply({ok:true,publishedAt:new Date().toISOString(),environment:process.env.CONTEXT === 'production'?'live':'test'});
+    }
+    if(action==='restore'){
+      const input=await readJson(req);
+      const key=typeof input.key==='string'?input.key:'';
+      if(!/^history\/\d{13}-[0-9a-f-]{36}$/.test(key))return reply({error:'Ungültige Version.'},400);
+      const old=await store().get(key,{type:'json'});
+      if(!old)return reply({error:'Version nicht gefunden.'},404);
+      const current=await getDocument('draft');
+      const etag=typeof input.etag==='string'?input.etag:null;
+      if(etag!==current.etag)return reply({error:'Entwurf inzwischen geändert. Bitte neu laden.'},409);
+      const saved=await store().setJSON('draft',normalize(old),current.etag?{onlyIfMatch:current.etag}:{onlyIfNew:true});
+      if(saved.modified===false)return reply({error:'Entwurf inzwischen geändert.'},409);
+      return reply({ok:true,etag:saved.etag,document:old});
     }
     if(action==='upload'){
       const type=(req.headers.get('content-type')||'').split(';')[0].toLowerCase();
