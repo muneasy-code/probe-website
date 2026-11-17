@@ -85,35 +85,44 @@
 
     const lang = currentLanguage();
     const container = document.querySelector("[data-cms-news-list]");
+    const visibleItems = state.news.items.filter(item => item.visible !== false);
+    const archive = !!container?.hasAttribute("data-cms-news-archive");
+    const displayedItems = archive ? visibleItems : visibleItems.slice(0, 3);
 
     if (container) {
       container.innerHTML = "";
-
-      state.news.items.forEach((item) => {
+      displayedItems.forEach(item => {
         const content = localized(item, lang);
         const article = document.createElement("article");
         article.className = "news-preview-card";
-
         const date = document.createElement("p");
         date.className = "news-date";
         date.textContent = safeText(content.date);
-
         const title = document.createElement("h3");
         title.textContent = safeText(content.title);
-
         const text = document.createElement("p");
         text.textContent = safeText(content.text);
-
+        if (item.image) {
+          const photo = document.createElement("img");
+          photo.className = "cms-news-photo";
+          photo.alt = safeText(content.title);
+          photo.loading = "lazy";
+          photo.decoding = "async";
+          setOptimizedImage(photo, item.image, 1080, 88);
+          article.append(photo);
+        }
         article.append(date, title, text);
         container.appendChild(article);
       });
+      const more = document.querySelector("[data-cms-news-more]");
+      if (more) more.hidden = archive || visibleItems.length <= 3;
     }
 
     const ticker = document.querySelector("[data-cms-news-ticker]");
     const tickerTrack = document.querySelector("[data-cms-news-ticker-track]");
     if (!ticker || !tickerTrack) return;
 
-    const titles = state.news.items
+    const titles = visibleItems
       .map((item) => safeText(localized(item, lang).title).trim())
       .filter(Boolean);
 
@@ -418,7 +427,27 @@
     });
 
     renderAll();
+
+    const isDraftPreview = new URLSearchParams(location.search).has("cms-preview");
+    if (!isDraftPreview) {
+      // Render the fast static defaults immediately, then apply published CMS data.
+      fetchJson("/api/probe-cms?mode=published").then(response => {
+        const doc = response?.document;
+        if (!doc || !doc.sections) return;
+        for (const kind of ["news", "team", "settings", "downloads"]) {
+          if (doc.sections[kind]) state[kind] = doc.sections[kind];
+        }
+        const slug = location.pathname.split("/").pop()?.replace(/\.html$/, "") || "index";
+        if (doc.pages?.[slug]) state.page = doc.pages[slug];
+        renderAll();
+      }).catch(() => {
+        // The original static content remains usable if CMS is unavailable.
+      });
+    }
     document.dispatchEvent(new CustomEvent("probe:cmsready"));
+    if (isDraftPreview && window.parent !== window) {
+      window.parent.postMessage({type: "probe:cmsready"}, location.origin);
+    }
   }
 
   document.addEventListener("probe:languagechange", () => {
