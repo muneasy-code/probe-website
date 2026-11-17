@@ -1408,5 +1408,6 @@ Object.entries(mobileFlyerHeadingsTranslations).forEach(([lang, entries]) => Obj
                 select.addEventListener("change", () => setLanguage(select.value, { persist: true }));
               });
 
+              initializeLanguageDropdowns();
               setLanguage(initialLanguage, { persist: Boolean(directLanguage) });
             });
