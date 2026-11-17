@@ -558,7 +558,7 @@
     {
       "key": "image-1",
       "label": "Persönliche Begleitung in der Pflege",
-      "source": "assets/probe-light-team.webp",
+      "source": "probe-light-team.webp",
       "alt": "Zwei Pflegekräfte im persönlichen Gespräch auf dem Flur einer Einrichtung",
       "position": "",
       "background": false
@@ -566,7 +566,7 @@
     {
       "key": "image-2",
       "label": "Internationales Pflegeteam im Austausch",
-      "source": "assets/probe-light-beratung.webp",
+      "source": "probe-light-beratung.webp",
       "alt": "Internationales Pflegeteam im persönlichen Austausch",
       "position": "",
       "background": false
@@ -630,7 +630,7 @@
     {
       "key": "image-10",
       "label": "Teilnehmende – Begleitung",
-      "source": "assets/probe-light-begleitung.webp",
+      "source": "probe-light-begleitung.webp",
       "alt": "Pflegekraft und Begleiterin besprechen gemeinsam Unterlagen",
       "position": "",
       "background": false
@@ -638,7 +638,7 @@
     {
       "key": "image-11",
       "label": "Einrichtungen – Zusammenarbeit",
-      "source": "assets/probe-light-einrichtungen.webp",
+      "source": "probe-light-einrichtungen.webp",
       "alt": "Internationales Pflegeteam im fachlichen Austausch in einer Einrichtung",
       "position": "",
       "background": false
