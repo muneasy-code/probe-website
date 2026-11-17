@@ -12,7 +12,7 @@ const STORE_NAME = process.env.CONTEXT === 'production' ? 'probe-editor-live' : 
 const COOKIE = 'probe_cms_session';
 const PAGES = new Set(['index','ueber-probe','unterstuetzung','team','kontakt','impressum','datenschutz']);
 const MAX_DOC_SIZE = 550000;
-const MAX_UPLOAD_SIZE = 10 * 1024 * 1024;
+const MAX_UPLOAD_SIZE = 5 * 1024 * 1024;
 const reply=(body,status=200,headers={})=>new Response(JSON.stringify(body),{status,headers:{...JSON_HEADERS,...headers}});
 const store=()=>getStore({name:STORE_NAME,region:REGION,consistency:'strong'});
 const cleanString=(v,len=2000)=>typeof v==='string'?v.slice(0,len):'';
@@ -201,7 +201,8 @@ export default async function handler(req) {
       if(result.modified===false)return reply({error:'Inzwischen wurde eine andere Version veröffentlicht. Bitte neu laden.'},409);
       if(published.doc){
         const name='history/'+Date.now()+'-'+randomUUID();
-        await store().setJSON(name,published.doc);
+        try { await store().setJSON(name,published.doc); }
+        catch(error) { console.error('ProBe CMS: backup failed',error?.message); }
       }
       return reply({ok:true,publishedAt:new Date().toISOString(),environment:process.env.CONTEXT === 'production'?'live':'test'});
     }
@@ -222,9 +223,9 @@ export default async function handler(req) {
       const type=(req.headers.get('content-type')||'').split(';')[0].toLowerCase();
       const ext={'image/jpeg':'jpg','image/png':'png','image/webp':'webp','image/gif':'gif','application/pdf':'pdf'}[type];
       if(!ext)return reply({error:'Nur JPG, PNG, WEBP, GIF oder PDF.'},415);
-      if(Number(req.headers.get('content-length')||0)>MAX_UPLOAD_SIZE)return reply({error:'Datei zu groß (maximal 10 MB).'},413);
+      if(Number(req.headers.get('content-length')||0)>MAX_UPLOAD_SIZE)return reply({error:'Datei zu groß (maximal 5 MB).'},413);
       const bytes=await req.arrayBuffer();
-      if(bytes.byteLength>MAX_UPLOAD_SIZE||!validMedia(bytes,type))return reply({error:'Ungültige Bilddatei.'},400);
+      if(bytes.byteLength>MAX_UPLOAD_SIZE||!validMedia(bytes,type))return reply({error:'Ungültige Datei.'},400);
       const key='media/'+randomUUID()+'.'+ext;
       await store().set(key,bytes);
       return reply({ok:true,url:'/api/probe-cms?media='+encodeURIComponent(key.slice(6))});
