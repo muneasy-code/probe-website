@@ -7,21 +7,14 @@
  <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/ueber-probe.css">
 <link rel="stylesheet" href="css/responsive.css">
-<link rel="stylesheet" href="css/redesign.css">
-<link rel="stylesheet" href="css/cinematic.css">
-<link rel="stylesheet" href="css/light-theme.css">
-<link rel="stylesheet" href="css/desktop-compact.css">
-<link rel="stylesheet" href="css/rtl-light-fix.css">
-<link rel="stylesheet" href="css/about-page-v2.css">
-<script defer src="js/light-images.js"></script>
 </head>
 
-<body class="page-about">
+<body>
 <header>
   <div class="container header-inner">
       <div class="mobile-header-top">
-    <a data-cms-link="link-0" class="logo" href="index.html">
-      <img data-cms-image="image-0" src="probe-logo.png" alt="ProBe" class="logo-img">
+    <a class="logo" href="index.html">
+      <img src="probe-logo.png" alt="ProBe" class="logo-img">
     </a>
 
 <button class="menu-toggle" aria-label="Menü öffnen">
@@ -29,12 +22,11 @@
 </button>
 </div>
 <nav class="main-nav">
-  <a data-cms-link="link-1" href="index.html" data-i18n="navStart">Start</a>
-  <a data-cms-link="link-2" href="ueber-probe.html" data-i18n="navAbout" aria-current="page">Über ProBe</a>
-  <a data-cms-link="link-3" href="unterstuetzung.html" data-i18n="navSupport">Unterstützung</a>
-  <a data-cms-link="link-4" href="team.html" data-i18n="navTeam">Team</a>
-  <a data-cms-link="link-5" href="index.html#netzwerk" data-i18n="networkNav">Netzwerk</a>
-  <a data-cms-link="link-6" href="kontakt.html" data-i18n="navContact">Kontakt</a>
+  <a href="index.html" data-i18n="navStart">Start</a>
+  <a href="ueber-probe.html" data-i18n="navAbout">Über ProBe</a>
+  <a href="unterstuetzung.html" data-i18n="navSupport">Unterstützung</a>
+  <a href="team.html" data-i18n="navTeam">Team</a>
+  <a href="kontakt.html" data-i18n="navContact">Kontakt</a>
 </nav>
 
 <div class="language-switcher" aria-label="Sprachauswahl">
@@ -43,47 +35,55 @@
         <button type="button" data-lang="ar">AR</button>
         <button type="button" data-lang="ru">RU</button>
         <button type="button" data-lang="tr">TR</button>
-        <button type="button" data-lang="uk">UK</button>
-        <button type="button" data-lang="vi">VI</button>
-        <select class="language-select" data-language-select aria-label="Sprache auswählen">
-          <option value="de">Deutsch</option><option value="en">English</option><option value="ar">العربية</option><option value="ru">Русский</option><option value="tr">Türkçe</option><option value="uk">Українська</option><option value="vi">Tiếng Việt</option>
-        </select>
       </div>
   </div>
 </header>
 
 <main>
-<section class="about-hero about-hero-v2">
-  <div class="container about-hero-grid">
-    <div class="about-hero-copy">
-      <p class="label" data-i18n="aboutPageLabel">Über ProBe</p>
-      <h1 data-i18n-html="aboutHeroTitle">Viele Wege.<br>Ein Ziel:<br><span class="about-hero-keep">deine Perspektive</span><br>in der Pflege.</h1>
-      <p class="lead-text" data-i18n="aboutHeroText">ProBe begleitet Menschen mit Migrationsgeschichte auf ihrem Weg in die Pflege – vom ersten Interesse über FSJ/BFD und Ausbildung bis zu Anerkennung, Berufseinstieg und Berufsalltag.</p>
+<section class="about-hero about-hero-photo">
+  <div class="container about-hero-content">
+    <p class="label" data-i18n="aboutPageLabel">Über ProBe</p>
 
-      <div class="about-quickfacts">
-        <span data-i18n="aboutFact1">Individuelle Begleitung</span>
-        <span data-i18n="aboutFact2">Anerkennung & Qualifizierung</span>
-        <span data-i18n="aboutFact3">Ausbildung & Arbeit</span>
-        <span data-i18n="aboutFact4">Kostenfrei</span>
-      </div>
-    </div>
+<h1 data-i18n-html="aboutHeroTitle">
+  Ankommen<br>
+  im Beruf ist<br>
+  mehr als ein<br>
+  Arbeitsvertrag.
+</h1>
+    <p class="lead-text" data-i18n="aboutHeroText">ProBe begleitet Menschen mit Migrationsgeschichte auf ihrem Weg in Ausbildung, Arbeit und Anerkennung im Pflege- und Gesundheitsbereich – persönlich, verständlich und nah an der Praxis.</p>
 
-    <div class="about-hero-media">
-      <img data-cms-image="image-8" src="assets/probe-light-begleitung.webp" width="900" height="600" loading="eager" decoding="async" alt="Pflegekraft und Begleiterin im persönlichen Austausch">
+    <div class="about-quickfacts">
+      <span data-i18n="aboutFact1">Individuelle Begleitung</span>
+      <span data-i18n="aboutFact2">Anerkennung & Qualifizierung</span>
+      <span data-i18n="aboutFact3">Ausbildung & Arbeit</span>
+      <span data-i18n="aboutFact4">Kostenfrei</span>
     </div>
   </div>
+
+  <svg class="about-wave"
+       viewBox="0 0 1440 140"
+       preserveAspectRatio="none"
+       aria-hidden="true">
+
+    <path
+      fill="#2f57a3"
+      d="M0,80 C220,10 320,110 520,55 C730,-5 850,105 1040,65 C1210,30 1320,50 1440,10 L1440,140 L0,140 Z">
+    </path>
+
+  </svg>
+
 </section>
 
   <section class="content about-story">
     <div class="container two-col">
       <div>
         <p class="label" data-i18n="aboutWhyLabel">Warum ProBe?</p>
-        <h2 data-i18n="aboutWhyTitle">Weil jeder Weg in die Pflege anders beginnt.</h2>
+        <h2 data-i18n="aboutWhyTitle">Weil berufliche Integration Orientierung braucht.</h2>
       </div>
 
       <div class="text-box">
-        <p data-i18n="aboutWhyText1">Der Weg in die Pflege kann an ganz unterschiedlichen Punkten beginnen: mit Interesse an einem FSJ oder BFD, mit einer Ausbildung, mit einem ausländischen Berufsabschluss oder bereits mitten im Arbeitsleben. Oft entstehen dabei Fragen zu Anerkennung, Qualifizierung, Sprache, Behörden oder den nächsten beruflichen Schritten.</p>
-        <p data-i18n="aboutWhyText2">ProBe setzt genau dort an. Die Berufs-Begleiter*innen unterstützen individuell – bei Orientierung, FSJ/BFD, Ausbildung, Anerkennung, Berufseinstieg und im Berufsalltag.</p>
+        <p data-i18n="aboutWhyText1">Wer in Deutschland beruflich neu startet, steht oft vor vielen Fragen: Welche Unterlagen werden benötigt? Wie funktioniert ein Anerkennungsverfahren? Welche Ausbildung passt? Und wer hilft, wenn Sprache, Behörden oder Strukturen noch unsicher sind?</p>
+        <p data-i18n="aboutWhyText2">ProBe setzt genau dort an. Die Berufs-Begleiter*innen unterstützen individuell – von der ersten Orientierung bis zu konkreten Schritten in Ausbildung, Arbeit oder Qualifizierung.</p>
       </div>
     </div>
   </section>
@@ -91,7 +91,7 @@
   <section class="content muted-section">
     <div class="container">
       <p class="label" data-i18n="aboutGoalsLabel">Was ProBe erreichen möchte</p>
-      <h2 data-i18n="aboutGoalsTitle">Unser Ziel: gute Perspektiven in Pflege und Gesundheit.</h2>
+      <h2 data-i18n="aboutGoalsTitle">Unser Ziel ist ein sicherer Start in Pflege und Gesundheit.</h2>
 
       <div class="target-grid feature-grid">
         <div class="target-card feature-card">
@@ -106,7 +106,7 @@
           <span class="check">✓</span>
           <div>
             <h3 data-i18n="aboutGoal2Title">Wege verständlich machen</h3>
-            <p data-i18n="aboutGoal2Text">FSJ/BFD, Anerkennung, Qualifizierung, Ausbildung und Berufseinstieg nachvollziehbar erklären.</p>
+            <p data-i18n="aboutGoal2Text">Anerkennung, Qualifizierung, Ausbildung und Einstieg nachvollziehbar erklären.</p>
           </div>
         </div>
 
@@ -114,7 +114,7 @@
           <span class="check">✓</span>
           <div>
             <h3 data-i18n="aboutGoal3Title">Integration begleiten</h3>
-            <p data-i18n="aboutGoal3Text">Im Berufsalltag unterstützen, Orientierung geben und Unsicherheiten abbauen.</p>
+            <p data-i18n="aboutGoal3Text">Beim Ankommen im Berufsalltag unterstützen und Unsicherheiten abbauen.</p>
           </div>
         </div>
 
@@ -137,9 +137,9 @@
       </div>
 
       <div class="target-list">
-        <div class="target-card"><span class="check">✓</span><span data-i18n="aboutTarget1">Menschen mit Migrationsgeschichte, die sich für einen Einstieg in Pflege und Gesundheit interessieren</span></div>
-        <div class="target-card"><span class="check">✓</span><span data-i18n="aboutTarget2">Auszubildende und Fachkräfte – auch bei Fragen zu Anerkennung, Qualifizierung oder Berufseinstieg</span></div>
-        <div class="target-card"><span class="check">✓</span><span data-i18n="aboutTarget3">Interessierte und Teilnehmende in FSJ oder BFD mit Pflegebezug</span></div>
+        <div class="target-card"><span class="check">✓</span><span data-i18n="aboutTarget1">Internationale Fachkräfte und Auszubildende im Pflege- und Gesundheitsbereich</span></div>
+        <div class="target-card"><span class="check">✓</span><span data-i18n="aboutTarget2">Personen mit Migrationsgeschichte, die eine berufliche Perspektive in der Pflege suchen</span></div>
+        <div class="target-card"><span class="check">✓</span><span data-i18n="aboutTarget3">Teilnehmende des Bundesfreiwilligendienstes mit Pflegebezug</span></div>
         <div class="target-card"><span class="check">✓</span><span data-i18n="aboutTarget4">Pflege- und Gesundheitseinrichtungen bei Integration und Fachkräftegewinnung</span></div>
       </div>
     </div>
@@ -151,7 +151,7 @@
         <p class="label" data-i18n="aboutCtaLabel">Unterstützung</p>
         <h2 data-i18n="aboutCtaTitle">Sie möchten wissen, ob ProBe zu Ihrer Situation passt?</h2>
       </div>
-      <a data-cms-link="link-7" class="btn primary" href="kontakt.html" data-i18n="aboutCtaBtn">Kontakt aufnehmen</a>
+      <a class="btn primary" href="kontakt.html" data-i18n="aboutCtaBtn">Kontakt aufnehmen</a>
     </div>
   </section>
 </main>
@@ -163,9 +163,7 @@
   <p class="funding-title" data-i18n="fundedBy">Gefördert durch</p>
 
   <div class="funding-logos">
-    <a data-cms-link="link-8" class="ministry-logo-viewport" href="https://ms.sachsen-anhalt.de/">
-      <img data-cms-image="image-1" src="ms-logo.png" alt="Ministerium für Arbeit, Soziales, Gesundheit und Gleichstellung des Landes Sachsen-Anhalt">
-    </a>
+    <img src="ms-logo.png" alt="">
 
   </div>
 </section>
@@ -174,15 +172,15 @@
   <p class="funding-title" data-i18n="inCooperationWith">In Kooperation mit</p>
 
   <div class="partner-main">
-    <img data-cms-image="image-2" src="drk-logo.png" alt="DRK Landesverband Sachsen-Anhalt">
-    <img data-cms-image="image-3" src="bpa-png.png" alt="Bundesverband privater Anbieter sozialer Dienste">
+    <img src="drk-logo.png" alt="DRK Landesverband Sachsen-Anhalt">
+    <img src="bpa-png.png" alt="Bundesverband privater Anbieter sozialer Dienste">
   </div>
 
   <div class="partner-regions">
-    <img data-cms-image="image-4" src="drkalt.png" alt="DRK Kreisverband Altmark">
-    <img data-cms-image="image-5" src="drkbö.png" alt="DRK Kreisverband Börde">
-    <img data-cms-image="image-6" src="drkjl.png" alt="DRK Regionalverband Magdeburg–Jerichower Land">
-    <img data-cms-image="image-7" src="drkwnz.png" alt="DRK Kreisverband Wanzleben">
+    <img src="drkalt.png" alt="DRK Kreisverband Altmark">
+    <img src="drkbö.png" alt="DRK Kreisverband Börde">
+    <img src="drkjl.png" alt="DRK Regionalverband Magdeburg–Jerichower Land">
+    <img src="drkwnz.png" alt="DRK Kreisverband Wanzleben">
   </div>
 </div>
 
@@ -191,19 +189,17 @@
 </span>
 
 <div class="footer-links">
-  <a data-cms-link="link-9" href="index.html#netzwerk" data-i18n="networkNav">Netzwerk</a>
-    <a data-cms-link="link-10" href="https://instagram.com/probe.sachsenanhalt"
+    <a href="https://instagram.com/probe.sachsenanhalt"
    target="_blank"
    class="social-link">
    Instagram
 </a>
-  <a data-cms-link="link-11" href="impressum.html" data-i18n="imprint">Impressum</a>
-  <a data-cms-link="link-12" href="datenschutz.html" data-i18n="privacy">Datenschutz</a>
+  <a href="impressum.html" data-i18n="imprint">Impressum</a>
+  <a href="datenschutz.html" data-i18n="privacy">Datenschutz</a>
 </div>
 </footer>
 
 <script src="js/translations.js"></script>
-<script src="js/network-route.js" defer></script>
 
 <script>
   const menuToggle = document.querySelector(".menu-toggle");
@@ -213,7 +209,5 @@
     mainNav.classList.toggle("open");
   });
 </script>
-<script src="js/cms-content.js"></script>
 </body>
 </html>
-

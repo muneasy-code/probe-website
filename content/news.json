@@ -25,16 +25,6 @@
         "date": "2026",
         "title": "Saksonya-Anhalt'ta proje başlangıcı",
         "text": "ProBe, uluslararası uzmanları, stajyerleri ve kurumları bakım ve sağlık alanına uyum süreçlerinde destekler."
-      },
-      "uk": {
-        "date": "2026",
-        "title": "Початок проєкту в Саксонії-Ангальт",
-        "text": "ProBe супроводжує людей з міграційним досвідом і заклади на шляху у сферу догляду та охорони здоров’я і в ній."
-      },
-      "vi": {
-        "date": "2026",
-        "title": "Khởi động dự án tại Sachsen-Anhalt",
-        "text": "ProBe đồng hành cùng người có trải nghiệm di cư và các cơ sở trên con đường đến với và phát triển trong lĩnh vực điều dưỡng và y tế."
       }
     },
     {
@@ -62,16 +52,6 @@
         "date": "Bilgi",
         "title": "Broşür ve materyaller mevcut",
         "text": "Projeye ilişkin bilgiler indirilebilir. Ek materyaller ve dil sürümleri daha sonra eklenebilir."
-      },
-      "uk": {
-        "date": "Інформація",
-        "title": "Флаєр та матеріали доступні",
-        "text": "Інформацію про проєкт можна завантажити. Надалі можуть бути додані інші матеріали та мовні версії."
-      },
-      "vi": {
-        "date": "Thông tin",
-        "title": "Đã có tờ giới thiệu và tài liệu",
-        "text": "Thông tin về dự án đã sẵn sàng để tải xuống. Có thể bổ sung thêm tài liệu và các phiên bản ngôn ngữ khác."
       }
     },
     {
@@ -99,16 +79,6 @@
         "date": "Destek",
         "title": "Bireysel destek mümkün",
         "text": "İlgilenen katılımcılar ve kurumlar bizimle iletişime geçebilir ve ücretsiz danışmanlık alabilir."
-      },
-      "uk": {
-        "date": "Супровід",
-        "title": "Доступна індивідуальна підтримка",
-        "text": "Зацікавлені учасники та заклади можуть звернутися до нас і безкоштовно отримати консультацію."
-      },
-      "vi": {
-        "date": "Đồng hành",
-        "title": "Có hỗ trợ theo nhu cầu cá nhân",
-        "text": "Người tham gia và các cơ sở quan tâm có thể liên hệ với chúng tôi để được tư vấn miễn phí."
       }
     }
   ]
