@@ -115,7 +115,11 @@
         container.appendChild(article);
       });
       const more = document.querySelector("[data-cms-news-more]");
-      if (more) more.hidden = archive || visibleItems.length <= 3;
+      if (more) {
+        const labels = {de:"Weitere Meldungen",en:"More news",ar:"المزيد من الأخبار",ru:"Другие новости",tr:"Diğer haberler",uk:"Інші новини",vi:"Tin tức khác"};
+        more.textContent = (labels[lang] || labels.de) + " →";
+        more.hidden = archive || visibleItems.length <= 3;
+      }
     }
 
     const ticker = document.querySelector("[data-cms-news-ticker]");
