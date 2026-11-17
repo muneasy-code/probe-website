@@ -151,7 +151,7 @@ function clear(parent){parent.replaceChildren();}
 function render(){
   if(!doc)return;
   document.querySelectorAll(".nav-item").forEach(b=>b.classList.toggle("active",b.dataset.view===view));
-  const titles={home:["Hallo Katrin! 👋","Was möchtest du heute aktualisieren?"],news:["Aktuelles","Beiträge anlegen, bearbeiten und veröffentlichen."],team:["Team & Kontakte","Personen, Fotos und Kontaktdaten pflegen."],materials:["Flyer & Material","Flyer austauschen und Downloads verwalten."],pages:["Website bearbeiten","Texte und Bilder in den einzelnen Seiten pflegen."],media:["Mediathek","Hochgeladene Bilder und PDF-Dateien."]};
+  const titles={home:["Hallo Katrin! 👋","Was möchtest du heute aktualisieren?"],news:["Aktuelles","Beiträge anlegen, bearbeiten und veröffentlichen."],team:["Team & Kontakte","Personen, Fotos und Kontaktdaten pflegen."],materials:["Flyer & Material","Flyer austauschen und Downloads verwalten."],pages:["Website bearbeiten","Texte und Bilder in den einzelnen Seiten pflegen."],media:["Mediathek","Hochgeladene Bilder und PDF-Dateien."],history:["Versionen","Frühere Veröffentlichungen sicher wiederherstellen."]};
   $("viewTitle").textContent=titles[view][0];$("viewIntro").textContent=titles[view][1];
   const root=$("editor");clear(root);
   if(view==="home")renderHome(root);
@@ -160,6 +160,7 @@ function render(){
   if(view==="materials")renderMaterials(root);
   if(view==="pages")renderPages(root);
   if(view==="media")renderMedia(root);
+  if(view==="history")renderHistory(root);
   $("openPreview").href="/"+previewSlug()+".html";
 }
 function moveTo(tab){view=tab;render();refreshPreview();}
@@ -167,7 +168,7 @@ function renderHome(root){
   const intro=panel(root,"Alles an einem Ort");
   note(intro,"Deine Änderungen sind zunächst nur ein Entwurf. Du kannst sie in der Vorschau anschauen, bevor du sie veröffentlichst. Die öffentliche Website bleibt unverändert.");
   const tiles=node("div","tile-grid");
-  for(const [id,title,sub] of [["news","Aktuelles","Meldungen erstellen"],["team","Team","Kontakte und Fotos"],["materials","Flyer & Material","PDFs und Downloads"],["pages","Website","Texte und Bilder"]]){
+  for(const [id,title,sub] of [["news","Aktuelles","Meldungen erstellen"],["team","Team","Kontakte und Fotos"],["materials","Flyer & Material","PDFs und Downloads"],["pages","Website","Texte und Bilder"],["history","Versionen","Frühere Stände"]]){
     const b=action("",()=>moveTo(id),"tile");append(b,node("strong","",title),node("small","",sub));tiles.append(b);
   }intro.append(tiles);
 }
@@ -248,6 +249,32 @@ function renderMaterials(root){
   field(all,"Titel",ld.title||"",v=>ld.title=v);
   field(all,"Beschreibung",ld.description||"",v=>ld.description=v,{type:"textarea"});
   append(all,action("Download entfernen",()=>{if(!confirm("Download-Eintrag entfernen?"))return;list.splice(selected.material,1);selected.material=0;mark();render();},"button danger"));
+}
+async function renderHistory(root){
+  const box=panel(root,"Vorherige Veröffentlichungen");
+  note(box,"Hier kannst du einen früheren Stand in deinen Entwurf zurückholen. Auf der Testwebsite ändert sich dadurch erst etwas, wenn du anschließend auf „In Vorschau veröffentlichen“ klickst.");
+  const list=node("div","item-list");append(box,list,node("p","help","Lade Versionsverlauf …"));
+  try{
+    const data=await req("?mode=history");
+    list.replaceChildren();
+    if(!data.versions?.length){append(list,node("p","help","Noch keine früheren Veröffentlichungen vorhanden."));return;}
+    for(const version of data.versions){
+      const at=version.at?new Date(version.at).toLocaleString("de-DE"):"Frühere Version";
+      const item=node("div","item");
+      append(item,node("strong","",at),action("Als Entwurf laden",async()=>{
+        if(dirty&&!confirm("Ungespeicherte Änderungen verwerfen?"))return;
+        if(!confirm("Die Version vom "+at+" als neuen Entwurf laden? Die veröffentlichte Website bleibt zunächst unverändert."))return;
+        try{
+          const restored=await post("restore",{key:version.key,etag});
+          doc=restored.document;etag=restored.etag;dirty=false;revision=0;
+          $("saveStatus").textContent="Frühere Version als Entwurf geladen";
+          toast("Entwurf wiederhergestellt ✓");
+          render();refreshPreview();
+        }catch(err){toast("Wiederherstellung fehlgeschlagen: "+err.message);}
+      },"button"));
+      list.append(item);
+    }
+  }catch(err){list.replaceChildren(node("p","help","Versionsverlauf nicht verfügbar: "+err.message));}
 }
 function prettify(key){return key.replace(/([a-z])([A-Z])/g,"$1 $2").replace(/[-_]/g," ").replace(/^./,x=>x.toUpperCase());}
 function renderPages(root){
