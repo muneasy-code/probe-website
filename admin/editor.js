@@ -119,7 +119,7 @@ function uploadControl(parent,label,onUploaded,accept="image/*"){
     try{
       let payload=file;
       if(file.type.startsWith("image/") && file.type!=="image/gif")payload=await compressImage(file);
-      if(payload.size>10*1024*1024)throw Error("Datei ist zu groß (max. 10 MB).");
+      if(payload.size>5*1024*1024)throw Error("Datei ist zu groß (max. 5 MB).");
       const response=await req("?action=upload",{method:"POST",headers:{"content-type":payload.type||file.type},body:payload});
       mediaList.unshift(response.url);const changed=onUploaded(response.url);if(changed!==false)mark();render();toast("Datei hochgeladen ✓");
     }catch(err){toast("Upload fehlgeschlagen: "+err.message);}
@@ -207,7 +207,12 @@ function renderTeam(root){
   selected.team=Math.max(0,Math.min(selected.team,all.length-1));
   chooseList(box,all,selected.team,i=>{selected.team=i;},m=>m.name);
   const m=all[selected.team],edit=panel(root,"Kontaktkarte bearbeiten");
-  field(edit,"Name",m.name||"",v=>{m.name=v;});
+  field(edit,"Name",m.name||"",v=>{
+    const previous=m.name;m.name=v;
+    for(const translation of Object.values(m.translations||{})){
+      if(translation?.name===previous)translation.name=v;
+    }
+  });
   toggle(edit,"Auf der Website anzeigen",m.visible!==false,v=>m.visible=v);
   const cols=row(edit);
   field(cols,"E-Mail-Adresse",m.email||"",v=>m.email=v,{type:"email"});
