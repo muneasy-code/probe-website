@@ -1290,6 +1290,111 @@ Object.entries(mobileFlyerHeadingsTranslations).forEach(([lang, entries]) => Obj
               }));
             }
 
+
+            // Mobile custom language menu: retain the native select as a no-JS fallback.
+            function initializeLanguageDropdowns() {
+              document.querySelectorAll(".language-switcher").forEach((switcher, index) => {
+                const select = switcher.querySelector("[data-language-select]");
+                if (!select) return;
+
+                const trigger = document.createElement("button");
+                trigger.type = "button";
+                trigger.className = "language-menu-trigger";
+                trigger.setAttribute("aria-haspopup", "listbox");
+                trigger.setAttribute("aria-expanded", "false");
+                trigger.setAttribute("aria-controls", "probe-language-menu-" + index);
+                const currentName = document.createElement("span");
+                currentName.className = "language-menu-current";
+                trigger.appendChild(currentName);
+
+                const menu = document.createElement("div");
+                menu.className = "language-menu-list";
+                menu.id = "probe-language-menu-" + index;
+                menu.setAttribute("role", "listbox");
+                menu.setAttribute("aria-label", "Sprache auswählen");
+                menu.hidden = true;
+
+                const optionButtons = [...select.options].map((option) => {
+                  const button = document.createElement("button");
+                  button.type = "button";
+                  button.className = "language-menu-option";
+                  button.dataset.languageOption = option.value;
+                  button.setAttribute("role", "option");
+                  button.setAttribute("dir", "auto");
+                  button.setAttribute("aria-selected", "false");
+                  button.textContent = option.textContent.trim();
+                  menu.appendChild(button);
+                  return button;
+                });
+
+                const closeMenu = (restoreFocus = false) => {
+                  menu.hidden = true;
+                  trigger.setAttribute("aria-expanded", "false");
+                  switcher.classList.remove("language-menu-open");
+                  if (restoreFocus) trigger.focus();
+                };
+
+                trigger.addEventListener("click", () => {
+                  if (!menu.hidden) {
+                    closeMenu();
+                    return;
+                  }
+                  menu.hidden = false;
+                  trigger.setAttribute("aria-expanded", "true");
+                  switcher.classList.add("language-menu-open");
+                  (optionButtons.find((button) => button.getAttribute("aria-selected") === "true") || optionButtons[0])?.focus();
+                });
+
+                menu.addEventListener("click", (event) => {
+                  const option = event.target.closest("[data-language-option]");
+                  if (!option) return;
+                  setLanguage(option.dataset.languageOption, { persist: true });
+                  closeMenu(true);
+                });
+
+                menu.addEventListener("keydown", (event) => {
+                  if (event.key === "Escape") {
+                    event.preventDefault();
+                    closeMenu(true);
+                    return;
+                  }
+                  if (event.key === "Tab") {
+                    closeMenu();
+                    return;
+                  }
+                  if (!["ArrowDown", "ArrowUp", "Home", "End"].includes(event.key)) return;
+                  event.preventDefault();
+                  const activeIndex = optionButtons.indexOf(document.activeElement);
+                  const nextIndex = event.key === "Home" ? 0
+                    : event.key === "End" ? optionButtons.length - 1
+                    : (activeIndex + (event.key === "ArrowDown" ? 1 : -1) + optionButtons.length) % optionButtons.length;
+                  optionButtons[nextIndex]?.focus();
+                });
+
+                document.addEventListener("pointerdown", (event) => {
+                  if (!switcher.contains(event.target)) closeMenu();
+                });
+                document.addEventListener("keydown", (event) => {
+                  if (event.key === "Escape" && !menu.hidden) closeMenu(true);
+                });
+                document.addEventListener("probe:languagechange", (event) => {
+                  const lang = event.detail.language;
+                  const selected = [...select.options].find((option) => option.value === lang);
+                  const name = selected?.textContent.trim() || "Deutsch";
+                  currentName.textContent = name;
+                  trigger.setAttribute("aria-label", "Sprache auswählen: " + name);
+                  optionButtons.forEach((button) => {
+                    button.setAttribute("aria-selected", String(button.dataset.languageOption === lang));
+                  });
+                });
+
+                switcher.append(trigger, menu);
+                select.classList.add("language-select-enhanced");
+                select.setAttribute("aria-hidden", "true");
+                select.tabIndex = -1;
+              });
+            }
+
             document.addEventListener("DOMContentLoaded", () => {
               const directLanguage = normalizeLanguage(new URLSearchParams(window.location.search).get("lang"));
               const initialLanguage = directLanguage || getStoredLanguage() || getBrowserLanguage();
