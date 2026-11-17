@@ -12,13 +12,13 @@
     vi: { phone: "Điện thoại:", email: "Email:" }
   };
   const TEAM_ACTION_LABELS = {
-    de: { more: "Mehr über", contact: "Kontakt aufnehmen" },
-    en: { more: "More about", contact: "Get in touch" },
-    ar: { more: "المزيد عن", contact: "تواصل معنا" },
-    ru: { more: "Подробнее о", contact: "Связаться" },
-    tr: { more: "Daha fazlası:", contact: "İletişime geç" },
-    uk: { more: "Більше про", contact: "Зв’язатися" },
-    vi: { more: "Tìm hiểu thêm về", contact: "Liên hệ" }
+    de: { more: "Mehr über", contact: "Kontakt aufnehmen", email: "E-Mail schreiben", call: "Anrufen" },
+    en: { more: "More about", contact: "Get in touch", email: "Write an email", call: "Call" },
+    ar: { more: "المزيد عن", contact: "تواصل معنا", email: "إرسال بريد إلكتروني", call: "اتصال" },
+    ru: { more: "Подробнее о", contact: "Связаться", email: "Написать письмо", call: "Позвонить" },
+    tr: { more: "Daha fazlası:", contact: "İletişime geç", email: "E-posta yaz", call: "Ara" },
+    uk: { more: "Більше про", contact: "Зв’язатися", email: "Написати листа", call: "Зателефонувати" },
+    vi: { more: "Tìm hiểu thêm về", contact: "Liên hệ", email: "Viết email", call: "Gọi điện" }
   };
 
   const state = {
@@ -195,58 +195,67 @@
       const actions = document.createElement("div");
       actions.className = "team-card-actions";
 
+      // Direct contact first; no personal contact data hidden in the bio.
+      const quickActions = document.createElement("div");
+      quickActions.className = "team-quick-actions";
+
+      function addQuickAction(kind, href, text, detail) {
+        if (!href) return;
+        const button = document.createElement("a");
+        button.className = "team-quick-link team-quick-link--" + kind;
+        button.href = href;
+        button.setAttribute("aria-label", text + ": " + detail + " (" + displayName + ")");
+        const symbol = document.createElement("span");
+        symbol.className = "team-quick-icon";
+        symbol.setAttribute("aria-hidden", "true");
+        symbol.textContent = kind === "email" ? "✉" : "☎";
+        const label = document.createElement("span");
+        label.textContent = text;
+        button.append(symbol, label);
+        quickActions.appendChild(button);
+      }
+
+      const email = safeText(member.email).trim();
+      if (email && /^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/.test(email)) {
+        addQuickAction("email", "mailto:" + email, actionLabels.email, email);
+      }
+
+      const phone = safeText(member.phone).trim();
+      if (phone) {
+        const dial = phone.replace(/[^+\\d]/g, "");
+        if (dial) addQuickAction("call", "tel:" + dial, actionLabels.call, phone);
+      }
+
+      if (quickActions.childElementCount) {
+        actions.appendChild(quickActions);
+      } else if (member.contactUrl) {
+        // Preserve the existing general contact fallback for incomplete records.
+        const link = document.createElement("a");
+        link.className = "team-quick-link team-quick-link--email";
+        link.href = safeUrl(member.contactUrl);
+        link.textContent = actionLabels.contact;
+        actions.appendChild(link);
+      }
+
       if (safeText(content.about).trim()) {
-      const details = document.createElement("details");
-      details.className = "team-details";
-
-      const summary = document.createElement("summary");
-      const summaryText = document.createElement("span");
-      const firstName = safeText(member.name).split(/\s+/)[0];
-      summaryText.textContent = `${actionLabels.more} ${firstName}`;
-      const summaryIcon = document.createElement("span");
-      summaryIcon.setAttribute("aria-hidden", "true");
-      summaryIcon.textContent = "＋";
-      summary.append(summaryText, summaryIcon);
-
-      const detailsBody = document.createElement("div");
-      detailsBody.className = "team-details-body";
-
-      const about = document.createElement("p");
-      about.className = "team-about";
-      about.textContent = safeText(content.about);
-
-      if (member.phone) {
-        const phone = document.createElement("a");
-        phone.href = `tel:${String(member.phone).replace(/[^+\d]/g, "")}`;
-        phone.textContent = `${labels.phone} ${member.phone}`;
-        detailsBody.appendChild(phone);
-      }
-
-      detailsBody.prepend(about);
-      details.append(summary, detailsBody);
-      actions.appendChild(details);
-      }
-
-      if (member.email || member.contactUrl) {
-        const contactButton = document.createElement("a");
-        contactButton.className = "team-contact-button";
-        contactButton.href = member.email ? `mailto:${member.email}` : safeUrl(member.contactUrl);
-        contactButton.setAttribute("aria-label", `${actionLabels.contact}: ${displayName}`);
-        const contactText = document.createElement("span");
-        contactText.textContent = actionLabels.contact;
-        const contactIcon = document.createElement("span");
-        contactIcon.setAttribute("aria-hidden", "true");
-        contactIcon.textContent = "↗";
-        contactButton.append(contactText, contactIcon);
-        actions.appendChild(contactButton);
-      }
-
-      if (member.phone && !safeText(content.about).trim()) {
-        const phone = document.createElement("a");
-        phone.className = "team-contact-button";
-        phone.href = `tel:${String(member.phone).replace(/[^+\d]/g, "")}`;
-        phone.textContent = `${labels.phone} ${member.phone}`;
-        actions.appendChild(phone);
+        const details = document.createElement("details");
+        details.className = "team-details";
+        const summary = document.createElement("summary");
+        const summaryText = document.createElement("span");
+        const firstName = displayName.split(/\\s+/)[0];
+        summaryText.textContent = actionLabels.more + " " + firstName;
+        const summaryIcon = document.createElement("span");
+        summaryIcon.setAttribute("aria-hidden", "true");
+        summaryIcon.textContent = "＋";
+        summary.append(summaryText, summaryIcon);
+        const detailsBody = document.createElement("div");
+        detailsBody.className = "team-details-body";
+        const about = document.createElement("p");
+        about.className = "team-about";
+        about.textContent = safeText(content.about);
+        detailsBody.appendChild(about);
+        details.append(summary, detailsBody);
+        actions.appendChild(details);
       }
 
       card.append(header, actions);
