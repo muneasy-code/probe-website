@@ -1,36 +1,53 @@
-PROBE CMS – EINMALIGE EINRICHTUNG
+PROBE REDAKTION v1 – TESTSTAND
 ================================
 
-Das CMS ist technisch eingebaut. Es pflegt:
-- Aktuelles auf der Startseite
-- Teammitglieder inklusive Fotos, Kontaktdaten und Übersetzungen
-- zentrale ProBe-Kontaktdaten
-- den aktuellen Flyer
+Redaktion: https://redesign-light--probe-lsa.netlify.app/admin/
+Testwebsite: https://redesign-light--probe-lsa.netlify.app/
+Produktivwebsite: https://probe-sachsen-anhalt.de/ (BLEIBT UNVERÄNDERT)
 
-Die Website selbst bleibt statisch und schnell. Das CMS bearbeitet nur die JSON-Dateien im Ordner /content.
-Design, HTML und CSS sind für die Redaktion nicht als Eingabefelder freigegeben.
-
-EINMALIG VOR DEM ERSTEN LOGIN
-------------------------------
-1. Den kompletten Website-Ordner in ein GitHub-Repository legen.
-2. Das Repository mit der bestehenden Netlify-Seite verbinden.
-3. In /admin/config.yml diese Zeile ersetzen:
-
-   repo: HIER_GITHUB_BENUTZERNAME/HIER_REPOSITORY_EINTRAGEN
-
-   Beispiel:
-   repo: muneasy/probe-website
-
-4. In Netlify/GitHub die OAuth-Anmeldung für Decap CMS konfigurieren.
-5. Katrin als GitHub-Collaboratorin mit Schreibzugriff auf das Repository hinzufügen.
-6. Danach öffnet Katrin:
-
-   https://probe-sachsen-anhalt.de/admin/
-
-WICHTIG
+TECHNIK
 -------
-Neue oder geänderte deutsche Inhalte erscheinen sofort nach dem nächsten Netlify-Deploy.
-Bei "Aktuelles" und "Team" können die vorhandenen Sprachversionen ebenfalls gepflegt werden.
-Fehlt bei einem dynamischen Inhalt eine Übersetzung, verwendet die Website automatisch die deutsche Fassung.
+- Eigenständiges ProBe-CMS, kein GitHub-/Decap-Login für die Redaktion.
+- Login per passwortgeschützter, signierter HttpOnly-Cookie-Session.
+- Passwort-Hash und Session-Schlüssel ausschließlich als Netlify-Umgebungsvariablen
+  (Functions, branch-deploy, als secret markiert). KEINE Passwörter im Repository.
+- Netlify Functions + Netlify Blobs mit separatem Test-Speicher 'probe-editor-stage'.
+- Live-Schreibzugriff durch PROBE_CMS_LIVE_ENABLED geschützt und standardmäßig AUS.
+- Dateien: JPG/PNG/WEBP/GIF/PDF, bis 5 MB; Fotos werden im Browser als WebP optimiert.
+- Alte Inhalts-JSONs bleiben unverändert als Ausfallsicherung erhalten.
 
-Die bestehenden Inhalte sind bereits in /content/news.json, /content/team.json und /content/settings.json übernommen.
+FUNKTIONEN FÜR KATRIN
+--------------------
+1. Aktuelles: Neue Beiträge, Überschrift, Datum/Kategorie, Text, Foto, Sichtbarkeit;
+   Startseite zeigt bis zu 3 sichtbare Meldungen, Rest unter /aktuelles.html.
+2. Team: Personen, Region, Funktion, Foto, E-Mail und Telefon bearbeiten.
+3. Flyer & Material: zentrale Kontaktdaten, Hauptflyer und zusätzliche Downloads.
+4. Website bearbeiten: bestehende Texte je Seite und Sprache, Bilder, Impressum/Datenschutz
+   mit Warnhinweis für notwendige rechtliche Freigabe.
+5. Mediathek: Dateien hochladen und vorhandene Dateien sehen.
+6. Versionen: Vorherige Veröffentlichung als ENTWURF wiederherstellen; keine direkte
+   automatische Live-Änderung.
+
+ABLAUF
+------
+- Anmelden und Bereich wählen.
+- Inhalte bearbeiten, bei Bedarf Sprachversion auswählen (de/en/ar/ru/tr/uk/vi).
+- Entwurf speichern; Entwurf im integrierten Vorschau-Fenster ansehen.
+- Bewusst auf 'In Vorschau veröffentlichen' klicken. Das betrifft NUR die Redesign-Testseite.
+- Die Schaltfläche 'Veröffentlichte Testseite' öffnet den zuletzt publizierten Teststand;
+  ungespeicherte Änderungen erscheinen ausschließlich in der integrierten Entwurfsvorschau.
+
+WICHTIG FÜR DEN SPÄTEREN LIVEGANG
+--------------------------------
+- Kein Merge nach main ohne ausdrückliche Freigabe.
+- Für Produktion sind separate Zugangsdaten, Datenschutz-/CMS-Abnahme und eine
+  bewusst geplante Übernahme der redaktionellen Inhalte und Medien nötig.
+- Live-Schreibzugriff erst nach separater expliziter Freigabe und Einrichtung aktivieren.
+- Netlify-Blobs-Speicher für Test und Produktion sind absichtlich getrennt.
+
+QA
+--
+- Statischer Test: aktuelle News, 4 Teamkontakte inkl. Maren, Flyer und 7 Sprachen erhalten.
+- JavaScript-Syntaxprüfung bestanden; Redesign-Branch-Deploy wird auf Netlify gebaut.
+- Vollständige Ende-zu-Ende-Prüfung von Login, Speichern, Upload, Veröffentlichung und
+  Browserlayout steht vor einer Freigabe für die Redaktion noch aus.
