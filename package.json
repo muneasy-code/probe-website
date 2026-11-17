@@ -1,0 +1,8 @@
+{
+  "name": "probe-redaktion",
+  "version": "1.0.0-test",
+  "private": true,
+  "type": "module",
+  "scripts": {"build": "node build.mjs"},
+  "dependencies": {"@netlify/blobs": "^11.1.9"}
+}
