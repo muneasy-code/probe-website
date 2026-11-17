@@ -379,7 +379,15 @@
     });
     (page.links || []).forEach(item => {
       document.querySelectorAll("[data-cms-link]").forEach(element => {
-        if (element.dataset.cmsLink === item.key && safeUrl(item.url)) element.href = safeUrl(item.url);
+        if (element.dataset.cmsLink !== item.key) return;
+        // Network navigation is responsive: do not let a CMS-stored desktop
+        // anchor overwrite the mobile link and cause a homepage flash.
+        if (element.dataset.i18n === "networkNav" || element.hasAttribute("data-network-route")) {
+          element.href = window.matchMedia("(max-width: 820px)").matches
+            ? "netzwerk.html" : "index.html#netzwerk";
+          return;
+        }
+        if (safeUrl(item.url)) element.href = safeUrl(item.url);
       });
     });
   }
