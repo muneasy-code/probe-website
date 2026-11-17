@@ -121,7 +121,7 @@ function uploadControl(parent,label,onUploaded,accept="image/*"){
       if(file.type.startsWith("image/") && file.type!=="image/gif")payload=await compressImage(file);
       if(payload.size>10*1024*1024)throw Error("Datei ist zu groß (max. 10 MB).");
       const response=await req("?action=upload",{method:"POST",headers:{"content-type":payload.type||file.type},body:payload});
-      mediaList.unshift(response.url);onUploaded(response.url);mark();render();toast("Datei hochgeladen ✓");
+      mediaList.unshift(response.url);const changed=onUploaded(response.url);if(changed!==false)mark();render();toast("Datei hochgeladen ✓");
     }catch(err){toast("Upload fehlgeschlagen: "+err.message);}
     finally{el.disabled=false;}
   });
@@ -160,7 +160,7 @@ function render(){
   if(view==="materials")renderMaterials(root);
   if(view==="pages")renderPages(root);
   if(view==="media")renderMedia(root);
-  const p=previewUrl();$("openPreview").href=p;
+  $("openPreview").href="/"+previewSlug()+".html";
 }
 function moveTo(tab){view=tab;render();refreshPreview();}
 function renderHome(root){
@@ -278,7 +278,7 @@ function renderPages(root){
 function renderMedia(root){
   const box=panel(root,"Mediathek");
   note(box,"Dateien bleiben hier erhalten. Ein Upload allein verändert noch keine Seite. Verwende ihn in einem Beitrag, einer Teamkarte oder bei den Materialien.");
-  uploadControl(box,"Bild oder PDF hinzufügen",u=>{}, "image/*,application/pdf");
+  uploadControl(box,"Bild oder PDF hinzufügen",()=>false, "image/*,application/pdf");
   const grid=node("div","media-grid");
   for(const url of mediaList){const item=node("div","media-card");
     if(!url.includes(".pdf")){const img=node("img");img.src=url;img.alt="Hochgeladenes Bild";img.loading="lazy";item.append(img);}
