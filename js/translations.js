@@ -1389,6 +1389,7 @@ Object.entries(mobileFlyerHeadingsTranslations).forEach(([lang, entries]) => Obj
                 });
 
                 switcher.append(trigger, menu);
+                switcher.classList.add("has-language-menu");
                 select.classList.add("language-select-enhanced");
                 select.setAttribute("aria-hidden", "true");
                 select.tabIndex = -1;
