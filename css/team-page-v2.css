@@ -273,7 +273,7 @@ html[dir="rtl"] .page-team .team-card-actions {
     font-size: .86rem;
     gap: 6px;
   }
-  .page-team .team-quick-actions:has(> :only-child) {
-    grid-template-columns: 1fr;
+  .page-team .team-quick-actions > :only-child {
+    grid-column: 1 / -1;
   }
 }
