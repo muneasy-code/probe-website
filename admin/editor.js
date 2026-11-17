@@ -26,7 +26,7 @@ function field(parent,label,value,onChange,opts={}){
   el.value=value??"";
   if(opts.dir)el.dir=opts.dir;
   if(opts.rows && el.tagName==="TEXTAREA")el.rows=opts.rows;
-  el.addEventListener(el.tagName==="SELECT"?"change":"input",()=>{onChange(el.value);mark();});
+  el.addEventListener(el.tagName==="SELECT"?"change":"input",()=>{onChange(el.value);if(!opts.noDirty)mark();});
   append(wrap,lab,el);
   if(opts.hint)append(wrap,node("small","help",opts.hint));
   parent.append(wrap);return el;
@@ -252,7 +252,7 @@ function renderMaterials(root){
 function prettify(key){return key.replace(/([a-z])([A-Z])/g,"$1 $2").replace(/[-_]/g," ").replace(/^./,x=>x.toUpperCase());}
 function renderPages(root){
   const choose=panel(root,"Seite auswählen");
-  const pageSelector=field(choose,"Website-Seite",selected.page,v=>{selected.page=v;render();refreshPreview();},{type:"select",options:PAGES});
+  const pageSelector=field(choose,"Website-Seite",selected.page,v=>{selected.page=v;render();refreshPreview();},{type:"select",options:PAGES,noDirty:true});
   const page=doc.pages[selected.page]||(doc.pages[selected.page]={texts:{de:{}},plain:{},images:[],links:[]});
   if(["impressum","datenschutz"].includes(selected.page))note(choose,"Rechtstexte bitte nur nach inhaltlicher Freigabe verändern.",true);
   const texts=panel(root,"Seitentexte");
