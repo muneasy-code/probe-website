@@ -50,6 +50,32 @@
     return merged;
   }
 
+  // Optimize same-origin CMS pictures via Netlify's native Image CDN.
+  // Keep the original source as fallback if a transformation fails.
+  function optimizedImageUrl(source, width = 800, quality = 88) {
+    const url = safeUrl(source);
+    if (!url) return "";
+    try {
+      const parsed = new URL(url, window.location.href);
+      if (parsed.origin !== window.location.origin || !/\.(png|jpe?g|webp)$/i.test(parsed.pathname)) return url;
+      return "/.netlify/images?url=" + encodeURIComponent(parsed.pathname) +
+        "&w=" + width + "&q=" + quality;
+    } catch {
+      return url;
+    }
+  }
+
+  function setOptimizedImage(img, source, width = 800, quality = 88) {
+    const original = safeUrl(source);
+    if (!original) return;
+    const optimized = optimizedImageUrl(original, width, quality);
+    img.onerror = optimized !== original ? () => {
+      img.onerror = null;
+      img.src = original;
+    } : null;
+    img.src = optimized;
+  }
+
   function safeText(value) {
     return typeof value === "string" ? value : "";
   }
@@ -141,7 +167,11 @@
       const displayName = safeText(content.name || member.name);
       const image = document.createElement("img");
       image.className = "team-photo";
-      image.src = safeUrl(member.image) || "/foto-platzhalter.png";
+      image.loading = "lazy";
+      image.decoding = "async";
+      image.width = 420;
+      image.height = 420;
+      setOptimizedImage(image, member.image || "/foto-platzhalter.png", 840, 88);
       image.alt = safeText(member.imageAlt || content.imageAlt || displayName || "Teammitglied");
       image.style.objectPosition = imagePosition(member.imagePosition);
 
@@ -306,14 +336,20 @@
         document.querySelectorAll(item.key).forEach(element => {
           // Replace only the image layer; retain the design's gradient overlays.
           const background = getComputedStyle(element).backgroundImage;
-          const replacement = `url(${JSON.stringify(url)})`;
+          const replacement = `url(${JSON.stringify(optimizedImageUrl(url, 1440, 88))})`;
           element.style.setProperty("background-image", /url\(.*?\)/.test(background) ? background.replace(/url\(.*?\)/g, replacement) : replacement, "important");
           if (item.position) element.style.setProperty("background-position", imagePosition(item.position), "important");
         });
       } else {
         document.querySelectorAll("[data-cms-image]").forEach(element => {
           if (element.dataset.cmsImage !== item.key) return;
-          element.src = url;
+          // Preserve static responsive variants unless the CMS image was changed.
+          if (element.dataset.cmsOriginal !== item.source) {
+            element.removeAttribute("srcset");
+            const isLogo = element.classList.contains("logo-img");
+            const isFooterLogo = Boolean(element.closest("footer"));
+            setOptimizedImage(element, url, isLogo ? 440 : isFooterLogo ? 620 : 1440, 90);
+          }
           element.alt = safeText(item.alt);
           if (item.position) element.style.objectPosition = imagePosition(item.position);
         });
