@@ -81,17 +81,18 @@
       const card = document.createElement("div");
       card.className = "team-card";
 
+      const displayName = safeText(content.name || member.name);
       const image = document.createElement("img");
       image.className = "team-photo";
       image.src = member.image || "/foto-platzhalter.png";
-      image.alt = member.name || "Teammitglied";
+      image.alt = safeText(content.imageAlt || displayName || "Teammitglied");
 
       const region = document.createElement("p");
       region.className = "team-region";
       region.textContent = safeText(content.region);
 
       const name = document.createElement("h3");
-      name.textContent = safeText(member.name);
+      name.textContent = displayName;
 
       const role = document.createElement("p");
       role.className = "team-role";
@@ -123,7 +124,16 @@
         contact.appendChild(email);
       }
 
-      card.append(image, region, name, role, about, contact);
+      card.append(image, region, name, role);
+      if (safeText(content.about).trim()) card.appendChild(about);
+      if (contact.childElementCount) card.appendChild(contact);
+      if (member.contactUrl) {
+        const contactLink = document.createElement("a");
+        contactLink.href = member.contactUrl;
+        contactLink.textContent = (TEAM_ACTION_LABELS[lang] || TEAM_ACTION_LABELS.de).contact;
+        contactLink.className = "team-contact-button";
+        card.appendChild(contactLink);
+      }
       container.appendChild(card);
     });
   }
