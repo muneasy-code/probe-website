@@ -87,53 +87,53 @@
       }
     },
     {
-      "name": "Ansprechperson folgt",
+      "name": "Maren Körner",
       "image": "/foto-platzhalter-weiblich.svg",
-      "contactUrl": "/kontakt.html",
       "translations": {
         "de": {
-          "name": "Ansprechperson folgt",
+          "name": "Maren Körner",
           "imageAlt": "Weibliche Platzhalterillustration für die Ansprechperson",
           "region": "JERICHOWER LAND & MAGDEBURG",
           "role": "Berufsbegleitung am Standort Burg"
         },
         "en": {
-          "name": "Local contact to be announced",
+          "name": "Maren Körner",
           "imageAlt": "Female placeholder illustration for the local contact",
           "region": "JERICHOWER LAND & MAGDEBURG",
           "role": "Career support, Burg location"
         },
         "ar": {
-          "name": "سيُعلن عن جهة الاتصال قريبًا",
+          "name": "Maren Körner",
           "imageAlt": "رسم توضيحي مؤقت لجهة الاتصال",
           "region": "يريخوفر لاند وماغديبورغ",
           "role": "المرافقة المهنية، موقع بورغ"
         },
         "ru": {
-          "name": "Контактное лицо будет объявлено",
+          "name": "Maren Körner",
           "imageAlt": "Иллюстрация-заполнитель для контактного лица",
           "region": "Йериховер-Ланд и Магдебург",
           "role": "Профессиональное сопровождение, Бург"
         },
         "tr": {
-          "name": "İletişim kişisi yakında açıklanacak",
+          "name": "Maren Körner",
           "imageAlt": "İletişim kişisi için kadın placeholder çizimi",
           "region": "JERICHOWER LAND VE MAGDEBURG",
           "role": "Burg’da mesleki destek"
         },
         "uk": {
-          "name": "Контактну особу буде оголошено",
+          "name": "Maren Körner",
           "imageAlt": "Жіноча ілюстрація-заповнювач для контактної особи",
           "region": "Єриховський район і Магдебург",
           "role": "Професійний супровід, Бург"
         },
         "vi": {
-          "name": "Thông tin người liên hệ sẽ được cập nhật",
+          "name": "Maren Körner",
           "imageAlt": "Hình minh họa nữ tạm thời cho người liên hệ",
           "region": "JERICHOWER LAND VÀ MAGDEBURG",
           "role": "Hỗ trợ nghề nghiệp tại Burg"
         }
-      }
+      },
+      "email": "maren.koerner@sachsen-anhalt.drk.de"
     },
     {
       "name": "Sascha Bornkampf",
