@@ -1320,9 +1320,14 @@ Object.entries(mobileFlyerHeadingsTranslations).forEach(([lang, entries]) => Obj
                   button.className = "language-menu-option";
                   button.dataset.languageOption = option.value;
                   button.setAttribute("role", "option");
-                  button.setAttribute("dir", "auto");
+                  // Keep every option in the same left-to-right menu column.
+                  // Only the Arabic label itself uses right-to-left text shaping.
+                  button.setAttribute("dir", "ltr");
                   button.setAttribute("aria-selected", "false");
-                  button.textContent = option.textContent.trim();
+                  const label = document.createElement("span");
+                  label.setAttribute("dir", option.value === "ar" ? "rtl" : "ltr");
+                  label.textContent = option.textContent.trim();
+                  button.appendChild(label);
                   menu.appendChild(button);
                   return button;
                 });
