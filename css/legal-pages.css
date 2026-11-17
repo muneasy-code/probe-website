@@ -1,0 +1,57 @@
+/* Shared legal-page polish, scoped to Impressum and Datenschutz only. */
+.page-legal main { display:block; width:100%; min-height:0; margin:0; padding:0; background:#fff; }
+.page-legal main > section.content {
+  display:block; width:100%; max-width:none; min-height:0; margin:0;
+  padding:clamp(28px,4vw,50px) clamp(18px,5vw,36px) clamp(48px,6vw,76px) !important;
+  box-sizing:border-box;
+}
+.page-legal main > section.content > .legal-content {
+  width:min(100%,780px); max-width:780px; min-width:0; margin:0 auto; padding:0;
+  box-sizing:border-box; color:#405b68; font-size:1rem; line-height:1.7; overflow-wrap:break-word;
+}
+.page-legal .legal-content h1 {
+  margin:0 0 clamp(24px,4vw,38px); padding:0 0 18px;
+  border-bottom:1px solid #dce7e8; color:#1c3f67;
+  font-size:clamp(2rem,5.5vw,3rem); font-weight:850; line-height:1.13;
+  letter-spacing:-.035em; text-transform:none; overflow-wrap:normal;
+}
+.page-legal .legal-content h2 {
+  margin:clamp(30px,4.5vw,42px) 0 12px; padding:0; color:#1c3f67;
+  font-size:clamp(1.28rem,3.5vw,1.7rem); font-weight:800; line-height:1.28;
+  letter-spacing:-.02em; overflow-wrap:anywhere;
+}
+.page-legal .legal-content h3 {
+  margin:25px 0 10px; padding:0; color:#197f79;
+  font-size:clamp(1.06rem,2.8vw,1.23rem); font-weight:750;
+  line-height:1.38; letter-spacing:-.01em;
+}
+.page-legal .legal-content h1 + h2,
+.page-legal .legal-content h1 + p { margin-top:0; }
+.page-legal .legal-content p {
+  max-width:100%; margin:0 0 16px; line-height:1.75; color:#48616d;
+  overflow-wrap:break-word; hyphens:auto;
+}
+.page-legal .legal-content strong { color:#294e62; font-weight:750; }
+.page-legal .legal-content a { color:#147d75; text-underline-offset:3px; }
+.page-legal .legal-content :is(a,button):focus-visible { outline:3px solid #147d75; outline-offset:3px; }
+.page-legal footer { margin:0; }
+@media (max-width:650px) {
+  .page-legal main > section.content { padding:26px 20px 52px !important; }
+  .page-legal .legal-content h1 {
+    font-size:clamp(1.9rem,8.3vw,2.35rem); margin-bottom:26px; padding-bottom:15px;
+  }
+  .page-legal .legal-content h2 {
+    margin-top:32px; font-size:clamp(1.22rem,5.3vw,1.48rem); line-height:1.28;
+  }
+  .page-legal .legal-content h3 { margin-top:22px; font-size:1.08rem; }
+  .page-legal .legal-content p { margin-bottom:15px; line-height:1.7; }
+}
+@media (max-width:360px) {
+  .page-legal main > section.content { padding-inline:16px !important; }
+}
+@media print {
+  .page-legal header, .page-legal footer { display:none !important; }
+  .page-legal main > section.content { padding:0 !important; }
+  .page-legal main > section.content > .legal-content { max-width:none; }
+  .page-legal .legal-content h2, .page-legal .legal-content h3 { break-after:avoid; }
+}
